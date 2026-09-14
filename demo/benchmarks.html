@@ -183,6 +183,26 @@ svg { display: block; width: 100%; height: auto; overflow: visible; }
 }
 .prov b { font-weight: 500; color: var(--ink-2); }
 
+/* ---------- world strip ---------- */
+.world { border-top: 1px solid var(--rule); padding: 20px 24px 6px; }
+.world-head {
+  display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline;
+  justify-content: space-between; margin-bottom: 4px;
+}
+.world-head h3 {
+  margin: 0; font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+.rank { font-family: var(--display); font-weight: 600; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.rank b { font-size: 22px; color: var(--nyc); }
+.world figure { margin: 0; }
+.world-note { font-size: 14.5px; color: var(--ink-2); margin: 2px 0 0; line-height: 1.5; max-width: 74ch; }
+.world-note em { color: var(--ink); font-style: normal; font-weight: 600; }
+.tick { stroke: var(--ink-3); stroke-width: 1; opacity: 0.4; }
+.tick-nyc { stroke: var(--nyc); stroke-width: 3; }
+.strip-label { font-family: var(--mono); font-size: 10.5px; fill: var(--ink-3); }
+.strip-nyc-label { font-family: var(--mono); font-size: 12px; font-weight: 600; fill: var(--nyc); }
+
 /* ---------- ledger ---------- */
 .ledger-scroll { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface); }
 table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 700px; }
@@ -328,6 +348,17 @@ chart to read the year.</p>
       parts of the US rather than to the country. Only five indicators have it.</p>
     </div>
   </div>
+  <div class="world">
+    <div class="world-head">
+      <h3>Where NYC sits in the world · 2019</h3>
+      <span class="rank">#<b>5</b> of 186</span>
+    </div>
+    <figure id="w-pm25"></figure>
+    <p class="world-note">Only four countries' cities breathe cleaner air than New York's —
+    <em>Iceland, Guadeloupe, Finland and Estonia</em>. This is the one comparison here that is
+    like-for-like: Tier 1 means NYC is measured against <em>other countries' city aggregates</em>,
+    not against whole nations.</p>
+  </div>
   <div class="caveat">
     <h3>Read with this</h3>
     <p>Units agree (µg/m³) and both are annual means, but the methods differ: NYC's figure comes
@@ -363,6 +394,17 @@ chart to read the year.</p>
       <p>There is <strong>no ACS 1-year release for 2020</strong>, so there is no denominator and
       no rate — on the year NYC's count jumped to 456. We left it empty.</p>
     </div>
+  </div>
+  <div class="world">
+    <div class="world-head">
+      <h3>Where NYC sits in the world · 2019</h3>
+      <span class="rank">#<b>85</b> of 137</span>
+    </div>
+    <figure id="w-hom"></figure>
+    <p class="world-note">Against the United States, NYC looks like a success story. Against the
+    world it sits in the <em>bottom half</em> — between <em>Pakistan and Montenegro</em>, with 84
+    countries reporting a lower rate. <em>Same number, different comparator, opposite
+    conclusion.</em></p>
   </div>
   <div class="caveat">
     <h3>Read with this</h3>
@@ -401,6 +443,16 @@ chart to read the year.</p>
       <p>The two numbers do not cover the same waste. The gap is <strong>real but
       overstated</strong>, and by an amount nobody has quantified.</p>
     </div>
+  </div>
+  <div class="world">
+    <div class="world-head">
+      <h3>Where NYC sits in the world · 2019</h3>
+      <span class="rank">#<b>38</b> of 64</span>
+    </div>
+    <figure id="w-waste"></figure>
+    <p class="world-note">Between <em>Bahrain and Greece</em>, and behind <em>Japan and Iceland</em>.
+    Only 63 countries report this indicator at all, so the field is thin — and the definitional
+    caveat below applies to every one of these comparisons, not just the US one.</p>
   </div>
   <div class="caveat">
     <h3>This is the chart the whole project exists for</h3>
@@ -547,6 +599,8 @@ const DATA = {
   }
 };
 
+const WORLD = {"pm25":{"nyc":6.6,"tier":1,"higher":false,"vals":[["BHS","Bahamas",4.86],["ISL","Iceland",6.07],["GLP","Guadeloupe",6.31],["FIN","Finland",6.4],["EST","Estonia",6.67],["SWE","",6.71],["CAN","Canada",6.87],["BRN","Brunei",6.96],["PRI","Puerto Rico",7.16],["NOR","Norway",7.49],["USA","",7.57],["DOM","Dominican Republic",7.98],["PRT","Portugal",7.98],["PYF","French Polynesia",8.31],["URY","",8.46],["NZL","New Zealand",8.54],["IRL","Ireland",8.66],["NCL","New Caledonia",8.68],["LUX","Luxembourg",8.74],["SLB","Solomon Islands",8.78],["AUS","Australia",9.08],["MCO","Monaco",9.21],["PNG","Papua New Guinea",9.67],["MTQ","Martinique",9.75],["BRB","Barbados",9.83],["CHE","Switzerland",9.87],["MUS","Mauritius",9.89],["JEY","Jersey",9.92],["KEN","Kenya",10.01],["GBR","United Kingdom",10.06],["ESP","Spain",10.19],["RUS","Russia",10.19],["HTI","Haiti",10.38],["TTO","",10.39],["BLZ","Belize",10.45],["DNK","Denmark",10.7],["ARG","Argentina",11.07],["NLD","Netherlands",11.15],["JPN","Japan",11.32],["BRA","Brazil",11.75],["LTU","Lithuania",11.83],["PAN","Panama",11.85],["DEU","Germany",11.92],["GUY","Guyana",12.01],["FRA","France",12.03],["BEL","Belgium",12.3],["REU","R\u00e9union",12.33],["MDV","Maldives",12.34],["GIB","Gibraltar",12.56],["MLT","Malta",13.08],["SUR","Suriname",13.21],["AUT","Austria",13.33],["SGP","Singapore",13.33],["PRY","Paraguay",13.5],["MDA","Moldova",13.63],["MAR","Morocco",13.92],["MYT","Mayotte",13.93],["NAM","Namibia",14.04],["GUF","French Guiana",14.13],["ROU","Romania",14.61],["COM","Comoros",14.71],["BWA","Botswana",14.78],["SOM","Somalia",14.92],["ZWE","",15.01],["CZE","Czech Republic",15.03],["UKR","",15.2],["HRV","Croatia",15.22],["CRI","Costa Rica",15.46],["VAT","",15.48],["ITA","Italy",15.55],["LVA","Latvia",15.64],["TZA","",15.93],["SVN","",15.94],["COL","Colombia",15.97],["HUN","Hungary",16.07],["GRC","Greece",16.16],["CYP","Cyprus",16.29],["SWZ","",16.35],["SVK","",16.64],["ALB","Albania",16.7],["VEN","",16.7],["BTN","Bhutan",16.91],["NIC","Nicaragua",17.07],["ECU","Ecuador",17.31],["BLR","Belarus",17.51],["JAM","Jamaica",17.6],["MNE","Montenegro",18.3],["MOZ","Mozambique",18.52],["BGR","Bulgaria",18.63],["CUB","Cuba",18.71],["MEX","Mexico",19.04],["ZMB","",19.43],["HND","Honduras",19.75],["KHM","Cambodia",19.8],["POL","Poland",20.36],["LSO","Lesotho",20.41],["ISR","Israel",20.42],["SSD","South Sudan",20.65],["MWI","Malawi",20.82],["MDG","Madagascar",20.89],["DJI","Djibouti",21.04],["IDN","Indonesia",21.29],["GEO","Georgia",21.66],["SRB","Serbia",21.91],["TLS","",22.26],["CHL","Chile",22.63],["VNM","",23.28],["GTM","Guatemala",23.31],["TUR","",23.34],["ETH","Ethiopia",23.5],["DZA","Algeria",23.75],["ZAF","",23.78],["SLV","El Salvador",23.84],["KOR","South Korea",24.22],["SDN","Sudan",24.42],["LBN","Lebanon",24.61],["ERI","Eritrea",24.63],["LAO","Laos",24.87],["LKA","Sri Lanka",25.26],["MYS","Malaysia",25.32],["PHL","Philippines",25.39],["TKM","",26.02],["JOR","Jordan",26.28],["THA","",26.34],["SYR","",26.57],["AZE","Azerbaijan",27.15],["BOL","Bolivia",27.43],["MMR","Myanmar",27.85],["LBY","Libya",28.4],["GNQ","Equatorial Guinea",28.68],["TUN","",28.72],["BDI","Burundi",29.04],["BIH","Bosnia and Herzegovina",32.53],["BEN","Benin",32.61],["PER","Peru",32.7],["MKD","Macedonia [FYROM]",32.75],["PSE","Palestinian Territories",32.93],["CPV","Cape Verde",33.14],["AGO","Angola",33.19],["GAB","Gabon",33.96],["CAF","Central African Republic",34.65],["IRN","Iran",36.41],["STP","S\u00e3o Tom\u00e9 and Pr\u00edncipe",36.46],["COG","Congo [Republic]",36.49],["NPL","Nepal",36.75],["OMN","Oman",36.91],["RWA","Rwanda",38.18],["ARM","Armenia",38.26],["KAZ","Kazakhstan",38.39],["KGZ","Kyrgyzstan",38.77],["ARE","United Arab Emirates",38.93],["UGA","",39.01],["CHN","China",39.12],["COD","Congo [DRC]",39.29],["TGO","",39.42],["LBR","Liberia",41.88],["GNB","Guinea-Bissau",42.65],["GMB","Gambia",43.5],["YEM","",43.87],["SEN","Senegal",44.35],["GIN","Guinea",45.36],["PRK","North Korea",45.39],["SLE","Sierra Leone",45.42],["IRQ","Iraq",45.44],["UZB","",46.63],["MLI","Mali",48.51],["BGD","Bangladesh",50.12],["BFA","Burkina Faso",51.29],["BHR","Bahrain",51.59],["PAK","Pakistan",53.18],["CIV","C\u00f4te d'Ivoire",54.06],["NGA","Nigeria",54.56],["GHA","Ghana",54.63],["MRT","Mauritania",54.7],["IND","India",55.57],["MNG","Mongolia",58.21],["NER","Niger",59.53],["TCD","",60.7],["SAU","Saudi Arabia",60.92],["QAT","Qatar",60.94],["CMR","Cameroon",62.02],["TJK","",62.65],["EGY","Egypt",66.42],["KWT","Kuwait",67.67],["AFG","Afghanistan",84.04]]},"hom":{"nyc":3.63,"tier":3,"higher":false,"vals":[["ASM","American Samoa",0],["BMU","Bermuda",0],["TUV","",0],["VAT","",0],["SGP","Singapore",0.21],["JPN","Japan",0.25],["BHR","Bahrain",0.27],["ISL","Iceland",0.28],["MAC","Macau",0.3],["HKG","Hong Kong",0.32],["PSE","Palestinian Territories",0.32],["KWT","Kuwait",0.36],["QAT","Qatar",0.39],["OMN","Oman",0.5],["CHN","China",0.52],["NOR","Norway",0.52],["ITA","Italy",0.53],["CHE","Switzerland",0.54],["KOR","South Korea",0.57],["MDV","Maldives",0.62],["IRL","Ireland",0.63],["LUX","Luxembourg",0.64],["POL","Poland",0.66],["HUN","Hungary",0.67],["SVN","",0.67],["ARE","United Arab Emirates",0.68],["VUT","",0.68],["ESP","Spain",0.7],["NLD","Netherlands",0.71],["PRT","Portugal",0.71],["GRC","Greece",0.73],["DEU","Germany",0.75],["HRV","Croatia",0.83],["CZE","Czech Republic",0.86],["DNK","Denmark",0.86],["AUT","Austria",0.87],["AUS","Australia",0.88],["FSM","Federated States of Micronesia",0.91],["MYS","Malaysia",0.93],["TON","",0.95],["MLT","Malta",0.99],["BTN","Bhutan",1.05],["MRT","Mauritania",1.07],["SWE","",1.08],["GBR","United Kingdom",1.14],["JOR","Jordan",1.14],["FRA","France",1.15],["CYP","Cyprus",1.17],["BGR","Bulgaria",1.19],["DZA","Algeria",1.2],["UZB","",1.2],["MKD","Macedonia [FYROM]",1.21],["ROU","Romania",1.25],["BIH","Bosnia and Herzegovina",1.26],["SRB","",1.26],["SVK","",1.39],["FIN","Finland",1.47],["ISR","Israel",1.64],["AZE","Azerbaijan",1.66],["CAN","Canada",1.82],["GHA","Ghana",1.83],["NPL","Nepal",1.95],["EST","Estonia",1.96],["GEO","Georgia",2.03],["MUS","Mauritius",2.1],["ALB","Albania",2.25],["NZL","New Zealand",2.28],["BLR","Belarus",2.38],["TUR","",2.4],["ARM","Armenia",2.51],["LIE","Liechtenstein",2.6],["FJI","Fiji",2.73],["MAR","Morocco",2.77],["MMR","Myanmar",2.89],["IND","India",2.95],["CYM","Cayman Islands",2.97],["KEN","Kenya",3.08],["LBN","Lebanon",3.14],["RWA","Rwanda",3.16],["ATG","Antigua and Barbuda",3.28],["LKA","Sri Lanka",3.31],["LTU","Lithuania",3.36],["LVA","Latvia",3.4],["PAK","Pakistan",3.47],["MNE","Montenegro",3.76],["MDA","Moldova",3.89],["UKR","",4.05],["BOL","Bolivia",4.26],["PHL","Philippines",4.3],["GUM","Guam",4.33],["CUB","Cuba",4.46],["TZA","",4.59],["CHL","Chile",4.81],["TUN","",4.81],["USA","",4.93],["SUR","",4.95],["ARG","Argentina",5.13],["ZWE","",5.17],["MNG","Mongolia",6.34],["CPV","Cape Verde",6.42],["ECU","Ecuador",6.86],["AFG","Afghanistan",7.16],["PER","Peru",7.35],["RUS","Russia",7.64],["NIC","Nicaragua",7.94],["PRY","Paraguay",8.5],["SYC","",8.5],["DOM","Dominican Republic",9.42],["UGA","",10.97],["CRI","Costa Rica",11.26],["PAN","Panama",11.33],["URY","",11.6],["NAM","Namibia",12.04],["GUF","French Guiana",13.23],["GRD","Grenada",13.8],["GUY","Guyana",16.84],["BRB","Barbados",17.07],["VCT","",18.24],["DMA","Dominica",19.15],["PRI","Puerto Rico",19.25],["NGA","Nigeria",21.1],["BRA","Brazil",21.24],["COL","Colombia",23.4],["BHS","Bahamas",24.07],["KNA","Saint Kitts and Nevis",25.56],["LCA","Saint Lucia",25.89],["GTM","Guatemala",25.94],["MEX","Mexico",29.15],["TCA","",30.12],["BLZ","Belize",34.73],["ZAF","",35.79],["TTO","",36.3],["SLV","",38.54],["HND","Honduras",41.01],["VEN","",41.03],["JAM","Jamaica",47.46]]},"waste":{"nyc":17.34,"tier":3,"higher":true,"vals":[["MYS","Malaysia",147.66],["SGP","Singapore",58.71],["KOR","South Korea",56.52],["SVN","Slovenia",51.52],["DEU","Germany",48.0],["THA","Thailand",37.51],["REU","R\u00e9union",36.81],["LVA","Latvia",35.36],["BEL","Belgium",34.12],["DNK","Denmark",33.55],["ITA","Italy",32.46],["SWE","Sweden",32.46],["LTU","Lithuania",31.28],["EST","Estonia",30.3],["NOR","Norway",29.91],["CHE","Switzerland",29.89],["HRV","Croatia",29.86],["LUX","Luxembourg",29.74],["FIN","Finland",29.32],["HKG","Hong Kong",28.88],["IRL","Ireland",28.24],["NLD","Netherlands",27.72],["BGR","Bulgaria",26.93],["GBR","United Kingdom",26.92],["SVK","Slovakia",26.87],["HUN","Hungary",26.51],["AUT","Austria",26.47],["POL","Poland",25.03],["CZE","Czech Republic",22.83],["FRA","France",22.46],["AUS","Australia",22.32],["BLR","Belarus",20.73],["ARE","United Arab Emirates",20.64],["CYP","Cyprus",20.41],["ESP","Spain",19.67],["JPN","Japan",19.19],["ISL","Iceland",18.85],["BHR","Bahrain",16.85],["GRC","Greece",16.0],["PRT","Portugal",12.78],["TUR","Turkey",11.95],["KAZ","Kazakhstan",11.12],["MTQ","Martinique",9.14],["MLT","Malta",9.07],["ROU","Romania",7.67],["ISR","Israel",6.73],["ARG","Argentina",6.68],["GLP","Guadeloupe",5.96],["MNE","Montenegro",5.59],["GUF","French Guiana",4.09],["CUB","Cuba",3.39],["CRI","Costa Rica",2.96],["PSE","Palestinian Territories",2],["MAC","Macau",0.97],["QAT","Qatar",0.71],["BGD","Bangladesh",0.52],["BMU","Bermuda",0.46],["ZAF","South Africa",0.33],["AND","Andorra",0],["AZE","Azerbaijan",0],["LIE","Liechtenstein",0],["MCO","Monaco",0],["UKR","Ukraine",0.0]]}};
+
 const W = 900, H = 330, M = {t: 22, r: 92, b: 34, l: 46};
 
 function draw(figId, legendId, spec) {
@@ -677,7 +731,63 @@ function niceStep(raw) {
   return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * mag;
 }
 
+// A strip plot: every reporting country as a tick on one linear value axis,
+// with NYC marked. The distribution is skewed, so position alone would flatter
+// NYC on the crime and waste charts -- the rank beside it carries that truth.
+function strip(figId, key, unit, decimals, marks) {
+  const spec = WORLD[key];
+  const SW = 900, SH = 76, pad = {l: 14, r: 14, t: 26, b: 22};
+  const vals = spec.vals.map(v => v[2]).concat([spec.nyc]);
+  const lo = 0, hi = Math.max(...vals) * 1.02;
+  const x = v => pad.l + (v - lo) / (hi - lo) * (SW - pad.l - pad.r);
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${SW} ${SH}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label",
+    `New York City at ${spec.nyc} ${unit} among ${spec.vals.length} reporting countries`);
+  const add = (tag, attrs, text) => {
+    const el = document.createElementNS(ns, tag);
+    for (const k in attrs) el.setAttribute(k, attrs[k]);
+    if (text != null) el.textContent = text;
+    svg.appendChild(el); return el;
+  };
+
+  add("line", {x1: pad.l, x2: SW - pad.r, y1: SH - pad.b, y2: SH - pad.b,
+    stroke: "var(--rule-strong)", "stroke-width": 1});
+  [lo, hi / 2, hi].forEach(v => {
+    add("text", {class: "strip-label", x: x(v), y: SH - 6, "text-anchor": "middle"},
+      `${fmt(v, decimals)}${v === hi ? " " + unit : ""}`);
+  });
+
+  spec.vals.forEach(([code, name, v]) => {
+    const t = add("line", {class: "tick", x1: x(v), x2: x(v),
+      y1: pad.t + 2, y2: SH - pad.b - 2});
+    const title = document.createElementNS(ns, "title");
+    title.textContent = `${name} — ${fmt(v, decimals)} ${unit}`;
+    t.appendChild(title);
+  });
+
+  (marks || []).forEach(m => {
+    const hit = spec.vals.find(v => v[0] === m);
+    if (!hit) return;
+    add("line", {x1: x(hit[2]), x2: x(hit[2]), y1: pad.t + 2, y2: SH - pad.b - 2,
+      stroke: "var(--ink-3)", "stroke-width": 1.5, opacity: 0.9});
+    add("text", {class: "strip-label", x: x(hit[2]), y: pad.t - 6, "text-anchor": "middle"},
+      hit[1].length > 13 ? hit[0] : hit[1]);
+  });
+
+  add("line", {class: "tick-nyc", x1: x(spec.nyc), x2: x(spec.nyc),
+    y1: pad.t - 2, y2: SH - pad.b});
+  add("text", {class: "strip-nyc-label", x: x(spec.nyc) + 7, y: pad.t + 6}, "NYC");
+  document.getElementById(figId).appendChild(svg);
+}
+
 draw("c-pm25", "l-pm25", DATA.pm25);
 draw("c-hom", "l-hom", DATA.hom);
 draw("c-waste", "l-waste", DATA.waste);
+
+strip("w-pm25", "pm25", "µg/m³", 0, ["IND", "CHN", "USA", "FRA"]);
+strip("w-hom", "hom", "per 100k", 0, ["JPN", "GBR", "USA", "BRA"]);
+strip("w-waste", "waste", "%", 0, ["DEU", "JPN", "USA"]);
 </script>
