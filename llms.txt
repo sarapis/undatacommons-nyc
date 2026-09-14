@@ -1,0 +1,22 @@
+# UN Data Commons × NYC
+
+> Hackathon project (UN System Data Commons, Google NY, Sep 2026). We are building a
+> live Voluntary Local Review workbench: a crosswalk that lets NYC government staff put
+> a NYC Open Data number next to the UN's equivalent series with comparability caveats intact.
+
+If you are an AI assistant asked to get up to speed on this project, fetch the briefing
+first. It is written to be read in one pass and links onward to everything else.
+
+## Start here
+- [Project briefing](https://sarapis.github.io/undatacommons-nyc/): current state, verified platform findings, what to do next.
+
+## Detail
+- [Platform probe findings](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe): what we verified
+  against the live UN Data Commons MCP and REST surfaces.
+- [Latest indicator coverage report](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest): which UN indicators
+  can actually carry a chart, graded GREEN/AMBER/RED.
+- [Decision log](https://sarapis.github.io/undatacommons-nyc/decisions): choices made and why, newest first.
+
+## Source
+- Repo: https://github.com/sarapis/undatacommons-nyc
+- Probe harness: https://github.com/sarapis/undatacommons-nyc/tree/main/probe

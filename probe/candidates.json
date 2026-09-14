@@ -1,0 +1,22 @@
+{
+  "_comment": "Candidate indicators for the NYC VLR crosswalk. Each entry is a natural-language query run against search_indicators, scoped to the places listed. Add topics freely -- the probe is cheap and the point is to find out what is chartable BEFORE we design around it.",
+  "places": ["United States"],
+  "peer_places": ["United Kingdom", "Canada", "France", "Germany", "Japan"],
+  "topics": [
+    {"id": "sdg-3.6.1",  "label": "Road traffic deaths",          "query": "road traffic deaths"},
+    {"id": "sdg-11.6.2", "label": "Air quality (PM2.5)",          "query": "fine particulate matter air pollution PM2.5"},
+    {"id": "sdg-11.1.1", "label": "Inadequate housing",           "query": "population living in inadequate housing or slums"},
+    {"id": "sdg-6.3.2",  "label": "Ambient water quality",        "query": "ambient water quality"},
+    {"id": "sdg-11.6.1", "label": "Municipal solid waste",        "query": "municipal solid waste collection and recycling"},
+    {"id": "sdg-16.1.1", "label": "Homicide rate",                "query": "intentional homicide rate"},
+    {"id": "sdg-8.5.2",  "label": "Unemployment rate",            "query": "unemployment rate"},
+    {"id": "sdg-1.2.1",  "label": "Poverty",                      "query": "population below national poverty line"},
+    {"id": "sdg-7.2.1",  "label": "Renewable energy share",       "query": "renewable energy share of final energy consumption"},
+    {"id": "sdg-17.8.1", "label": "Internet use",                 "query": "individuals using the internet"},
+    {"id": "sdg-11.7.1", "label": "Public open space",            "query": "urban public open space"},
+    {"id": "sdg-4.1.2",  "label": "School completion",            "query": "school completion rate"},
+    {"id": "sdg-3.9.1",  "label": "Deaths from air pollution",    "query": "mortality attributed to air pollution"},
+    {"id": "sdg-5.5.1",  "label": "Women in local government",    "query": "women in local government"},
+    {"id": "sdg-9.c.1",  "label": "Mobile network coverage",      "query": "population covered by mobile network"}
+  ]
+}
