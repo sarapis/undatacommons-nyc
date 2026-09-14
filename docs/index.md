@@ -8,6 +8,11 @@ title: Project briefing
 
 **Last updated: 2026-09-14** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
+## The demo
+
+**[Eleven Pairs, Three Charts](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html)** — three comparisons that hold with
+provenance and grade on every card, then the eight that fail and why. Public, no sign-in.
+
 ## The deadline
 
 **Builders' Day — Tue 22 Sep 2026, 10:00–18:00, Google NY (HUD315).** UN Data Commons goes
@@ -163,6 +168,7 @@ international comparison does not exist.
 
 | What | Where |
 |---|---|
+| Demo — Eleven Pairs, Three Charts | [https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html) |
 | Activity feed (append-only updates) | [https://sarapis.github.io/undatacommons-nyc/activity](https://sarapis.github.io/undatacommons-nyc/activity) |
 | Crosswalk status (both sides verified) | [https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest) |
 | Platform probe findings | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe) |
