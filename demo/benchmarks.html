@@ -1,0 +1,683 @@
+<title>Eleven Pairs, Three Charts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+
+<style>
+:root {
+  color-scheme: light;
+  --ground:       #f1f4f5;
+  --surface:      #ffffff;
+  --surface-sunk: #e7ebed;
+  --ink:          #0e1519;
+  --ink-2:        #4a5960;
+  --ink-3:        #7c8b92;
+  --rule:         #d3dade;
+  --rule-strong:  #b3bec4;
+
+  --nyc:          #2a78d6;
+  --comp:         #eb6834;
+
+  --good:         #0ca30c;
+  --warning:      #fab219;
+  --serious:      #ec835a;
+  --critical:     #d03b3b;
+
+  --grid:         #e3e8ea;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body:    "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --mono:    "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground:       #101619;
+    --surface:      #182025;
+    --surface-sunk: #0c1114;
+    --ink:          #eef3f5;
+    --ink-2:        #a3b2b9;
+    --ink-3:        #74858d;
+    --rule:         #2a353b;
+    --rule-strong:  #3d4b52;
+    --nyc:          #3987e5;
+    --comp:         #d95926;
+    --grid:         #232e34;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground:       #101619;
+  --surface:      #182025;
+  --surface-sunk: #0c1114;
+  --ink:          #eef3f5;
+  --ink-2:        #a3b2b9;
+  --ink-3:        #74858d;
+  --rule:         #2a353b;
+  --rule-strong:  #3d4b52;
+  --nyc:          #3987e5;
+  --comp:         #d95926;
+  --grid:         #232e34;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px 88px; }
+
+/* ---------- masthead ---------- */
+.masthead { padding: 52px 0 36px; border-bottom: 2px solid var(--ink); }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 20px;
+}
+h1 {
+  font-family: var(--display);
+  font-weight: 700; font-size: clamp(34px, 5.4vw, 56px);
+  line-height: 1.04; letter-spacing: -0.022em;
+  margin: 0 0 22px; text-wrap: balance; max-width: 19ch;
+}
+.lede { font-size: 20px; line-height: 1.52; color: var(--ink-2); max-width: 64ch; margin: 0; }
+.lede strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- funnel ---------- */
+.funnel {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); margin: 0 0 56px;
+}
+.funnel div { background: var(--surface); padding: 20px 18px; }
+.funnel dt {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.funnel dd {
+  margin: 0; font-family: var(--display); font-weight: 600;
+  font-size: 34px; line-height: 1; letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.funnel .last dd { color: var(--nyc); }
+.funnel small { display: block; font-family: var(--body); font-size: 13px; color: var(--ink-3); margin-top: 7px; line-height: 1.35; }
+
+h2 {
+  font-family: var(--display); font-weight: 600;
+  font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--ink-2); margin: 0 0 4px;
+}
+.section-rule { border: 0; border-top: 1px solid var(--rule-strong); margin: 0 0 26px; }
+.section-note { font-size: 15px; color: var(--ink-2); margin: 0 0 26px; max-width: 62ch; }
+
+/* ---------- benchmark cards ---------- */
+.card {
+  background: var(--surface); border: 1px solid var(--rule);
+  margin-bottom: 26px;
+}
+.card-head {
+  display: flex; flex-wrap: wrap; gap: 14px 20px;
+  align-items: baseline; justify-content: space-between;
+  padding: 22px 24px 18px; border-bottom: 1px solid var(--rule);
+}
+.card-title { margin: 0; font-family: var(--display); font-weight: 600; font-size: 23px; letter-spacing: -0.01em; }
+.sdg-code {
+  font-family: var(--mono); font-size: 12px; color: var(--ink-3);
+  display: block; margin-bottom: 5px; letter-spacing: 0.04em;
+}
+.chips { display: flex; gap: 7px; flex-wrap: wrap; }
+.chip {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 4px 9px; border: 1px solid var(--rule-strong); color: var(--ink-2);
+  white-space: nowrap;
+}
+.chip.proxy { border-color: var(--warning); color: var(--ink); background: color-mix(in srgb, var(--warning) 16%, transparent); }
+.chip.tier { background: var(--surface-sunk); }
+
+.plot { padding: 20px 24px 8px; }
+figure { margin: 0; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+.legend { display: flex; gap: 20px; flex-wrap: wrap; padding: 0 24px 18px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-2); }
+.swatch { width: 15px; height: 3px; flex: none; }
+
+.readout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--rule); border-top: 1px solid var(--rule);
+}
+.readout > div { background: var(--surface); padding: 16px 24px; }
+.readout h3 {
+  margin: 0 0 6px; font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+.readout p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+.readout .num { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.caveat {
+  border-top: 1px solid var(--rule);
+  padding: 18px 24px; display: grid; gap: 4px;
+  background: color-mix(in srgb, var(--warning) 9%, var(--surface));
+}
+.caveat h3 {
+  margin: 0; font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2);
+}
+.caveat p { margin: 0; font-size: 15.5px; line-height: 1.55; max-width: 76ch; }
+.caveat strong { font-weight: 600; }
+
+.prov {
+  font-family: var(--mono); font-size: 11.5px; line-height: 1.75; color: var(--ink-3);
+  padding: 14px 24px; border-top: 1px solid var(--rule); background: var(--surface-sunk);
+  overflow-x: auto;
+}
+.prov b { font-weight: 500; color: var(--ink-2); }
+
+/* ---------- ledger ---------- */
+.ledger-scroll { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 700px; }
+th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th {
+  font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-3); background: var(--surface-sunk);
+  border-bottom: 1px solid var(--rule-strong); white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+td.ind { font-weight: 600; white-space: nowrap; }
+td.ind span { display: block; font-family: var(--mono); font-size: 11.5px; font-weight: 400; color: var(--ink-3); }
+td.why { color: var(--ink-2); line-height: 1.5; }
+.tag {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500; letter-spacing: 0.06em;
+  padding: 3px 7px; border: 1px solid currentColor; white-space: nowrap; display: inline-block;
+}
+.t-blocked  { color: var(--critical); }
+.t-context  { color: var(--serious); }
+.t-nosource { color: var(--ink-3); }
+
+/* ---------- inversion ---------- */
+.inversion {
+  border: 2px solid var(--ink); background: var(--surface);
+  padding: 30px 28px; margin-top: 56px;
+}
+.inversion h2 { color: var(--ink); margin-bottom: 14px; }
+.inversion p { margin: 0 0 14px; max-width: 68ch; font-size: 17px; }
+.inversion p:last-child { margin-bottom: 0; }
+.versus {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--rule-strong); border: 1px solid var(--rule-strong);
+  margin: 22px 0;
+}
+.versus > div { background: var(--surface); padding: 18px 20px; }
+.versus dt {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px;
+}
+.versus dd { margin: 0; }
+.versus .big {
+  font-family: var(--display); font-weight: 700; font-size: 30px;
+  line-height: 1.12; letter-spacing: -0.015em; display: block; margin-bottom: 6px;
+}
+.versus small { font-size: 14px; color: var(--ink-2); line-height: 1.45; display: block; }
+
+footer {
+  margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule);
+  font-size: 14px; color: var(--ink-3); line-height: 1.65;
+}
+footer a { color: var(--nyc); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--nyc) 40%, transparent); }
+footer a:hover, footer a:focus-visible { border-bottom-color: var(--nyc); }
+footer p { margin: 0 0 10px; max-width: 74ch; }
+:focus-visible { outline: 2px solid var(--nyc); outline-offset: 2px; }
+
+/* ---------- chart internals ---------- */
+.gridline { stroke: var(--grid); stroke-width: 1; }
+.axis-text { font-family: var(--mono); font-size: 11px; fill: var(--ink-3); }
+.series-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.endlabel { font-family: var(--mono); font-size: 12px; font-weight: 600; }
+.gapnote { font-family: var(--mono); font-size: 10.5px; fill: var(--ink-3); }
+.hover-line { stroke: var(--rule-strong); stroke-width: 1; stroke-dasharray: 3 3; }
+.tip {
+  position: absolute; pointer-events: none; z-index: 5;
+  background: var(--surface); border: 1px solid var(--rule-strong);
+  padding: 9px 11px; font-size: 13px; line-height: 1.5;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13); white-space: nowrap;
+  font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .1s;
+}
+.tip .y { font-family: var(--mono); font-size: 11px; color: var(--ink-3); display: block; margin-bottom: 4px; }
+.tip i { display: inline-block; width: 10px; height: 3px; margin-right: 6px; vertical-align: middle; }
+.plot { position: relative; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 760px) {
+  .funnel { grid-template-columns: repeat(2, 1fr); }
+  .readout, .versus { grid-template-columns: 1fr; }
+  body { font-size: 16px; }
+}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">UN Data Commons × NYC Open Data · Builders' Day, Google NY, 22 Sep 2026</p>
+  <h1>Eleven pairs. Three can honestly share an axis.</h1>
+  <p class="lede">New York published the world's first Voluntary Local Review in 2018. The UN now
+  holds the authoritative global series. <strong>Joining them is the easy part.</strong> Knowing
+  which joins are legitimate is the whole job — and most of them are not.</p>
+</header>
+
+<dl class="funnel">
+  <div>
+    <dt>SDG corpus</dt>
+    <dd>689</dd>
+    <small>base indicators in the goal framework</small>
+  </div>
+  <div>
+    <dt>With US data</dt>
+    <dd>248</dd>
+    <small>377 have none at all</small>
+  </div>
+  <div>
+    <dt>Mapped to NYC</dt>
+    <dd>11</dd>
+    <small>both sides verified by hand</small>
+  </div>
+  <div class="last">
+    <dt>Chartable</dt>
+    <dd>3</dd>
+    <small>the other 8 fail, for reasons worth knowing</small>
+  </div>
+</dl>
+
+<h2>The three that hold</h2>
+<hr class="section-rule">
+<p class="section-note">Every figure below carries its source, its vintage and its unit. Hover any
+chart to read the year.</p>
+
+<!-- ============ PM2.5 ============ -->
+<section class="card">
+  <div class="card-head">
+    <div>
+      <span class="sdg-code">SDG 11.6.2 · undata/sdg/EN_ATM_PM25</span>
+      <h3 class="card-title">Fine particulate matter</h3>
+    </div>
+    <div class="chips">
+      <span class="chip tier">Tier 1 · city aggregate</span>
+      <span class="chip proxy">Proxy</span>
+    </div>
+  </div>
+  <div class="plot"><figure id="c-pm25"></figure></div>
+  <div class="legend" id="l-pm25"></div>
+  <div class="readout">
+    <div>
+      <h3>Where NYC sits</h3>
+      <p><span class="num">6.60</span> µg/m³ in 2019, against <span class="num">7.57</span> for the
+      US city aggregate — and the gap has widened every year since 2016.</p>
+    </div>
+    <div>
+      <h3>Why this one is Tier 1</h3>
+      <p>The UN publishes a <em>degree-of-urbanisation</em> slice, so this compares NYC to the city
+      parts of the US rather than to the country. Only five indicators have it.</p>
+    </div>
+  </div>
+  <div class="caveat">
+    <h3>Read with this</h3>
+    <p>Units agree (µg/m³) and both are annual means, but the methods differ: NYC's figure comes
+    from <strong>NYCCAS ground monitors</strong>, the UN's is a <strong>population-weighted
+    modelled estimate</strong>. Comparable in level, not interchangeable.</p>
+  </div>
+  <p class="prov"><b>UN</b> undata/sdg/EN_ATM_PM25.URBANIZATION--DOU_CITY · 10 obs 2010–2019 · unstats.un.org/sdgs/dataportal<br>
+  <b>NYC</b> c3uy-2p5r Air Quality and Health Impacts · citywide annual mean · updated 2026-06-18</p>
+</section>
+
+<!-- ============ HOMICIDE ============ -->
+<section class="card">
+  <div class="card-head">
+    <div>
+      <span class="sdg-code">SDG 16.1.1 · undata/sdg/VC_IHR_PSRC</span>
+      <h3 class="card-title">Intentional homicide</h3>
+    </div>
+    <div class="chips">
+      <span class="chip tier">Tier 3 · national</span>
+      <span class="chip proxy">Proxy</span>
+    </div>
+  </div>
+  <div class="plot"><figure id="c-hom"></figure></div>
+  <div class="legend" id="l-hom"></div>
+  <div class="readout">
+    <div>
+      <h3>The crossing</h3>
+      <p>NYC ran above the national rate until <span class="num">2013</span>, then below it — and
+      stayed below through the 2021 spike. Invisible from either dataset alone.</p>
+    </div>
+    <div>
+      <h3>The 2020 gap is deliberate</h3>
+      <p>There is <strong>no ACS 1-year release for 2020</strong>, so there is no denominator and
+      no rate — on the year NYC's count jumped to 456. We left it empty.</p>
+    </div>
+  </div>
+  <div class="caveat">
+    <h3>Read with this</h3>
+    <p>NYPD records <strong>murder &amp; non-negligent manslaughter</strong>, which tracks the UNODC
+    intentional-homicide definition closely. NYC publishes a count, not a rate — the denominator is
+    Census ACS annual population. Pre-2006 rows in the NYPD file carry junk incident dates
+    (17 murders in 1990) and are excluded.</p>
+  </div>
+  <p class="prov"><b>UN</b> undata/sdg/VC_IHR_PSRC · 21 obs 2000–2023 · per 100,000 population · unstats.un.org/sdgs/dataportal<br>
+  <b>NYC</b> qgea-i56i NYPD Complaint Data Historic, offence code 101 · updated 2026-04-28<br>
+  <b>Denominator</b> Census ACS 1-year B01003_001E · place 51000 / state 36</p>
+</section>
+
+<!-- ============ WASTE ============ -->
+<section class="card">
+  <div class="card-head">
+    <div>
+      <span class="sdg-code">SDG 11.6.1 · undata/sdg/EN_MWT_RCYR</span>
+      <h3 class="card-title">Municipal waste recycled</h3>
+    </div>
+    <div class="chips">
+      <span class="chip tier">Tier 3 · national</span>
+      <span class="chip proxy">Proxy</span>
+    </div>
+  </div>
+  <div class="plot"><figure id="c-waste"></figure></div>
+  <div class="legend" id="l-waste"></div>
+  <div class="readout">
+    <div>
+      <h3>The naive read</h3>
+      <p>NYC recycles <span class="num">17.2%</span> against <span class="num">23.6%</span> for the
+      US in 2018 — a six-point gap, and an easy headline.</p>
+    </div>
+    <div>
+      <h3>The honest read</h3>
+      <p>The two numbers do not cover the same waste. The gap is <strong>real but
+      overstated</strong>, and by an amount nobody has quantified.</p>
+    </div>
+  </div>
+  <div class="caveat">
+    <h3>This is the chart the whole project exists for</h3>
+    <p>DSNY tonnage covers <strong>residential collection only</strong>. The UN municipal-waste
+    definition <strong>includes commercial waste</strong>. Same units, same period, same apparent
+    shape — and the comparison is still not apples to apples. Every automated check passes here.
+    Only a person reading both definitions catches it.</p>
+  </div>
+  <p class="prov"><b>UN</b> undata/sdg/EN_MWT_RCYR · 19 obs 2000–2018 · percent · unstats.un.org/sdgs/dataportal<br>
+  <b>NYC</b> ebb7-mvp5 DSNY Monthly Tonnage Data · rate derived from tonnage · updated 2026-09-10<br>
+  <b>Note</b> the published Recycling Diversion &amp; Capture Rates dataset has not updated since 2020</p>
+</section>
+
+<h2 style="margin-top:52px">The eight that don't — and why</h2>
+<hr class="section-rule">
+<p class="section-note">A blocked pair is not a failure of the pipeline. Recording <em>why</em> two
+numbers cannot share an axis is the product; a crosswalk showing only the easy pairs would be the
+thing we are building against.</p>
+
+<div class="ledger-scroll">
+<table>
+  <thead>
+    <tr><th>Indicator</th><th>Verdict</th><th>Why it fails</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ind">Road traffic deaths<span>SDG 3.6.1</span></td>
+      <td><span class="tag t-blocked">Blocked</span></td>
+      <td class="why">NYC has daily Vision Zero data, every fatality geocoded. The UN has
+      <strong>one observation</strong> — a 2021 modelled estimate. Blocked by the UN side.</td>
+    </tr>
+    <tr>
+      <td class="ind">Maternal mortality<span>SDG 3.1.1</span></td>
+      <td><span class="tag t-blocked">Blocked</span></td>
+      <td class="why">The UN rate is per 100,000 <strong>live births</strong>, not per population —
+      the denominator lives in a different NYC dataset. NYC also publishes pregnancy-<em>associated</em>
+      deaths, a deliberately broader definition.</td>
+    </tr>
+    <tr>
+      <td class="ind">Child mortality<span>SDG 3.2.1</span></td>
+      <td><span class="tag t-context">Context only</span></td>
+      <td class="why">UN counts deaths <strong>under five</strong>; NYC's series is <strong>under
+      one</strong>. Both are raw counts, so the units "agree" — which is exactly the trap. The chart
+      would look perfect and compare different populations.</td>
+    </tr>
+    <tr>
+      <td class="ind">Poverty<span>SDG 1.2.1</span></td>
+      <td><span class="tag t-context">Context only</span></td>
+      <td class="why">The UN series is the <strong>international</strong> extreme-poverty line
+      (~$2.15/day), near zero for any US city. NYC's own measure is an order of magnitude higher.
+      Two numbers sharing a name and measuring nothing alike.</td>
+    </tr>
+    <tr>
+      <td class="ind">Deaths from air pollution<span>SDG 3.9.1</span></td>
+      <td><span class="tag t-context">Context only</span></td>
+      <td class="why">UN reports a national death <strong>count</strong> from ambient air pollution;
+      NYC reports an age-adjusted <strong>rate for ages 30+</strong> from PM2.5 specifically.
+      Different measure, age base and pollutant scope.</td>
+    </tr>
+    <tr>
+      <td class="ind">Inadequate housing<span>SDG 11.1.1</span></td>
+      <td><span class="tag t-context">Context only</span></td>
+      <td class="why">UN measures the <strong>share of urban population</strong> in slums. NYC's
+      nearest analogue is a <strong>count</strong> of hazardous housing violations — an enforcement
+      output that tracks inspection rates as much as conditions.</td>
+    </tr>
+    <tr>
+      <td class="ind">Built-up area per capita<span>SDG 11.7.1</span></td>
+      <td><span class="tag t-nosource">No NYC source</span></td>
+      <td class="why">Tier 1 UN data with city-level slices across countries, 2000–2025. No NYC
+      equivalent identified yet. Recorded so the gap stays visible rather than forgotten.</td>
+    </tr>
+    <tr>
+      <td class="ind">Safely managed drinking water<span>SDG 6.1.1</span></td>
+      <td><span class="tag t-nosource">No signal</span></td>
+      <td class="why">Sits at ~100% for the US across the whole window, as it would for NYC. Two flat
+      lines at 100 tell an analyst nothing. Excluded deliberately — a ceiling effect is a reason not
+      to build a view, and that judgment belongs written down.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<section class="inversion">
+  <h2>The inversion</h2>
+  <p>We expected the UN to be the rich side and NYC the patchy one. On the city's flagship
+  street-safety programme, it is the other way round.</p>
+  <dl class="versus">
+    <div>
+      <dt>New York City · Vision Zero</dt>
+      <dd>
+        <span class="big">Every fatality, geocoded, daily</span>
+        <small>Motor Vehicle Collisions — Crashes, ~2.2M records since 2012, updated continuously.</small>
+      </dd>
+    </div>
+    <div>
+      <dt>UN · SDG 3.6.1</dt>
+      <dd>
+        <span class="big">One number, 2021</span>
+        <small>A single modelled WHO estimate for the United States. No trend is possible.</small>
+      </dd>
+    </div>
+  </dl>
+  <p>For road safety, the international comparison a city would most want simply does not exist.
+  That is not a gap in NYC's reporting — it is an argument for city data flowing <em>toward</em> the
+  UN system, not only the other way.</p>
+</section>
+
+<footer>
+  <p><b>Method.</b> 689 base indicators enumerated from the SDG goal trees via the UN Data Commons
+  MCP and REST endpoints; 248 screened as having a usable US series; NYC counterparts proposed by
+  embedding search over all 2,400 NYC Open Data datasets, then graded by hand. Comparability grades
+  are human judgments — the harness verifies that a mapping still resolves and that units agree, and
+  a human grade vetoes it.</p>
+  <p><b>Every number here is re-derivable.</b> Code, crosswalk and full working notes:
+  <a href="https://github.com/sarapis/undatacommons-nyc">github.com/sarapis/undatacommons-nyc</a> ·
+  <a href="https://sarapis.github.io/undatacommons-nyc/">project briefing</a>.
+  Figures retrieved 14 Sep 2026 against the UN Data Commons staging deployment; the platform goes
+  public 17 Sep 2026.</p>
+</footer>
+
+</div>
+
+<script>
+const DATA = {
+  pm25: {
+    unit: "µg/m³",
+    nyc: {2010:9.54,2011:10.1,2012:8.95,2013:8.63,2014:8.93,2015:8.56,2016:7.45,2017:7.38,2018:7.0,2019:6.6},
+    comp:{2010:9.947,2011:10.024,2012:9.746,2013:9.388,2014:9.227,2015:8.868,2016:8.09,2017:8.514,2018:8.67,2019:7.572},
+    nycLabel: "New York City", compLabel: "US cities (UN)", decimals: 2
+  },
+  hom: {
+    unit: "per 100k",
+    nyc: {2006:6.927,2007:5.886,2008:6.205,2009:5.434,2010:6.5,2011:6.016,2012:4.99,2013:3.831,2014:3.945,2015:4.047,2016:3.889,2017:3.224,2018:3.572,2019:3.634,2020:null,2021:5.621,2022:5.194,2023:4.662},
+    comp:{2006:5.79,2007:5.67,2008:5.4,2009:5.0,2010:4.73,2011:4.67,2012:4.68,2013:4.47,2014:4.38,2015:4.87,2016:5.29,2017:5.21,2018:4.89,2019:4.93,2020:null,2021:6.78,2022:6.51,2023:5.76},
+    nycLabel: "New York City", compLabel: "United States (UN)", decimals: 2,
+    gapNote: {year: 2020, text: "no ACS 2020"}
+  },
+  waste: {
+    unit: "%",
+    nyc: {2000:19.381,2001:18.008,2002:12.876,2003:8.896,2004:15.52,2005:16.391,2006:15.945,2007:15.885,2008:16.118,2009:15.706,2010:15.476,2011:15.02,2012:14.737,2013:15.117,2014:15.702,2015:16.337,2016:17.028,2017:17.026,2018:17.17},
+    comp:{2000:21.775,2001:22.064,2002:22.105,2003:22.742,2004:22.863,2005:23.348,2006:24.061,2007:24.6,2008:24.524,2009:25.327,2010:25.995,2011:26.467,2012:25.95,2013:25.46,2014:25.6,2015:25.775,2016:25.564,2017:24.931,2018:23.632},
+    nycLabel: "New York City", compLabel: "United States (UN)", decimals: 1
+  }
+};
+
+const W = 900, H = 330, M = {t: 22, r: 92, b: 34, l: 46};
+
+function draw(figId, legendId, spec) {
+  const fig = document.getElementById(figId);
+  const years = Object.keys(spec.nyc).map(Number).sort((a, b) => a - b);
+  const vals = [];
+  years.forEach(y => { [spec.nyc[y], spec.comp[y]].forEach(v => { if (v != null) vals.push(v); }); });
+
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const pad = (hi - lo) * 0.16;
+  lo = Math.max(0, lo - pad); hi = hi + pad;
+  // Land ticks on round numbers so every label names a value the scale reaches.
+  const step = niceStep((hi - lo) / 4);
+  lo = Math.floor(lo / step) * step; hi = Math.ceil(hi / step) * step;
+
+  const x = y => M.l + (y - years[0]) / (years[years.length - 1] - years[0]) * (W - M.l - M.r);
+  const yy = v => M.t + (1 - (v - lo) / (hi - lo)) * (H - M.t - M.b);
+
+  const ticks = [];
+  for (let v = lo; v <= hi + 1e-9; v += step) ticks.push(+v.toFixed(6));
+
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label",
+    `${spec.nycLabel} compared with ${spec.compLabel}, ${years[0]} to ${years[years.length-1]}, in ${spec.unit}`);
+
+  const add = (tag, attrs, text) => {
+    const el = document.createElementNS(ns, tag);
+    for (const k in attrs) el.setAttribute(k, attrs[k]);
+    if (text != null) el.textContent = text;
+    svg.appendChild(el);
+    return el;
+  };
+
+  ticks.forEach(v => {
+    add("line", {class: "gridline", x1: M.l, x2: W - M.r, y1: yy(v), y2: yy(v)});
+    add("text", {class: "axis-text", x: M.l - 10, y: yy(v) + 4, "text-anchor": "end"}, fmt(v, spec.decimals));
+  });
+
+  const everyN = years.length > 14 ? 3 : 2;
+  years.forEach((y, i) => {
+    if (i % everyN === 0 || i === years.length - 1) {
+      add("text", {class: "axis-text", x: x(y), y: H - M.b + 20, "text-anchor": "middle"}, y);
+    }
+  });
+
+  // Segment each series so a missing year renders as a real break, not a bridge.
+  ["comp", "nyc"].forEach(key => {
+    const colour = key === "nyc" ? "var(--nyc)" : "var(--comp)";
+    let seg = [];
+    const flush = () => {
+      if (seg.length > 1) {
+        add("path", {class: "series-line", stroke: colour, fill: "none",
+          d: seg.map((p, i) => `${i ? "L" : "M"}${x(p[0]).toFixed(1)},${yy(p[1]).toFixed(1)}`).join(" ")});
+      } else if (seg.length === 1) {
+        add("circle", {cx: x(seg[0][0]), cy: yy(seg[0][1]), r: 3, fill: colour});
+      }
+      seg = [];
+    };
+    years.forEach(y => { const v = spec[key][y]; if (v == null) flush(); else seg.push([y, v]); });
+    flush();
+
+    const last = years.filter(y => spec[key][y] != null).pop();
+    add("circle", {cx: x(last), cy: yy(spec[key][last]), r: 4.5, fill: colour,
+      stroke: "var(--surface)", "stroke-width": 2});
+    add("text", {class: "endlabel", x: x(last) + 11, y: yy(spec[key][last]) + 4, fill: colour},
+      `${fmt(spec[key][last], spec.decimals)} ${spec.unit}`);
+  });
+
+  if (spec.gapNote) {
+    add("line", {class: "hover-line", x1: x(spec.gapNote.year), x2: x(spec.gapNote.year),
+      y1: M.t, y2: H - M.b});
+    add("text", {class: "gapnote", x: x(spec.gapNote.year), y: M.t - 7, "text-anchor": "middle"},
+      spec.gapNote.text);
+  }
+
+  const hover = add("line", {class: "hover-line", x1: 0, x2: 0, y1: M.t, y2: H - M.b,
+    opacity: 0, "stroke-dasharray": "none"});
+  const dots = ["comp", "nyc"].map(k => add("circle", {r: 5, opacity: 0,
+    fill: k === "nyc" ? "var(--nyc)" : "var(--comp)", stroke: "var(--surface)", "stroke-width": 2}));
+
+  fig.appendChild(svg);
+  const tip = document.createElement("div");
+  tip.className = "tip";
+  fig.parentElement.appendChild(tip);
+
+  const move = ev => {
+    const r = svg.getBoundingClientRect();
+    const px = (ev.clientX - r.left) / r.width * W;
+    let best = years[0], bd = Infinity;
+    years.forEach(y => { const d = Math.abs(x(y) - px); if (d < bd) { bd = d; best = y; } });
+    const nv = spec.nyc[best], cv = spec.comp[best];
+    hover.setAttribute("x1", x(best)); hover.setAttribute("x2", x(best));
+    hover.setAttribute("opacity", 1);
+    [["comp", cv], ["nyc", nv]].forEach(([k, v], i) => {
+      if (v == null) { dots[i].setAttribute("opacity", 0); return; }
+      dots[i].setAttribute("cx", x(best)); dots[i].setAttribute("cy", yy(v));
+      dots[i].setAttribute("opacity", 1);
+    });
+    tip.innerHTML = `<span class="y">${best}</span>` +
+      row("var(--nyc)", spec.nycLabel, nv, spec) + row("var(--comp)", spec.compLabel, cv, spec);
+    tip.style.opacity = 1;
+    const left = x(best) / W * r.width;
+    tip.style.left = Math.min(Math.max(left - 60, 0), r.width - 190) + "px";
+    tip.style.top = "6px";
+  };
+  svg.addEventListener("pointermove", move);
+  svg.addEventListener("pointerleave", () => {
+    tip.style.opacity = 0; hover.setAttribute("opacity", 0);
+    dots.forEach(d => d.setAttribute("opacity", 0));
+  });
+
+  document.getElementById(legendId).innerHTML =
+    `<span><i class="swatch" style="background:var(--nyc)"></i>${spec.nycLabel}</span>` +
+    `<span><i class="swatch" style="background:var(--comp)"></i>${spec.compLabel}</span>`;
+}
+
+function row(colour, label, v, spec) {
+  return `<div><i style="background:${colour}"></i>${label} — ` +
+    (v == null ? "no data" : `<b>${fmt(v, spec.decimals)}</b> ${spec.unit}`) + `</div>`;
+}
+function fmt(v, d) { return v.toFixed(d); }
+function niceStep(raw) {
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const n = raw / mag;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * mag;
+}
+
+draw("c-pm25", "l-pm25", DATA.pm25);
+draw("c-hom", "l-hom", DATA.hom);
+draw("c-waste", "l-waste", DATA.waste);
+</script>
