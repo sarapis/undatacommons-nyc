@@ -14,7 +14,8 @@ title: Project briefing
 provenance and grade on every card, then the eight that fail and why. Each card also places NYC
 among **every reporting country** in 2019. Public, no sign-in.
 
-The headline finding: NYC ranks **#5 of 186** on city air quality, **#85 of 137** on homicide.
+The headline finding: NYC ranks **#5 of 186** on city air quality, **#18 of 196** on road deaths
+(four times safer than the US), and **#85 of 137** on homicide.
 Against the US, NYC's homicide trend reads as a success story; against the world it sits in the
 bottom half. Same number, different comparator, opposite conclusion.
 
@@ -165,6 +166,8 @@ international comparison does not exist.
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
 - [x] Embedding search — correct dataset from median rank 1535 to 23 of 2,400
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
+- [ ] Re-key screening on country coverage, not US coverage — the comparator is the world now
+- [ ] Replace the keyword city-scope filter; it passes 328 of 377 aid-flow indicators
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
