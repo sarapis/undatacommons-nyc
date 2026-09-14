@@ -7,6 +7,15 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-14 — The human grade vetoes every mechanical check
+
+The pair probe initially reported BLOCKED and CONTEXT pairs as chartable: resolution, unit and
+overlap checks all passed, so it waved through pairs a human had judged incomparable. Now the
+grade overrides, and a trend requires five overlapping years rather than a shared endpoint.
+
+Kept as a decision because the pull to let the automated check "win" will recur every time
+someone adds a pair. Units agreeing is necessary and nowhere near sufficient.
+
 ## 2026-09-14 — Missing denominator years stay empty
 
 There is no ACS 1-year release for 2020, so NYC rates have no 2020 value — on the year homicides

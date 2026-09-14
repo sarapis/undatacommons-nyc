@@ -30,7 +30,8 @@
           }
         },
         "grade": "PROXY",
-        "reason": "Units agree (ug/m3) and both are annual means, but the methods differ: NYC's figure comes from NYCCAS ground monitors, the UN's is a population-weighted modelled estimate. Comparable in level, not interchangeable. Chart together with the method difference stated."
+        "reason": "Units agree (ug/m3) and both are annual means, but the methods differ: NYC's figure comes from NYCCAS ground monitors, the UN's is a population-weighted modelled estimate. Comparable in level, not interchangeable. Chart together with the method difference stated.",
+        "tier": 1
       },
       "un": {
         "dcid": "undata/sdg/EN_ATM_PM25.URBANIZATION--DOU_CITY",
@@ -160,7 +161,8 @@
           "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
           "per": 100000,
           "unit": "per 100k"
-        }
+        },
+        "tier": 3
       },
       "un": {
         "dcid": "undata/sdg/VC_IHR_PSRC",
@@ -347,7 +349,8 @@
           }
         },
         "grade": "PROXY",
-        "reason": "DSNY tonnage covers DSNY-collected residential waste only -- it excludes commercial waste, which the UN municipal-waste definition includes. Derived diversion rate, not a published one; the published Recycling Diversion and Capture Rates dataset has not updated since 2020. The month field is text ('2026 / 08') so the year comes from substring, not date_extract_y. Rows before 1993 predate curbside recycling (no recycling tonnage, 1990 partial) and are excluded."
+        "reason": "DSNY tonnage covers DSNY-collected residential waste only -- it excludes commercial waste, which the UN municipal-waste definition includes. Derived diversion rate, not a published one; the published Recycling Diversion and Capture Rates dataset has not updated since 2020. The month field is text ('2026 / 08') so the year comes from substring, not date_extract_y. Rows before 1993 predate curbside recycling (no recycling tonnage, 1990 partial) and are excluded.",
+        "tier": 3
       },
       "un": {
         "dcid": "undata/sdg/EN_MWT_RCYR",
@@ -503,6 +506,1035 @@
         "unit_check": "units agree",
         "blockers": [],
         "chartable": true
+      }
+    },
+    {
+      "pair": {
+        "id": "road-deaths",
+        "sdg": "3.6.1",
+        "tier": 3,
+        "label": "Road traffic deaths",
+        "un": {
+          "dcid": "undata/sdg/SH_STA_TRAF",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/FRA",
+            "country/JPN",
+            "country/CAN"
+          ]
+        },
+        "nyc": {
+          "dataset": "h9gi-nx95",
+          "unit": "count",
+          "year_field": "yr",
+          "value_field": "value",
+          "soql": {
+            "$select": "date_extract_y(crash_date) AS yr, sum(number_of_persons_killed) AS value",
+            "$where": "crash_date >= '2013-01-01T00:00:00'",
+            "$group": "yr",
+            "$order": "yr",
+            "$limit": "100"
+          }
+        },
+        "denominator": {
+          "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
+          "per": 100000,
+          "unit": "per 100k"
+        },
+        "grade": "BLOCKED",
+        "reason": "NYC has an excellent series (Vision Zero collision data, daily updates). The UN side has ONE observation, 2021, a periodic WHO modelled estimate. Kept in the crosswalk deliberately: this is what a blocked pair looks like, and the blocker is the UN side, not ours."
+      },
+      "un": {
+        "dcid": "undata/sdg/SH_STA_TRAF",
+        "name": "Death rate due to road traffic injuries",
+        "n_obs": 1,
+        "years": [
+          2021
+        ],
+        "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+        "provenance": "https://unstats.un.org/sdgs/dataportal",
+        "values": {
+          "2021": 14.2
+        }
+      },
+      "nyc": {
+        "dataset": "h9gi-nx95",
+        "declared_unit": "per 100k",
+        "name": "Motor Vehicle Collisions - Crashes",
+        "updated_at": "2026-07-31",
+        "archived": false,
+        "n_obs": 11,
+        "years": [
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "values": {
+          "2013": 3.533259091271934,
+          "2014": 3.0855913600615423,
+          "2015": 2.8419706434958347,
+          "2016": 2.881347177386625,
+          "2017": 2.9689083393619953,
+          "2018": 2.7504099420532677,
+          "2019": 2.9267764903559716,
+          "2021": 3.5075234014993537,
+          "2022": 3.4789297420541545,
+          "2023": 3.390637118878765,
+          "2024": 3.1610960605194203
+        },
+        "raw_counts": {
+          "2013": 297.0,
+          "2014": 262.0,
+          "2015": 243.0,
+          "2016": 246.0,
+          "2017": 256.0,
+          "2018": 231.0,
+          "2019": 244.0,
+          "2020": 269.0,
+          "2021": 297.0,
+          "2022": 290.0,
+          "2023": 280.0,
+          "2024": 268.0,
+          "2025": 229.0,
+          "2026": 68.0
+        },
+        "denominator": {
+          "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
+          "per": 100000,
+          "years_dropped_no_denominator": [
+            2020,
+            2025,
+            2026
+          ]
+        }
+      },
+      "assessment": {
+        "overlap_years": [
+          2021
+        ],
+        "unit_check": "units agree",
+        "blockers": [
+          "grade BLOCKED: human judgment says these must not share an axis"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "child-mortality",
+        "sdg": "3.2.1",
+        "tier": 3,
+        "label": "Child mortality (deaths)",
+        "un": {
+          "dcid": "undata/who/CHILD_DEATHS.AGE--Y0T4",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/FRA",
+            "country/JPN"
+          ]
+        },
+        "nyc": {
+          "dataset": "fcau-jc6k",
+          "unit": "count",
+          "year_field": "yr",
+          "value_field": "value",
+          "soql": {
+            "$select": "year AS yr, infant_deaths AS value",
+            "$where": "materal_race_or_ethnicity='Total'",
+            "$order": "year",
+            "$limit": "100"
+          }
+        },
+        "grade": "CONTEXT",
+        "reason": "AGE BANDS DO NOT MATCH. The UN counts deaths under five; NYC's infant mortality dataset counts deaths under one. Both are raw counts so the units 'agree', which is exactly the trap -- a chart would look correct and compare different populations. Show side by side, never on one axis, until an under-five NYC series is sourced."
+      },
+      "un": {
+        "dcid": "undata/who/CHILD_DEATHS.AGE--Y0T4",
+        "name": "Number of deaths among children and adolescents [Age=Under 5 years old]",
+        "n_obs": 69,
+        "years": [
+          1955,
+          1956,
+          1957,
+          1958,
+          1959,
+          1960,
+          1961,
+          1962,
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "unit": "COUNT_DEATHS",
+        "provenance": "https://www.who.int/data",
+        "values": {
+          "1955": 133236,
+          "1956": 132749,
+          "1957": 133158,
+          "1958": 133027,
+          "1959": 131893,
+          "1960": 130148,
+          "1961": 128281,
+          "1962": 124619,
+          "1963": 119768,
+          "1964": 115421,
+          "1965": 109146,
+          "1966": 101805,
+          "1967": 95828,
+          "1968": 91277,
+          "1969": 88972,
+          "1970": 88200,
+          "1971": 84523,
+          "1972": 76842,
+          "1973": 69970,
+          "1974": 65922,
+          "1975": 62656,
+          "1976": 59564,
+          "1977": 58000,
+          "1978": 56668,
+          "1979": 55421,
+          "1980": 54699,
+          "1981": 53385,
+          "1982": 52017,
+          "1983": 50528,
+          "1984": 49057,
+          "1985": 48271,
+          "1986": 47481,
+          "1987": 46708,
+          "1988": 46418,
+          "1989": 46331,
+          "1990": 45985,
+          "1991": 44710,
+          "1992": 42768,
+          "1993": 40712,
+          "1994": 38700,
+          "1995": 36870,
+          "1996": 35371,
+          "1997": 34227,
+          "1998": 33511,
+          "1999": 33092,
+          "2000": 32942,
+          "2001": 32708,
+          "2002": 32243,
+          "2003": 32111,
+          "2004": 32104,
+          "2005": 32006,
+          "2006": 32170,
+          "2007": 32308,
+          "2008": 31809,
+          "2009": 30797,
+          "2010": 29583,
+          "2011": 28550,
+          "2012": 27881,
+          "2013": 27352,
+          "2014": 27052,
+          "2015": 26836,
+          "2016": 26438,
+          "2017": 25848,
+          "2018": 25223,
+          "2019": 24741,
+          "2020": 24122,
+          "2021": 23797,
+          "2022": 24061,
+          "2023": 23989
+        }
+      },
+      "nyc": {
+        "dataset": "fcau-jc6k",
+        "declared_unit": "count",
+        "name": "Infant Mortality",
+        "updated_at": "2026-04-14",
+        "archived": false,
+        "n_obs": 3,
+        "years": [
+          2021,
+          2022,
+          2023
+        ],
+        "values": {
+          "2021": 400.0,
+          "2022": 427.0,
+          "2023": 414.0
+        }
+      },
+      "assessment": {
+        "overlap_years": [
+          2021,
+          2022,
+          2023
+        ],
+        "unit_check": "unmapped UN unit `COUNT_DEATHS` - check by hand",
+        "blockers": [
+          "grade CONTEXT: human judgment says these must not share an axis"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "maternal-mortality",
+        "sdg": "3.1.1",
+        "tier": 3,
+        "label": "Maternal mortality",
+        "un": {
+          "dcid": "undata/sdg/SH_STA_MORT.SEX--F",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/FRA",
+            "country/JPN",
+            "country/CAN"
+          ]
+        },
+        "nyc": {
+          "dataset": "27x4-cbi6",
+          "unit": "count",
+          "year_field": "yr",
+          "value_field": "value",
+          "soql": {
+            "$select": "year AS yr, sum(deaths) AS value",
+            "$where": "related='All' AND underlying_cause='All' AND race_ethnicity='All'",
+            "$group": "year",
+            "$order": "year",
+            "$limit": "100"
+          }
+        },
+        "grade": "BLOCKED",
+        "reason": "Two problems. NYC publishes pregnancy-ASSOCIATED deaths (any cause within a year of pregnancy), a deliberately broader definition than the UN's maternal mortality. And the UN rate is per 100,000 LIVE BIRTHS, not per population -- the denominator lives in a different NYC dataset (fcau-jc6k number_of_live_births). Needs a cross-dataset join before it can be charted."
+      },
+      "un": {
+        "dcid": "undata/sdg/SH_STA_MORT.SEX--F",
+        "name": "Maternal mortality ratio [Sex=Female]",
+        "n_obs": 24,
+        "years": [
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "unit": "RATIO_COUNT_PER_100000_COUNT_LIVEBIRTHS",
+        "provenance": "https://unstats.un.org/sdgs/dataportal",
+        "values": {
+          "2000": 12.08972,
+          "2001": 12.66158,
+          "2002": 12.97853,
+          "2003": 13.32249,
+          "2004": 13.22134,
+          "2005": 13.35735,
+          "2006": 13.48268,
+          "2007": 13.49325,
+          "2008": 13.8463,
+          "2009": 14.5966,
+          "2010": 14.58391,
+          "2011": 15.34365,
+          "2012": 15.68152,
+          "2013": 16.06281,
+          "2014": 16.53585,
+          "2015": 17.02174,
+          "2016": 17.78948,
+          "2017": 17.85647,
+          "2018": 17.55006,
+          "2019": 17.51903,
+          "2020": 22.45825,
+          "2021": 31.21465,
+          "2022": 20.03668,
+          "2023": 16.63253
+        }
+      },
+      "nyc": {
+        "dataset": "27x4-cbi6",
+        "declared_unit": "count",
+        "name": "Pregnancy-Associated Mortality",
+        "updated_at": "2025-10-23",
+        "archived": false,
+        "n_obs": 6,
+        "years": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "values": {
+          "2016": 36.0,
+          "2017": 55.0,
+          "2018": 42.0,
+          "2019": 57.0,
+          "2020": 51.0,
+          "2021": 58.0
+        }
+      },
+      "assessment": {
+        "overlap_years": [
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "unit_check": "unmapped UN unit `RATIO_COUNT_PER_100000_COUNT_LIVEBIRTHS` - check by hand",
+        "blockers": [
+          "grade BLOCKED: human judgment says these must not share an axis"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "air-pollution-deaths",
+        "sdg": "3.9.1",
+        "tier": 3,
+        "label": "Deaths attributable to ambient air pollution",
+        "un": {
+          "dcid": "undata/who/AIR_DEATH.AIR_POL_TYPE--AMB",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/FRA",
+            "country/JPN"
+          ]
+        },
+        "nyc": {
+          "dataset": "c3uy-2p5r",
+          "unit": "per 100k",
+          "year_field": "yr",
+          "value_field": "value",
+          "soql": {
+            "$select": "time_period AS yr, data_value AS value",
+            "$where": "name='Deaths due to PM2.5' AND geo_type_name='Citywide'",
+            "$order": "time_period",
+            "$limit": "100"
+          }
+        },
+        "grade": "CONTEXT",
+        "reason": "UN reports a national death COUNT attributable to ambient air pollution; NYC reports an age-adjusted RATE for ages 30+ attributable to PM2.5 specifically. Different measure, different age base, different pollutant scope. Informative side by side, not comparable on one axis."
+      },
+      "un": {
+        "dcid": "undata/who/AIR_DEATH.AIR_POL_TYPE--AMB",
+        "name": "Deaths attributable to air pollution [Air pollution type=Ambient air pollution]",
+        "n_obs": 10,
+        "years": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019
+        ],
+        "unit": "COUNT_DEATHS",
+        "provenance": "https://www.who.int/data",
+        "values": {
+          "2010": 105663.978,
+          "2011": 106566.183,
+          "2012": 103917.779,
+          "2013": 102489.545,
+          "2014": 100430.466,
+          "2015": 100100.436,
+          "2016": 91458.633,
+          "2017": 97910.081,
+          "2018": 103222.312,
+          "2019": 93885.936
+        }
+      },
+      "nyc": {
+        "dataset": "c3uy-2p5r",
+        "declared_unit": "per 100k",
+        "name": "Air Quality and Health Impacts",
+        "updated_at": "2026-06-18",
+        "archived": false,
+        "n_obs": 5,
+        "years": [
+          2005,
+          2009,
+          2012,
+          2015,
+          2017
+        ],
+        "values": {
+          "2005": 64.7,
+          "2009": 48.2,
+          "2012": 40.6,
+          "2015": 37.7,
+          "2017": 33.0
+        }
+      },
+      "assessment": {
+        "overlap_years": [
+          2012,
+          2015,
+          2017
+        ],
+        "unit_check": "unmapped UN unit `COUNT_DEATHS` - check by hand",
+        "blockers": [
+          "grade CONTEXT: human judgment says these must not share an axis"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "poverty",
+        "sdg": "1.2.1",
+        "tier": 3,
+        "label": "Poverty",
+        "un": {
+          "dcid": "undata/sdg/SI_POV_DAY1",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/MEX",
+            "country/COL"
+          ]
+        },
+        "nyc": null,
+        "grade": "CONTEXT",
+        "reason": "NOT THE SAME CONCEPT. The UN series is the share below the INTERNATIONAL extreme-poverty line (~$2.15/day PPP), which is near zero for any US city and carries no signal. NYC's own poverty measure is a cost-of-living-adjusted threshold an order of magnitude higher. Also the NYCgov measure is published as a separate dataset per year, so there is no continuous series to query. Included as the clearest example of two numbers that share a name and measure nothing alike."
+      },
+      "un": {
+        "dcid": "undata/sdg/SI_POV_DAY1",
+        "name": "Proportion of population below international poverty line",
+        "n_obs": 61,
+        "years": [
+          1963,
+          1964,
+          1965,
+          1966,
+          1967,
+          1968,
+          1969,
+          1970,
+          1971,
+          1972,
+          1973,
+          1974,
+          1975,
+          1976,
+          1977,
+          1978,
+          1979,
+          1980,
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "unit": "Percent",
+        "provenance": "https://unstats.un.org/sdgs/dataportal",
+        "values": {
+          "1963": 1.5,
+          "1964": 1.5,
+          "1965": 1.2,
+          "1966": 1.2,
+          "1967": 1,
+          "1968": 1,
+          "1969": 0.7,
+          "1970": 1,
+          "1971": 1,
+          "1972": 0.7,
+          "1973": 0.7,
+          "1974": 0.7,
+          "1975": 0.7,
+          "1976": 0.7,
+          "1977": 0.5,
+          "1978": 0.7,
+          "1979": 0.7,
+          "1980": 0.5,
+          "1981": 0.5,
+          "1982": 0.7,
+          "1983": 0.7,
+          "1984": 0.7,
+          "1985": 0.7,
+          "1986": 0.7,
+          "1987": 0.5,
+          "1988": 0.5,
+          "1989": 0.5,
+          "1990": 0.5,
+          "1991": 0.5,
+          "1992": 0.5,
+          "1993": 0.7,
+          "1994": 0.7,
+          "1995": 0.7,
+          "1996": 0.7,
+          "1997": 0.7,
+          "1998": 0.7,
+          "1999": 0.7,
+          "2000": 0.7,
+          "2001": 1,
+          "2002": 1,
+          "2003": 1,
+          "2004": 1,
+          "2005": 1,
+          "2006": 1,
+          "2007": 1,
+          "2008": 1,
+          "2009": 1,
+          "2010": 1.2,
+          "2011": 1,
+          "2012": 1,
+          "2013": 1,
+          "2014": 1.2,
+          "2015": 1.2,
+          "2016": 1.2,
+          "2017": 1.2,
+          "2018": 1,
+          "2019": 1,
+          "2020": 0.5,
+          "2021": 0.5,
+          "2022": 1.2,
+          "2023": 1.2
+        }
+      },
+      "nyc": {
+        "absent": true
+      },
+      "assessment": {
+        "overlap_years": [],
+        "unit_check": "n/a \u2014 no NYC source",
+        "blockers": [
+          "no NYC counterpart identified"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "housing-inadequate",
+        "sdg": "11.1.1",
+        "tier": 2,
+        "label": "Inadequate housing",
+        "un": {
+          "dcid": "undata/sdg/EN_LND_SLUM.URBANIZATION--DOU_U",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/MEX",
+            "country/COL"
+          ]
+        },
+        "nyc": {
+          "dataset": "wvxf-dwi5",
+          "unit": "count",
+          "year_field": "yr",
+          "value_field": "value",
+          "soql": {
+            "$select": "date_extract_y(inspectiondate) AS yr, count(*) AS value",
+            "$where": "class='C' AND inspectiondate >= '2010-01-01T00:00:00'",
+            "$group": "yr",
+            "$order": "yr",
+            "$limit": "100"
+          }
+        },
+        "grade": "CONTEXT",
+        "reason": "UN measures the SHARE OF URBAN POPULATION living in slums. NYC's nearest analogue is a COUNT of class C (immediately hazardous) housing maintenance violations -- an enforcement output, not a population share, and sensitive to inspection rates rather than to conditions alone. Directionally interesting, structurally different. Tier 2: the UN side is urban, which bundles cities with suburbs."
+      },
+      "un": {
+        "dcid": "undata/sdg/EN_LND_SLUM.URBANIZATION--DOU_U",
+        "name": "Proportion of urban population living in slums [Urbanization=Urban area (degree of urbanization)]",
+        "n_obs": 12,
+        "years": [
+          2000,
+          2002,
+          2004,
+          2006,
+          2008,
+          2010,
+          2012,
+          2014,
+          2016,
+          2018,
+          2020,
+          2022
+        ],
+        "unit": "Percent",
+        "provenance": "https://unstats.un.org/sdgs/dataportal",
+        "values": {
+          "2000": 0.2,
+          "2002": 0.2,
+          "2004": 0.2,
+          "2006": 0.2,
+          "2008": 0.2,
+          "2010": 0.2,
+          "2012": 0.2,
+          "2014": 0.2,
+          "2016": 0.2,
+          "2018": 0.15,
+          "2020": 0.15,
+          "2022": 0.09318
+        }
+      },
+      "nyc": {
+        "dataset": "wvxf-dwi5",
+        "declared_unit": "count",
+        "name": "Housing Maintenance Code Violations",
+        "updated_at": "2026-09-14",
+        "archived": false,
+        "n_obs": 17,
+        "years": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "values": {
+          "2010": 21506.0,
+          "2011": 27414.0,
+          "2012": 56749.0,
+          "2013": 89443.0,
+          "2014": 92292.0,
+          "2015": 90911.0,
+          "2016": 93074.0,
+          "2017": 97529.0,
+          "2018": 104944.0,
+          "2019": 168199.0,
+          "2020": 132879.0,
+          "2021": 176557.0,
+          "2022": 202742.0,
+          "2023": 249747.0,
+          "2024": 297753.0,
+          "2025": 278172.0,
+          "2026": 183517.0
+        }
+      },
+      "assessment": {
+        "overlap_years": [
+          2010,
+          2012,
+          2014,
+          2016,
+          2018,
+          2020,
+          2022
+        ],
+        "unit_check": "UNIT MISMATCH: UN `Percent` vs NYC `count`",
+        "blockers": [
+          "UNIT MISMATCH: UN `Percent` vs NYC `count`",
+          "grade CONTEXT: human judgment says these must not share an axis"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "built-up-area",
+        "sdg": "11.7.1",
+        "tier": 1,
+        "label": "Built-up area per capita (cities)",
+        "un": {
+          "dcid": "undata/unicef/DM_BU_PC_DOU.URBANIZATION--DOU_CITY",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/FRA",
+            "country/JPN",
+            "country/CAN",
+            "country/MEX"
+          ]
+        },
+        "nyc": null,
+        "grade": "NO-NYC-SOURCE",
+        "reason": "Tier 1 UN data exists with a full 2000-2025 series and city-level slices across countries, but no NYC Open Data equivalent has been identified. Candidates to investigate: PLUTO lot area aggregates, Parks Properties. Recorded so the gap is visible rather than forgotten."
+      },
+      "un": {
+        "dcid": "undata/unicef/DM_BU_PC_DOU.URBANIZATION--DOU_CITY",
+        "name": "Built-up area per capita by degree of urbanization [Urbanization=City (degree of urbanization)]",
+        "n_obs": 26,
+        "years": [
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "unit": "COUNT",
+        "provenance": "https://data.unicef.org/",
+        "values": {
+          "2000": 88.05,
+          "2001": 88.42,
+          "2002": 88.77,
+          "2003": 89.1,
+          "2004": 89.41,
+          "2005": 89.68,
+          "2006": 90.02,
+          "2007": 90.3,
+          "2008": 90.57,
+          "2009": 90.85,
+          "2010": 91.12,
+          "2011": 91.11,
+          "2012": 91.12,
+          "2013": 91.12,
+          "2014": 91.13,
+          "2015": 91.13,
+          "2016": 90.69,
+          "2017": 90.28,
+          "2018": 89.93,
+          "2019": 89.63,
+          "2020": 89.63,
+          "2021": 90.8,
+          "2022": 91.79,
+          "2023": 92.61,
+          "2024": 93.41,
+          "2025": 94.22
+        }
+      },
+      "nyc": {
+        "absent": true
+      },
+      "assessment": {
+        "overlap_years": [],
+        "unit_check": "n/a \u2014 no NYC source",
+        "blockers": [
+          "no NYC counterpart identified"
+        ],
+        "chartable": false
+      }
+    },
+    {
+      "pair": {
+        "id": "drinking-water",
+        "sdg": "6.1.1",
+        "tier": 3,
+        "label": "Safely managed drinking water",
+        "un": {
+          "dcid": "undata/sdg/SH_H2O_SAFE",
+          "place": "country/USA",
+          "peers": [
+            "country/GBR",
+            "country/MEX",
+            "country/COL"
+          ]
+        },
+        "nyc": null,
+        "grade": "NO-SIGNAL",
+        "reason": "The UN series sits at or near 100% for the US across the whole window, as it would for NYC. A chart of two flat lines at 100 tells a policy analyst nothing. Recorded as deliberately excluded rather than overlooked -- a ceiling effect is a reason not to build a view, and that judgment should be written down."
+      },
+      "un": {
+        "dcid": "undata/sdg/SH_H2O_SAFE",
+        "name": "Proportion of population using safely managed drinking water services",
+        "n_obs": 20,
+        "years": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "unit": "Percent",
+        "provenance": "https://unstats.un.org/sdgs/dataportal",
+        "values": {
+          "2005": 95.35508728,
+          "2006": 95.36439514,
+          "2007": 95.37364197,
+          "2008": 95.38283539,
+          "2009": 95.3919754,
+          "2010": 95.55789185,
+          "2011": 95.72309113,
+          "2012": 95.88738251,
+          "2013": 96.05080414,
+          "2014": 96.21326447,
+          "2015": 96.37471771,
+          "2016": 96.53507233,
+          "2017": 96.6943512,
+          "2018": 96.85242462,
+          "2019": 97.00933075,
+          "2020": 97.16495514,
+          "2021": 97.31930542,
+          "2022": 97.46839142,
+          "2023": 97.566185,
+          "2024": 97.56768799
+        }
+      },
+      "nyc": {
+        "absent": true
+      },
+      "assessment": {
+        "overlap_years": [],
+        "unit_check": "n/a \u2014 no NYC source",
+        "blockers": [
+          "no NYC counterpart identified"
+        ],
+        "chartable": false
       }
     }
   ]

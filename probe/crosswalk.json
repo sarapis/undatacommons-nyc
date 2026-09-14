@@ -29,7 +29,8 @@
         }
       },
       "grade": "PROXY",
-      "reason": "Units agree (ug/m3) and both are annual means, but the methods differ: NYC's figure comes from NYCCAS ground monitors, the UN's is a population-weighted modelled estimate. Comparable in level, not interchangeable. Chart together with the method difference stated."
+      "reason": "Units agree (ug/m3) and both are annual means, but the methods differ: NYC's figure comes from NYCCAS ground monitors, the UN's is a population-weighted modelled estimate. Comparable in level, not interchangeable. Chart together with the method difference stated.",
+      "tier": 1
     },
     {
       "id": "homicide",
@@ -65,7 +66,8 @@
         "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
         "per": 100000,
         "unit": "per 100k"
-      }
+      },
+      "tier": 3
     },
     {
       "id": "waste-recycled",
@@ -95,7 +97,219 @@
         }
       },
       "grade": "PROXY",
-      "reason": "DSNY tonnage covers DSNY-collected residential waste only -- it excludes commercial waste, which the UN municipal-waste definition includes. Derived diversion rate, not a published one; the published Recycling Diversion and Capture Rates dataset has not updated since 2020. The month field is text ('2026 / 08') so the year comes from substring, not date_extract_y. Rows before 1993 predate curbside recycling (no recycling tonnage, 1990 partial) and are excluded."
+      "reason": "DSNY tonnage covers DSNY-collected residential waste only -- it excludes commercial waste, which the UN municipal-waste definition includes. Derived diversion rate, not a published one; the published Recycling Diversion and Capture Rates dataset has not updated since 2020. The month field is text ('2026 / 08') so the year comes from substring, not date_extract_y. Rows before 1993 predate curbside recycling (no recycling tonnage, 1990 partial) and are excluded.",
+      "tier": 3
+    },
+    {
+      "id": "road-deaths",
+      "sdg": "3.6.1",
+      "tier": 3,
+      "label": "Road traffic deaths",
+      "un": {
+        "dcid": "undata/sdg/SH_STA_TRAF",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN",
+          "country/CAN"
+        ]
+      },
+      "nyc": {
+        "dataset": "h9gi-nx95",
+        "unit": "count",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "date_extract_y(crash_date) AS yr, sum(number_of_persons_killed) AS value",
+          "$where": "crash_date >= '2013-01-01T00:00:00'",
+          "$group": "yr",
+          "$order": "yr",
+          "$limit": "100"
+        }
+      },
+      "denominator": {
+        "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
+        "per": 100000,
+        "unit": "per 100k"
+      },
+      "grade": "BLOCKED",
+      "reason": "NYC has an excellent series (Vision Zero collision data, daily updates). The UN side has ONE observation, 2021, a periodic WHO modelled estimate. Kept in the crosswalk deliberately: this is what a blocked pair looks like, and the blocker is the UN side, not ours."
+    },
+    {
+      "id": "child-mortality",
+      "sdg": "3.2.1",
+      "tier": 3,
+      "label": "Child mortality (deaths)",
+      "un": {
+        "dcid": "undata/who/CHILD_DEATHS.AGE--Y0T4",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN"
+        ]
+      },
+      "nyc": {
+        "dataset": "fcau-jc6k",
+        "unit": "count",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "year AS yr, infant_deaths AS value",
+          "$where": "materal_race_or_ethnicity='Total'",
+          "$order": "year",
+          "$limit": "100"
+        }
+      },
+      "grade": "CONTEXT",
+      "reason": "AGE BANDS DO NOT MATCH. The UN counts deaths under five; NYC's infant mortality dataset counts deaths under one. Both are raw counts so the units 'agree', which is exactly the trap -- a chart would look correct and compare different populations. Show side by side, never on one axis, until an under-five NYC series is sourced."
+    },
+    {
+      "id": "maternal-mortality",
+      "sdg": "3.1.1",
+      "tier": 3,
+      "label": "Maternal mortality",
+      "un": {
+        "dcid": "undata/sdg/SH_STA_MORT.SEX--F",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN",
+          "country/CAN"
+        ]
+      },
+      "nyc": {
+        "dataset": "27x4-cbi6",
+        "unit": "count",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "year AS yr, sum(deaths) AS value",
+          "$where": "related='All' AND underlying_cause='All' AND race_ethnicity='All'",
+          "$group": "year",
+          "$order": "year",
+          "$limit": "100"
+        }
+      },
+      "grade": "BLOCKED",
+      "reason": "Two problems. NYC publishes pregnancy-ASSOCIATED deaths (any cause within a year of pregnancy), a deliberately broader definition than the UN's maternal mortality. And the UN rate is per 100,000 LIVE BIRTHS, not per population -- the denominator lives in a different NYC dataset (fcau-jc6k number_of_live_births). Needs a cross-dataset join before it can be charted."
+    },
+    {
+      "id": "air-pollution-deaths",
+      "sdg": "3.9.1",
+      "tier": 3,
+      "label": "Deaths attributable to ambient air pollution",
+      "un": {
+        "dcid": "undata/who/AIR_DEATH.AIR_POL_TYPE--AMB",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN"
+        ]
+      },
+      "nyc": {
+        "dataset": "c3uy-2p5r",
+        "unit": "per 100k",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "time_period AS yr, data_value AS value",
+          "$where": "name='Deaths due to PM2.5' AND geo_type_name='Citywide'",
+          "$order": "time_period",
+          "$limit": "100"
+        }
+      },
+      "grade": "CONTEXT",
+      "reason": "UN reports a national death COUNT attributable to ambient air pollution; NYC reports an age-adjusted RATE for ages 30+ attributable to PM2.5 specifically. Different measure, different age base, different pollutant scope. Informative side by side, not comparable on one axis."
+    },
+    {
+      "id": "poverty",
+      "sdg": "1.2.1",
+      "tier": 3,
+      "label": "Poverty",
+      "un": {
+        "dcid": "undata/sdg/SI_POV_DAY1",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/MEX",
+          "country/COL"
+        ]
+      },
+      "nyc": null,
+      "grade": "CONTEXT",
+      "reason": "NOT THE SAME CONCEPT. The UN series is the share below the INTERNATIONAL extreme-poverty line (~$2.15/day PPP), which is near zero for any US city and carries no signal. NYC's own poverty measure is a cost-of-living-adjusted threshold an order of magnitude higher. Also the NYCgov measure is published as a separate dataset per year, so there is no continuous series to query. Included as the clearest example of two numbers that share a name and measure nothing alike."
+    },
+    {
+      "id": "housing-inadequate",
+      "sdg": "11.1.1",
+      "tier": 2,
+      "label": "Inadequate housing",
+      "un": {
+        "dcid": "undata/sdg/EN_LND_SLUM.URBANIZATION--DOU_U",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/MEX",
+          "country/COL"
+        ]
+      },
+      "nyc": {
+        "dataset": "wvxf-dwi5",
+        "unit": "count",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "date_extract_y(inspectiondate) AS yr, count(*) AS value",
+          "$where": "class='C' AND inspectiondate >= '2010-01-01T00:00:00'",
+          "$group": "yr",
+          "$order": "yr",
+          "$limit": "100"
+        }
+      },
+      "grade": "CONTEXT",
+      "reason": "UN measures the SHARE OF URBAN POPULATION living in slums. NYC's nearest analogue is a COUNT of class C (immediately hazardous) housing maintenance violations -- an enforcement output, not a population share, and sensitive to inspection rates rather than to conditions alone. Directionally interesting, structurally different. Tier 2: the UN side is urban, which bundles cities with suburbs."
+    },
+    {
+      "id": "built-up-area",
+      "sdg": "11.7.1",
+      "tier": 1,
+      "label": "Built-up area per capita (cities)",
+      "un": {
+        "dcid": "undata/unicef/DM_BU_PC_DOU.URBANIZATION--DOU_CITY",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN",
+          "country/CAN",
+          "country/MEX"
+        ]
+      },
+      "nyc": null,
+      "grade": "NO-NYC-SOURCE",
+      "reason": "Tier 1 UN data exists with a full 2000-2025 series and city-level slices across countries, but no NYC Open Data equivalent has been identified. Candidates to investigate: PLUTO lot area aggregates, Parks Properties. Recorded so the gap is visible rather than forgotten."
+    },
+    {
+      "id": "drinking-water",
+      "sdg": "6.1.1",
+      "tier": 3,
+      "label": "Safely managed drinking water",
+      "un": {
+        "dcid": "undata/sdg/SH_H2O_SAFE",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/MEX",
+          "country/COL"
+        ]
+      },
+      "nyc": null,
+      "grade": "NO-SIGNAL",
+      "reason": "The UN series sits at or near 100% for the US across the whole window, as it would for NYC. A chart of two flat lines at 100 tells a policy analyst nothing. Recorded as deliberately excluded rather than overlooked -- a ceiling effect is a reason not to build a view, and that judgment should be written down."
     }
   ]
 }

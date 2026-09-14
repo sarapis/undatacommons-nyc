@@ -27,6 +27,16 @@ import census                                 # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ARTIFACTS = ROOT / "docs" / "artifacts"
 
+# Grades that permit two series to share an axis. Anything else is a human
+# judgment that they must not, and that judgment OVERRIDES every mechanical
+# check below -- units can agree perfectly on two things that measure different
+# populations. A green light the analyst did not earn is the failure this whole
+# project exists to prevent.
+CHARTABLE_GRADES = {"DIRECT", "PROXY"}
+
+# A trend needs more than a shared endpoint.
+MIN_OVERLAP_YEARS = 5
+
 # Unit DCIDs the UN side uses, mapped to what we would call them locally. Used
 # only to flag an obvious mismatch; a match here is necessary, not sufficient.
 UNIT_EQUIV = {
@@ -57,6 +67,8 @@ def un_side(client, spec):
 
 
 def nyc_side(spec):
+    if spec is None:
+        return {"absent": True}
     out = {"dataset": spec["dataset"], "declared_unit": spec.get("unit")}
     try:
         meta = nyc.metadata(spec["dataset"])
@@ -91,7 +103,7 @@ def apply_denominator(pair, ny):
     interpolated denominator yields a rate indistinguishable from a measured one.
     """
     spec = pair.get("denominator")
-    if not spec or ny.get("error") or not ny.get("values"):
+    if not spec or ny.get("absent") or ny.get("error") or not ny.get("values"):
         return ny
 
     years = [int(y) for y in ny["values"]]
@@ -122,6 +134,9 @@ def apply_denominator(pair, ny):
 def assess(pair, un, ny):
     """Mechanical checks only. Comparability stays a human call."""
     blockers = []
+    if ny.get("absent"):
+        return {"overlap_years": [], "unit_check": "n/a — no NYC source",
+                "blockers": ["no NYC counterpart identified"], "chartable": False}
     if un.get("error"):
         blockers.append(f"UN side did not resolve: {un['error']}")
     if ny.get("error"):
@@ -148,6 +163,13 @@ def assess(pair, un, ny):
         unit_check = f"UNIT MISMATCH: UN `{un_unit}` vs NYC `{ny_unit}`"
         blockers.append(unit_check)
 
+    grade = pair.get("grade", "")
+    if grade not in CHARTABLE_GRADES:
+        blockers.append(f"grade {grade}: human judgment says these must not share an axis")
+    elif len(overlap) < MIN_OVERLAP_YEARS and not blockers:
+        blockers.append(f"only {len(overlap)} overlapping year(s); a trend needs "
+                        f"{MIN_OVERLAP_YEARS}")
+
     return {"overlap_years": overlap, "unit_check": unit_check,
             "blockers": blockers, "chartable": not blockers}
 
@@ -173,27 +195,33 @@ def main():
           "Both sides of every mapping, verified. The grade in each entry is a **human**",
           "judgment recorded in `probe/crosswalk.json`; this page verifies that the mapping",
           "still resolves and that the units agree.", "",
-          "| Pair | SDG | Grade | Chartable | Overlap | Units | Blockers |",
+          "Tier 1 = NYC vs national **city** aggregates · Tier 2 = urban aggregates · "
+          "Tier 3 = national totals. The tier says what the comparison is worth.", "",
+          "| Pair | SDG | Tier | Grade | Chartable | Overlap | Blockers |",
           "|---|---|---|---|---|---|---|"]
     for r in out:
         p, a = r["pair"], r["assessment"]
         ov = f"{a['overlap_years'][0]}–{a['overlap_years'][-1]}" if a["overlap_years"] else "—"
-        md.append(f"| {p['label']} | {p['sdg']} | {p['grade']} | "
-                  f"{'yes' if a['chartable'] else 'NO'} | {ov} | {a['unit_check']} | "
-                  f"{'; '.join(a['blockers']) or '—'} |")
+        blockers = "; ".join(a["blockers"]) or "—"
+        if len(blockers) > 110:
+            blockers = blockers[:107] + "..."
+        md.append(f"| {p['label']} | {p['sdg']} | {p.get('tier', '—')} | {p['grade']} | "
+                  f"{'yes' if a['chartable'] else 'NO'} | {ov} | {blockers} |")
 
     md += ["", "## Detail", ""]
     for r in out:
         p, un, ny, a = r["pair"], r["un"], r["nyc"], r["assessment"]
-        md += [f"### {p['label']} (SDG {p['sdg']}) — **{p['grade']}**", "",
+        md += [f"### {p['label']} (SDG {p['sdg']}) — **{p['grade']}**, Tier {p.get('tier', '—')}", "",
                f"*{p['reason']}*", "",
                f"- **UN** `{p['un']['dcid']}` — {un.get('n_obs', 0)} obs"
                + (f", {un['years'][0]}–{un['years'][-1]}" if un.get("years") else "")
                + f", unit `{un.get('unit')}`, source {un.get('provenance') or '—'}",
-               f"- **NYC** `{p['nyc']['dataset']}` {ny.get('name', '')} — "
-               f"{ny.get('n_obs', 0)} obs"
-               + (f", {ny['years'][0]}–{ny['years'][-1]}" if ny.get("years") else "")
-               + f", updated {ny.get('updated_at', '—')}",
+               (f"- **NYC** — no counterpart identified"
+                if ny.get("absent") else
+                f"- **NYC** `{p['nyc']['dataset']}` {ny.get('name', '')} — "
+                f"{ny.get('n_obs', 0)} obs"
+                + (f", {ny['years'][0]}–{ny['years'][-1]}" if ny.get("years") else "")
+                + f", updated {ny.get('updated_at', '—')}"),
                *([f"- **Denominator** {ny['denominator']['source']}, per "
                   f"{ny['denominator']['per']:,}"
                   + (f" — no denominator for "
@@ -206,6 +234,19 @@ def main():
                + f" · {a['unit_check']}", ""]
         if a["blockers"]:
             md += ["  **Blockers:** " + "; ".join(a["blockers"]), ""]
+
+    counts = {}
+    for r in out:
+        g = r["pair"]["grade"]
+        counts[g] = counts.get(g, 0) + 1
+    chartable = sum(1 for r in out if r["assessment"]["chartable"])
+    md += ["## Summary", "",
+           f"**{len(out)} pairs · {chartable} chartable end to end.**", ""]
+    for g, n in sorted(counts.items(), key=lambda kv: -kv[1]):
+        md.append(f"- {g}: {n}")
+    md += ["", "A blocked or context-only pair is not a failure. Recording *why* two numbers",
+           "cannot share an axis is the product; a crosswalk showing only the easy pairs",
+           "would be the thing we are building against.", ""]
 
     text = "\n".join(md)
     (ARTIFACTS / f"crosswalk-{today}.md").write_text(text)

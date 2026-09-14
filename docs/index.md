@@ -82,6 +82,18 @@ class" honestly.
 **Road safety is out as our headline demo.** It was the example in our application. One data
 point cannot carry it.
 
+## What the crosswalk says so far
+
+11 indicator pairs mapped; **3 can honestly share an axis** (PM2.5, homicide, waste recycling).
+The other 8 fail for reasons worth knowing: mismatched age bands, denominators that live in a
+different dataset, concepts that share a name and measure nothing alike, ceiling effects, and one
+Tier 1 indicator with no NYC source. Recording *why* is the product — a crosswalk showing only
+the easy pairs would be the thing we are building against.
+
+**Road traffic deaths is blocked by the UN side, not ours**: NYC has daily Vision Zero data, the
+UN has one 2021 modelled estimate. For the city's flagship street-safety programme the
+international comparison does not exist.
+
 ## Open questions
 
 - **Peer comparators are tiered, not general.** The `URBANIZATION--DOU_CITY` slice lets us
@@ -107,7 +119,8 @@ point cannot carry it.
   [crosswalk status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest)
 - [ ] Confirm the peer-comparator framing (recommendation above)
 - [x] Census denominators — all three pairs now chartable end to end
-- [ ] Extend the crosswalk beyond the first three pairs, seeded from the 2018 VLR and the MMR
+- [x] Crosswalk expanded to 11 pairs — 3 chartable, 8 documented as not comparable and why
+  ([status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest))
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
