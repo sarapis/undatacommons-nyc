@@ -133,8 +133,8 @@
         "per": 100000,
         "unit": "per 100k"
       },
-      "grade": "BLOCKED",
-      "reason": "NYC has an excellent series (Vision Zero collision data, daily updates). The UN side has ONE observation, 2021, a periodic WHO modelled estimate. Kept in the crosswalk deliberately: this is what a blocked pair looks like, and the blocker is the UN side, not ours."
+      "grade": "RANK-ONLY",
+      "reason": "NYC holds 11 years of rates from Vision Zero collision records; the UN holds ONE observation, 2021. That blocks a trend and not a ranking: WHO publishes a single global round, and 195 countries in that year is enough to place NYC (#18 of 196, 3.51 per 100k, beside Spain and the Netherlands, against 14.2 for the US). Originally graded BLOCKED -- the blocker was our framing, not the data. Still Tier 3: a city set against whole nations. WHO figures are modelled estimates; NYC counts collision records."
     },
     {
       "id": "child-mortality",
