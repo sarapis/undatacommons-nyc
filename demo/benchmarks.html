@@ -450,9 +450,14 @@ chart to read the year.</p>
       <span class="rank">#<b>38</b> of 64</span>
     </div>
     <figure id="w-waste"></figure>
-    <p class="world-note">Between <em>Bahrain and Greece</em>, and behind <em>Japan and Iceland</em>.
+    <p class="world-note">Between <em>Bahrain and Greece</em>, and behind <em>Japan and Germany</em>.
     Only 63 countries report this indicator at all, so the field is thin — and the definitional
     caveat below applies to every one of these comparisons, not just the US one.</p>
+    <p class="world-note" style="margin-top:10px">
+    <em>And one figure here is impossible.</em> Malaysia reports <em>147.7%</em> of its municipal
+    waste recycled in 2019 — in the authoritative UN database. We left it in the data and clipped
+    it off the axis rather than deleting it, because a silent drop is how a dataset launders its
+    own errors. It is marked in red at the right edge.</p>
   </div>
   <div class="caveat">
     <h3>This is the chart the whole project exists for</h3>
@@ -734,11 +739,14 @@ function niceStep(raw) {
 // A strip plot: every reporting country as a tick on one linear value axis,
 // with NYC marked. The distribution is skewed, so position alone would flatter
 // NYC on the crime and waste charts -- the rank beside it carries that truth.
-function strip(figId, key, unit, decimals, marks) {
+function strip(figId, key, unit, decimals, marks, axisMax) {
   const spec = WORLD[key];
   const SW = 900, SH = 76, pad = {l: 14, r: 14, t: 26, b: 22};
   const vals = spec.vals.map(v => v[2]).concat([spec.nyc]);
-  const lo = 0, hi = Math.max(...vals) * 1.02;
+  // An explicit axisMax clips impossible outliers off the scale rather than
+  // letting one bad figure flatten the whole distribution. Clipped points are
+  // still drawn, at the edge, and named in the caption -- never silently dropped.
+  const lo = 0, hi = axisMax || Math.max(...vals) * 1.02;
   const x = v => pad.l + (v - lo) / (hi - lo) * (SW - pad.l - pad.r);
   const ns = "http://www.w3.org/2000/svg";
   const svg = document.createElementNS(ns, "svg");
@@ -761,20 +769,29 @@ function strip(figId, key, unit, decimals, marks) {
   });
 
   spec.vals.forEach(([code, name, v]) => {
-    const t = add("line", {class: "tick", x1: x(v), x2: x(v),
-      y1: pad.t + 2, y2: SH - pad.b - 2});
+    const clipped = v > hi;
+    const t = add("line", {class: "tick", x1: x(clipped ? hi : v), x2: x(clipped ? hi : v),
+      y1: pad.t + 2, y2: SH - pad.b - 2,
+      stroke: clipped ? "var(--critical)" : null, opacity: clipped ? 0.9 : null});
     const title = document.createElementNS(ns, "title");
-    title.textContent = `${name} — ${fmt(v, decimals)} ${unit}`;
+    title.textContent = `${name || code} — ${fmt(v, decimals)} ${unit}` +
+      (clipped ? " (beyond axis)" : "");
     t.appendChild(title);
   });
 
+  // Label only marks that will not collide, and never over the NYC label.
+  const placed = [x(spec.nyc)];
   (marks || []).forEach(m => {
     const hit = spec.vals.find(v => v[0] === m);
     if (!hit) return;
-    add("line", {x1: x(hit[2]), x2: x(hit[2]), y1: pad.t + 2, y2: SH - pad.b - 2,
+    const px = x(Math.min(hit[2], hi));
+    add("line", {x1: px, x2: px, y1: pad.t + 2, y2: SH - pad.b - 2,
       stroke: "var(--ink-3)", "stroke-width": 1.5, opacity: 0.9});
-    add("text", {class: "strip-label", x: x(hit[2]), y: pad.t - 6, "text-anchor": "middle"},
-      hit[1].length > 13 ? hit[0] : hit[1]);
+    if (placed.every(q => Math.abs(q - px) > 62)) {
+      placed.push(px);
+      add("text", {class: "strip-label", x: px, y: pad.t - 6, "text-anchor": "middle"},
+        (hit[1] && hit[1].length <= 13) ? hit[1] : hit[0]);
+    }
   });
 
   add("line", {class: "tick-nyc", x1: x(spec.nyc), x2: x(spec.nyc),
@@ -787,7 +804,7 @@ draw("c-pm25", "l-pm25", DATA.pm25);
 draw("c-hom", "l-hom", DATA.hom);
 draw("c-waste", "l-waste", DATA.waste);
 
-strip("w-pm25", "pm25", "µg/m³", 0, ["IND", "CHN", "USA", "FRA"]);
-strip("w-hom", "hom", "per 100k", 0, ["JPN", "GBR", "USA", "BRA"]);
-strip("w-waste", "waste", "%", 0, ["DEU", "JPN", "USA"]);
+strip("w-pm25", "pm25", "µg/m³", 0, ["CHN", "IND", "USA"]);
+strip("w-hom", "hom", "per 100k", 0, ["USA", "BRA", "JAM"]);
+strip("w-waste", "waste", "%", 0, ["USA", "DEU"], 100);
 </script>
