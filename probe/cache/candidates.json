@@ -16,16 +16,10 @@
    },
    "candidates": [
     {
-     "id": "vajk-p37e",
-     "name": "DOHMH COVID-19 Antibody-by-Neighborhood Poverty",
-     "updated": "2024-07-03",
-     "score": 0.6
-    },
-    {
-     "id": "c7ru-d68s",
-     "name": "2017-18  - 2021-22 Demographic Snapshot",
-     "updated": "2024-11-26",
-     "score": 0.6
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "updated": "2020-02-08",
+     "score": 0.525
     }
    ],
    "already_mapped": true
@@ -75,20 +69,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "hpid-63r5",
-     "name": "NYC Municipal Building Energy Benchmarking Results (2014)",
-     "updated": "2022-05-09",
-     "score": 0.667
-    },
-    {
-     "id": "vvj6-d5qx",
-     "name": "NYC Municipal Building Energy Benchmarking Results",
-     "updated": "2022-05-09",
-     "score": 0.667
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -109,19 +90,19 @@
      "id": "fvp3-gcb2",
      "name": "Local Law 84 Monthly Data (Calendar Year)",
      "updated": "2025-11-25",
-     "score": 0.6
+     "score": 0.617
     },
     {
-     "id": "usc3-8zwd",
-     "name": "Energy and Water Data Disclosure for Local Law 84 2021 (Data for Calendar Year 2020)",
+     "id": "77q4-nkfh",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2016 (Data for Calendar Year 2015)",
      "updated": "2024-10-01",
-     "score": 0.6
+     "score": 0.595
     },
     {
-     "id": "7x5e-2fxh",
-     "name": "Energy and Water Data Disclosure for Local Law 84 2022 (Data for Calendar Year 2021)",
-     "updated": "2026-04-21",
-     "score": 0.6
+     "id": "r6ub-zhff",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2013 (Data for Calendar Year 2012)",
+     "updated": "2024-10-01",
+     "score": 0.555
     }
    ],
    "already_mapped": false
@@ -139,7 +120,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "u97r-kgca",
+     "name": "Domestic Violence Homicide Incidents in the Ten Largest U.S. Cities",
+     "updated": "2024-01-31",
+     "score": 0.634
+    },
+    {
+     "id": "pztn-9bne",
+     "name": "Shooting Victims (2006-Present)",
+     "updated": "2026-07-27",
+     "score": 0.564
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -299,7 +293,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "cfz5-6fvh",
+     "name": "City of New York Municipal Solar-Readiness Assessment (Local Law 24 of 2016) data",
+     "updated": "2026-04-16",
+     "score": 0.556
+    },
+    {
+     "id": "77q4-nkfh",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2016 (Data for Calendar Year 2015)",
+     "updated": "2024-10-01",
+     "score": 0.536
+    },
+    {
+     "id": "r6ub-zhff",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2013 (Data for Calendar Year 2012)",
+     "updated": "2024-10-01",
+     "score": 0.501
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -333,16 +346,10 @@
    },
    "candidates": [
     {
-     "id": "mpbx-6c9k",
-     "name": "Mayor's Office to End Domestic and Gender-Based Violence Annual  Report on Outreach to Cosmetologists",
-     "updated": "2026-02-24",
-     "score": 0.6
-    },
-    {
-     "id": "ipu7-kigb",
-     "name": "ENDGBV in Focus: Outreach Campaigns and Activities, 2018-2019",
-     "updated": "2024-01-31",
-     "score": 0.6
+     "id": "ia2d-e54m",
+     "name": "Water Consumption in the City of New York",
+     "updated": "2025-05-21",
+     "score": 0.541
     }
    ],
    "already_mapped": false
@@ -424,7 +431,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "cgwq-3ie6",
+     "name": "Broadband Adoption and Infrastructure by Council District",
+     "updated": "2022-09-23",
+     "score": 0.609
+    },
+    {
+     "id": "3kx3-7svp",
+     "name": "Broadband Adoption and Infrastructure by Congressional District",
+     "updated": "2022-09-23",
+     "score": 0.574
+    },
+    {
+     "id": "rxpf-yca2",
+     "name": "Internet Master Plan: Broadband Adoption and Infrastructure by Community District",
+     "updated": "2022-09-23",
+     "score": 0.566
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -456,7 +482,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "cgwq-3ie6",
+     "name": "Broadband Adoption and Infrastructure by Council District",
+     "updated": "2022-09-23",
+     "score": 0.617
+    },
+    {
+     "id": "3kx3-7svp",
+     "name": "Broadband Adoption and Infrastructure by Congressional District",
+     "updated": "2022-09-23",
+     "score": 0.589
+    },
+    {
+     "id": "rxpf-yca2",
+     "name": "Internet Master Plan: Broadband Adoption and Infrastructure by Community District",
+     "updated": "2022-09-23",
+     "score": 0.584
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -472,20 +517,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "fb86-vt7u",
-     "name": "Capital Projects Dashboard - Citywide Budget and Schedule",
-     "updated": "2026-07-15",
-     "score": 0.6
-    },
-    {
-     "id": "gyhf-rsr3",
-     "name": "Capital Projects Dashboard - Citywide Budget and Spend by Fiscal Year",
-     "updated": "2026-07-15",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -581,7 +613,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "ax85-bzte",
+     "name": "DOHMH Tuberculosis Surveillance: Data from the Tuberculosis Control Annual Summary",
+     "updated": "2024-11-19",
+     "score": 0.527
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -597,26 +636,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "ebb7-mvp5",
-     "name": "DSNY Monthly Tonnage Data",
-     "updated": "2026-09-10",
-     "score": 0.6
-    },
-    {
-     "id": "rn6p-xvjd",
-     "name": "Inspections of Municipal Solid Waste Disposal Locations (No Longer Maintained)",
-     "updated": "2026-09-14",
-     "score": 0.6
-    },
-    {
-     "id": "gaq9-z3hz",
-     "name": "Recycling Diversion and Capture Rates",
-     "updated": "2020-02-08",
-     "score": 0.5
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -650,10 +670,22 @@
    },
    "candidates": [
     {
-     "id": "umve-k9rk",
-     "name": "NYC Climate Budgeting Report: Emission Factors",
-     "updated": "2026-05-15",
-     "score": 0.7
+     "id": "psr5-vz6y",
+     "name": "Office of Climate and Sustainability: 2019 Fuel Oil Sales",
+     "updated": "2024-01-24",
+     "score": 0.551
+    },
+    {
+     "id": "ae3f-9i8x",
+     "name": "Office of Climate and Sustainability: 2018 Fuel Oil Sales",
+     "updated": "2024-01-24",
+     "score": 0.536
+    },
+    {
+     "id": "75g4-kk7x",
+     "name": "Office of Climate and Sustainability: 2017 Fuel Oil Sales",
+     "updated": "2024-01-24",
+     "score": 0.535
     }
    ],
    "already_mapped": false
@@ -671,14 +703,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "p48c-iqtu",
-     "name": "NYC Wetlands",
-     "updated": "2026-01-06",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -710,7 +735,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "fdgu-y9iy",
+     "name": "Expense Budget--Miscellaneous Expense by Category",
+     "updated": "2026-07-08",
+     "score": 0.61
+    },
+    {
+     "id": "46m8-77gv",
+     "name": "Capital Budget",
+     "updated": "2026-07-13",
+     "score": 0.61
+    },
+    {
+     "id": "iw4r-p85g",
+     "name": "Expense Budget-Debt Service Agency OTPS Detail",
+     "updated": "2026-07-08",
+     "score": 0.607
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -728,10 +772,22 @@
    },
    "candidates": [
     {
-     "id": "sg72-pis5",
-     "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
-     "updated": "2023-10-05",
-     "score": 0.8
+     "id": "rdjw-z878",
+     "name": "CBO Expense Report",
+     "updated": "2020-04-25",
+     "score": 0.585
+    },
+    {
+     "id": "hdie-5bdv",
+     "name": "Debt Burden",
+     "updated": "2026-05-19",
+     "score": 0.553
+    },
+    {
+     "id": "8sea-35e7",
+     "name": "Asset Management Executive Summary - State of Good Repair Needs (Expense)",
+     "updated": "2025-10-23",
+     "score": 0.55
     }
    ],
    "already_mapped": false
@@ -751,10 +807,22 @@
    },
    "candidates": [
     {
+     "id": "rdjw-z878",
+     "name": "CBO Expense Report",
+     "updated": "2020-04-25",
+     "score": 0.528
+    },
+    {
      "id": "sg72-pis5",
      "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
      "updated": "2023-10-05",
-     "score": 0.5
+     "score": 0.516
+    },
+    {
+     "id": "8sea-35e7",
+     "name": "Asset Management Executive Summary - State of Good Repair Needs (Expense)",
+     "updated": "2025-10-23",
+     "score": 0.513
     }
    ],
    "already_mapped": false
@@ -774,10 +842,22 @@
    },
    "candidates": [
     {
-     "id": "gzfs-3h4m",
-     "name": "Agency Spending by Budget Function",
-     "updated": "2026-07-08",
-     "score": 0.6
+     "id": "rdjw-z878",
+     "name": "CBO Expense Report",
+     "updated": "2020-04-25",
+     "score": 0.585
+    },
+    {
+     "id": "8sea-35e7",
+     "name": "Asset Management Executive Summary - State of Good Repair Needs (Expense)",
+     "updated": "2025-10-23",
+     "score": 0.567
+    },
+    {
+     "id": "hdie-5bdv",
+     "name": "Debt Burden",
+     "updated": "2026-05-19",
+     "score": 0.552
     }
    ],
    "already_mapped": false
@@ -797,10 +877,22 @@
    },
    "candidates": [
     {
+     "id": "rdjw-z878",
+     "name": "CBO Expense Report",
+     "updated": "2020-04-25",
+     "score": 0.554
+    },
+    {
      "id": "sg72-pis5",
      "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
      "updated": "2023-10-05",
-     "score": 0.6
+     "score": 0.54
+    },
+    {
+     "id": "8sea-35e7",
+     "name": "Asset Management Executive Summary - State of Good Repair Needs (Expense)",
+     "updated": "2025-10-23",
+     "score": 0.537
     }
    ],
    "already_mapped": false
@@ -834,7 +926,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "5r5y-pvs3",
+     "name": "NYCHA Resident Data Book Summary",
+     "updated": "2025-08-01",
+     "score": 0.549
+    },
+    {
+     "id": "6yzk-rwz2",
+     "name": "Internet Master Plan: Broadband Adoption & Demographic Citywide",
+     "updated": "2022-09-23",
+     "score": 0.531
+    },
+    {
+     "id": "fdgu-y9iy",
+     "name": "Expense Budget--Miscellaneous Expense by Category",
+     "updated": "2026-07-08",
+     "score": 0.524
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -884,16 +995,10 @@
    },
    "candidates": [
     {
-     "id": "hnxz-kkn5",
-     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
-     "updated": "2022-05-09",
-     "score": 0.5
-    },
-    {
-     "id": "9auy-76zt",
-     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
-     "updated": "2022-05-09",
-     "score": 0.5
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "updated": "2020-02-08",
+     "score": 0.516
     }
    ],
    "already_mapped": false
@@ -911,7 +1016,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "idfb-y78n",
+     "name": "Recreational Boating Permits",
+     "updated": "2020-02-08",
+     "score": 0.503
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -927,20 +1039,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "hnxz-kkn5",
-     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
-     "updated": "2022-05-09",
-     "score": 0.5
-    },
-    {
-     "id": "9auy-76zt",
-     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
-     "updated": "2022-05-09",
-     "score": 0.5
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -956,7 +1055,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "updated": "2020-02-08",
+     "score": 0.524
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -972,14 +1078,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "9auy-76zt",
-     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
-     "updated": "2022-05-09",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -995,14 +1094,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "3y4p-uusw",
-     "name": "Watershed Water Quality - Limnology",
-     "updated": "2025-05-02",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1020,16 +1112,10 @@
    },
    "candidates": [
     {
-     "id": "9auy-76zt",
-     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
-     "updated": "2022-05-09",
-     "score": 0.8
-    },
-    {
-     "id": "hnxz-kkn5",
-     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
-     "updated": "2022-05-09",
-     "score": 0.6
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "updated": "2020-02-08",
+     "score": 0.558
     }
    ],
    "already_mapped": false
@@ -1047,14 +1133,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "3y4p-uusw",
-     "name": "Watershed Water Quality - Limnology",
-     "updated": "2025-05-02",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1075,19 +1154,7 @@
      "id": "2t2c-qih9",
      "name": "Full-Time And Full-Time Equivalent Staffing Levels",
      "updated": "2026-07-08",
-     "score": 0.6
-    },
-    {
-     "id": "dcjb-es8v",
-     "name": "Headcount Actuals By Funding Source",
-     "updated": "2026-05-19",
-     "score": 0.6
-    },
-    {
-     "id": "84ax-hg3y",
-     "name": "Full-Time and FTE Headcount including Covered Organizations",
-     "updated": "2026-05-15",
-     "score": 0.6
+     "score": 0.543
     }
    ],
    "already_mapped": false
@@ -1105,14 +1172,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "69wu-b929",
-     "name": "LinkNYC Usage Statistics (Historical Data)",
-     "updated": "2022-09-23",
-     "score": 0.5
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1128,7 +1188,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "2jrp-puwz",
+     "name": "Mayor's Management Report Spending and Budget",
+     "updated": "2025-09-24",
+     "score": 0.584
+    },
+    {
+     "id": "rdjw-z878",
+     "name": "CBO Expense Report",
+     "updated": "2020-04-25",
+     "score": 0.568
+    },
+    {
+     "id": "w4ne-9ea9",
+     "name": "Preliminary Mayor's Management Report Spending and Budget",
+     "updated": "2026-03-10",
+     "score": 0.56
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1144,7 +1223,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "5r5y-pvs3",
+     "name": "NYCHA Resident Data Book Summary",
+     "updated": "2025-08-01",
+     "score": 0.514
+    },
+    {
+     "id": "2jrp-puwz",
+     "name": "Mayor's Management Report Spending and Budget",
+     "updated": "2025-09-24",
+     "score": 0.503
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1176,7 +1268,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "u97r-kgca",
+     "name": "Domestic Violence Homicide Incidents in the Ten Largest U.S. Cities",
+     "updated": "2024-01-31",
+     "score": 0.614
+    },
+    {
+     "id": "pztn-9bne",
+     "name": "Shooting Victims (2006-Present)",
+     "updated": "2026-07-27",
+     "score": 0.535
+    }
+   ],
    "already_mapped": true
   },
   {
@@ -1288,26 +1393,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "gjm4-k24g",
-     "name": "Self-Reported Drinking Water Tank Inspection Results",
-     "updated": "2026-09-14",
-     "score": 0.6
-    },
-    {
-     "id": "rytv-g5ui",
-     "name": "NYC Drinking Water Tank Inspections and Audits Compliance Results",
-     "updated": "2026-09-14",
-     "score": 0.6
-    },
-    {
-     "id": "v8i9-yfpr",
-     "name": "Adding Chemicals to Water Supply Permits",
-     "updated": "2026-07-15",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": true
   },
   {
@@ -1323,20 +1409,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "gjm4-k24g",
-     "name": "Self-Reported Drinking Water Tank Inspection Results",
-     "updated": "2026-09-14",
-     "score": 0.7
-    },
-    {
-     "id": "rytv-g5ui",
-     "name": "NYC Drinking Water Tank Inspections and Audits Compliance Results",
-     "updated": "2026-09-14",
-     "score": 0.7
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1352,7 +1425,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 0.535
+    },
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "updated": "2024-05-02",
+     "score": 0.508
+    },
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "updated": "2026-08-20",
+     "score": 0.5
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1373,7 +1465,19 @@
      "id": "gaq9-z3hz",
      "name": "Recycling Diversion and Capture Rates",
      "updated": "2020-02-08",
-     "score": 1.0
+     "score": 0.697
+    },
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "updated": "2024-05-02",
+     "score": 0.614
+    },
+    {
+     "id": "bpea-2i5q",
+     "name": "DSNY Waste Characterization 2023 - Main Sort Results",
+     "updated": "2024-05-02",
+     "score": 0.547
     }
    ],
    "already_mapped": true
@@ -1396,7 +1500,19 @@
      "id": "gaq9-z3hz",
      "name": "Recycling Diversion and Capture Rates",
      "updated": "2020-02-08",
-     "score": 1.0
+     "score": 0.702
+    },
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "updated": "2024-05-02",
+     "score": 0.556
+    },
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "updated": "2026-08-20",
+     "score": 0.536
     }
    ],
    "already_mapped": false
@@ -1446,20 +1562,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "7piy-bhr9",
-     "name": "NYC Wetlands Map",
-     "updated": "2025-12-06",
-     "score": 0.6
-    },
-    {
-     "id": "p48c-iqtu",
-     "name": "NYC Wetlands",
-     "updated": "2026-01-06",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1475,14 +1578,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "69wu-b929",
-     "name": "LinkNYC Usage Statistics (Historical Data)",
-     "updated": "2022-09-23",
-     "score": 0.5
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1514,7 +1610,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "arhf-esqb",
+     "name": "DOP Adult Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.563
+    },
+    {
+     "id": "7m8q-jgtg",
+     "name": "DOP Juvenile Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.559
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1530,14 +1639,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "rh3d-kgz3",
-     "name": "The Five-System Asset Allocation Chart",
-     "updated": "2026-08-31",
-     "score": 1.0
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1601,14 +1703,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "rh3d-kgz3",
-     "name": "The Five-System Asset Allocation Chart",
-     "updated": "2026-08-31",
-     "score": 0.7
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1624,7 +1719,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "t474-a92g",
+     "name": "City Council Capital Budget",
+     "updated": "2025-12-30",
+     "score": 0.51
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1640,7 +1742,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "9cgq-8a58",
+     "name": "Building Auditing Report",
+     "updated": "2026-04-01",
+     "score": 0.532
+    },
+    {
+     "id": "jaw4-yuem",
+     "name": "Algorithmic Tools Compliance Report",
+     "updated": "2026-04-10",
+     "score": 0.505
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1656,20 +1771,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "augs-s4dd",
-     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
-     "updated": "2025-06-04",
-     "score": 0.6
-    },
-    {
-     "id": "a35y-93e7",
-     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
-     "updated": "2024-01-31",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1781,7 +1883,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "psr5-vz6y",
+     "name": "Office of Climate and Sustainability: 2019 Fuel Oil Sales",
+     "updated": "2024-01-24",
+     "score": 0.527
+    },
+    {
+     "id": "ae3f-9i8x",
+     "name": "Office of Climate and Sustainability: 2018 Fuel Oil Sales",
+     "updated": "2024-01-24",
+     "score": 0.525
+    },
+    {
+     "id": "75g4-kk7x",
+     "name": "Office of Climate and Sustainability: 2017 Fuel Oil Sales",
+     "updated": "2024-01-24",
+     "score": 0.523
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1797,7 +1918,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "ia2d-e54m",
+     "name": "Water Consumption in the City of New York",
+     "updated": "2025-05-21",
+     "score": 0.507
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -1909,20 +2037,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "augs-s4dd",
-     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
-     "updated": "2025-06-04",
-     "score": 0.6
-    },
-    {
-     "id": "a35y-93e7",
-     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
-     "updated": "2024-01-31",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -1954,14 +2069,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "69wu-b929",
-     "name": "LinkNYC Usage Statistics (Historical Data)",
-     "updated": "2022-09-23",
-     "score": 0.5
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -2009,20 +2117,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "augs-s4dd",
-     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
-     "updated": "2025-06-04",
-     "score": 0.6
-    },
-    {
-     "id": "a35y-93e7",
-     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
-     "updated": "2024-01-31",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -2056,10 +2151,22 @@
    },
    "candidates": [
     {
-     "id": "a35y-93e7",
-     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
+     "id": "2rb7-7eqa",
+     "name": "ENDGBV: The Intersection of Domestic Violence, Race/Ethnicity and Sex",
      "updated": "2024-01-31",
-     "score": 0.6
+     "score": 0.606
+    },
+    {
+     "id": "arhf-esqb",
+     "name": "DOP Adult Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.545
+    },
+    {
+     "id": "7m8q-jgtg",
+     "name": "DOP Juvenile Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.525
     }
    ],
    "already_mapped": false
@@ -2125,7 +2232,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 0.627
+    },
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "updated": "2024-05-02",
+     "score": 0.585
+    },
+    {
+     "id": "bpea-2i5q",
+     "name": "DSNY Waste Characterization 2023 - Main Sort Results",
+     "updated": "2024-05-02",
+     "score": 0.54
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2143,22 +2269,10 @@
    },
    "candidates": [
     {
-     "id": "867j-5pgi",
-     "name": "Trade Waste Hauler Licensees",
-     "updated": "2026-09-11",
-     "score": 0.6
-    },
-    {
-     "id": "f7dc-2q9f",
-     "name": "SARS-CoV-2 concentrations measured in NYC Wastewater",
-     "updated": "2026-08-03",
-     "score": 0.6
-    },
-    {
      "id": "gaq9-z3hz",
      "name": "Recycling Diversion and Capture Rates",
      "updated": "2020-02-08",
-     "score": 0.5
+     "score": 0.553
     }
    ],
    "already_mapped": false
@@ -2192,7 +2306,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "gf36-w2jr",
+     "name": "2019-2020 Local Law 102 Physical Education Report -Final",
+     "updated": "2024-11-26",
+     "score": 0.505
+    },
+    {
+     "id": "d33y-i2m7",
+     "name": "Financial Plan Headcount Baseline & Initiatives By Funding",
+     "updated": "2026-07-08",
+     "score": 0.501
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2208,7 +2335,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "6ewv-5j4c",
+     "name": "2021 City Council October Attendance",
+     "updated": "2024-11-26",
+     "score": 0.506
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2224,7 +2358,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "39g5-gbp3",
+     "name": "Expense Budget Funding - All Source",
+     "updated": "2026-07-08",
+     "score": 0.503
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2242,10 +2383,22 @@
    },
    "candidates": [
     {
-     "id": "sw27-mp7d",
-     "name": "Rates of Intimate Partner Violence Across New York City: An Intersectional Analysis",
+     "id": "2rb7-7eqa",
+     "name": "ENDGBV: The Intersection of Domestic Violence, Race/Ethnicity and Sex",
      "updated": "2024-01-31",
-     "score": 0.6
+     "score": 0.551
+    },
+    {
+     "id": "arhf-esqb",
+     "name": "DOP Adult Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.541
+    },
+    {
+     "id": "7m8q-jgtg",
+     "name": "DOP Juvenile Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.527
     }
    ],
    "already_mapped": false
@@ -2265,16 +2418,22 @@
    },
    "candidates": [
     {
+     "id": "2rb7-7eqa",
+     "name": "ENDGBV: The Intersection of Domestic Violence, Race/Ethnicity and Sex",
+     "updated": "2024-01-31",
+     "score": 0.607
+    },
+    {
+     "id": "arhf-esqb",
+     "name": "DOP Adult Probationers Rearrested As A Percentage Of NYPD Arrest Report (Monthly Average)",
+     "updated": "2026-08-04",
+     "score": 0.553
+    },
+    {
      "id": "a35y-93e7",
      "name": "Family Violence Related Snapshots: New York City Community Board Districts",
      "updated": "2024-01-31",
-     "score": 0.6
-    },
-    {
-     "id": "augs-s4dd",
-     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
-     "updated": "2025-06-04",
-     "score": 0.6
+     "score": 0.548
     }
    ],
    "already_mapped": false
@@ -2308,26 +2467,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "q68s-8qxv",
-     "name": "NYCCAS Air Pollution Rasters",
-     "updated": "2026-04-21",
-     "score": 0.85
-    },
-    {
-     "id": "v988-8fd7",
-     "name": "NYC Climate Budgeting Report: Forecasted Avoided Health Events",
-     "updated": "2026-06-02",
-     "score": 0.85
-    },
-    {
-     "id": "ic46-fvh8",
-     "name": "NYC Climate Budgeting Report: Avoided Health Events By NTA (Archived)",
-     "updated": "2025-05-19",
-     "score": 0.85
-    }
-   ],
+   "candidates": [],
    "already_mapped": true
   },
   {
@@ -2343,7 +2483,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "utpj-74fz",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2017 (Data for Calendar Year 2016)",
+     "updated": "2024-10-01",
+     "score": 0.532
+    },
+    {
+     "id": "myei-c3fa",
+     "name": "DOF: Cooperative Comparable Rental Income (Citywide)",
+     "updated": "2023-06-13",
+     "score": 0.523
+    },
+    {
+     "id": "5zyy-y8am",
+     "name": "NYC Building Energy and Water Data Disclosure for Local Law 84 2023 to Present (Data for Calendar Year 2022-Present)",
+     "updated": "2026-04-21",
+     "score": 0.502
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2503,7 +2662,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "fuzb-9jre",
+     "name": "Archaeology Reports Database",
+     "updated": "2026-07-07",
+     "score": 0.513
+    },
+    {
+     "id": "9azj-tmjp",
+     "name": "Government Publication - Required Reports",
+     "updated": "2026-09-04",
+     "score": 0.508
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2535,7 +2707,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "n6uf-ruxa",
+     "name": "PMMR Performance Indicators FY2013-15 (Historical Data)",
+     "updated": "2023-11-30",
+     "score": 0.578
+    },
+    {
+     "id": "wcrd-6u4m",
+     "name": "NYC Open Data Plan: Mayor's Management Report (MMR) Indicators",
+     "updated": "2025-09-15",
+     "score": 0.551
+    },
+    {
+     "id": "rbed-zzin",
+     "name": "Mayor's Management Report - Agency Performance Indicators",
+     "updated": "2026-05-12",
+     "score": 0.544
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2551,7 +2742,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "n6uf-ruxa",
+     "name": "PMMR Performance Indicators FY2013-15 (Historical Data)",
+     "updated": "2023-11-30",
+     "score": 0.59
+    },
+    {
+     "id": "f34v-uffx",
+     "name": "OneNYC Indicators (Historical)",
+     "updated": "2022-06-01",
+     "score": 0.566
+    },
+    {
+     "id": "rbed-zzin",
+     "name": "Mayor's Management Report - Agency Performance Indicators",
+     "updated": "2026-05-12",
+     "score": 0.558
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2583,7 +2793,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "updated": "2026-08-20",
+     "score": 0.504
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2599,14 +2816,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "a8wp-rerh",
-     "name": "Self Hauler Registrants",
-     "updated": "2026-09-11",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -2640,10 +2850,22 @@
    },
    "candidates": [
     {
-     "id": "sg72-pis5",
-     "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
-     "updated": "2023-10-05",
-     "score": 0.571
+     "id": "qj5n-h5qp",
+     "name": "Capital Projects Dashboard - Citywide Budget Spend History and Variance",
+     "updated": "2026-07-15",
+     "score": 0.52
+    },
+    {
+     "id": "rdjw-z878",
+     "name": "CBO Expense Report",
+     "updated": "2020-04-25",
+     "score": 0.517
+    },
+    {
+     "id": "8sea-35e7",
+     "name": "Asset Management Executive Summary - State of Good Repair Needs (Expense)",
+     "updated": "2025-10-23",
+     "score": 0.516
     }
    ],
    "already_mapped": false
@@ -2693,7 +2915,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "7n9x-tbtd",
+     "name": "NYC Climate Budgeting Report: Resiliency Exposure Forecast - Coastal Flooding",
+     "updated": "2026-05-19",
+     "score": 0.539
+    },
+    {
+     "id": "t7k8-wj6b",
+     "name": "Hazard Mitigation Plan \u2013 Mitigation Actions Database (points)",
+     "updated": "2024-08-27",
+     "score": 0.528
+    },
+    {
+     "id": "hqhh-iv7p",
+     "name": "Hazard Mitigation Plan - Mitigation Actions Database (Lines)",
+     "updated": "2024-08-27",
+     "score": 0.527
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2709,14 +2950,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "dbpt-pbmd",
-     "name": "EEO-4 Reports",
-     "updated": "2024-05-22",
-     "score": 1.0
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -2764,7 +2998,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "jb7j-dtam",
+     "name": "New York City Leading Causes of Death",
+     "updated": "2026-01-27",
+     "score": 0.549
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -2782,10 +3023,16 @@
    },
    "candidates": [
     {
-     "id": "6ucq-tfej",
-     "name": "2021 City Council - September Attendance Report",
-     "updated": "2024-11-26",
-     "score": 0.767
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "updated": "2020-02-08",
+     "score": 0.52
+    },
+    {
+     "id": "5r5y-pvs3",
+     "name": "NYCHA Resident Data Book Summary",
+     "updated": "2025-08-01",
+     "score": 0.519
     }
    ],
    "already_mapped": false
@@ -2851,7 +3098,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "mrjc-v9pm",
+     "name": "New York City's Flood Vulnerability Index",
+     "updated": "2026-04-21",
+     "score": 0.502
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -3011,7 +3265,14 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "jb7j-dtam",
+     "name": "New York City Leading Causes of Death",
+     "updated": "2026-01-27",
+     "score": 0.548
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -3061,10 +3322,22 @@
    },
    "candidates": [
     {
-     "id": "hnxz-kkn5",
-     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
-     "updated": "2022-05-09",
-     "score": 1.0
+     "id": "xhvt-s4va",
+     "name": "Functional Parkland",
+     "updated": "2026-08-16",
+     "score": 0.544
+    },
+    {
+     "id": "at6q-ktig",
+     "name": "DPR_PlayAreas_001",
+     "updated": "2024-02-20",
+     "score": 0.539
+    },
+    {
+     "id": "4e2n-s75z",
+     "name": "Suitability of City-Owned and Leased Property for Urban Agriculture (LL 48 of 2011)",
+     "updated": "2025-09-17",
+     "score": 0.533
     }
    ],
    "already_mapped": false
@@ -3082,14 +3355,7 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [
-    {
-     "id": "a8wp-rerh",
-     "name": "Self Hauler Registrants",
-     "updated": "2026-09-11",
-     "score": 0.6
-    }
-   ],
+   "candidates": [],
    "already_mapped": false
   },
   {
@@ -3105,7 +3371,26 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "updated": "2024-05-02",
+     "score": 0.548
+    },
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 0.543
+    },
+    {
+     "id": "bpea-2i5q",
+     "name": "DSNY Waste Characterization 2023 - Main Sort Results",
+     "updated": "2024-05-02",
+     "score": 0.513
+    }
+   ],
    "already_mapped": false
   },
   {
@@ -3169,7 +3454,20 @@
     "provenance": "undata/p/SDG",
     "grade": "GREEN"
    },
-   "candidates": [],
+   "candidates": [
+    {
+     "id": "2z24-2htf",
+     "name": "Office of Labor Policy & Standards Workplace Inquiries (Historical)",
+     "updated": "2025-04-22",
+     "score": 0.511
+    },
+    {
+     "id": "7t9i-jsfp",
+     "name": "Annual Report on Domestic Violence Initiatives, Indicators and Factors",
+     "updated": "2026-03-11",
+     "score": 0.5
+    }
+   ],
    "already_mapped": false
   },
   {

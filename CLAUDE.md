@@ -30,8 +30,11 @@ UN System Data Commons.
 - `docs/` — the briefing hub, served at https://sarapis.github.io/undatacommons-nyc/
 - `docs/artifacts/` — generated outputs; regenerate rather than hand-edit
 - `probe/` — probes and the enumeration pipeline (stdlib only)
-  - `corpus.py` → `screen.py` → `match_nyc.py`: enumerate the SDG corpus, screen for US
-    coverage, propose NYC candidates. Cached in `probe/cache/`, all stages resumable.
+  - `corpus.py` → `screen.py` → `catalog.py` → `match_nyc.py`: enumerate the SDG corpus,
+    screen for US coverage, cache the NYC catalog, propose candidates by embedding search.
+    Cached in `probe/cache/`, all stages resumable.
+  - Needs `pip3 install model2vec` for embedding search. Without it the matcher falls back to
+    keyword overlap, which measured median rank 1535 of 2400 — worse than a coin flip.
   - `pair_probe.py`: verify both sides of every crosswalk mapping.
 
 ## Conventions

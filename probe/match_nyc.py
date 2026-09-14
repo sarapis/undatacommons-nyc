@@ -26,6 +26,7 @@ import time
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import nyc  # noqa: E402
+import embed  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CACHE = ROOT / "probe" / "cache"
@@ -57,6 +58,13 @@ rural farmers pastoral""".split())
 # word "domestic" is the failure this guards against.
 MIN_MATCHED_TERMS = 2
 MIN_COVERAGE = 0.5
+
+# Embedding search always returns its top k, so without a floor every indicator
+# gets "candidates" and the count means nothing. Cosine similarity on the
+# verified pairs sits around 0.5-0.7 for real matches; the median top candidate
+# across all indicators is 0.46, so this keeps roughly the better half and is a
+# calibration choice, not a threshold with any theory behind it.
+MIN_SIMILARITY = 0.50
 
 
 def city_scoped(terms):
@@ -94,12 +102,13 @@ def score(terms, dataset):
     return round(min(base, 1.0), 3)
 
 
-def search(terms, limit=5):
+def search_keyword(terms, limit=5):
+    """Fallback retrieval. Measurably poor -- see embed.py -- but dependency-free."""
     if not terms:
         return []
-    q = " ".join(terms[:6])
     try:
-        d = nyc._get(nyc.CATALOG, {"domains": nyc.DOMAIN, "q": q, "limit": limit})
+        d = nyc._get(nyc.CATALOG, {"domains": nyc.DOMAIN,
+                                   "q": " ".join(terms[:6]), "limit": limit})
     except nyc.NYCError as exc:
         print(f"  ! {exc}", file=sys.stderr)
         return []
@@ -121,24 +130,43 @@ def main():
     existing = {p["un"]["dcid"].split(".")[0]
                 for p in json.loads((ROOT / "probe" / "crosswalk.json").read_text())["pairs"]}
 
+    index, mode = None, "keyword"
+    if embed.available() and embed.CATALOG.exists():
+        index, mode = embed.Index(), "embedding"
+    else:
+        print("  WARNING: model2vec not installed (or catalog not cached) -- falling back\n"
+              "  to keyword matching, which put the correct dataset at median rank 1535\n"
+              "  of 2400 on our verified pairs, versus 23 for embeddings.\n"
+              "  Fix: pip3 install model2vec && python3 probe/catalog.py",
+              file=sys.stderr)
+
     results, skipped = [], []
     for i, ind in enumerate(green, 1):
         terms = keywords(ind.get("name"))
         if not city_scoped(terms):
             skipped.append(ind)
             continue
+
         cands = []
-        for ds in search(terms):
-            sc = score(terms, ds)
-            if sc >= args.min_score:
-                cands.append({"id": ds.get("id"), "name": ds.get("name"),
-                              "updated": (ds.get("updatedAt") or "")[:10], "score": sc})
+        if index:
+            for ds in index.search(ind.get("name") or "", k=5):
+                if ds.get("archived") or ds["score"] < MIN_SIMILARITY:
+                    continue
+                cands.append({"id": ds["id"], "name": ds["name"],
+                              "updated": ds.get("updated", ""), "score": ds["score"]})
+        else:
+            for ds in search_keyword(terms):
+                sc = score(terms, ds)
+                if sc >= args.min_score:
+                    cands.append({"id": ds.get("id"), "name": ds.get("name"),
+                                  "updated": (ds.get("updatedAt") or "")[:10], "score": sc})
+            time.sleep(0.25)
+
         cands.sort(key=lambda c: -c["score"])
         results.append({"indicator": ind, "candidates": cands[:3],
                         "already_mapped": ind["dcid"] in existing})
         if i % 25 == 0:
             print(f"  matched {i}/{len(green)}", file=sys.stderr)
-        time.sleep(0.25)
 
     with_c = [r for r in results if r["candidates"]]
     new = [r for r in with_c if not r["already_mapped"]]
@@ -151,12 +179,19 @@ def main():
           f"{len(skipped)} were excluded before searching as inherently national "
           "(balance of payments, ODA, treaties, fisheries and similar) — a city does not "
           "publish them and matching could only yield false positives.", "",
-          "**This is a shortlist for human review, not a set of mappings.** The score is term "
-          "overlap — good for surfacing a candidate, useless for deciding comparability. "
-          "Promoting a row into `probe/crosswalk.json` means writing the grade and the reason "
-          "by hand.", "",
+          f"Retrieval: **{mode}**. Embedding search over the full 2,400-dataset catalog "
+          "(name, description, columns, tags, category), which on our seven verified pairs "
+          "put the correct dataset at median rank **23** versus **1535** for keyword overlap.",
+          "",
+          "**This is a shortlist for human review, not a set of mappings.** Similarity surfaces "
+          "a candidate; it cannot decide comparability. Two of those seven verified pairs stay "
+          "unfindable at any rank because the mapping depends on what is *inside* a dataset — "
+          "NYC's homicide series is offence code 101 inside 'NYPD Complaint Data Historic', "
+          "which its metadata never mentions. Promoting a row into `probe/crosswalk.json` means "
+          "writing the grade and the reason by hand.", "",
           f"- {len(green)} indicators screened GREEN on the UN side",
-          f"- {len(with_c)} have at least one plausible NYC dataset",
+          f"- {len(with_c)} have at least one NYC dataset above the "
+          f"{MIN_SIMILARITY} similarity floor",
           f"- **{len(new)} are not yet in the crosswalk**", "",
           "| Score | SDG indicator | UN obs | Candidate NYC dataset | Updated |",
           "|---|---|---:|---|---|"]

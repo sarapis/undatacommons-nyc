@@ -89,8 +89,11 @@ US data at all. The 11 hand-built pairs are 1.6% of the corpus and 4% of the usa
 the crosswalk is a verified sample, not a representative one.
 
 The `probe/` pipeline now enumerates, screens and proposes candidates from the corpus rather
-than from intuition. Its matching stage is keyword-based and roughly a third accurate; treat its
-output as a shortlist for human review, never as mappings.
+than from intuition. Its matching stage uses embedding search over the full 2,400-dataset NYC catalog: on seven
+hand-verified pairs it puts the correct dataset at median rank **23**, against **1535** for the
+keyword matcher it replaced. Still a shortlist for human review, never mappings — about 30% of
+real mappings depend on what is *inside* a dataset (NYC's homicide series is offence code 101
+inside "NYPD Complaint Data Historic") and no text method can find those.
 
 ## What the crosswalk says so far
 
@@ -133,7 +136,8 @@ international comparison does not exist.
   ([status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest))
 - [x] Systematic enumeration pipeline — 689 SDG indicators, 248 with US data
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
-- [ ] Replace keyword matching with embedding search (the current matcher is ~1/3 accurate)
+- [x] Embedding search — correct dataset from median rank 1535 to 23 of 2,400
+  ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
