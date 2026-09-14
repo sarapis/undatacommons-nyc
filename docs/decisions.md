@@ -7,14 +7,17 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
-## 2026-09-14 — Recommend national city aggregates as the peer comparator
+## 2026-09-14 — Comparators are tiered; city-level is the exception, not the rule
 
-`URBANIZATION--DOU_CITY` turns out to exist for many countries with full 10-year series, so NYC
-can be compared to the city aggregate of the UK, France, Japan, Mexico and others from UN Data
-Commons alone. One source, one method, one unit, no cherry-picked comparator city. Supersedes
-the open question below. **Recommended, not yet confirmed — Devin's call.**
+`URBANIZATION--DOU_CITY` gives a genuine NYC-vs-national-city-aggregate comparison across many
+countries, but only for **five indicators** — it clusters in gridded-geospatial families and the
+administrative indicators have no spatial dimension. Tier 1 (city aggregates, ~5 indicators),
+Tier 2 (urban/rural, ~8, low NYC relevance), Tier 3 (national totals, everything else).
 
-Caveat to carry onto any chart: NYC sits inside the US city aggregate, roughly 7% of it.
+**Plan against Tier 3 as the default.** An earlier version of this entry recommended city
+aggregates as the primary framing, generalising from PM2.5 alone; corrected the same day.
+
+Caveat to carry onto any Tier 1 chart: NYC sits inside the US city aggregate, roughly 7% of it.
 
 ## 2026-09-14 — The pair probe does not assign comparability grades
 

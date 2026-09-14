@@ -84,12 +84,14 @@ point cannot carry it.
 
 ## Open questions
 
-- **Peer comparators — recommendation on the table, awaiting a call.** Probing resolved this
-  further than expected: the `URBANIZATION--DOU_CITY` slice exists for *many countries* with
-  full 10-year series, so we can compare NYC to the **city aggregate of other nations** using
-  only UN Data Commons. One source, one method, one unit. Arguably better than the
-  NYC-vs-London comparison we promised, since nothing is cherry-picked. **Recommended as the
-  primary framing. Devin's call.** See the [activity feed](https://sarapis.github.io/undatacommons-nyc/activity).
+- **Peer comparators are tiered, not general.** The `URBANIZATION--DOU_CITY` slice lets us
+  compare NYC to the **city aggregate of other nations** — same source, method and unit — but a
+  scan of 5,320 variables found it on only **five indicators** (PM2.5, built-up area per capita,
+  population, two food-insecurity measures). They cluster in gridded-geospatial families; the
+  administrative indicators have no spatial dimension and will not gain one. About eight more
+  carry a coarser urban/rural cut of little NYC relevance. **The general case remains
+  NYC-vs-nation**, so the comparability grade carries most of the weight. See the
+  [activity feed](https://sarapis.github.io/undatacommons-nyc/activity).
 - **Homicide is blocked on a denominator.** NYC publishes a count, the UN a rate per 100,000.
   The Census ACS path (`B01003_001E`, place 51000 / state 36) now requires a free
   api.census.gov key — a five-minute signup nobody has done yet.
