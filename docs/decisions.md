@@ -7,6 +7,12 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-14 — Missing denominator years stay empty
+
+There is no ACS 1-year release for 2020, so NYC rates have no 2020 value — on the year homicides
+spiked. Interpolating would produce a number visually identical to a measured one, in precisely
+the case someone would quote it. The probe records dropped years explicitly.
+
 ## 2026-09-14 — Comparators are tiered; city-level is the exception, not the rule
 
 `URBANIZATION--DOU_CITY` gives a genuine NYC-vs-national-city-aggregate comparison across many

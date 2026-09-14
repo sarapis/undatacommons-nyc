@@ -12,7 +12,7 @@ still resolves and that the units agree.
 | Pair | SDG | Grade | Chartable | Overlap | Units | Blockers |
 |---|---|---|---|---|---|---|
 | Fine particulate matter (PM2.5), annual mean | 11.6.2 | PROXY | yes | 2010–2019 | units agree | — |
-| Intentional homicide | 16.1.1 | PROXY | NO | 2006–2023 | UNIT MISMATCH: UN `RATIO_COUNT_PER_100000_COUNT_POP` vs NYC `count` | needs a population denominator before the two can share an axis; UNIT MISMATCH: UN `RATIO_COUNT_PER_100000_COUNT_POP` vs NYC `count` |
+| Intentional homicide | 16.1.1 | PROXY | yes | 2006–2023 | units agree | — |
 | Proportion of municipal waste recycled | 11.6.1 | PROXY | yes | 2000–2018 | units agree | — |
 
 ## Detail
@@ -27,13 +27,12 @@ still resolves and that the units agree.
 
 ### Intentional homicide (SDG 16.1.1) — **PROXY**
 
-*NYPD 'murder & non-negligent manslaughter' tracks the UNODC intentional-homicide definition closely. BLOCKER: NYC side is a count, UN side is a rate per 100,000 -- needs an annual NYC population denominator before the two can share an axis. Pre-2006 rows in this dataset carry junk incident dates (17 murders in 1990) and are excluded. Denominator path: Census ACS B01003_001E for place 51000 in state 36 now requires a free api.census.gov key -- unresolved.*
+*NYPD 'murder & non-negligent manslaughter' tracks the UNODC intentional-homicide definition closely. BLOCKER: NYC side is a count, UN side is a rate per 100,000 -- needs an annual NYC population denominator before the two can share an axis. Pre-2006 rows in this dataset carry junk incident dates (17 murders in 1990) and are excluded. Denominator: Census ACS 1-year total population. There is no ACS 1-year release for 2020, so 2020 carries no rate -- and 2020 is the year NYC homicides jumped. That gap is left empty rather than interpolated.*
 
 - **UN** `undata/sdg/VC_IHR_PSRC` — 21 obs, 2000–2023, unit `RATIO_COUNT_PER_100000_COUNT_POP`, source https://unstats.un.org/sdgs/dataportal
-- **NYC** `qgea-i56i` NYPD Complaint Data Historic — 20 obs, 2006–2025, updated 2026-04-28
-- Overlap: 2006–2023 · UNIT MISMATCH: UN `RATIO_COUNT_PER_100000_COUNT_POP` vs NYC `count`
-
-  **Blockers:** needs a population denominator before the two can share an axis; UNIT MISMATCH: UN `RATIO_COUNT_PER_100000_COUNT_POP` vs NYC `count`
+- **NYC** `qgea-i56i` NYPD Complaint Data Historic — 18 obs, 2006–2024, updated 2026-04-28
+- **Denominator** Census ACS 1-year B01003_001E, NYC place 51000 / state 36, per 100,000 — no denominator for 2020, 2025, those years carry no rate
+- Overlap: 2006–2023 · units agree
 
 ### Proportion of municipal waste recycled (SDG 11.6.1) — **PROXY**
 

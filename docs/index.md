@@ -92,9 +92,10 @@ point cannot carry it.
   carry a coarser urban/rural cut of little NYC relevance. **The general case remains
   NYC-vs-nation**, so the comparability grade carries most of the weight. See the
   [activity feed](https://sarapis.github.io/undatacommons-nyc/activity).
-- **Homicide is blocked on a denominator.** NYC publishes a count, the UN a rate per 100,000.
-  The Census ACS path (`B01003_001E`, place 51000 / state 36) now requires a free
-  api.census.gov key — a five-minute signup nobody has done yet.
+- **Denominators are solved.** Census ACS 1-year supplies annual NYC population, so
+  count-vs-rate pairs work. Requires a free api.census.gov key in `CENSUS_API_KEY` — never
+  committed; this repo is public. **Known hole: no ACS 1-year release for 2020**, so 2020
+  carries no rate, on the year NYC homicides spiked. Left empty, not interpolated.
 - **For the organizers:** is city-level ingestion on the roadmap? Is there a sanctioned path for
   a city to *contribute* a series? Will staging DCIDs survive the 17 Sep public launch? Are
   there rate limits?
@@ -105,7 +106,7 @@ point cannot carry it.
 - [x] Pair probe — both sides of every mapping verified,
   [crosswalk status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest)
 - [ ] Confirm the peer-comparator framing (recommendation above)
-- [ ] Census API key, to unblock homicide and every other rate-based indicator
+- [x] Census denominators — all three pairs now chartable end to end
 - [ ] Extend the crosswalk beyond the first three pairs, seeded from the 2018 VLR and the MMR
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data

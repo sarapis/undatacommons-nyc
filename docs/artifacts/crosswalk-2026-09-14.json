@@ -154,8 +154,13 @@
           }
         },
         "grade": "PROXY",
-        "reason": "NYPD 'murder & non-negligent manslaughter' tracks the UNODC intentional-homicide definition closely. BLOCKER: NYC side is a count, UN side is a rate per 100,000 -- needs an annual NYC population denominator before the two can share an axis. Pre-2006 rows in this dataset carry junk incident dates (17 murders in 1990) and are excluded. Denominator path: Census ACS B01003_001E for place 51000 in state 36 now requires a free api.census.gov key -- unresolved.",
-        "requires_denominator": true
+        "reason": "NYPD 'murder & non-negligent manslaughter' tracks the UNODC intentional-homicide definition closely. BLOCKER: NYC side is a count, UN side is a rate per 100,000 -- needs an annual NYC population denominator before the two can share an axis. Pre-2006 rows in this dataset carry junk incident dates (17 murders in 1990) and are excluded. Denominator: Census ACS 1-year total population. There is no ACS 1-year release for 2020, so 2020 carries no rate -- and 2020 is the year NYC homicides jumped. That gap is left empty rather than interpolated.",
+        "requires_denominator": true,
+        "denominator": {
+          "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
+          "per": 100000,
+          "unit": "per 100k"
+        }
       },
       "un": {
         "dcid": "undata/sdg/VC_IHR_PSRC",
@@ -212,11 +217,11 @@
       },
       "nyc": {
         "dataset": "qgea-i56i",
-        "declared_unit": "count",
+        "declared_unit": "per 100k",
         "name": "NYPD Complaint Data Historic",
         "updated_at": "2026-04-28",
         "archived": false,
-        "n_obs": 20,
+        "n_obs": 18,
         "years": [
           2006,
           2007,
@@ -232,14 +237,32 @@
           2017,
           2018,
           2019,
-          2020,
           2021,
           2022,
           2023,
-          2024,
-          2025
+          2024
         ],
         "values": {
+          "2006": 6.926838223388951,
+          "2007": 5.885532792388012,
+          "2008": 6.205380148283477,
+          "2009": 5.433823477716141,
+          "2010": 6.499774768143138,
+          "2011": 6.015832798660021,
+          "2012": 4.989985842114689,
+          "2013": 3.8306714726921305,
+          "2014": 3.945317197025254,
+          "2015": 4.046591945059912,
+          "2016": 3.888647410131543,
+          "2017": 3.224048899775917,
+          "2018": 3.5719609637055427,
+          "2019": 3.6344806417125386,
+          "2021": 5.621485316881119,
+          "2022": 5.194401994170514,
+          "2023": 4.662126038458301,
+          "2024": 4.281633843166229
+        },
+        "raw_counts": {
           "2006": 569.0,
           "2007": 487.0,
           "2008": 519.0,
@@ -260,6 +283,14 @@
           "2023": 385.0,
           "2024": 363.0,
           "2025": 277.0
+        },
+        "denominator": {
+          "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
+          "per": 100000,
+          "years_dropped_no_denominator": [
+            2020,
+            2025
+          ]
         }
       },
       "assessment": {
@@ -278,17 +309,13 @@
           2017,
           2018,
           2019,
-          2020,
           2021,
           2022,
           2023
         ],
-        "unit_check": "UNIT MISMATCH: UN `RATIO_COUNT_PER_100000_COUNT_POP` vs NYC `count`",
-        "blockers": [
-          "needs a population denominator before the two can share an axis",
-          "UNIT MISMATCH: UN `RATIO_COUNT_PER_100000_COUNT_POP` vs NYC `count`"
-        ],
-        "chartable": false
+        "unit_check": "units agree",
+        "blockers": [],
+        "chartable": true
       }
     },
     {

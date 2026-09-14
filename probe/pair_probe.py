@@ -22,6 +22,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from undc import Client, UNDCError          # noqa: E402
 import nyc                                   # noqa: E402
+import census                                 # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ARTIFACTS = ROOT / "docs" / "artifacts"
@@ -82,6 +83,42 @@ def nyc_side(spec):
     return out
 
 
+def apply_denominator(pair, ny):
+    """Convert a NYC count series into a rate when the pair declares one.
+
+    Years with no denominator are DROPPED, not estimated. ACS 1-year has no 2020
+    release, so 2020 simply has no rate -- and that is the honest rendering. An
+    interpolated denominator yields a rate indistinguishable from a measured one.
+    """
+    spec = pair.get("denominator")
+    if not spec or ny.get("error") or not ny.get("values"):
+        return ny
+
+    years = [int(y) for y in ny["values"]]
+    try:
+        pop, gaps = census.nyc_population(range(min(years), max(years) + 1))
+    except census.CensusError as exc:
+        ny["denominator_error"] = str(exc)
+        return ny
+
+    per = spec.get("per", 100000)
+    rates, dropped = {}, []
+    for y, v in ny["values"].items():
+        if int(y) in pop:
+            rates[y] = v / pop[int(y)] * per
+        else:
+            dropped.append(int(y))
+
+    ny["raw_counts"] = ny["values"]
+    ny["values"] = rates
+    ny["years"] = sorted(int(y) for y in rates)
+    ny["n_obs"] = len(rates)
+    ny["declared_unit"] = spec.get("unit", "per 100k")
+    ny["denominator"] = {"source": spec.get("source", "ACS 1-year B01003_001E"),
+                         "per": per, "years_dropped_no_denominator": sorted(dropped)}
+    return ny
+
+
 def assess(pair, un, ny):
     """Mechanical checks only. Comparability stays a human call."""
     blockers = []
@@ -91,8 +128,10 @@ def assess(pair, un, ny):
         blockers.append(f"NYC side did not resolve: {ny['error']}")
     if ny.get("archived"):
         blockers.append(f"NYC dataset is ARCHIVED ({ny.get('name')})")
-    if pair.get("requires_denominator"):
+    if pair.get("requires_denominator") and not ny.get("denominator"):
         blockers.append("needs a population denominator before the two can share an axis")
+    if ny.get("denominator_error"):
+        blockers.append(f"denominator unavailable: {ny['denominator_error']}")
 
     un_years, ny_years = set(un.get("years") or []), set(ny.get("years") or [])
     overlap = sorted(un_years & ny_years)
@@ -120,7 +159,7 @@ def main():
     for pair in spec["pairs"]:
         print(f"-> {pair['id']}", file=sys.stderr)
         un = un_side(client, pair["un"])
-        ny = nyc_side(pair["nyc"])
+        ny = apply_denominator(pair, nyc_side(pair["nyc"]))
         out.append({"pair": pair, "un": un, "nyc": ny,
                     "assessment": assess(pair, un, ny)})
 
@@ -155,6 +194,13 @@ def main():
                f"{ny.get('n_obs', 0)} obs"
                + (f", {ny['years'][0]}–{ny['years'][-1]}" if ny.get("years") else "")
                + f", updated {ny.get('updated_at', '—')}",
+               *([f"- **Denominator** {ny['denominator']['source']}, per "
+                  f"{ny['denominator']['per']:,}"
+                  + (f" — no denominator for "
+                     f"{', '.join(str(x) for x in ny['denominator']['years_dropped_no_denominator'])}, "
+                     f"those years carry no rate"
+                     if ny['denominator']['years_dropped_no_denominator'] else "")]
+                 if ny.get("denominator") else []),
                f"- Overlap: {a['overlap_years'][0] if a['overlap_years'] else '—'}"
                + (f"–{a['overlap_years'][-1]}" if a["overlap_years"] else "")
                + f" · {a['unit_check']}", ""]
