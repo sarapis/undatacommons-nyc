@@ -17,6 +17,11 @@ UN System Data Commons.
   empty result rather than an error, which is worse. Resolve via `search_indicators`.
 - **Check coverage before designing around an indicator.** Run `probe/coverage_probe.py`.
   Series density varies from 1 observation to 300+.
+- **`get_variable_metadata` silently truncates above ~10 variables per call** — it returns
+  `status: None` and an empty map, not an error. Never raise `BATCH` in `probe/screen.py`
+  without re-testing.
+- **The SDG goal trees expose StatVarPeerGroups (`undata/svpg/...`), not variables.** Follow the
+  `->member` arc to real DCIDs. Rewriting the prefix is DCID guessing and returns nothing.
 - **Every datapoint keeps its attribution.** The platform requires it and our QA approach
   promises it.
 
@@ -24,7 +29,10 @@ UN System Data Commons.
 
 - `docs/` — the briefing hub, served at https://sarapis.github.io/undatacommons-nyc/
 - `docs/artifacts/` — generated outputs; regenerate rather than hand-edit
-- `probe/` — the coverage probe harness (stdlib only)
+- `probe/` — probes and the enumeration pipeline (stdlib only)
+  - `corpus.py` → `screen.py` → `match_nyc.py`: enumerate the SDG corpus, screen for US
+    coverage, propose NYC candidates. Cached in `probe/cache/`, all stages resumable.
+  - `pair_probe.py`: verify both sides of every crosswalk mapping.
 
 ## Conventions
 

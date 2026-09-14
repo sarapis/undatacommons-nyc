@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-14** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-15** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 > **If you are an AI assistant:** this page is the project's shared memory. Read it in full
 > before answering questions about the project. It is current as of the date above — check the
@@ -82,6 +82,16 @@ class" honestly.
 **Road safety is out as our headline demo.** It was the example in our application. One data
 point cannot carry it.
 
+## The corpus, and how much of it we have touched
+
+**689 base SDG indicators** in the goal framework; **248** have a usable US series; 377 have no
+US data at all. The 11 hand-built pairs are 1.6% of the corpus and 4% of the usable pool — so
+the crosswalk is a verified sample, not a representative one.
+
+The `probe/` pipeline now enumerates, screens and proposes candidates from the corpus rather
+than from intuition. Its matching stage is keyword-based and roughly a third accurate; treat its
+output as a shortlist for human review, never as mappings.
+
 ## What the crosswalk says so far
 
 11 indicator pairs mapped; **3 can honestly share an axis** (PM2.5, homicide, waste recycling).
@@ -121,6 +131,9 @@ international comparison does not exist.
 - [x] Census denominators — all three pairs now chartable end to end
 - [x] Crosswalk expanded to 11 pairs — 3 chartable, 8 documented as not comparable and why
   ([status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest))
+- [x] Systematic enumeration pipeline — 689 SDG indicators, 248 with US data
+  ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
+- [ ] Replace keyword matching with embedding search (the current matcher is ~1/3 accurate)
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention

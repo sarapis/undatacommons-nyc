@@ -1,0 +1,3256 @@
+{
+ "generated": "2026-09-14",
+ "results": [
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SI_POV_DAY1",
+    "name": "Proportion of population below international poverty line",
+    "n_obs": 61,
+    "first_year": 1963,
+    "latest_year": 2023,
+    "span_years": 61,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "vajk-p37e",
+     "name": "DOHMH COVID-19 Antibody-by-Neighborhood Poverty",
+     "updated": "2024-07-03",
+     "score": 0.6
+    },
+    {
+     "id": "c7ru-d68s",
+     "name": "2017-18  - 2021-22 Demographic Snapshot",
+     "updated": "2024-11-26",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": true
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_RSK_LST",
+    "name": "Red List Index",
+    "n_obs": 46,
+    "first_year": 1980,
+    "latest_year": 2025,
+    "span_years": 46,
+    "unit": "INDEX",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/GF_FRN_FDI",
+    "name": "Foreign direct investment (FDI) inflows",
+    "n_obs": 35,
+    "first_year": 1990,
+    "latest_year": 2024,
+    "span_years": 35,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_PRIM",
+    "name": "Energy intensity level of primary energy",
+    "n_obs": 34,
+    "first_year": 1990,
+    "latest_year": 2023,
+    "span_years": 34,
+    "unit": "RATIO_ENERGY_MJ_PER_CR_USD_PPP2011",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "hpid-63r5",
+     "name": "NYC Municipal Building Energy Benchmarking Results (2014)",
+     "updated": "2022-05-09",
+     "score": 0.667
+    },
+    {
+     "id": "vvj6-d5qx",
+     "name": "NYC Municipal Building Energy Benchmarking Results",
+     "updated": "2022-05-09",
+     "score": 0.667
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_FEC_RNEW",
+    "name": "Share of renewable energy in the total final energy consumption",
+    "n_obs": 34,
+    "first_year": 1990,
+    "latest_year": 2023,
+    "span_years": 34,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "fvp3-gcb2",
+     "name": "Local Law 84 Monthly Data (Calendar Year)",
+     "updated": "2025-11-25",
+     "score": 0.6
+    },
+    {
+     "id": "usc3-8zwd",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2021 (Data for Calendar Year 2020)",
+     "updated": "2024-10-01",
+     "score": 0.6
+    },
+    {
+     "id": "7x5e-2fxh",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2022 (Data for Calendar Year 2021)",
+     "updated": "2026-04-21",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_IHR_PSRCN",
+    "name": "Number of victims of intentional homicide",
+    "n_obs": 31,
+    "first_year": 1990,
+    "latest_year": 2023,
+    "span_years": 34,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_GRF_ANIMKPT",
+    "name": "Number of local breeds kept in the country",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_GRF_ANIMKPT_TRB",
+    "name": "Number of transboundary breeds (including extinct ones)",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_RSK_LBREDS",
+    "name": "Proportion of local breeds classified as being at risk of extinction as a share of local breeds with known level of extinction risk",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_NOEX_LBREDN",
+    "name": "Number of local breeds (not extinct)",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_NOEX_TRBBREDN",
+    "name": "Number of transboundary breeds (not extinct) (number)",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_RSK_TRBBREDS",
+    "name": "Proportion of transboundary breeds classified as being at risk of extinction as a share of local breeds with known level of extinction risk (%)",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_UNK_TRBBREDN",
+    "name": "Number of transboundary breeds with unknown risk status (number)",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_UNK_LBREDN",
+    "name": "Number of local breeds with unknown risk status",
+    "n_obs": 26,
+    "first_year": 2000,
+    "latest_year": 2025,
+    "span_years": 26,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/DC_TRF_TOTDL",
+    "name": "Total outbound assistance for development",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_RNEW",
+    "name": "Installed renewable electricity-generating capacity",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "RATIO_POWER_W_PER_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_ACS_ELEC",
+    "name": "Proportion of population with access to electricity",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MAT_DOMCMPC",
+    "name": "Domestic material consumption per capita",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "mpbx-6c9k",
+     "name": "Mayor's Office to End Domestic and Gender-Based Violence Annual  Report on Outreach to Cosmetologists",
+     "updated": "2026-02-24",
+     "score": 0.6
+    },
+    {
+     "id": "ipu7-kigb",
+     "name": "ENDGBV in Focus: Outreach Campaigns and Activities, 2018-2019",
+     "updated": "2024-01-31",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MAT_DOMCMPT",
+    "name": "Domestic material consumption",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FM_LBL_BMNY_ZG",
+    "name": "Annual growth of broad money",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FM_LBL_BMNY_IR_ZS",
+    "name": "Ratio of broad money to total reserves",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "RATIO",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FP_CPI_TOTL_ZG",
+    "name": "Annual inflation (consumer prices)",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_NET_BBND",
+    "name": "Fixed broadband subscriptions per 100 inhabitants",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "RATIO_COUNT_PER_100_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_USE_ii99",
+    "name": "Proportion of individuals using the Internet",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_NET_BBNDN",
+    "name": "Number of fixed broadband subscriptions",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/NE_GDI_TOTL_KD_ZG",
+    "name": "Annual growth of the gross capital formation",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "fb86-vt7u",
+     "name": "Capital Projects Dashboard - Citywide Budget and Schedule",
+     "updated": "2026-07-15",
+     "score": 0.6
+    },
+    {
+     "id": "gyhf-rsr3",
+     "name": "Capital Projects Dashboard - Citywide Budget and Spend by Fiscal Year",
+     "updated": "2026-07-15",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/PA_NUS_ATLS",
+    "name": "Alternative conversion factor used by the Development Economics Group (DEC)",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "RATIO",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_ACS_DTP3",
+    "name": "Proportion of the target population who received 3 doses of diphtheria-tetanus-pertussis (DTP3) vaccine",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_ACS_MCV2",
+    "name": "Proportion of the target population who received measles-containing-vaccine second-dose (MCV2)",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_SAN_DEFECT",
+    "name": "Proportion of population practicing open defecation",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_SAN_SAFE",
+    "name": "Proportion of population using safely managed sanitation services",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_TBS_INCD",
+    "name": "Tuberculosis incidence",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SP_ACS_BSRVSAN",
+    "name": "Proportion of population using basic sanitation services",
+    "n_obs": 25,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "ebb7-mvp5",
+     "name": "DSNY Monthly Tonnage Data",
+     "updated": "2026-09-10",
+     "score": 0.6
+    },
+    {
+     "id": "rn6p-xvjd",
+     "name": "Inspections of Municipal Solid Waste Disposal Locations (No Longer Maintained)",
+     "updated": "2026-09-14",
+     "score": 0.6
+    },
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/DC_ODA_POVDLG",
+    "name": "Outbound official development assistance grants for poverty reduction, as percentage of GNI",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_ATM_CO2",
+    "name": "Carbon dioxide emissions from fuel combustion",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "umve-k9rk",
+     "name": "NYC Climate Budgeting Report: Emission Factors",
+     "updated": "2026-05-15",
+     "score": 0.7
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_H2O_STRESS",
+    "name": "Level of water stress: freshwater withdrawal as a proportion of available freshwater resources",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "p48c-iqtu",
+     "name": "NYC Wetlands",
+     "updated": "2026-01-06",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_H2O_WUEYST",
+    "name": "Water use efficiency",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "RATIO_CR_USD_PER_VOL_M3",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/GC_GOB_TAXD",
+    "name": "Proportion of domestic budget funded by domestic taxes",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_XPD_EDUC",
+    "name": "Proportion of total government spending on essential services: education",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "sg72-pis5",
+     "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
+     "updated": "2023-10-05",
+     "score": 0.8
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_XPD_PROT",
+    "name": "Proportion of total government spending on essential services: social protection",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "sg72-pis5",
+     "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
+     "updated": "2023-10-05",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_XPD_ESSRV",
+    "name": "Proportion of total government spending on essential services",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "gzfs-3h4m",
+     "name": "Agency Spending by Budget Function",
+     "updated": "2026-07-08",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_XPD_HLTH",
+    "name": "Proportion of total government spending on essential services: health",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "sg72-pis5",
+     "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
+     "updated": "2023-10-05",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_ACS_UNHC_25",
+    "name": "Universal health coverage (UHC) service coverage index, 2025 methodology",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "INDEX",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_OOP_XPD_EARNNET40",
+    "name": "Proportion of the population with positive out-of-pocket household expenditure on health exceeding 40 percent of household discretionary budget",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_STA_BRTC",
+    "name": "Proportion of births attended by skilled health personnel",
+    "n_obs": 24,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_PWAN",
+    "name": "Permanent water area of lakes and rivers",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "AREA_KM2",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_PWAP",
+    "name": "Permanent water area of lakes and rivers as a proportion of total land area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "hnxz-kkn5",
+     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
+     "updated": "2022-05-09",
+     "score": 0.5
+    },
+    {
+     "id": "9auy-76zt",
+     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
+     "updated": "2022-05-09",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_SWAN",
+    "name": "Seasonal water area of lakes and rivers",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "AREA_KM2",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_SWAP",
+    "name": "Seasonal water area of lakes and rivers as a proportion of total land area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "hnxz-kkn5",
+     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
+     "updated": "2022-05-09",
+     "score": 0.5
+    },
+    {
+     "id": "9auy-76zt",
+     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
+     "updated": "2022-05-09",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MXWAP",
+    "name": "Maximum reservoir water area as a proportion of total land area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MNWAC",
+    "name": "Change in minimum reservoir water area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "9auy-76zt",
+     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
+     "updated": "2022-05-09",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MNWAN",
+    "name": "Minimum reservoir water area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "AREA_KM2",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "3y4p-uusw",
+     "name": "Watershed Water Quality - Limnology",
+     "updated": "2025-05-02",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MNWAP",
+    "name": "Minimum reservoir water area as a proportion of total land area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "9auy-76zt",
+     "name": "Landcover Raster Data (2010) \u2013 3ft Resolution",
+     "updated": "2022-05-09",
+     "score": 0.8
+    },
+    {
+     "id": "hnxz-kkn5",
+     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
+     "updated": "2022-05-09",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MXWAN",
+    "name": "Maxiumum reservoir water area",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "AREA_KM2",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "3y4p-uusw",
+     "name": "Watershed Water Quality - Limnology",
+     "updated": "2025-05-02",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/GB_POP_SCIERD",
+    "name": "Number of full-time-equivalent researchers per million inhabitants",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "RATIO_COUNT_PER_1000000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "2t2c-qih9",
+     "name": "Full-Time And Full-Time Equivalent Staffing Levels",
+     "updated": "2026-07-08",
+     "score": 0.6
+    },
+    {
+     "id": "dcjb-es8v",
+     "name": "Headcount Actuals By Funding Source",
+     "updated": "2026-05-19",
+     "score": 0.6
+    },
+    {
+     "id": "84ax-hg3y",
+     "name": "Full-Time and FTE Headcount including Covered Organizations",
+     "updated": "2026-05-15",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_MOB_2GNTWK",
+    "name": "Proportion of population covered by at least a 2G mobile network",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "69wu-b929",
+     "name": "LinkNYC Usage Statistics (Historical Data)",
+     "updated": "2022-09-23",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/NE_CON_GOVT_KD_ZG",
+    "name": "Annual growth of final consumption expenditure of the general government",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/NE_CON_PRVT_KD_ZG",
+    "name": "Annual growth of final consumption expenditure of households and non-profit institutions serving households (NPISHs)",
+    "n_obs": 23,
+    "first_year": 2000,
+    "latest_year": 2022,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SN_ITK_DEFC",
+    "name": "Prevalence of undernourishment",
+    "n_obs": 23,
+    "first_year": 2001,
+    "latest_year": 2023,
+    "span_years": 23,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_IHR_PSRC",
+    "name": "Number of victims of intentional homicide per 100,000 population",
+    "n_obs": 21,
+    "first_year": 2000,
+    "latest_year": 2023,
+    "span_years": 24,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": true
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_PRS_UNSNT",
+    "name": "Unsentenced detainees as a proportion of overall prison population",
+    "n_obs": 21,
+    "first_year": 2003,
+    "latest_year": 2023,
+    "span_years": 21,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_VOV_PHY_ASLT",
+    "name": "Proportion of population subjected to physical assault in the previous 12 months",
+    "n_obs": 21,
+    "first_year": 2003,
+    "latest_year": 2023,
+    "span_years": 21,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RVR_MNRVFLC",
+    "name": "Change in minimum river flow (%)",
+    "n_obs": 20,
+    "first_year": 2005,
+    "latest_year": 2024,
+    "span_years": 20,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RVR_MNRVFLN",
+    "name": "River flow minimum (m3/s)",
+    "n_obs": 20,
+    "first_year": 2005,
+    "latest_year": 2024,
+    "span_years": 20,
+    "unit": "RATIO_VOL_M3_PER_TIME_SC",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RVR_MXRVFLC",
+    "name": "Change in maximum river flow (%)",
+    "n_obs": 20,
+    "first_year": 2005,
+    "latest_year": 2024,
+    "span_years": 20,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RVR_MXRVFLN",
+    "name": "River flow maximum (m3/s)",
+    "n_obs": 20,
+    "first_year": 2005,
+    "latest_year": 2024,
+    "span_years": 20,
+    "unit": "RATIO_VOL_M3_PER_TIME_SC",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_H2O_SAFE",
+    "name": "Proportion of population using safely managed drinking water services",
+    "n_obs": 20,
+    "first_year": 2005,
+    "latest_year": 2024,
+    "span_years": 20,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "gjm4-k24g",
+     "name": "Self-Reported Drinking Water Tank Inspection Results",
+     "updated": "2026-09-14",
+     "score": 0.6
+    },
+    {
+     "id": "rytv-g5ui",
+     "name": "NYC Drinking Water Tank Inspections and Audits Compliance Results",
+     "updated": "2026-09-14",
+     "score": 0.6
+    },
+    {
+     "id": "v8i9-yfpr",
+     "name": "Adding Chemicals to Water Supply Permits",
+     "updated": "2026-07-15",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": true
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SP_ACS_BSRVH2O",
+    "name": "Proportion of population using basic drinking water services",
+    "n_obs": 20,
+    "first_year": 2005,
+    "latest_year": 2024,
+    "span_years": 20,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "gjm4-k24g",
+     "name": "Self-Reported Drinking Water Tank Inspection Results",
+     "updated": "2026-09-14",
+     "score": 0.7
+    },
+    {
+     "id": "rytv-g5ui",
+     "name": "NYC Drinking Water Tank Inspections and Audits Compliance Results",
+     "updated": "2026-09-14",
+     "score": 0.7
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MWT_GENV",
+    "name": "Municipal waste generated",
+    "n_obs": 19,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MWT_RCYR",
+    "name": "Proportion of municipal waste recycled",
+    "n_obs": 19,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 1.0
+    }
+   ],
+   "already_mapped": true
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MWT_RCYV",
+    "name": "Municipal waste recycled",
+    "n_obs": 19,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 1.0
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_PWAC",
+    "name": "Change in permanent water area of lakes and rivers",
+    "n_obs": 18,
+    "first_year": 2005,
+    "latest_year": 2022,
+    "span_years": 18,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_SWAC",
+    "name": "Change in seasonal water area of lakes and rivers",
+    "n_obs": 18,
+    "first_year": 2005,
+    "latest_year": 2022,
+    "span_years": 18,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MAR_CHLDEV",
+    "name": "Chlorophyll-a deviations, remote sensing",
+    "n_obs": 18,
+    "first_year": 2005,
+    "latest_year": 2022,
+    "span_years": 18,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "7piy-bhr9",
+     "name": "NYC Wetlands Map",
+     "updated": "2025-12-06",
+     "score": 0.6
+    },
+    {
+     "id": "p48c-iqtu",
+     "name": "NYC Wetlands",
+     "updated": "2026-01-06",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_MOB_3GNTWK",
+    "name": "Proportion of population covered by at least a 3G mobile network",
+    "n_obs": 17,
+    "first_year": 2007,
+    "latest_year": 2024,
+    "span_years": 18,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "69wu-b929",
+     "name": "LinkNYC Usage Statistics (Historical Data)",
+     "updated": "2022-09-23",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_ACS_PCV3",
+    "name": "Proportion of the target population who received a 3rd dose of pneumococcal conjugate (PCV3) vaccine",
+    "n_obs": 17,
+    "first_year": 2008,
+    "latest_year": 2024,
+    "span_years": 17,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_PRR_ROBB",
+    "name": "Police reporting rate for robbery in the previous 12 months",
+    "n_obs": 17,
+    "first_year": 2007,
+    "latest_year": 2023,
+    "span_years": 17,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FI_FSI_FSERA",
+    "name": "Rate of return on assets",
+    "n_obs": 16,
+    "first_year": 2009,
+    "latest_year": 2024,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "rh3d-kgz3",
+     "name": "The Five-System Asset Allocation Chart",
+     "updated": "2026-08-31",
+     "score": 1.0
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FI_FSI_FSANL",
+    "name": "Non-performing loans to total gross loans",
+    "n_obs": 16,
+    "first_year": 2009,
+    "latest_year": 2024,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FI_FSI_FSKA",
+    "name": "Ratio of regulatory capital to assets",
+    "n_obs": 16,
+    "first_year": 2009,
+    "latest_year": 2024,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FI_FSI_FSKRTC",
+    "name": "Ratio of regulatory tier-1 capital to risk-weighted assets",
+    "n_obs": 16,
+    "first_year": 2009,
+    "latest_year": 2024,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FI_FSI_FSLS",
+    "name": "Ratio of liquid assets to short term liabilities",
+    "n_obs": 16,
+    "first_year": 2009,
+    "latest_year": 2024,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "rh3d-kgz3",
+     "name": "The Five-System Asset Allocation Chart",
+     "updated": "2026-08-31",
+     "score": 0.7
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FI_FSI_FSKNL",
+    "name": "Ratio of non-performing loans (net of provisions) to capital",
+    "n_obs": 16,
+    "first_year": 2009,
+    "latest_year": 2024,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ST_EEV_STDACCT",
+    "name": "Implementation of standard accounting tools to monitor the economic and environmental aspects of tourism (number of tables)",
+    "n_obs": 16,
+    "first_year": 2008,
+    "latest_year": 2023,
+    "span_years": 16,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETV",
+    "name": "Detected victims of human trafficking",
+    "n_obs": 16,
+    "first_year": 2007,
+    "latest_year": 2022,
+    "span_years": 16,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "augs-s4dd",
+     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
+     "updated": "2025-06-04",
+     "score": 0.6
+    },
+    {
+     "id": "a35y-93e7",
+     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
+     "updated": "2024-01-31",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVR",
+    "name": "Detected victims of human trafficking (per 100,000 population)",
+    "n_obs": 16,
+    "first_year": 2007,
+    "latest_year": 2022,
+    "span_years": 16,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_VOV_ROBB",
+    "name": "Proportion of population subjected to robbery in the previous 12 months",
+    "n_obs": 16,
+    "first_year": 2008,
+    "latest_year": 2023,
+    "span_years": 16,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_FPA_CFPI",
+    "name": "Indicator of Food Price Anomalies (IFPA) by Consumer Price Index of Food",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "INDEX",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/DC_ENVTECH_REXP",
+    "name": "Amount of tracked re-exported Environmentally Sound Technologies",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/DC_ENVTECH_EXP",
+    "name": "Amount of tracked exported Environmentally Sound Technologies",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/DC_ENVTECH_IMP",
+    "name": "Amount of tracked imported Environmentally Sound Technologies",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_FFS_CMPT_CD",
+    "name": "Fossil-fuel subsidies (consumption and production)",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_FFS_CMPT_PC_CD",
+    "name": "Fossil-fuel subsidies (consumption and production) per capita",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_GRF_PLNTSTOR",
+    "name": "Plant genetic resources accessions stored ex situ",
+    "n_obs": 15,
+    "first_year": 1995,
+    "latest_year": 2024,
+    "span_years": 30,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FB_BNK_CAPA_ZS",
+    "name": "Bank capital to assets ratio",
+    "n_obs": 15,
+    "first_year": 2009,
+    "latest_year": 2023,
+    "span_years": 15,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_ACS_HPV",
+    "name": "Proportion of the target population who received the final dose of human papillomavirus (HPV) vaccine",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_TRP_INTVN",
+    "name": "Number of people requiring interventions against neglected tropical diseases",
+    "n_obs": 15,
+    "first_year": 2010,
+    "latest_year": 2024,
+    "span_years": 15,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVFL",
+    "name": "Detected victims of human trafficking for forced labour, servitude and slavery",
+    "n_obs": 14,
+    "first_year": 2009,
+    "latest_year": 2022,
+    "span_years": 14,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVFLR",
+    "name": "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population)",
+    "n_obs": 14,
+    "first_year": 2009,
+    "latest_year": 2022,
+    "span_years": 14,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVSX",
+    "name": "Detected victims of human trafficking for sexual exploitation",
+    "n_obs": 14,
+    "first_year": 2009,
+    "latest_year": 2022,
+    "span_years": 14,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "augs-s4dd",
+     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
+     "updated": "2025-06-04",
+     "score": 0.6
+    },
+    {
+     "id": "a35y-93e7",
+     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
+     "updated": "2024-01-31",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVSXR",
+    "name": "Detected victims of human trafficking for sexual exploitation (per 100,000 population)",
+    "n_obs": 14,
+    "first_year": 2009,
+    "latest_year": 2022,
+    "span_years": 14,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_MOB_4GNTWK",
+    "name": "Proportion of population covered by at least a 4G mobile network",
+    "n_obs": 13,
+    "first_year": 2012,
+    "latest_year": 2024,
+    "span_years": 13,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "69wu-b929",
+     "name": "LinkNYC Usage Statistics (Historical Data)",
+     "updated": "2022-09-23",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_NHR_CMPLNC",
+    "name": "Countries with National Human Rights Institutions in compliance with the Paris Principles",
+    "n_obs": 13,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_NHR_IMPL",
+    "name": "Proportion of countries with independent National Human Rights Institutions in compliance with the Paris Principles",
+    "n_obs": 13,
+    "first_year": 2000,
+    "latest_year": 2024,
+    "span_years": 25,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVOP",
+    "name": "Detected victims of human trafficking for other purposes",
+    "n_obs": 13,
+    "first_year": 2009,
+    "latest_year": 2022,
+    "span_years": 14,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "augs-s4dd",
+     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
+     "updated": "2025-06-04",
+     "score": 0.6
+    },
+    {
+     "id": "a35y-93e7",
+     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
+     "updated": "2024-01-31",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVOPR",
+    "name": "Detected victims of human trafficking for other purposes (per 100,000 population)",
+    "n_obs": 13,
+    "first_year": 2009,
+    "latest_year": 2022,
+    "span_years": 14,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_PRR_SEXV",
+    "name": "Police reporting rate for sexual assault in the previous 12 months",
+    "n_obs": 13,
+    "first_year": 2007,
+    "latest_year": 2019,
+    "span_years": 13,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "a35y-93e7",
+     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
+     "updated": "2024-01-31",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SM_DTH_MIGR",
+    "name": "Total deaths and disappearances recorded during migration",
+    "n_obs": 12,
+    "first_year": 2014,
+    "latest_year": 2025,
+    "span_years": 12,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ST_EEV_ACCSEEA",
+    "name": "Implementation of standard accounting tools to monitor the economic and environmental aspects of tourism (SEEA tables)",
+    "n_obs": 12,
+    "first_year": 2008,
+    "latest_year": 2019,
+    "span_years": 12,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_VOV_SEX_ASLT",
+    "name": "Proportion of population subjected to sexual assault in the previous 12 months",
+    "n_obs": 12,
+    "first_year": 2008,
+    "latest_year": 2019,
+    "span_years": 12,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_EWT_COLLV",
+    "name": "Total electronic waste collected",
+    "n_obs": 11,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_EWT_COLLPCAP",
+    "name": "Electronic waste collected per capita",
+    "n_obs": 11,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "WEIGHT_KG",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "867j-5pgi",
+     "name": "Trade Waste Hauler Licensees",
+     "updated": "2026-09-11",
+     "score": 0.6
+    },
+    {
+     "id": "f7dc-2q9f",
+     "name": "SARS-CoV-2 concentrations measured in NYC Wastewater",
+     "updated": "2026-08-03",
+     "score": 0.6
+    },
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "updated": "2020-02-08",
+     "score": 0.5
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_WBE_MANGN",
+    "name": "Mangrove area",
+    "n_obs": 11,
+    "first_year": 2000,
+    "latest_year": 2020,
+    "span_years": 21,
+    "unit": "AREA_KM2",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SE_GPI_PTNPRE",
+    "name": "Adjusted gender parity index for participation rate in organized learning (one year before the official primary entry age)",
+    "n_obs": 11,
+    "first_year": 2005,
+    "latest_year": 2022,
+    "span_years": 18,
+    "unit": "RATIO",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SE_PRE_PARTN",
+    "name": "Participation rate in organized learning (one year before the official primary entry age)",
+    "n_obs": 11,
+    "first_year": 2005,
+    "latest_year": 2022,
+    "span_years": 18,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SI_RMT_COST_SND",
+    "name": "Average remittance costs of sending $200 for a sending country as a proportion of the amount remitted",
+    "n_obs": 11,
+    "first_year": 2011,
+    "latest_year": 2025,
+    "span_years": 15,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_PRR_PHYV",
+    "name": "Police reporting rate for physical assault in the previous 12 months",
+    "n_obs": 11,
+    "first_year": 2013,
+    "latest_year": 2023,
+    "span_years": 11,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "sw27-mp7d",
+     "name": "Rates of Intimate Partner Violence Across New York City: An Intersectional Analysis",
+     "updated": "2024-01-31",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_PRR_SEX_VIO",
+    "name": "Police reporting rate for sexual violence in the previous 12 months",
+    "n_obs": 11,
+    "first_year": 2013,
+    "latest_year": 2023,
+    "span_years": 11,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "a35y-93e7",
+     "name": "Family Violence Related Snapshots: New York City Community Board Districts",
+     "updated": "2024-01-31",
+     "score": 0.6
+    },
+    {
+     "id": "augs-s4dd",
+     "name": "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) Annual Fact Sheet",
+     "updated": "2025-06-04",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_VOV_SEXL",
+    "name": "Proportion of population subjected to sexual violence in the previous 12 months",
+    "n_obs": 11,
+    "first_year": 2013,
+    "latest_year": 2023,
+    "span_years": 11,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_ATM_PM25",
+    "name": "Annual mean levels of fine particulate matter (population-weighted)",
+    "n_obs": 10,
+    "first_year": 2010,
+    "latest_year": 2019,
+    "span_years": 10,
+    "unit": "RATIO_WEIGHT_MICROGR_PER_VOL_M3",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "q68s-8qxv",
+     "name": "NYCCAS Air Pollution Rasters",
+     "updated": "2026-04-21",
+     "score": 0.85
+    },
+    {
+     "id": "v988-8fd7",
+     "name": "NYC Climate Budgeting Report: Forecasted Avoided Health Events",
+     "updated": "2026-06-02",
+     "score": 0.85
+    },
+    {
+     "id": "ic46-fvh8",
+     "name": "NYC Climate Budgeting Report: Avoided Health Events By NTA (Archived)",
+     "updated": "2025-05-19",
+     "score": 0.85
+    }
+   ],
+   "already_mapped": true
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MAR_BEALIT_PUSA",
+    "name": "Beach litter items per unit of surface area (Number of items per 100 square meters)",
+    "n_obs": 10,
+    "first_year": 2015,
+    "latest_year": 2024,
+    "span_years": 10,
+    "unit": "RATIO_COUNT_PER_100_AREA_M2",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_WBE_MANGC",
+    "name": "Mangrove total area change",
+    "n_obs": 10,
+    "first_year": 2007,
+    "latest_year": 2020,
+    "span_years": 14,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_REG_BRTH90N",
+    "name": "Countries with birth registration data that are at least 90 percent complete",
+    "n_obs": 10,
+    "first_year": 2015,
+    "latest_year": 2024,
+    "span_years": 10,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_REG_DETH75N",
+    "name": "Countries with death registration data that are at least 75 percent complete",
+    "n_obs": 10,
+    "first_year": 2015,
+    "latest_year": 2024,
+    "span_years": 10,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SL_LBR_NTLCPL",
+    "name": "Level of national compliance with labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation",
+    "n_obs": 10,
+    "first_year": 2015,
+    "latest_year": 2024,
+    "span_years": 10,
+    "unit": "SCORE",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_SNS_WALN_DRK",
+    "name": "Proportion of population that feel safe walking alone around the area they live after dark",
+    "n_obs": 10,
+    "first_year": 2013,
+    "latest_year": 2023,
+    "span_years": 11,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_PRD_FIESS",
+    "name": "Prevalence of severe food insecurity in the population",
+    "n_obs": 9,
+    "first_year": 2015,
+    "latest_year": 2023,
+    "span_years": 9,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_PRD_FIESSN",
+    "name": "Population in severe food insecurity",
+    "n_obs": 9,
+    "first_year": 2015,
+    "latest_year": 2023,
+    "span_years": 9,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_PRD_FIESMS",
+    "name": "Prevalence of moderate or severe food insecurity in the population",
+    "n_obs": 9,
+    "first_year": 2015,
+    "latest_year": 2023,
+    "span_years": 9,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_PRD_FIESMSN",
+    "name": "Population in moderate or severe food insecurity",
+    "n_obs": 9,
+    "first_year": 2015,
+    "latest_year": 2023,
+    "span_years": 9,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_SCP_FRMN",
+    "name": "Number of companies publishing sustainability reports with disclosure by dimension",
+    "n_obs": 9,
+    "first_year": 2015,
+    "latest_year": 2023,
+    "span_years": 9,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_GRF_ANIMRCNTN_TRB",
+    "name": "Number of transboundary breeds for which sufficient genetic resources are stored for reconstitution",
+    "n_obs": 8,
+    "first_year": 2018,
+    "latest_year": 2025,
+    "span_years": 8,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IQ_SPI_PIL4",
+    "name": "Performance index of data sources (Pillar 4 of Statistical Performance Indicators)",
+    "n_obs": 8,
+    "first_year": 2016,
+    "latest_year": 2023,
+    "span_years": 8,
+    "unit": "INDEX",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IQ_SPI_PIL5",
+    "name": "Performance index of data Infrastructure (Pillar 5 of Statistical Performance Indicators)",
+    "n_obs": 8,
+    "first_year": 2016,
+    "latest_year": 2023,
+    "span_years": 8,
+    "unit": "INDEX",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SI_COV_DISAB",
+    "name": "[ILO] Proportion of population with severe disabilities receiving disability cash benefit",
+    "n_obs": 8,
+    "first_year": 2013,
+    "latest_year": 2023,
+    "span_years": 11,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_HAZ_GENV",
+    "name": "Hazardous waste generated",
+    "n_obs": 7,
+    "first_year": 2007,
+    "latest_year": 2019,
+    "span_years": 13,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_HAZ_PCAP",
+    "name": "Hazardous waste generated, per capita",
+    "n_obs": 7,
+    "first_year": 2007,
+    "latest_year": 2019,
+    "span_years": 13,
+    "unit": "WEIGHT_KG",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "a8wp-rerh",
+     "name": "Self Hauler Registrants",
+     "updated": "2026-09-11",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_GRF_ANIMRCNTN",
+    "name": "Number of local breeds for which sufficient genetic resources are stored for reconstitution",
+    "n_obs": 7,
+    "first_year": 2019,
+    "latest_year": 2025,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SD_XPD_ESED",
+    "name": "Proportion of total government spending on essential services, education [UIS methodology]",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "sg72-pis5",
+     "name": "IBO Federal Stimulus Budget and Spending Tracker (ARPA and CRRSAA)",
+     "updated": "2023-10-05",
+     "score": 0.571
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_DSR_LGRGSR",
+    "name": "Score of adoption and implementation of national disaster-risk reduction strategies in line with the Sendai Framework",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "INDEX",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_DSR_SILN",
+    "name": "Number of local governments that adopt and implement local disaster-risk reduction strategies in line with national strategies",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_DSR_SILS",
+    "name": "Proportion of local governments that adopt and implement local disaster-risk reduction strategies in line with national disaster-risk reduction strategies",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_GOV_LOGV",
+    "name": "Number of local governments",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "dbpt-pbmd",
+     "name": "EEO-4 Reports",
+     "updated": "2024-05-22",
+     "score": 1.0
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_STT_FPOS",
+    "name": "Countries with national statistical legislation that complies with the Fundamental Principles of Official Statistics",
+    "n_obs": 7,
+    "first_year": 2019,
+    "latest_year": 2025,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_STA_POISN",
+    "name": "Mortality rate attributed to unintentional poisonings",
+    "n_obs": 7,
+    "first_year": 2000,
+    "latest_year": 2021,
+    "span_years": 22,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SH_STA_SCIDE",
+    "name": "Suicide mortality rate",
+    "n_obs": 7,
+    "first_year": 2000,
+    "latest_year": 2021,
+    "span_years": 22,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SP_LGL_LNDSTR",
+    "name": "Proportion of people with secure tenure rights to land out of total adult population",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "6ucq-tfej",
+     "name": "2021 City Council - September Attendance Report",
+     "updated": "2024-11-26",
+     "score": 0.767
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_BSDN",
+    "name": "Number of disruptions to basic services attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_CDAN",
+    "name": "Number of damaged critical infrastructure attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_DAFF",
+    "name": "Number of directly affected persons attributed to disasters per 100,000 population",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_AFFCT",
+    "name": "Number of people affected by disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_CDYN",
+    "name": "Number of other destroyed or damaged critical infrastructure units and facilities attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_CILN",
+    "name": "Direct economic loss resulting from damaged or destroyed critical infrastructure attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_HOLH",
+    "name": "Direct economic loss in the housing sector attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_DDPA",
+    "name": "Direct economic loss to other damaged or destroyed productive assets attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_ESDN",
+    "name": "Number of disruptions to educational services attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_GDPLS",
+    "name": "Direct economic loss attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "CR_USD",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_IJILN",
+    "name": "Number of injured or ill people attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_MMHN",
+    "name": "Number of deaths and missing persons attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_MTMP",
+    "name": "Number of deaths and missing persons attributed to disasters per 100,000 population",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_MORT",
+    "name": "Number of deaths due to disaster",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_PDAN",
+    "name": "Number of people whose damaged dwellings were attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_PDYN",
+    "name": "Number of people whose destroyed dwellings were attributed to disasters",
+    "n_obs": 7,
+    "first_year": 2015,
+    "latest_year": 2021,
+    "span_years": 7,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_LND_TOTL",
+    "name": "Land area",
+    "n_obs": 6,
+    "first_year": 1990,
+    "latest_year": 2025,
+    "span_years": 36,
+    "unit": "AREA_HA",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "hnxz-kkn5",
+     "name": "NYC Urban Tree Canopy Assessment Metrics 2010",
+     "updated": "2022-05-09",
+     "score": 1.0
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_EWT_GENPCAP",
+    "name": "Electronic waste generated per capita",
+    "n_obs": 6,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "WEIGHT_KG",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [
+    {
+     "id": "a8wp-rerh",
+     "name": "Self Hauler Registrants",
+     "updated": "2026-09-11",
+     "score": 0.6
+    }
+   ],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_EWT_GENV",
+    "name": "Total electronic waste generated",
+    "n_obs": 6,
+    "first_year": 2000,
+    "latest_year": 2018,
+    "span_years": 19,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MAR_BEALIT_EXP",
+    "name": "Total beach litter originating from national land-based sources that is exported",
+    "n_obs": 6,
+    "first_year": 2017,
+    "latest_year": 2022,
+    "span_years": 6,
+    "unit": "WEIGHT_TN",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IT_MOB_OWN",
+    "name": "Proportion of individuals who own a mobile telephone",
+    "n_obs": 6,
+    "first_year": 2019,
+    "latest_year": 2024,
+    "span_years": 6,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_MAR_BEALIT_BP",
+    "name": "Proportion of beach litter originating from national land-based sources that ends in the beach",
+    "n_obs": 5,
+    "first_year": 2017,
+    "latest_year": 2021,
+    "span_years": 5,
+    "unit": "Percent",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_CBD_ABSCLRHS",
+    "name": "Countries that have legislative, administrative and policy framework or measures reported to the Access and Benefit-Sharing Clearing-House",
+    "n_obs": 5,
+    "first_year": 2021,
+    "latest_year": 2025,
+    "span_years": 5,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_CBD_NAGOYA",
+    "name": "Countries that are parties to the Nagoya Protocol",
+    "n_obs": 5,
+    "first_year": 2021,
+    "latest_year": 2025,
+    "span_years": 5,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_EFDN",
+    "name": "Number of destroyed or damaged educational facilities attributed to disasters",
+    "n_obs": 5,
+    "first_year": 2017,
+    "latest_year": 2021,
+    "span_years": 5,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_DSR_OBDN",
+    "name": "Number of disruptions to other basic services attributed to disasters",
+    "n_obs": 5,
+    "first_year": 2015,
+    "latest_year": 2019,
+    "span_years": 5,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVOG",
+    "name": "Detected victims of human trafficking for removal of organ",
+    "n_obs": 5,
+    "first_year": 2018,
+    "latest_year": 2022,
+    "span_years": 5,
+    "unit": "COUNT",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/VC_HTF_DETVOGR",
+    "name": "Detected victims of human trafficking for removal of organ (per 100,000 population)",
+    "n_obs": 5,
+    "first_year": 2018,
+    "latest_year": 2022,
+    "span_years": 5,
+    "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+    "observation_period": "P1Y",
+    "provenance": "undata/p/SDG",
+    "grade": "GREEN"
+   },
+   "candidates": [],
+   "already_mapped": false
+  }
+ ]
+}
