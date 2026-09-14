@@ -7,6 +7,23 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-14 — Recommend national city aggregates as the peer comparator
+
+`URBANIZATION--DOU_CITY` turns out to exist for many countries with full 10-year series, so NYC
+can be compared to the city aggregate of the UK, France, Japan, Mexico and others from UN Data
+Commons alone. One source, one method, one unit, no cherry-picked comparator city. Supersedes
+the open question below. **Recommended, not yet confirmed — Devin's call.**
+
+Caveat to carry onto any chart: NYC sits inside the US city aggregate, roughly 7% of it.
+
+## 2026-09-14 — The pair probe does not assign comparability grades
+
+The probe verifies that a mapping still resolves and that units agree. The grade itself stays a
+human judgment recorded in `crosswalk.json`. A machine that scores comparability would be
+confidently wrong exactly where it matters — the waste pair has agreeing units and is still not
+an apples-to-apples comparison, because NYC counts residential collection and the UN counts all
+municipal waste.
+
 ## 2026-09-14 — Road safety is out as the headline demo indicator
 
 SDG 3.6.1 returns one observation for the US (2021). Our application used road safety as the
@@ -25,8 +42,7 @@ is a prerequisite for the MCP option anyway, so this is sequencing rather than e
 Three people on different machines need to run it without a virtualenv debugging session.
 `certifi` is used when importable and falls back to the system trust store.
 
-## Open — peer-comparator framing
+## Superseded — peer-comparator framing
 
-Compare NYC to peer *cities* (needs a non-UN source: OECD metro, Eurostat Urban Audit,
-UN-Habitat) or to *nations* (free, honest, works today: "NYC's rate sits between Portugal and
-Slovenia")? Blocks the benchmark view design. **Owner: Devin.**
+Was: compare NYC to peer *cities* (needs a non-UN source) or to *nations*? The DOU_CITY finding
+above gives a third and better answer. Kept for the record.

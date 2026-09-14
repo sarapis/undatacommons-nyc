@@ -1,0 +1,96 @@
+{
+  "_comment": "Candidate NYC <-> UN indicator pairs. Each entry declares both sides plus a human-assigned comparability grade and the reason for it. pair_probe.py verifies that both sides actually resolve and that the units agree; it does NOT assign the grade -- that stays a human judgment, recorded here and reviewable.",
+  "pairs": [
+    {
+      "id": "pm25",
+      "sdg": "11.6.2",
+      "label": "Fine particulate matter (PM2.5), annual mean",
+      "un": {
+        "dcid": "undata/sdg/EN_ATM_PM25.URBANIZATION--DOU_CITY",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN",
+          "country/CAN",
+          "country/MEX"
+        ]
+      },
+      "nyc": {
+        "dataset": "c3uy-2p5r",
+        "unit": "mcg/m3",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "time_period AS yr, data_value AS value",
+          "$where": "name='Fine particles (PM 2.5)' AND geo_type_name='Citywide' AND measure='Annual mean'",
+          "$order": "time_period",
+          "$limit": "100"
+        }
+      },
+      "grade": "PROXY",
+      "reason": "Units agree (ug/m3) and both are annual means, but the methods differ: NYC's figure comes from NYCCAS ground monitors, the UN's is a population-weighted modelled estimate. Comparable in level, not interchangeable. Chart together with the method difference stated."
+    },
+    {
+      "id": "homicide",
+      "sdg": "16.1.1",
+      "label": "Intentional homicide",
+      "un": {
+        "dcid": "undata/sdg/VC_IHR_PSRC",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN",
+          "country/CAN"
+        ]
+      },
+      "nyc": {
+        "dataset": "qgea-i56i",
+        "unit": "count",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "date_extract_y(cmplnt_fr_dt) AS yr, count(*) AS value",
+          "$where": "ky_cd='101' AND cmplnt_fr_dt >= '2006-01-01T00:00:00'",
+          "$group": "yr",
+          "$order": "yr",
+          "$limit": "100"
+        }
+      },
+      "grade": "PROXY",
+      "reason": "NYPD 'murder & non-negligent manslaughter' tracks the UNODC intentional-homicide definition closely. BLOCKER: NYC side is a count, UN side is a rate per 100,000 -- needs an annual NYC population denominator before the two can share an axis. Pre-2006 rows in this dataset carry junk incident dates (17 murders in 1990) and are excluded. Denominator path: Census ACS B01003_001E for place 51000 in state 36 now requires a free api.census.gov key -- unresolved.",
+      "requires_denominator": true
+    },
+    {
+      "id": "waste-recycled",
+      "sdg": "11.6.1",
+      "label": "Proportion of municipal waste recycled",
+      "un": {
+        "dcid": "undata/sdg/EN_MWT_RCYR",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/JPN",
+          "country/CAN"
+        ]
+      },
+      "nyc": {
+        "dataset": "ebb7-mvp5",
+        "unit": "percent",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "substring(month,1,4) AS yr, sum(papertonscollected + mgptonscollected) / sum(refusetonscollected + papertonscollected + mgptonscollected) * 100 AS value",
+          "$where": "substring(month,1,4) >= '1993'",
+          "$group": "yr",
+          "$order": "yr",
+          "$limit": "100"
+        }
+      },
+      "grade": "PROXY",
+      "reason": "DSNY tonnage covers DSNY-collected residential waste only -- it excludes commercial waste, which the UN municipal-waste definition includes. Derived diversion rate, not a published one; the published Recycling Diversion and Capture Rates dataset has not updated since 2020. The month field is text ('2026 / 08') so the year comes from substring, not date_extract_y. Rows before 1993 predate curbside recycling (no recycling tonnage, 1990 partial) and are excluded."
+    }
+  ]
+}

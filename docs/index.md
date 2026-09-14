@@ -84,9 +84,15 @@ point cannot carry it.
 
 ## Open questions
 
-- **Peer cities.** We told the organizers we would compare NYC to London and Bogotá. UN Data
-  Commons alone cannot do that. Either source peer-city data elsewhere (OECD metro, Eurostat
-  Urban Audit, UN-Habitat) or reframe as NYC-vs-nations. **Undecided — product call.**
+- **Peer comparators — recommendation on the table, awaiting a call.** Probing resolved this
+  further than expected: the `URBANIZATION--DOU_CITY` slice exists for *many countries* with
+  full 10-year series, so we can compare NYC to the **city aggregate of other nations** using
+  only UN Data Commons. One source, one method, one unit. Arguably better than the
+  NYC-vs-London comparison we promised, since nothing is cherry-picked. **Recommended as the
+  primary framing. Devin's call.** See the [activity feed](https://sarapis.github.io/undatacommons-nyc/activity).
+- **Homicide is blocked on a denominator.** NYC publishes a count, the UN a rate per 100,000.
+  The Census ACS path (`B01003_001E`, place 51000 / state 36) now requires a free
+  api.census.gov key — a five-minute signup nobody has done yet.
 - **For the organizers:** is city-level ingestion on the roadmap? Is there a sanctioned path for
   a city to *contribute* a series? Will staging DCIDs survive the 17 Sep public launch? Are
   there rate limits?
@@ -94,8 +100,11 @@ point cannot carry it.
 ## Next steps
 
 - [x] Coverage probe harness — built, run, [results published](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest)
-- [ ] Decide the peer-comparator framing (blocks the benchmark view design)
-- [ ] Crosswalk v0, restricted to GREEN indicators, seeded from the 2018 VLR and the MMR
+- [x] Pair probe — both sides of every mapping verified,
+  [crosswalk status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest)
+- [ ] Confirm the peer-comparator framing (recommendation above)
+- [ ] Census API key, to unblock homicide and every other rate-based indicator
+- [ ] Extend the crosswalk beyond the first three pairs, seeded from the 2018 VLR and the MMR
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
@@ -105,6 +114,7 @@ point cannot carry it.
 | What | Where |
 |---|---|
 | Activity feed (append-only updates) | [https://sarapis.github.io/undatacommons-nyc/activity](https://sarapis.github.io/undatacommons-nyc/activity) |
+| Crosswalk status (both sides verified) | [https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest) |
 | Platform probe findings | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe) |
 | Latest coverage report | [https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) |
 | Decision log | [https://sarapis.github.io/undatacommons-nyc/decisions](https://sarapis.github.io/undatacommons-nyc/decisions) |
