@@ -26,6 +26,24 @@ CACHE = pathlib.Path(__file__).resolve().parent / "cache"
 CORPUS, SCREENED = CACHE / "corpus.json", CACHE / "screened.json"
 US = "country/USA"
 
+# We used to screen on "does the United States report this?" That was the right
+# question while the US was the comparator. The comparator is now every
+# reporting country, so the question is "do enough countries report this?" --
+# and an indicator the US skips can still place NYC among the world.
+#
+# A diverse panel is the cheap proxy: get_variable_metadata reports coverage for
+# exactly the entities you ask about, so 12 countries spanning regions and
+# income levels cost one call per batch instead of a per-indicator world query.
+# Six, not twelve: the response cap is on variables x entities together, and a
+# twelve-country panel made every batch overflow and split down to single
+# variables -- correct but needlessly slow. Six still spans income levels and
+# regions, which is all the coverage signal needs.
+PANEL = [
+    "country/USA", "country/DEU", "country/BRA",
+    "country/IND", "country/KEN", "country/IDN",
+]
+MIN_PANEL_COVERAGE = 2      # fewer than this and there is nobody to compare against
+
 MIN_OBS, MIN_SPAN, RECENT_SINCE = 5, 5, 2015
 
 # get_variable_metadata silently truncates above ~10 variables per call: it
@@ -33,13 +51,20 @@ MIN_OBS, MIN_SPAN, RECENT_SINCE = 5, 5, 2015
 # earlier version of this script used 40 and cheerfully reported "689/689
 # screened" having recorded 9. Never raise this without re-testing, and never
 # trust a batch result without verify_batch below.
-BATCH = 10
+BATCH = 5   # variables per call; the cap is on variables x panel entities
 
 
-def grade(n_obs, span, latest):
-    if n_obs <= 1:
-        return "RED"
-    if n_obs < MIN_OBS or span < MIN_SPAN:
+def grade(depth, span, latest, coverage):
+    """Grade on per-country series depth AND how many countries report it."""
+    if coverage == 0:
+        return "NO-DATA"
+    if coverage < MIN_PANEL_COVERAGE:
+        return "THIN-COVERAGE"
+    if depth <= 1:
+        # One observation blocks a trend and still supports a ranking, which is
+        # how road deaths turned out to be usable after we had written it off.
+        return "RANK-ONLY"
+    if depth < MIN_OBS or span < MIN_SPAN:
         return "AMBER"
     if latest and latest < RECENT_SINCE:
         return "AMBER"
@@ -55,7 +80,7 @@ def fetch_metadata(client, dcids, attempt=1):
     """
     try:
         r = client.call_tool("get_variable_metadata",
-                             {"variable_dcids": dcids, "entity_dcids": [US]})
+                             {"variable_dcids": dcids, "entity_dcids": PANEL})
     except UNDCError as exc:
         if "403" in str(exc) and attempt <= 4:
             wait = 5 * attempt
@@ -78,32 +103,38 @@ def fetch_metadata(client, dcids, attempt=1):
 
 
 def screen(client, dcids):
-    """Return one row per indicator, choosing its best facet for the US."""
+    """One row per indicator, judged on panel coverage and per-country depth."""
     rows = []
     for dcid, meta in fetch_metadata(client, dcids).items():
         facets = meta.get("facets") or []
-        # Keep only facets that actually cover the US, then take the richest.
-        usable = [f for f in facets
-                  if US in ((f.get("scope") or {}).get("entityCoverage") or [])]
-        if not usable:
-            rows.append({"dcid": dcid, "name": meta.get("name"), "n_obs": 0,
-                         "grade": "NO-US-DATA"})
+        covered = set()
+        for f in facets:
+            covered |= set(((f.get("scope") or {}).get("entityCoverage") or []))
+        if not facets or not covered:
+            rows.append({"dcid": dcid, "name": meta.get("name"),
+                         "panel_coverage": 0, "depth": 0, "grade": "NO-DATA"})
             continue
-        best = max(usable, key=lambda f: f.get("obsCount") or 0)
+
+        best = max(facets, key=lambda f: f.get("obsCount") or 0)
+        cov = (best.get("scope") or {}).get("entityCoverage") or []
+        # obsCount is the TOTAL across the covered entities, so per-country
+        # depth is the count divided by how many entities the facet covers.
+        depth = round((best.get("obsCount") or 0) / max(len(cov), 1), 1)
         dr = best.get("dateRange") or {}
         start, end = str(dr.get("start", ""))[:4], str(dr.get("end", ""))[:4]
         first = int(start) if start.isdigit() else None
         latest = int(end) if end.isdigit() else None
         span = (latest - first + 1) if (first and latest) else 0
-        n = best.get("obsCount") or 0
         props = best.get("properties") or {}
         rows.append({
-            "dcid": dcid, "name": meta.get("name"), "n_obs": n,
+            "dcid": dcid, "name": meta.get("name"),
+            "panel_coverage": len(covered), "depth": depth,
             "first_year": first, "latest_year": latest, "span_years": span,
             "unit": (props.get("unit") or "").split("UNIT_MEASURE-")[-1],
             "observation_period": props.get("observationPeriod"),
             "provenance": best.get("provenanceId"),
-            "grade": grade(n, span, latest),
+            "us_reports": US in covered,
+            "grade": grade(depth, span, latest, len(covered)),
         })
     return rows
 
@@ -147,9 +178,14 @@ def main():
         {"requested": len(bases), "screened": len(rows),
          "not_returned": missing, "grade_counts": counts,
          "indicators": rows}, indent=1))
-    print(f"\nscreened {len(rows):,}")
+    usable = [r for r in rows if r["grade"] in ("GREEN", "AMBER", "RANK-ONLY")]
+    us_only = [r for r in usable if not r.get("us_reports")]
+    print(f"\nscreened {len(rows):,} against a {len(PANEL)}-country panel")
     for g, n in sorted(counts.items(), key=lambda kv: -kv[1]):
-        print(f"  {g:<12} {n:,}")
+        print(f"  {g:<16} {n:,}")
+    print(f"\n  usable (GREEN/AMBER/RANK-ONLY): {len(usable):,}")
+    print(f"  ...of which the US does NOT report: {len(us_only):,}"
+          f"  <- invisible to the old US-only screen")
     print(f"\nwrote {SCREENED}")
 
 

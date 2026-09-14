@@ -27,6 +27,7 @@ import time
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import nyc  # noqa: E402
 import embed  # noqa: E402
+import scope  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CACHE = ROOT / "probe" / "cache"
@@ -40,11 +41,11 @@ estimated average annual mean level levels among all both which that this
 national countries country year years age sex data measure share""".split())
 
 
-# Many SDG indicators are macroeconomic or nation-state concepts that no city
-# publishes and none ever will -- balance of payments, ODA, refugees by country
-# of origin, tariffs. Matching them against a municipal catalog can only produce
-# false positives, so they are excluded before searching rather than filtered out
-# of the results afterwards. This list is a judgment call and belongs under review.
+# Kept only as the fallback when model2vec is unavailable. Measured against the
+# 50 hand-labelled cases in scope_eval.json it scores precision 0.69 -- it passes
+# 11 of 26 nation-only indicators, because the class it must catch (development
+# finance) is spelled a hundred ways no word list covers. scope.py does the real
+# work now, at precision 0.83 for the same perfect recall.
 NOT_CITY_SCOPED = set("""gdp tariff tariffs exports imports remittances balance
 payments account debt fiscal monetary currency sovereign oda aid donor recipient
 refugees asylum migrant seats parliament treaty ratified convention signatory
@@ -68,6 +69,7 @@ MIN_SIMILARITY = 0.50
 
 
 def city_scoped(terms):
+    """Keyword fallback. See NOT_CITY_SCOPED above for why this is the weak path."""
     return not (set(terms) & NOT_CITY_SCOPED)
 
 
@@ -130,6 +132,14 @@ def main():
     existing = {p["un"]["dcid"].split(".")[0]
                 for p in json.loads((ROOT / "probe" / "crosswalk.json").read_text())["pairs"]}
 
+    # An indicator a city cannot report is excluded before searching: matching it
+    # against a municipal catalog can only manufacture false positives.
+    scoper = scope.Scoper() if scope.available() else None
+    if not scoper:
+        print("  WARNING: model2vec missing -- falling back to the keyword scope\n"
+              "  filter, which lets through 11 of 26 nation-only indicators.",
+              file=sys.stderr)
+
     index, mode = None, "keyword"
     if embed.available() and embed.CATALOG.exists():
         index, mode = embed.Index(), "embedding"
@@ -143,7 +153,9 @@ def main():
     results, skipped = [], []
     for i, ind in enumerate(green, 1):
         terms = keywords(ind.get("name"))
-        if not city_scoped(terms):
+        in_scope = (scoper.is_city(ind.get("name"), scope.THRESHOLD) if scoper
+                    else city_scoped(terms))
+        if not in_scope:
             skipped.append(ind)
             continue
 
@@ -176,9 +188,11 @@ def main():
           f"# Crosswalk candidates — {today}", "",
           f"Every SDG indicator with a usable US series ({len(green)} of 689), searched against "
           "the NYC Open Data catalog.", "",
-          f"{len(skipped)} were excluded before searching as inherently national "
-          "(balance of payments, ODA, treaties, fisheries and similar) — a city does not "
-          "publish them and matching could only yield false positives.", "",
+          f"{len(skipped)} were excluded before searching as inherently national — ODA, debt "
+          "service, treaties, tariffs, fisheries and similar. A city does not publish them and "
+          "matching could only yield false positives. The classifier scores precision 0.83 at "
+          "perfect recall on 50 hand-labelled cases (`probe/scope_eval.json`), against 0.69 for "
+          "the keyword list it replaced.", "",
           f"Retrieval: **{mode}**. Embedding search over the full 2,400-dataset catalog "
           "(name, description, columns, tags, category), which on our seven verified pairs "
           "put the correct dataset at median rank **23** versus **1535** for keyword overlap.",

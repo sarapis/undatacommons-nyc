@@ -112,8 +112,10 @@ point cannot carry it.
 
 ## The corpus, and how much of it we have touched
 
-**689 base SDG indicators** in the goal framework; **248** have a usable US series; 377 have no
-US data at all. The 11 hand-built pairs are 1.6% of the corpus and 4% of the usable pool — so
+**689 base SDG indicators** in the goal framework. Screened against a six-country panel: **442
+usable**, of which **130 are indicators the United States does not report** and **67 of those are
+city-scoped** — mostly municipal and hazardous waste, wastewater and groundwater. A city can be
+compared internationally on exactly the indicators its own country skips. The 11 hand-built pairs are 1.6% of the corpus and 4% of the usable pool — so
 the crosswalk is a verified sample, not a representative one.
 
 The `probe/` pipeline now enumerates, screens and proposes candidates from the corpus rather
@@ -166,8 +168,8 @@ international comparison does not exist.
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
 - [x] Embedding search — correct dataset from median rank 1535 to 23 of 2,400
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
-- [ ] Re-key screening on country coverage, not US coverage — the comparator is the world now
-- [ ] Replace the keyword city-scope filter; it passes 328 of 377 aid-flow indicators
+- [x] Screening re-keyed onto a 6-country coverage panel — 442 usable, 130 the US never reports
+- [x] City-scope filter replaced with a measured classifier (precision 0.69 → 0.83, recall 1.00)
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
