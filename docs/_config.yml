@@ -4,6 +4,11 @@ theme: jekyll-theme-minimal
 
 # The minimal theme ships only a `default` layout, so posts use it too.
 permalink: /updates/:year-:month-:day-:title/
+
+# Jekyll drops future-dated posts SILENTLY -- no warning, the page just never
+# appears. With collaborators in different timezones that is a trap, and a feed
+# that loses entries without saying so is worse than no feed.
+future: true
 defaults:
   - scope: { path: "", type: posts }
     values: { layout: default }

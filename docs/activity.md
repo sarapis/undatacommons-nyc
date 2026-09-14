@@ -22,7 +22,8 @@ read the briefing. If you want to know how it got that way, read this.
 ```
 
 Or add `docs/_posts/YYYY-MM-DD-slug.md` by hand with front matter: `title`, `author`, and a
-`date` that includes a time so same-day posts order correctly.
+`date` that includes a time so same-day posts order correctly. The filename date and the front
+matter date must agree, or the permalink and the ordering disagree.
 
 Say what changed, what it revealed, and what it means for the next step. A finding that
 invalidates an earlier assumption is the most valuable thing you can post — flag it clearly so
