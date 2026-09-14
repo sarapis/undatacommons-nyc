@@ -1,5 +1,6 @@
 ---
 layout: default
+nav_id: summary
 title: Project briefing
 ---
 

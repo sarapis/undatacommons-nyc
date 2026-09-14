@@ -1,5 +1,6 @@
 ---
 layout: default
+nav_id: activity
 title: Activity feed
 ---
 

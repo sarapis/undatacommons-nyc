@@ -12,3 +12,13 @@ future: true
 defaults:
   - scope: { path: "", type: posts }
     values: { layout: default }
+
+# Sidebar navigation. `id` matches a page's `nav_id` front matter to mark the
+# current page; add an entry here and set nav_id on the page to extend it.
+nav:
+  - title: Summary
+    id: summary
+    url: /
+  - title: Activity feed
+    id: activity
+    url: /activity/
