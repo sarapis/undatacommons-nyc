@@ -11,7 +11,12 @@ title: Project briefing
 ## The demo
 
 **[Eleven Pairs, Three Charts](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html)** — three comparisons that hold with
-provenance and grade on every card, then the eight that fail and why. Public, no sign-in.
+provenance and grade on every card, then the eight that fail and why. Each card also places NYC
+among **every reporting country** in 2019. Public, no sign-in.
+
+The headline finding: NYC ranks **#5 of 186** on city air quality, **#85 of 137** on homicide.
+Against the US, NYC's homicide trend reads as a success story; against the world it sits in the
+bottom half. Same number, different comparator, opposite conclusion.
 
 ## The deadline
 
