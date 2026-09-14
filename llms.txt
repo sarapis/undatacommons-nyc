@@ -10,6 +10,9 @@ first. It is written to be read in one pass and links onward to everything else.
 ## Start here
 - [Project briefing](https://sarapis.github.io/undatacommons-nyc/): current state, verified platform findings, what to do next.
 
+- [Activity feed](https://sarapis.github.io/undatacommons-nyc/activity): append-only log of updates, newest first, most recent
+  reproduced in full. Read this for what happened when; read the briefing for what is true now.
+
 ## Detail
 - [Platform probe findings](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe): what we verified
   against the live UN Data Commons MCP and REST surfaces.

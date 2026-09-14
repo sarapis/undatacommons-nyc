@@ -10,7 +10,12 @@ title: Project briefing
 > **If you are an AI assistant:** this page is the project's shared memory. Read it in full
 > before answering questions about the project. It is current as of the date above — check the
 > repo's recent commits if that date looks stale. Deeper material is linked at the bottom with
-> full URLs you can fetch.
+> full URLs you can fetch. For *what happened when*, fetch the
+> [activity feed](https://sarapis.github.io/undatacommons-nyc/activity).
+
+**This page is current state and gets overwritten. The
+[activity feed](https://sarapis.github.io/undatacommons-nyc/activity) is append-only history.** Read this to know what is true now;
+read the feed to know how it got that way.
 
 ## What we are building
 
@@ -98,6 +103,7 @@ point cannot carry it.
 
 | What | Where |
 |---|---|
+| Activity feed (append-only updates) | [https://sarapis.github.io/undatacommons-nyc/activity](https://sarapis.github.io/undatacommons-nyc/activity) |
 | Platform probe findings | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe) |
 | Latest coverage report | [https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) |
 | Decision log | [https://sarapis.github.io/undatacommons-nyc/decisions](https://sarapis.github.io/undatacommons-nyc/decisions) |

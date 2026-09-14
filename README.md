@@ -28,9 +28,20 @@ mapping — is the product, not a feature of it.
 | Path | What it is |
 |---|---|
 | `docs/` | The briefing hub, served at the URL above |
+| `docs/_posts/` | Activity feed entries — one file per update |
 | `docs/findings/` | What we verified against the live platform |
 | `docs/artifacts/` | Generated outputs (coverage reports) |
 | `probe/` | The coverage probe harness |
+
+## Posting an update
+
+```bash
+./tools/new-update.sh "Short title here"
+```
+
+Creates `docs/_posts/YYYY-MM-DD-slug.md`. Write the body, commit, push. The briefing page is
+current state and gets overwritten; the feed is history and never does — if a finding
+invalidates the briefing, do both.
 
 ## Running the probe
 

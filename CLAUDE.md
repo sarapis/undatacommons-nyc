@@ -4,6 +4,7 @@ Hackathon project: a live Voluntary Local Review workbench bridging NYC Open Dat
 UN System Data Commons.
 
 **Read `docs/index.md` first.** It is the project briefing and is kept current.
+`docs/activity.md` is the append-only feed of what happened when.
 
 ## Hard-won rules — do not relearn these the expensive way
 
@@ -27,5 +28,11 @@ UN System Data Commons.
 
 ## Conventions
 
+Two pages, two jobs. **`docs/index.md` is current state and gets overwritten;
+`docs/_posts/` is history and never does.** When a finding invalidates something in the
+briefing, post an update *and* correct the briefing — a feed nobody reconciles is just a diary.
+
+- Post updates with `./tools/new-update.sh "Short title"`, then write the body. Say what
+  changed, what it revealed, and what it means next.
 - Record choices in `docs/decisions.md` with the reasoning, newest first.
 - Update the `Last updated` date in `docs/index.md` when you change it.
