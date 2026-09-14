@@ -2,7 +2,7 @@
 layout: default
 title: "Systematic enumeration: 689 SDG indicators, 248 with US data, and a matcher that is only a third right"
 author: Devin
-date: 2026-09-15 09:00:00 -0400
+date: 2026-09-14 09:00:00 -0400
 ---
 
 The first eleven crosswalk pairs came from topics I chose out of my head, which meant the

@@ -2,7 +2,7 @@
 layout: default
 title: "Embedding search: correct dataset moves from median rank 1535 to 23"
 author: Devin
-date: 2026-09-15 14:00:00 -0400
+date: 2026-09-14 14:00:00 -0400
 ---
 
 Replaced the keyword matcher. The headline is not that embeddings are better — it is *how

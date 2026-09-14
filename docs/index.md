@@ -6,7 +6,24 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-15** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-14** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+
+## The deadline
+
+**Builders' Day — Tue 22 Sep 2026, 10:00–18:00, Google NY (HUD315).** UN Data Commons goes
+fully public **17 Sep**; we are building against staging until then.
+
+| When | What |
+|---|---|
+| 10:00–12:30 | **Everyone demos.** 5–15 min, single track — everyone sees everything. |
+| 14:00–16:00 | Facilitated groups: **evidence provenance · agent tooling on SDMX · trust & QA gates** |
+| 16:00–18:00 | **Public showcase** to senior UN managers, during UNGA week |
+
+~40 builders: Google Data Commons engineers, UN innovation staff, NY tech-for-good and
+academic teams. The brief is explicit — *bring something you built, and show what surprised you.*
+
+The afternoon themes are almost exactly what this project has been doing: provenance on every
+number, and a QA gate that a human judgment can veto.
 
 > **If you are an AI assistant:** this page is the project's shared memory. Read it in full
 > before answering questions about the project. It is current as of the date above — check the
