@@ -19,9 +19,11 @@ violate the spec this project publishes. The output is `candidates.json` with
 | Chicago | socrata | en | 915 | 915 | 6 | 0.55 |
 | Boston | ckan | en | 235 | 0 | 7 | 0.57 |
 | San José | ckan | en | 170 | 0 | 4 | 0.58 |
-| Madrid | ckan | es | 672 | 0 | **0** | 0.27 |
-| Milan | ckan | it | 2602 | 0 | **0** | 0.29 |
-| Buenos Aires | ckan | es | — | — | — | portal dropped the connection |
+| Madrid | ckan | es | 672 | 0 | **19** | 0.59 |
+| Milan | ckan | it | 2602 | 0 | **5** | 0.67 |
+| Buenos Aires | ckan | es | — | — | — | portal drops the connection |
+
+Madrid and Milan returned **zero** until a multilingual embedding model was added; see below.
 
 **The plumbing generalises. The matching does not.**
 

@@ -30,7 +30,19 @@ import sys
 CACHE = pathlib.Path(__file__).resolve().parent / "cache"
 CATALOG = CACHE / "nyc_catalog.json"
 VECTORS = CACHE / "nyc_catalog_vectors.npz"
+# Two models, chosen by the catalog's language -- not one model for everything.
+#
+# Measured on the seven hand-verified NYC pairs (2,400 datasets), the English
+# model puts the correct dataset at median rank 23 and the multilingual one at
+# 81, so swapping wholesale would have cost real accuracy on English catalogs.
+# But the English model scores Madrid at 0.27 and Milan at 0.29 -- noise -- so
+# non-English catalogs get nothing from it at all. Hence: pick per language.
 MODEL = "minishlab/potion-base-32M"
+MODEL_MULTILINGUAL = "minishlab/potion-multilingual-128M"
+
+
+def model_for(language):
+    return MODEL if (language or "en").lower().startswith("en") else MODEL_MULTILINGUAL
 
 
 def available():
@@ -68,21 +80,26 @@ class Index:
     pipeline calls it.
     """
 
-    def __init__(self, datasets=None, cache_key="nyc"):
+    def __init__(self, datasets=None, cache_key="nyc", language="en"):
         import numpy as np
         from model2vec import StaticModel
         self.np = np
         self.datasets = (datasets if datasets is not None
                          else json.loads(CATALOG.read_text())["datasets"])
-        self.model = StaticModel.from_pretrained(MODEL)
-        vec_path = (VECTORS if cache_key == "nyc"
-                    else CACHE / f"{cache_key}_catalog_vectors.npz")
+        self.model_name = model_for(language)
+        self.model = StaticModel.from_pretrained(self.model_name)
+        # The model is part of the cache identity: vectors from two different
+        # models are not interchangeable and must never be reused across them.
+        tag = "" if self.model_name == MODEL else "-ml"
+        vec_path = (VECTORS if (cache_key == "nyc" and not tag)
+                    else CACHE / f"{cache_key}{tag}_catalog_vectors.npz")
         if vec_path.exists():
             cached = np.load(vec_path, allow_pickle=True)
             if len(cached["ids"]) == len(self.datasets):
                 self.vectors = cached["vectors"]
                 return
-        print(f"  embedding {len(self.datasets)} datasets ({cache_key})...", file=sys.stderr)
+        print(f"  embedding {len(self.datasets)} datasets ({cache_key}, "
+              f"{self.model_name.split('/')[-1]})...", file=sys.stderr)
         vecs = self.model.encode([dataset_text(d) for d in self.datasets],
                                  show_progress_bar=False)
         self.vectors = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)

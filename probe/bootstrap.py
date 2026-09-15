@@ -59,13 +59,15 @@ def main():
         catalog = portal.catalog(limit=a.catalog_limit)
     except PortalError as exc:
         raise SystemExit(f"catalog fetch failed: {exc}")
-    print(f"   {len(catalog)} datasets", file=sys.stderr)
+    print(f"   {len(catalog)} datasets · model "
+          f"{embed.model_for(city.get('language','en')).split('/')[-1]}", file=sys.stderr)
 
     with_cols = sum(1 for d in catalog if d.get("columns"))
     if not embed.available():
         raise SystemExit("model2vec required: pip3 install model2vec")
 
-    index = embed.Index(datasets=catalog, cache_key=city["key"])
+    index = embed.Index(datasets=catalog, cache_key=city["key"],
+                        language=city.get("language", "en"))
     scoper = scope.Scoper()
 
     indicators = [r for r in json.loads(SCREENED.read_text())["indicators"]

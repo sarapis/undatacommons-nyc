@@ -3,61 +3,94 @@
   "spec_version": "0.1",
   "cities": [
     {
-      "key": "nyc", "name": "New York City", "country": "US",
-      "platform": "socrata", "domain": "data.cityofnewyork.us",
+      "key": "nyc",
+      "name": "New York City",
+      "country": "US",
+      "platform": "socrata",
+      "domain": "data.cityofnewyork.us",
       "language": "en",
-      "population": {"source": "Census ACS 1-year B01003_001E, place 51000 / state 36",
-                     "module": "census", "annual": true},
+      "population": {
+        "source": "Census ACS 1-year B01003_001E, place 51000 / state 36",
+        "module": "census",
+        "annual": true
+      },
       "status": "crosswalked",
       "note": "The reference implementation. 12 graded pairs in probe/crosswalk.json."
     },
     {
-      "key": "chicago", "name": "Chicago", "country": "US",
-      "platform": "socrata", "domain": "data.cityofchicago.org",
+      "key": "chicago",
+      "name": "Chicago",
+      "country": "US",
+      "platform": "socrata",
+      "domain": "data.cityofchicago.org",
       "language": "en",
-      "population": {"source": "Census ACS 1-year B01003_001E, place 14000 / state 17",
-                     "module": "census", "annual": true},
+      "population": {
+        "source": "Census ACS 1-year B01003_001E, place 14000 / state 17",
+        "module": "census",
+        "annual": true
+      },
       "status": "candidates-only"
     },
     {
-      "key": "boston", "name": "Boston", "country": "US",
-      "platform": "ckan", "domain": "https://data.boston.gov",
+      "key": "boston",
+      "name": "Boston",
+      "country": "US",
+      "platform": "ckan",
+      "domain": "https://data.boston.gov",
       "language": "en",
-      "population": {"source": "Census ACS 1-year B01003_001E, place 07000 / state 25",
-                     "module": "census", "annual": true},
+      "population": {
+        "source": "Census ACS 1-year B01003_001E, place 07000 / state 25",
+        "module": "census",
+        "annual": true
+      },
       "status": "candidates-only"
     },
     {
-      "key": "san-jose", "name": "San José", "country": "US",
-      "platform": "ckan", "domain": "https://data.sanjoseca.gov",
+      "key": "san-jose",
+      "name": "San Jos\u00e9",
+      "country": "US",
+      "platform": "ckan",
+      "domain": "https://data.sanjoseca.gov",
       "language": "en",
-      "population": {"source": "Census ACS 1-year B01003_001E, place 68000 / state 06",
-                     "module": "census", "annual": true},
+      "population": {
+        "source": "Census ACS 1-year B01003_001E, place 68000 / state 06",
+        "module": "census",
+        "annual": true
+      },
       "status": "candidates-only"
     },
     {
-      "key": "madrid", "name": "Madrid", "country": "ES",
-      "platform": "ckan", "domain": "https://datos.madrid.es",
+      "key": "madrid",
+      "name": "Madrid",
+      "country": "ES",
+      "platform": "ckan",
+      "domain": "https://datos.madrid.es",
       "language": "es",
       "population": null,
       "status": "candidates-only",
       "note": "Spanish-language catalog. No sourced denominator yet, so rate-based indicators are blocked."
     },
     {
-      "key": "milan", "name": "Milan", "country": "IT",
-      "platform": "ckan", "domain": "https://dati.comune.milano.it",
+      "key": "milan",
+      "name": "Milan",
+      "country": "IT",
+      "platform": "ckan",
+      "domain": "https://dati.comune.milano.it",
       "language": "it",
       "population": null,
       "status": "candidates-only",
       "note": "Italian-language catalog. No sourced denominator yet."
     },
     {
-      "key": "buenos-aires", "name": "Buenos Aires", "country": "AR",
-      "platform": "ckan", "domain": "https://data.buenosaires.gob.ar",
+      "key": "buenos-aires",
+      "name": "Buenos Aires",
+      "country": "AR",
+      "platform": "ckan",
+      "domain": "https://data.buenosaires.gob.ar",
       "language": "es",
       "population": null,
-      "status": "candidates-only",
-      "note": "Spanish-language catalog. No sourced denominator yet."
+      "status": "unreachable",
+      "note": "Spanish-language catalog. The portal closes the connection on anonymous package_search (RemoteDisconnected), on two attempts a day apart. Recorded as unreachable rather than as zero results -- they are different findings."
     }
   ]
 }

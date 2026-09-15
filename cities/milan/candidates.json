@@ -17,5 +17,154 @@
  "catalog_size": 2602,
  "catalog_datasets_with_field_names": 0,
  "indicators_probed": 80,
- "results": []
+ "results": [
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_PRIM",
+    "name": "Energy intensity level of primary energy",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
+     "name": "Energia elettrica erogata da A2A - totale giornaliero",
+     "url": "https://dati.comune.milano.it/dataset/ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
+     "updated": "2026-05-08",
+     "similarity": 0.602
+    },
+    {
+     "id": "ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
+     "name": "Produzione netta di energia elettrica degli impianti fotovoltaici - Serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.594
+    },
+    {
+     "id": "ds1537-consumi-di-energia-elettrica-serie-storica",
+     "name": "Consumi di energia elettrica - serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1537-consumi-di-energia-elettrica-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.561
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_RNEW",
+    "name": "Installed renewable electricity-generating capacity",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
+     "name": "Produzione netta di energia elettrica degli impianti fotovoltaici - Serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.668
+    },
+    {
+     "id": "ds1541-potenza-media-di-impianto-delle-installazioni-fotovoltaiche-serie-storica",
+     "name": "Potenza media per impianto delle installazioni fotovoltaiche - Serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1541-potenza-media-di-impianto-delle-installazioni-fotovoltaiche-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.623
+    },
+    {
+     "id": "ds1542-densita-degli-impianti-fotovoltaici-serie-storica",
+     "name": "Densit\u00e0 degli impianti fotovoltaici - Serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1542-densita-degli-impianti-fotovoltaici-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.587
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_FEC_RNEW",
+    "name": "Share of renewable energy in the total final energy consumption",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
+     "name": "Produzione netta di energia elettrica degli impianti fotovoltaici - Serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.615
+    },
+    {
+     "id": "ds1537-consumi-di-energia-elettrica-serie-storica",
+     "name": "Consumi di energia elettrica - serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1537-consumi-di-energia-elettrica-serie-storica",
+     "updated": "2026-05-08",
+     "similarity": 0.588
+    },
+    {
+     "id": "ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
+     "name": "Energia elettrica erogata da A2A - totale giornaliero",
+     "url": "https://dati.comune.milano.it/dataset/ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
+     "updated": "2026-05-08",
+     "similarity": 0.574
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/FP_CPI_TOTL_ZG",
+    "name": "Annual inflation (consumer prices)",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds1499-tasso-di-inflazione-mensile-serie-storica-dal-1971",
+     "name": "Tasso di inflazione mensile - serie storica dal 1971",
+     "url": "https://dati.comune.milano.it/dataset/ds1499-tasso-di-inflazione-mensile-serie-storica-dal-1971",
+     "updated": "2026-08-18",
+     "similarity": 0.6
+    },
+    {
+     "id": "ds1821-tasso-inflazione-annuale",
+     "name": "Tasso di inflazione annuale - serie storica",
+     "url": "https://dati.comune.milano.it/dataset/ds1821-tasso-inflazione-annuale",
+     "updated": "2026-05-08",
+     "similarity": 0.586
+    },
+    {
+     "id": "ds2242_prezzi-al-consumo-dicembre-2022-indice-nic-per-sottoclassi-di-spesa",
+     "name": "Prezzi al consumo dicembre 2022: indice NIC per sottoclassi di spesa",
+     "url": "https://dati.comune.milano.it/dataset/ds2242_prezzi-al-consumo-dicembre-2022-indice-nic-per-sottoclassi-di-spesa",
+     "updated": "2026-05-08",
+     "similarity": 0.575
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SD_CPA_UPRDP",
+    "name": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds964-nil-vigenti-pgt-2030",
+     "name": "Nuclei d'Identit\u00e0 Locale (NIL) VIGENTI - PGT 2030",
+     "url": "https://dati.comune.milano.it/dataset/ds964-nil-vigenti-pgt-2030",
+     "updated": "2026-05-08",
+     "similarity": 0.551
+    },
+    {
+     "id": "ds345-popolazione-pendolarismo-in-uscita-2011c",
+     "name": "Censimento 2011: Pendolarismo in uscita dal comune di Milano",
+     "url": "https://dati.comune.milano.it/dataset/ds345-popolazione-pendolarismo-in-uscita-2011c",
+     "updated": "2026-05-08",
+     "similarity": 0.526
+    }
+   ]
+  }
+ ]
 }

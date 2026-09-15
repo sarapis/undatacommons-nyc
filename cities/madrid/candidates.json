@@ -17,5 +17,483 @@
  "catalog_size": 672,
  "catalog_datasets_with_field_names": 0,
  "indicators_probed": 80,
- "results": []
+ "results": [
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_PRIM",
+    "name": "Energy intensity level of primary energy",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300430-0-consumo-energia-edificios",
+     "name": "Consumo de energ\u00eda en edificios municipales. Datos mensuales",
+     "url": "https://datos.madrid.es/dataset/300430-0-consumo-energia-edificios",
+     "updated": "2026-08-25",
+     "similarity": 0.547
+    },
+    {
+     "id": "300466-0-instalaciones-fotovoltaicas",
+     "name": "Inventario de instalaciones fotovoltaicas",
+     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "updated": "2026-07-24",
+     "similarity": 0.514
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_RNEW",
+    "name": "Installed renewable electricity-generating capacity",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300466-0-instalaciones-fotovoltaicas",
+     "name": "Inventario de instalaciones fotovoltaicas",
+     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "updated": "2026-07-24",
+     "similarity": 0.562
+    },
+    {
+     "id": "300430-0-consumo-energia-edificios",
+     "name": "Consumo de energ\u00eda en edificios municipales. Datos mensuales",
+     "url": "https://datos.madrid.es/dataset/300430-0-consumo-energia-edificios",
+     "updated": "2026-08-25",
+     "similarity": 0.507
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_FEC_RNEW",
+    "name": "Share of renewable energy in the total final energy consumption",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300430-0-consumo-energia-edificios",
+     "name": "Consumo de energ\u00eda en edificios municipales. Datos mensuales",
+     "url": "https://datos.madrid.es/dataset/300430-0-consumo-energia-edificios",
+     "updated": "2026-08-25",
+     "similarity": 0.566
+    },
+    {
+     "id": "300466-0-instalaciones-fotovoltaicas",
+     "name": "Inventario de instalaciones fotovoltaicas",
+     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "updated": "2026-07-24",
+     "similarity": 0.552
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_H2O_RVAMBQ",
+    "name": "Proportion of river water bodies with good ambient water quality",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.551
+    },
+    {
+     "id": "300051-0-fuentes",
+     "name": "Fuentes de agua para beber",
+     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "updated": "2026-09-15",
+     "similarity": 0.546
+    },
+    {
+     "id": "300149-0-agua-regenerada",
+     "name": "Volumen del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300149-0-agua-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.521
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_H2O_WBAMBQ",
+    "name": "Proportion of bodies of water with good ambient water quality",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300051-0-fuentes",
+     "name": "Fuentes de agua para beber",
+     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "updated": "2026-09-15",
+     "similarity": 0.513
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.503
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_PWAC",
+    "name": "Change in permanent water area of lakes and rivers",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "50055-0-fuentes-mascotas",
+     "name": "Fuentes de agua para mascotas",
+     "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
+     "updated": "2026-09-15",
+     "similarity": 0.585
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.574
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.555
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_PWAN",
+    "name": "Permanent water area of lakes and rivers",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "50055-0-fuentes-mascotas",
+     "name": "Fuentes de agua para mascotas",
+     "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
+     "updated": "2026-09-15",
+     "similarity": 0.585
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.578
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.556
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_SWAN",
+    "name": "Seasonal water area of lakes and rivers",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "50055-0-fuentes-mascotas",
+     "name": "Fuentes de agua para mascotas",
+     "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
+     "updated": "2026-09-15",
+     "similarity": 0.583
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.568
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.547
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_SWAP",
+    "name": "Seasonal water area of lakes and rivers as a proportion of total land area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "50055-0-fuentes-mascotas",
+     "name": "Fuentes de agua para mascotas",
+     "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
+     "updated": "2026-09-15",
+     "similarity": 0.56
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.529
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.52
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_PWAP",
+    "name": "Permanent water area of lakes and rivers as a proportion of total land area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "50055-0-fuentes-mascotas",
+     "name": "Fuentes de agua para mascotas",
+     "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
+     "updated": "2026-09-15",
+     "similarity": 0.562
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.538
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.528
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_LKRV_SWAC",
+    "name": "Change in seasonal water area of lakes and rivers",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "50055-0-fuentes-mascotas",
+     "name": "Fuentes de agua para mascotas",
+     "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
+     "updated": "2026-09-15",
+     "similarity": 0.589
+    },
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.575
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.556
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MNWAC",
+    "name": "Change in minimum reservoir water area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.522
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MNWAN",
+    "name": "Minimum reservoir water area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.573
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.533
+    },
+    {
+     "id": "300051-0-fuentes",
+     "name": "Fuentes de agua para beber",
+     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "updated": "2026-09-15",
+     "similarity": 0.513
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MXWAN",
+    "name": "Maxiumum reservoir water area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300154-0-calidad-aguas-regenerada",
+     "name": "Calidad del agua regenerada",
+     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
+     "updated": "2026-09-09",
+     "similarity": 0.525
+    },
+    {
+     "id": "300641-0-tanques-tormentas",
+     "name": "Tanques de tormentas",
+     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
+     "updated": "2026-07-29",
+     "similarity": 0.501
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_H2O_IWRMD_EE",
+    "name": "Degree of implementation of integrated water resources management: enabling environment",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300051-0-fuentes",
+     "name": "Fuentes de agua para beber",
+     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "updated": "2026-09-15",
+     "similarity": 0.507
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/GR_G14_GDP",
+    "name": "Total bugetary revenue of the central government as a proportion of GDP",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300657-0-presupuestos-proyecto-2026",
+     "name": "Presupuestos. Proyecto de Presupuesto General 2026",
+     "url": "https://datos.madrid.es/dataset/300657-0-presupuestos-proyecto-2026",
+     "updated": "2026-07-10",
+     "similarity": 0.507
+    },
+    {
+     "id": "300666-0-presupuesto-general-curso",
+     "name": "Presupuestos. Presupuesto General 2026",
+     "url": "https://datos.madrid.es/dataset/300666-0-presupuesto-general-curso",
+     "updated": "2026-07-10",
+     "similarity": 0.502
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SD_CPA_UPRDP",
+    "name": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300577-0-iguala-vulnerabilidad",
+     "name": "IGUALA. \u00cdndice de vulnerabilidad territorial agregado del Ayuntamiento de Madrid",
+     "url": "https://datos.madrid.es/dataset/300577-0-iguala-vulnerabilidad",
+     "updated": "2026-07-23",
+     "similarity": 0.535
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_LGL_GENEQEMP",
+    "name": "Level of achievement regarding legal frameworks that promote, enforce and monitor gender equality with respect to employment and economic benefits (Area 3)",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "300577-0-iguala-vulnerabilidad",
+     "name": "IGUALA. \u00cdndice de vulnerabilidad territorial agregado del Ayuntamiento de Madrid",
+     "url": "https://datos.madrid.es/dataset/300577-0-iguala-vulnerabilidad",
+     "updated": "2026-07-23",
+     "similarity": 0.515
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SG_LGL_GENEQVAW",
+    "name": "Level of achievement regarding legal frameworks that promote, enforce and monitor gender equality with respect to violence against women (Area 2)",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "8562-0-la-violencia-sexual-en-la-ciudad-de-madrid",
+     "name": "La violencia sexual en la ciudad de Madrid",
+     "url": "https://datos.madrid.es/dataset/8562-0-la-violencia-sexual-en-la-ciudad-de-madrid",
+     "updated": "2026-07-29",
+     "similarity": 0.565
+    }
+   ]
+  }
+ ]
 }
