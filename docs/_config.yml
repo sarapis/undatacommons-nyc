@@ -28,9 +28,6 @@ nav:
   - title: Comparability spec
     id: spec
     url: /spec/
-  - title: Portal inventory
+  - title: Municipal portals
     id: portals
-    url: /artifacts/portals-latest/
-  - title: Municipal readiness
-    id: readiness
-    url: /artifacts/readiness-latest/
+    url: /artifacts/municipal-latest/

@@ -22,7 +22,11 @@
    "above_0.5": 2,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.53
+   "best": 0.53,
+   "city": "Dallas",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "acs"
   },
   {
    "portal": "datahub.austintexas.gov",
@@ -43,7 +47,11 @@
    "above_0.5": 16,
    "above_0.55": 5,
    "above_0.6": 2,
-   "best": 0.652
+   "best": 0.652,
+   "city": "Austin",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.ny.gov",
@@ -76,7 +84,11 @@
    "above_0.5": 3,
    "above_0.55": 1,
    "above_0.6": 0,
-   "best": 0.592
+   "best": 0.592,
+   "city": "Orlando",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "acs"
   },
   {
    "portal": "data.cityofchicago.org",
@@ -97,7 +109,11 @@
    "above_0.5": 6,
    "above_0.55": 1,
    "above_0.6": 1,
-   "best": 0.606
+   "best": 0.606,
+   "city": "Chicago",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "acs"
   },
   {
    "portal": "data.cdc.gov",
@@ -154,7 +170,11 @@
    "above_0.5": 25,
    "above_0.55": 8,
    "above_0.6": 3,
-   "best": 0.61
+   "best": 0.61,
+   "city": "New York",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "opendata.howardcountymd.gov",
@@ -283,7 +303,11 @@
    "above_0.5": 16,
    "above_0.55": 5,
    "above_0.6": 3,
-   "best": 0.705
+   "best": 0.705,
+   "city": "Los Angeles",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "data.montgomerycountymd.gov",
@@ -352,7 +376,11 @@
    "above_0.5": 12,
    "above_0.55": 9,
    "above_0.6": 7,
-   "best": 0.751
+   "best": 0.751,
+   "city": "Providence",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.calgary.ca",
@@ -373,7 +401,11 @@
    "above_0.5": 25,
    "above_0.55": 15,
    "above_0.6": 6,
-   "best": 0.771
+   "best": 0.771,
+   "city": "Calgary",
+   "city_source": "override",
+   "country_name": "Canada",
+   "country_source": "override"
   },
   {
    "portal": "data.pa.gov",
@@ -418,7 +450,11 @@
    "above_0.5": 8,
    "above_0.55": 2,
    "above_0.6": 1,
-   "best": 0.657
+   "best": 0.657,
+   "city": "Norfolk",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.honolulu.gov",
@@ -463,7 +499,11 @@
    "above_0.5": 1,
    "above_0.55": 1,
    "above_0.6": 0,
-   "best": 0.582
+   "best": 0.582,
+   "city": "Seattle",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.delaware.gov",
@@ -508,7 +548,11 @@
    "above_0.5": 2,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.531
+   "best": 0.531,
+   "city": "Los Angeles (Controller)",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "data.cambridgema.gov",
@@ -529,7 +573,11 @@
    "above_0.5": 18,
    "above_0.55": 5,
    "above_0.6": 4,
-   "best": 0.75
+   "best": 0.75,
+   "city": "Cambridge",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.transportation.gov",
@@ -586,7 +634,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.456
+   "best": 0.456,
+   "city": "Cincinnati",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.texas.gov",
@@ -643,7 +695,11 @@
    "above_0.5": 3,
    "above_0.55": 2,
    "above_0.6": 2,
-   "best": 0.675
+   "best": 0.675,
+   "city": "New Orleans",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "internal-data.ct.gov",
@@ -676,7 +732,11 @@
    "above_0.5": 6,
    "above_0.55": 3,
    "above_0.6": 1,
-   "best": 0.687
+   "best": 0.687,
+   "city": "Gainesville",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "acs"
   },
   {
    "portal": "data.sonomacounty.ca.gov",
@@ -733,7 +793,11 @@
    "above_0.5": 17,
    "above_0.55": 15,
    "above_0.6": 7,
-   "best": 0.702
+   "best": 0.702,
+   "city": "Edmonton",
+   "city_source": "domain",
+   "country_name": "Canada",
+   "country_source": "tld"
   },
   {
    "portal": "data.brla.gov",
@@ -754,7 +818,11 @@
    "above_0.5": 6,
    "above_0.55": 2,
    "above_0.6": 1,
-   "best": 0.82
+   "best": 0.82,
+   "city": "Baton Rouge",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "data.nasa.gov",
@@ -787,7 +855,11 @@
    "above_0.5": 2,
    "above_0.55": 2,
    "above_0.6": 1,
-   "best": 0.679
+   "best": 0.679,
+   "city": "Oakland",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "internal-sandiegocounty.data.socrata.com",
@@ -832,7 +904,11 @@
    "above_0.5": 12,
    "above_0.55": 5,
    "above_0.6": 3,
-   "best": 0.705
+   "best": 0.705,
+   "city": "Winnipeg",
+   "city_source": "override",
+   "country_name": "Canada",
+   "country_source": "override"
   },
   {
    "portal": "www.data.act.gov.au",
@@ -961,7 +1037,11 @@
    "above_0.5": 10,
    "above_0.55": 4,
    "above_0.6": 2,
-   "best": 0.7
+   "best": 0.7,
+   "city": "Kansas City",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "performance.commerce.gov",
@@ -1042,7 +1122,11 @@
    "above_0.5": 7,
    "above_0.55": 3,
    "above_0.6": 1,
-   "best": 0.616
+   "best": 0.616,
+   "city": "Berkeley",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "acs"
   },
   {
    "portal": "healthdata.nj.gov",
@@ -1075,7 +1159,11 @@
    "above_0.5": 10,
    "above_0.55": 3,
    "above_0.6": 0,
-   "best": 0.593
+   "best": 0.593,
+   "city": "Mesa",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "janesville.data.socrata.com",
@@ -1096,7 +1184,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.472
+   "best": 0.472,
+   "city": "Janesville",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "data.dumfriesva.gov",
@@ -1153,7 +1245,11 @@
    "above_0.5": 4,
    "above_0.55": 3,
    "above_0.6": 1,
-   "best": 0.916
+   "best": 0.916,
+   "city": "Everett",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.richmondgov.com",
@@ -1174,7 +1270,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.415
+   "best": 0.415,
+   "city": "Richmond, VA",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "bronx.lehman.cuny.edu",
@@ -1279,7 +1379,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.47
+   "best": 0.47,
+   "city": "Somerville",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.readingpa.gov",
@@ -1336,7 +1440,11 @@
    "above_0.5": 2,
    "above_0.55": 2,
    "above_0.6": 1,
-   "best": 0.715
+   "best": 0.715,
+   "city": "Edmonton",
+   "city_source": "override",
+   "country_name": "Canada",
+   "country_source": "override"
   },
   {
    "portal": "data.macoupincountyil.gov",
@@ -1393,7 +1501,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.493
+   "best": 0.493,
+   "city": "Rancho Cordova",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "datamgmt.nassaucountyny.gov",
@@ -1474,7 +1586,11 @@
    "above_0.5": 6,
    "above_0.55": 4,
    "above_0.6": 2,
-   "best": 0.635
+   "best": 0.635,
+   "city": "Seattle",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "www.transparentrichmond.org",
@@ -1495,7 +1611,11 @@
    "above_0.5": 9,
    "above_0.55": 4,
    "above_0.6": 0,
-   "best": 0.598
+   "best": 0.598,
+   "city": "Richmond, CA",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "data.urbanaillinois.us",
@@ -1552,7 +1672,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.412
+   "best": 0.412,
+   "city": "Kirkland",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "dashboard.plano.gov",
@@ -1645,7 +1769,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.404
+   "best": 0.404,
+   "city": "Buffalony",
+   "city_source": "domain",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.mesaaz.gov",
@@ -1666,7 +1794,11 @@
    "above_0.5": 1,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.509
+   "best": 0.509,
+   "city": "Mesa",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.bloomington.in.gov",
@@ -1747,7 +1879,11 @@
    "above_0.5": 4,
    "above_0.55": 2,
    "above_0.6": 2,
-   "best": 0.652
+   "best": 0.652,
+   "city": "Roseville",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "openinformation.novascotia.ca",
@@ -1804,7 +1940,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.443
+   "best": 0.443,
+   "city": "Pittsburgh",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "opendata.fcgov.com",
@@ -2017,7 +2157,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.454
+   "best": 0.454,
+   "city": "Mesquite",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "acs"
   },
   {
    "portal": "cityofcamas.demo.socrata.com",
@@ -2038,7 +2182,11 @@
    "above_0.5": 1,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.521
+   "best": 0.521,
+   "city": "Camas",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "stat.montgomerycountymd.gov",
@@ -2071,7 +2219,11 @@
    "above_0.5": 1,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.535
+   "best": 0.535,
+   "city": "Camas",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "cityoffairfaxpd.data.socrata.com",
@@ -2092,7 +2244,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.411
+   "best": 0.411,
+   "city": "Fairfax (police)",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "gainesville-govstat.demo.socrata.com",
@@ -2113,7 +2269,11 @@
    "above_0.5": 1,
    "above_0.55": 1,
    "above_0.6": 1,
-   "best": 0.614
+   "best": 0.614,
+   "city": "Gainesville",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "johnstonia.data.socrata.com",
@@ -2206,7 +2366,11 @@
    "above_0.5": 12,
    "above_0.55": 6,
    "above_0.6": 3,
-   "best": 0.739
+   "best": 0.739,
+   "city": "Santa Monica",
+   "city_source": "override",
+   "country_name": "United States",
+   "country_source": "override"
   },
   {
    "portal": "carsoncity.data.socrata.com",
@@ -2239,7 +2403,11 @@
    "above_0.5": 5,
    "above_0.55": 1,
    "above_0.6": 0,
-   "best": 0.558
+   "best": 0.558,
+   "city": "Janesville",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "mesa-az.demo.socrata.com",
@@ -2332,7 +2500,11 @@
    "above_0.5": 20,
    "above_0.55": 16,
    "above_0.6": 9,
-   "best": 0.761
+   "best": 0.761,
+   "city": "Madrid",
+   "city_source": "registry",
+   "country_name": "Spain",
+   "country_source": "tld"
   },
   {
    "portal": "data.buenosaires.gob.ar",
@@ -2349,7 +2521,11 @@
    "catalog_sampled": 454,
    "match_language": "es",
    "cutoff": 0.504,
-   "abs_error": "PortalError"
+   "abs_error": "PortalError",
+   "city": "Buenos Aires",
+   "city_source": "override",
+   "country_name": "Argentina",
+   "country_source": "override"
   },
   {
    "portal": "datos.gob.cl",
@@ -2382,7 +2558,11 @@
    "above_0.5": 6,
    "above_0.55": 4,
    "above_0.6": 3,
-   "best": 0.692
+   "best": 0.692,
+   "city": "Boston",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "data.sanjoseca.gov",
@@ -2403,7 +2583,11 @@
    "above_0.5": 6,
    "above_0.55": 3,
    "above_0.6": 2,
-   "best": 0.648
+   "best": 0.648,
+   "city": "San Jose",
+   "city_source": "acs",
+   "country_name": "United States",
+   "country_source": "tld"
   },
   {
    "portal": "dati.comune.matera.it",
@@ -2424,7 +2608,11 @@
    "above_0.5": 5,
    "above_0.55": 2,
    "above_0.6": 1,
-   "best": 0.649
+   "best": 0.649,
+   "city": "Matera",
+   "city_source": "override",
+   "country_name": "Italy",
+   "country_source": "override"
   },
   {
    "portal": "dati.comune.milano.it",
@@ -2445,7 +2633,11 @@
    "above_0.5": 5,
    "above_0.55": 4,
    "above_0.6": 4,
-   "best": 0.684
+   "best": 0.684,
+   "city": "Milan",
+   "city_source": "registry",
+   "country_name": "Italy",
+   "country_source": "tld"
   },
   {
    "portal": "opendata.swiss",
@@ -2490,7 +2682,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.445
+   "best": 0.445,
+   "city": "Zagreb",
+   "city_source": "override",
+   "country_name": "Croatia",
+   "country_source": "override"
   },
   {
    "portal": "data.gov.gr",
@@ -2551,7 +2747,11 @@
    "datasets": 641,
    "error": null,
    "level": "city",
-   "candidates_error": "PortalError"
+   "candidates_error": "PortalError",
+   "city": "Leeds",
+   "city_source": "override",
+   "country_name": "United Kingdom",
+   "country_source": "override"
   },
   {
    "portal": "data.london.gov.uk",
@@ -2612,7 +2812,11 @@
    "datasets": 282,
    "error": null,
    "level": "city",
-   "candidates_error": "PortalError"
+   "candidates_error": "PortalError",
+   "city": "Rostock",
+   "city_source": "override",
+   "country_name": "Germany",
+   "country_source": "override"
   },
   {
    "portal": "www.opendata.hu",
@@ -2672,7 +2876,11 @@
    "source": "okfn-probed",
    "datasets": 223,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "city": "Recife",
+   "city_source": "override",
+   "country_name": "Brazil",
+   "country_source": "override"
   },
   {
    "portal": "dati.toscana.it",
@@ -2705,7 +2913,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.382
+   "best": 0.382,
+   "city": "Montr\u00e9al",
+   "city_source": "override",
+   "country_name": "Canada",
+   "country_source": "override"
   },
   {
    "portal": "data.gov.ua",
@@ -2738,7 +2950,11 @@
    "above_0.5": 7,
    "above_0.55": 3,
    "above_0.6": 2,
-   "best": 0.67
+   "best": 0.67,
+   "city": "Karlsruhe",
+   "city_source": "override",
+   "country_name": "Germany",
+   "country_source": "override"
   },
   {
    "portal": "dados.fortaleza.ce.gov.br",
@@ -2759,7 +2975,11 @@
    "above_0.5": 12,
    "above_0.55": 7,
    "above_0.6": 6,
-   "best": 0.678
+   "best": 0.678,
+   "city": "Fortaleza",
+   "city_source": "override",
+   "country_name": "Brazil",
+   "country_source": "override"
   },
   {
    "portal": "dados.recife.pe.gov.br",
@@ -2780,7 +3000,11 @@
    "above_0.5": 15,
    "above_0.55": 8,
    "above_0.6": 0,
-   "best": 0.599
+   "best": 0.599,
+   "city": "Recife",
+   "city_source": "override",
+   "country_name": "Brazil",
+   "country_source": "override"
   },
   {
    "portal": "dados.rs.gov.br",
@@ -2825,7 +3049,11 @@
    "above_0.5": 15,
    "above_0.55": 7,
    "above_0.6": 0,
-   "best": 0.57
+   "best": 0.57,
+   "city": "S\u00e3o Paulo",
+   "city_source": "override",
+   "country_name": "Brazil",
+   "country_source": "override"
   },
   {
    "portal": "dados.pb.gov.br",
@@ -2858,7 +3086,11 @@
    "above_0.5": 22,
    "above_0.55": 9,
    "above_0.6": 5,
-   "best": 0.732
+   "best": 0.732,
+   "city": "Belo Horizonte",
+   "city_source": "override",
+   "country_name": "Brazil",
+   "country_source": "override"
   },
   {
    "portal": "opendata.transport.nsw.gov.au",
@@ -3019,7 +3251,11 @@
    "above_0.5": 20,
    "above_0.55": 14,
    "above_0.6": 8,
-   "best": 0.731
+   "best": 0.731,
+   "city": "Queensland (state)",
+   "city_source": "override",
+   "country_name": "Australia",
+   "country_source": "override"
   },
   {
    "portal": "data.gov.au",
@@ -3462,7 +3698,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.442
+   "best": 0.442,
+   "city": "Codeando M\u00e9xico (civic org)",
+   "city_source": "override",
+   "country_name": "Mexico",
+   "country_source": "override"
   },
   {
    "portal": "opendatadc.org",
@@ -3597,7 +3837,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.352
+   "best": 0.352,
+   "city": "M\u00e1laga",
+   "city_source": "override",
+   "country_name": "Spain",
+   "country_source": "override"
   },
   {
    "portal": "opendata.cmt.es",
@@ -4166,7 +4410,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.321
+   "best": 0.321,
+   "city": "Misiones (province)",
+   "city_source": "override",
+   "country_name": "Argentina",
+   "country_source": "override"
   },
   {
    "portal": "edx.netl.doe.gov",
@@ -4259,7 +4507,11 @@
    "above_0.5": 1,
    "above_0.55": 1,
    "above_0.6": 0,
-   "best": 0.576
+   "best": 0.576,
+   "city": "Nantou",
+   "city_source": "override",
+   "country_name": "Taiwan",
+   "country_source": "override"
   },
   {
    "portal": "hdx.rwlabs.org",
@@ -4568,7 +4820,11 @@
    "datasets": 406,
    "error": null,
    "level": "city-or-region",
-   "candidates_error": "PortalError"
+   "candidates_error": "PortalError",
+   "city": "Lazio (region)",
+   "city_source": "override",
+   "country_name": "Italy",
+   "country_source": "override"
   },
   {
    "portal": "datastore.landcareresearch.co.nz",
@@ -4871,7 +5127,11 @@
    "above_0.5": 3,
    "above_0.55": 2,
    "above_0.6": 2,
-   "best": 0.702
+   "best": 0.702,
+   "city": "Mendoza",
+   "city_source": "override",
+   "country_name": "Argentina",
+   "country_source": "override"
   },
   {
    "portal": "datos.ciudaddemendoza.gov.ar",
@@ -4894,7 +5154,11 @@
    "above_0.5": 3,
    "above_0.55": 2,
    "above_0.6": 2,
-   "best": 0.702
+   "best": 0.702,
+   "city": "Mendoza",
+   "city_source": "override",
+   "country_name": "Argentina",
+   "country_source": "override"
   },
   {
    "portal": "energydata.uct.ac.za",
@@ -4945,7 +5209,11 @@
    "above_0.5": 29,
    "above_0.55": 19,
    "above_0.6": 13,
-   "best": 0.738
+   "best": 0.738,
+   "city": "Bolzano",
+   "city_source": "override",
+   "country_name": "Italy",
+   "country_source": "override"
   },
   {
    "portal": "www.opendatanetwork.it",
@@ -4982,7 +5250,11 @@
    "above_0.5": 16,
    "above_0.55": 5,
    "above_0.6": 3,
-   "best": 0.691
+   "best": 0.691,
+   "city": "Z\u00fcrich",
+   "city_source": "override",
+   "country_name": "Switzerland",
+   "country_source": "override"
   },
   {
    "portal": "dados.ufrn.br",
@@ -5061,7 +5333,11 @@
    "above_0.5": 16,
    "above_0.55": 6,
    "above_0.6": 4,
-   "best": 0.774
+   "best": 0.774,
+   "city": "Denmark (multi-city)",
+   "city_source": "override",
+   "country_name": "Denmark",
+   "country_source": "override"
   },
   {
    "portal": "data.brisbane.qld.gov.au",
@@ -5112,7 +5388,11 @@
    "above_0.5": 0,
    "above_0.55": 0,
    "above_0.6": 0,
-   "best": 0.47
+   "best": 0.47,
+   "city": "Rivas-Vaciamadrid",
+   "city_source": "override",
+   "country_name": "Spain",
+   "country_source": "override"
   },
   {
    "portal": "datos.jus.gov.ar",

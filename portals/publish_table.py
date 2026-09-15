@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Render the municipal readiness table from inventory.json.
+"""Render one combined municipal table: identity, size, matchability, denominator.
 
-Separate from analyze.py because that re-queries every portal; this only
-formats what has already been measured.
+Replaces the separate inventory and readiness tables -- they were keyed by the
+same portals and split the same story across two pages.
 """
 import datetime as dt, json, pathlib
 
@@ -19,44 +19,54 @@ def denom(h):
         return "ACS"
     c = reg.get(h)
     if c and c.get("population"):
-        return {"portal_csv": "own (snapshot)", "portal_csv_series": "own (series)",
+        return {"portal_csv": "own · snapshot", "portal_csv_series": "own · series",
                 "census": "ACS"}[c["population"]["module"]]
     return "—"
 
 
-muni = [r for r in rows if r.get("above_0.55") is not None]
-muni.sort(key=lambda r: (-r["above_0.55"], -(r["datasets"] or 0)))
+muni = [r for r in rows if r["level"] in ("city", "city-or-region") and r.get("datasets")]
+muni.sort(key=lambda r: (-(r.get("above_0.55") if r.get("above_0.55") is not None else -1),
+                         -(r["datasets"] or 0)))
 today = dt.date.today().isoformat()
+scored = [r for r in muni if r.get("above_0.55") is not None]
+with_den = [r for r in muni if denom(r["portal"]) != "—"]
 
-md = ["---", "layout: default", f"title: Municipal readiness — {today}", "---", "",
-      f"# Municipal portal readiness — {today}", "",
-      "Which cities are worth starting a crosswalk on. Three gates: a reachable portal, "
-      "indicators the matcher can find, and a population denominator.", "",
-      "> **What the match column is not.** *≥0.55* counts UN indicators whose best match in "
-      "that catalog clears a fixed similarity bar. It is a measure of **how much is worth "
-      "reviewing**, not of quality — hand-reading candidate lists puts precision near half, and "
-      "under [spec v0.1](../spec/) a grade is a human judgment regardless. NYC, the one city "
-      "with hand-verified pairs, scores middling here, which is the clearest evidence that this "
-      "column does not rank crosswalk success.", "",
-      "> An earlier version of this table used each catalog's own calibrated cutoff. That keeps "
-      "the top ~20% by construction, so **28 cities tied at exactly 12** and the column carried "
-      "no information. Per-catalog calibration is right for bounding one city's worksheet and "
-      "wrong for comparing cities.", "",
-      f"**{len(muni)} municipal portals scored.**", "",
-      "| Portal | Lang | Datasets | Best | ≥0.55 | ≥0.50 | Denominator |",
-      "|---|---|---:|---:|---:|---:|---|"]
+md = ["---", "layout: default", f"title: Municipal portals — {today}", "---", "",
+      f"# Municipal open data portals — {today}", "",
+      f"**{len(muni)} city and regional portals**, holding "
+      f"{sum(r['datasets'] for r in muni):,} datasets. {len(scored)} scored for matchable UN "
+      f"indicators; {len(with_den)} have a population denominator wired.", "",
+      "Three gates decide whether a city can produce a chart: a reachable portal, indicators the "
+      "matcher can find, and a denominator. This table shows all three.", "",
+      "> **≥0.55 is review volume, not quality.** It counts UN indicators whose best match in "
+      "that catalog clears a fixed similarity bar. Hand-reading candidate lists puts precision "
+      "near half, and under [spec v0.1](../spec/) a grade is a human judgment regardless. NYC — "
+      "the only city with hand-verified pairs — scores middling, which is the clearest evidence "
+      "this column does not rank crosswalk success.", "",
+      "> **City and country are derived**, from an ACS place match, the project registry, a CKAN "
+      "title, the domain, or a hand override where none of those work. The source is recorded "
+      "per row in `portals/inventory.json` so a wrong one can be traced.", "",
+      "| City | Country | Portal | Plat | Lang | Datasets | Best | ≥0.55 | ≥0.50 | Denominator |",
+      "|---|---|---|---|---|---:|---:|---:|---:|---|"]
 for r in muni:
-    md.append(f"| [{r['portal']}]({r['url']}) | {r.get('match_language','?')} | "
-              f"{r['datasets']:,} | {r['best']:.2f} | **{r['above_0.55']}** | "
-              f"{r['above_0.5']} | {denom(r['portal'])} |")
+    b = f"{r['best']:.2f}" if r.get("best") is not None else "—"
+    a55 = r.get("above_0.55"); a50 = r.get("above_0.5")
+    a55 = "**" + str(a55) + "**" if a55 is not None else "—"
+    a50 = str(a50) if a50 is not None else "—"
+    md.append(f"| {r.get('city') or '?'} | {r.get('country_name') or '?'} | "
+              f"[{r['portal']}]({r['url']}) | {r['platform']} | "
+              f"{r.get('match_language','?')} | {r['datasets']:,} | {b} | {a55} | {a50} | "
+              f"{denom(r['portal'])} |")
 md += ["", "## Reading it", "",
        "- **Catalog size does not predict potential.** Bolzano has 930 datasets and 19 indicators "
        "above 0.55; Milan has 2,602 and 4.",
-       "- **Four of the top six are non-English.** Before the multilingual model these returned "
-       "zero candidates.",
-       "- **A denominator is the other gate.** A city with 19 candidates and no population source "
-       "still cannot chart a rate — most SDG indicators are per 100,000.", ""]
+       "- **Four of the top six are non-English**, and returned zero candidates before a "
+       "multilingual embedding model was added.",
+       "- **The denominator is the binding gate.** Most SDG indicators are rates per 100,000, so "
+       "a city with 19 candidates and no population source still cannot chart one. 27 US cities "
+       "resolve via Census ACS; Madrid and Milan are wired from their own statistical "
+       "publications; the rest need one.", ""]
 out = ROOT / "docs/artifacts"
-(out / f"readiness-{today}.md").write_text("\n".join(md))
-(out / "readiness-latest.md").write_text("\n".join(md))
-print(f"wrote docs/artifacts/readiness-{today}.md ({len(muni)} portals)")
+(out / f"municipal-{today}.md").write_text("\n".join(md))
+(out / "municipal-latest.md").write_text("\n".join(md))
+print(f"wrote docs/artifacts/municipal-{today}.md — {len(muni)} portals")

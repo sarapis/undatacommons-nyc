@@ -71,7 +71,7 @@ silently.
 
 ### The portal inventory
 
-The **[inventory](https://sarapis.github.io/undatacommons-nyc/artifacts/portals-latest)** covers **372 portals surveyed, 70 municipal**,
+The **[municipal table](https://sarapis.github.io/undatacommons-nyc/artifacts/municipal-latest)** covers all **70 municipal portals** with city, country, size, matchable indicators and denominator status; the wider survey reached **372 portals**,
 holding **543,000 datasets** between them — 159 Socrata and the rest CKAN.
 
 The primary CKAN source is the **[CKAN Ecosystem Catalog](https://ecosystem.ckan.org)** (NSF POSE
