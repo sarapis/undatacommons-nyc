@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-14** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-15** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
@@ -128,15 +128,23 @@ inside "NYPD Complaint Data Historic") and no text method can find those.
 
 ## What the crosswalk says so far
 
-11 indicator pairs mapped; **3 can honestly share an axis** (PM2.5, homicide, waste recycling).
-The other 8 fail for reasons worth knowing: mismatched age bands, denominators that live in a
-different dataset, concepts that share a name and measure nothing alike, ceiling effects, and one
-Tier 1 indicator with no NYC source. Recording *why* is the product — a crosswalk showing only
-the easy pairs would be the thing we are building against.
+12 indicator pairs mapped by hand. **Three share an axis as trends** (PM2.5, homicide, waste
+recycling), **one ranks but cannot track** (road deaths), and **one has no comparator at all**
+(municipal waste — the US reports it to nobody). The remaining seven fail for reasons worth
+knowing: mismatched age bands, denominators in a different dataset, concepts that share a name and
+measure nothing alike, ceiling effects, and one Tier 1 indicator with no NYC source.
 
-**Road traffic deaths is blocked by the UN side, not ours**: NYC has daily Vision Zero data, the
-UN has one 2021 modelled estimate. For the city's flagship street-safety programme the
-international comparison does not exist.
+Recording *why* is the product — a crosswalk showing only the easy pairs would be the thing we are
+building against.
+
+**Two corrections we made to ourselves, both worth repeating:**
+
+- **Road deaths is not blocked.** We graded it BLOCKED because the UN holds one observation. That
+  blocks a *trend* and not a *ranking*: 195 countries reported in 2021, and NYC places **18th of
+  196** at 3.51 per 100k — beside Spain and the Netherlands, four times safer than the US. The
+  blocker was our framing.
+- **The caveat can run either way.** DSNY's residential-only coverage makes NYC look *worse* on
+  recycling and *better* on waste per capita. One definitional gap, two opposite distortions.
 
 ## Open questions
 
@@ -163,14 +171,16 @@ international comparison does not exist.
   [crosswalk status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest)
 - [ ] Confirm the peer-comparator framing (recommendation above)
 - [x] Census denominators — all three pairs now chartable end to end
-- [x] Crosswalk expanded to 11 pairs — 3 chartable, 8 documented as not comparable and why
+- [x] Crosswalk at 12 pairs — 5 on the demo, 7 documented as not comparable and why
   ([status](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest))
-- [x] Systematic enumeration pipeline — 689 SDG indicators, 248 with US data
+- [x] Systematic enumeration pipeline — 689 SDG indicators enumerated from the goal trees
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
 - [x] Embedding search — correct dataset from median rank 1535 to 23 of 2,400
   ([candidates](https://sarapis.github.io/undatacommons-nyc/artifacts/candidates-latest))
 - [x] Screening re-keyed onto a 6-country coverage panel — 442 usable, 130 the US never reports
 - [x] City-scope filter replaced with a measured classifier (precision 0.69 → 0.83, recall 1.00)
+- [x] Demo at five cards — three trends, one rank-only, one with no comparator
+- [ ] **17 Sep: re-run every probe against the public launch and diff the DCIDs**
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [ ] Bridge service composing UN DC MCP with NYC Open Data
 - [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
