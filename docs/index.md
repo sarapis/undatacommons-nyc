@@ -34,18 +34,29 @@ keep the English model.
 
 **Threshold.** An absolute similarity cutoff cannot travel — good matches span 0.42–0.70 in NYC,
 0.50–0.55 in Chicago, 0.37–0.59 in Madrid. The cutoff is now derived from each catalog's own
-top-score distribution, landing at 0.450 (Milan) to 0.515 (Madrid) and yielding worksheets of
-12–16 indicators per city instead of 0 or 69. A z-score was tried first and was wrong twice over;
-[the write-up](https://sarapis.github.io/undatacommons-nyc/activity) says why, because the failure is more instructive than the fix.
+top-score distribution, landing at **0.450 (Milan) to 0.564 (Madrid)** and yielding worksheets of
+**13–16** indicators per city instead of 0 or 69. A z-score was tried first and was wrong twice
+over; [the write-up](https://sarapis.github.io/undatacommons-nyc/activity) says why, because the failure is more instructive than the
+fix.
 
 **The matcher used to miss what the cities plainly hold — now fixed.** Boston publishes *Vision
 Zero Fatality Records*; it ranked 23rd of 235 for "death rate due to road traffic injuries", below
 a contract-award file. The cause was document representation, not the query: a static embedding
 averaged 60 characters of exactly-right title and tags into 1,500 characters of programme
 boilerplate. Scoring title/tags/columns and description as **separate vectors and taking the max**
-puts it at **rank 1**, and improves NYC's ground-truth median from **23 to 14** at the same time. An earlier version of this page said
-"no substantive SDG indicator has matched outside NYC" without that distinction, which read as a
-claim about the cities; see the [correction](https://sarapis.github.io/undatacommons-nyc/activity).
+puts it at **rank 1**, and improves NYC's ground-truth median from **23 to 14** at the same time.
+
+An earlier version of this page said "no substantive SDG indicator has matched outside NYC". That
+was true of the matcher and read as a claim about the cities, which was wrong — Chicago publishes
+*Traffic Crashes*, *Crimes 2001–Present* and *Open Air Chicago*; Boston publishes *Vision Zero
+Fatality Records*. See the [correction](https://sarapis.github.io/undatacommons-nyc/activity).
+
+**Where it stands after the fix.** Boston's worksheet now surfaces *CO₂ emissions → Greenhouse Gas
+Emissions* and *Land area → 2016 Land Cover*, alongside survivors like *Food waste → Trash
+Schedules by Address*. Roughly half the top candidates are plausible, against two or three in ten
+before. Better, and still a worksheet for a person rather than a set of mappings — under
+[spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/) a grade is a human judgment, so the bootstrapper emits
+`is_crosswalk: false` by construction.
 
 ### The portal inventory
 

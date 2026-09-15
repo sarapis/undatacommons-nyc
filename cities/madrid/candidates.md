@@ -15,7 +15,7 @@ Generated 2026-09-15 · ckan · `https://datos.madrid.es`
 | 7.4 | 0.76 | Share of renewable energy in the total final energy  | [Consumo y generación de energía en el Ayun](https://datos.madrid.es/dataset/300514-0-consumo-generacion-energia) | |
 | 6.8 | 0.69 | Energy intensity level of primary energy | [Consumo y generación de energía en el Ayun](https://datos.madrid.es/dataset/300514-0-consumo-generacion-energia) | |
 | 6.6 | 0.68 | Proportion of river water bodies with good ambient w | [Volumen del agua regenerada](https://datos.madrid.es/dataset/300149-0-agua-regenerada) | |
-| 6.5 | 0.71 | Installed renewable electricity-generating capacity | [Inventario de instalaciones fotovoltaicas](https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas) | |
+| 6.5 | 0.71 | Installed renewable electricity-generating capacity | [Oficinas y trámites](https://datos.madrid.es/dataset/300663-0-oficinas-tramites) | |
 | 6.2 | 0.57 | Maxiumum reservoir water area | [Volumen del agua regenerada](https://datos.madrid.es/dataset/300149-0-agua-regenerada) | |
 | 6.2 | 0.66 | Proportion of bodies of water with good ambient wate | [Volumen del agua regenerada](https://datos.madrid.es/dataset/300149-0-agua-regenerada) | |
 | 6.0 | 0.58 | Water use efficiency | [Volumen del agua regenerada](https://datos.madrid.es/dataset/300149-0-agua-regenerada) | |
@@ -27,6 +27,6 @@ Generated 2026-09-15 · ckan · `https://datos.madrid.es`
 | 5.6 | 0.60 | Change in seasonal water area of lakes and rivers | [Calidad del vertido de las aguas residuale](https://datos.madrid.es/dataset/300146-0-depuradoras-vertido) | |
 | 5.1 | 0.57 | Permanent water area of lakes and rivers as a propor | [Calidad del vertido de las aguas residuale](https://datos.madrid.es/dataset/300146-0-depuradoras-vertido) | |
 | 5.1 | 0.56 | Seasonal water area of lakes and rivers as a proport | [Calidad del vertido de las aguas residuale](https://datos.madrid.es/dataset/300146-0-depuradoras-vertido) | |
-| 4.4 | 0.57 | Carbon dioxide emissions from fuel combustion | [Calidad del aire. Episodios de alta contam](https://datos.madrid.es/dataset/300403-0-calidad-aire-episodios-no2) | |
+| 4.4 | 0.57 | Carbon dioxide emissions from fuel combustion | [EMT. GTFS (General Transit Feed Specificat](https://datos.madrid.es/dataset/900030-0-emt-autobus-gtfs) | |
 
 *16 rows; showing the top 80. Regenerate with `python3 probe/bootstrap.py --city madrid`.*

@@ -43,9 +43,9 @@
      "z": 6.76
     },
     {
-     "id": "300466-0-instalaciones-fotovoltaicas",
-     "name": "Inventario de instalaciones fotovoltaicas",
-     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "id": "300663-0-oficinas-tramites",
+     "name": "Oficinas y tr\u00e1mites",
+     "url": "https://datos.madrid.es/dataset/300663-0-oficinas-tramites",
      "updated": "2026-07-24",
      "similarity": 0.677,
      "z": 6.67
@@ -61,9 +61,9 @@
    },
    "candidates": [
     {
-     "id": "300466-0-instalaciones-fotovoltaicas",
-     "name": "Inventario de instalaciones fotovoltaicas",
-     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "id": "300663-0-oficinas-tramites",
+     "name": "Oficinas y tr\u00e1mites",
+     "url": "https://datos.madrid.es/dataset/300663-0-oficinas-tramites",
      "updated": "2026-07-24",
      "similarity": 0.709,
      "z": 6.51
@@ -129,9 +129,9 @@
    },
    "candidates": [
     {
-     "id": "300403-0-calidad-aire-episodios-no2",
-     "name": "Calidad del aire. Episodios de alta contaminaci\u00f3n atmosf\u00e9rica por di\u00f3xido de nitr\u00f3geno",
-     "url": "https://datos.madrid.es/dataset/300403-0-calidad-aire-episodios-no2",
+     "id": "900030-0-emt-autobus-gtfs",
+     "name": "EMT. GTFS (General Transit Feed Specification)",
+     "url": "https://datos.madrid.es/dataset/900030-0-emt-autobus-gtfs",
      "updated": "2026-07-23",
      "similarity": 0.572,
      "z": 4.37
@@ -223,9 +223,9 @@
      "z": 5.81
     },
     {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "id": "300112-0-agendas-institucionales",
+     "name": "Agendas de responsables p\u00fablicos del Ayuntamiento de Madrid",
+     "url": "https://datos.madrid.es/dataset/300112-0-agendas-institucionales",
      "updated": "2026-09-15",
      "similarity": 0.595,
      "z": 5.58
@@ -257,9 +257,9 @@
      "z": 5.66
     },
     {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "id": "300112-0-agendas-institucionales",
+     "name": "Agendas de responsables p\u00fablicos del Ayuntamiento de Madrid",
+     "url": "https://datos.madrid.es/dataset/300112-0-agendas-institucionales",
      "updated": "2026-09-15",
      "similarity": 0.596,
      "z": 5.44
@@ -291,9 +291,9 @@
      "z": 5.68
     },
     {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "id": "300112-0-agendas-institucionales",
+     "name": "Agendas de responsables p\u00fablicos del Ayuntamiento de Madrid",
+     "url": "https://datos.madrid.es/dataset/300112-0-agendas-institucionales",
      "updated": "2026-09-15",
      "similarity": 0.588,
      "z": 5.42
@@ -369,9 +369,9 @@
      "z": 5.3
     },
     {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
+     "id": "300112-0-agendas-institucionales",
+     "name": "Agendas de responsables p\u00fablicos del Ayuntamiento de Madrid",
+     "url": "https://datos.madrid.es/dataset/300112-0-agendas-institucionales",
      "updated": "2026-09-15",
      "similarity": 0.575,
      "z": 5.25
