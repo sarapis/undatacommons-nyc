@@ -124,8 +124,9 @@ def main():
     args = ap.parse_args()
 
     data = json.loads((CACHE / "screened.json").read_text())
-    green = [r for r in data["indicators"] if r.get("grade") == "GREEN"]
-    green.sort(key=lambda r: -(r.get("n_obs") or 0))
+    USABLE = ("GREEN", "AMBER", "RANK-ONLY")
+    green = [r for r in data["indicators"] if r.get("grade") in USABLE]
+    green.sort(key=lambda r: (-(r.get("panel_coverage") or 0), -(r.get("depth") or 0)))
     if args.limit:
         green = green[:args.limit]
 
@@ -186,8 +187,8 @@ def main():
     today = dt.date.today().isoformat()
     md = ["---", "layout: default", f"title: Crosswalk candidates — {today}", "---", "",
           f"# Crosswalk candidates — {today}", "",
-          f"Every SDG indicator with a usable US series ({len(green)} of 689), searched against "
-          "the NYC Open Data catalog.", "",
+          f"Every usable SDG indicator ({len(green)} of 689 — graded GREEN, AMBER or RANK-ONLY "
+          "against a six-country coverage panel), searched against the NYC Open Data catalog.", "",
           f"{len(skipped)} were excluded before searching as inherently national — ODA, debt "
           "service, treaties, tariffs, fisheries and similar. A city does not publish them and "
           "matching could only yield false positives. The classifier scores precision 0.83 at "
@@ -203,16 +204,16 @@ def main():
           "NYC's homicide series is offence code 101 inside 'NYPD Complaint Data Historic', "
           "which its metadata never mentions. Promoting a row into `probe/crosswalk.json` means "
           "writing the grade and the reason by hand.", "",
-          f"- {len(green)} indicators screened GREEN on the UN side",
+          f"- {len(green)} indicators usable on the UN side",
           f"- {len(with_c)} have at least one NYC dataset above the "
           f"{MIN_SIMILARITY} similarity floor",
           f"- **{len(new)} are not yet in the crosswalk**", "",
-          "| Score | SDG indicator | UN obs | Candidate NYC dataset | Updated |",
+          "| Score | SDG indicator | Coverage | Candidate NYC dataset | Updated |",
           "|---|---|---:|---|---|"]
     for r in sorted(new, key=lambda r: -r["candidates"][0]["score"])[:60]:
         ind, top = r["indicator"], r["candidates"][0]
         md.append(f"| {top['score']} | {(ind.get('name') or '')[:58]} "
-                  f"(`{ind['dcid'].split('/')[-1]}`) | {ind.get('n_obs')} | "
+                  f"(`{ind['dcid'].split('/')[-1]}`) | {ind.get('panel_coverage')}/6 | "
                   f"{(top['name'] or '')[:44]} (`{top['id']}`) | {top['updated']} |")
     md += ["", f"*Showing the top 60 of {len(new)} unmapped candidates. "
            f"Regenerate with `python3 probe/match_nyc.py`.*", ""]
