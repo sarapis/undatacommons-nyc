@@ -14,7 +14,8 @@
           "country/JPN",
           "country/CAN",
           "country/MEX"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": {
         "dataset": "c3uy-2p5r",
@@ -26,7 +27,8 @@
           "$where": "name='Fine particles (PM 2.5)' AND geo_type_name='Citywide' AND measure='Annual mean'",
           "$order": "time_period",
           "$limit": "100"
-        }
+        },
+        "method_class": "survey_estimate"
       },
       "grade": "PROXY",
       "reason": "Units agree (ug/m3) and both are annual means, but the methods differ: NYC's figure comes from NYCCAS ground monitors, the UN's is a population-weighted modelled estimate. Comparable in level, not interchangeable. Chart together with the method difference stated.",
@@ -44,7 +46,8 @@
           "country/FRA",
           "country/JPN",
           "country/CAN"
-        ]
+        ],
+        "method_class": "administrative_count"
       },
       "nyc": {
         "dataset": "qgea-i56i",
@@ -57,7 +60,8 @@
           "$group": "yr",
           "$order": "yr",
           "$limit": "100"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "grade": "PROXY",
       "reason": "NYPD 'murder & non-negligent manslaughter' tracks the UNODC intentional-homicide definition closely. BLOCKER: NYC side is a count, UN side is a rate per 100,000 -- needs an annual NYC population denominator before the two can share an axis. Pre-2006 rows in this dataset carry junk incident dates (17 murders in 1990) and are excluded. Denominator: Census ACS 1-year total population. There is no ACS 1-year release for 2020, so 2020 carries no rate -- and 2020 is the year NYC homicides jumped. That gap is left empty rather than interpolated.",
@@ -81,7 +85,8 @@
           "country/FRA",
           "country/JPN",
           "country/CAN"
-        ]
+        ],
+        "method_class": "administrative_count"
       },
       "nyc": {
         "dataset": "ebb7-mvp5",
@@ -94,7 +99,8 @@
           "$group": "yr",
           "$order": "yr",
           "$limit": "100"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "grade": "PROXY",
       "reason": "DSNY tonnage covers DSNY-collected residential waste only -- it excludes commercial waste, which the UN municipal-waste definition includes. Derived diversion rate, not a published one; the published Recycling Diversion and Capture Rates dataset has not updated since 2020. The month field is text ('2026 / 08') so the year comes from substring, not date_extract_y. Rows before 1993 predate curbside recycling (no recycling tonnage, 1990 partial) and are excluded.",
@@ -113,7 +119,8 @@
           "country/FRA",
           "country/JPN",
           "country/CAN"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": {
         "dataset": "h9gi-nx95",
@@ -126,7 +133,8 @@
           "$group": "yr",
           "$order": "yr",
           "$limit": "100"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "denominator": {
         "source": "Census ACS 1-year B01003_001E, NYC place 51000 / state 36",
@@ -148,7 +156,8 @@
           "country/GBR",
           "country/FRA",
           "country/JPN"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": {
         "dataset": "fcau-jc6k",
@@ -160,7 +169,8 @@
           "$where": "materal_race_or_ethnicity='Total'",
           "$order": "year",
           "$limit": "100"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "grade": "CONTEXT",
       "reason": "AGE BANDS DO NOT MATCH. The UN counts deaths under five; NYC's infant mortality dataset counts deaths under one. Both are raw counts so the units 'agree', which is exactly the trap -- a chart would look correct and compare different populations. Show side by side, never on one axis, until an under-five NYC series is sourced."
@@ -178,7 +188,8 @@
           "country/FRA",
           "country/JPN",
           "country/CAN"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": {
         "dataset": "27x4-cbi6",
@@ -191,7 +202,8 @@
           "$group": "year",
           "$order": "year",
           "$limit": "100"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "grade": "BLOCKED",
       "reason": "Two problems. NYC publishes pregnancy-ASSOCIATED deaths (any cause within a year of pregnancy), a deliberately broader definition than the UN's maternal mortality. And the UN rate is per 100,000 LIVE BIRTHS, not per population -- the denominator lives in a different NYC dataset (fcau-jc6k number_of_live_births). Needs a cross-dataset join before it can be charted."
@@ -208,7 +220,8 @@
           "country/GBR",
           "country/FRA",
           "country/JPN"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": {
         "dataset": "c3uy-2p5r",
@@ -220,7 +233,8 @@
           "$where": "name='Deaths due to PM2.5' AND geo_type_name='Citywide'",
           "$order": "time_period",
           "$limit": "100"
-        }
+        },
+        "method_class": "modelled_estimate"
       },
       "grade": "CONTEXT",
       "reason": "UN reports a national death COUNT attributable to ambient air pollution; NYC reports an age-adjusted RATE for ages 30+ attributable to PM2.5 specifically. Different measure, different age base, different pollutant scope. Informative side by side, not comparable on one axis."
@@ -237,7 +251,8 @@
           "country/GBR",
           "country/MEX",
           "country/COL"
-        ]
+        ],
+        "method_class": "survey_estimate"
       },
       "nyc": null,
       "grade": "CONTEXT",
@@ -255,7 +270,8 @@
           "country/GBR",
           "country/MEX",
           "country/COL"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": {
         "dataset": "wvxf-dwi5",
@@ -268,7 +284,8 @@
           "$group": "yr",
           "$order": "yr",
           "$limit": "100"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "grade": "CONTEXT",
       "reason": "UN measures the SHARE OF URBAN POPULATION living in slums. NYC's nearest analogue is a COUNT of class C (immediately hazardous) housing maintenance violations -- an enforcement output, not a population share, and sensitive to inspection rates rather than to conditions alone. Directionally interesting, structurally different. Tier 2: the UN side is urban, which bundles cities with suburbs."
@@ -287,10 +304,11 @@
           "country/JPN",
           "country/CAN",
           "country/MEX"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": null,
-      "grade": "NO-NYC-SOURCE",
+      "grade": "NO-SOURCE",
       "reason": "Tier 1 UN data exists with a full 2000-2025 series and city-level slices across countries, but no NYC Open Data equivalent has been identified. Candidates to investigate: PLUTO lot area aggregates, Parks Properties. Recorded so the gap is visible rather than forgotten."
     },
     {
@@ -305,7 +323,8 @@
           "country/GBR",
           "country/MEX",
           "country/COL"
-        ]
+        ],
+        "method_class": "modelled_estimate"
       },
       "nyc": null,
       "grade": "NO-SIGNAL",
@@ -324,7 +343,8 @@
           "country/JPN",
           "country/FRA",
           "country/MEX"
-        ]
+        ],
+        "method_class": "administrative_count"
       },
       "nyc": {
         "dataset": "ebb7-mvp5",
@@ -337,7 +357,8 @@
           "$group": "yr",
           "$order": "yr",
           "$limit": "60"
-        }
+        },
+        "method_class": "administrative_count"
       },
       "grade": "PROXY",
       "reason": "The US reports this indicator to nobody -- EN_MWT_COLLV has ZERO US observations in every year, while 90 other countries report it, so NYC's only comparator is the world. Both sides are derived to kg per capita, so the raw units differ by design (UN tonnes, NYC tons). TWO CAVEATS. DSNY collects from residences and institutions only and the UN definition includes commercial waste, so NYC's figure is an UNDERCOUNT and its true rank is worse -- the opposite direction to the recycling pair, where the same gap flatters the comparator instead. And DSNY publishes 'Tons' without saying short or metric; US short tons assumed, and if they are metric every NYC figure is ~10% low.",
@@ -349,5 +370,7 @@
         "note": "DSNY publishes 'Tons' without specifying short or metric; US short tons assumed. If metric, NYC figures are ~10% low."
       }
     }
-  ]
+  ],
+  "spec_version": "0.1",
+  "publisher": "sarapis/undatacommons-nyc"
 }

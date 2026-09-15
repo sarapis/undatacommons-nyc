@@ -20,6 +20,13 @@ waste — an indicator the **US does not report at all**, where the caveat rever
 Against the US, NYC's homicide trend reads as a success story; against the world it sits in the
 bottom half. Same number, different comparator, opposite conclusion.
 
+## The spec
+
+**[City ↔ UN Comparability Spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/)** — the
+grade and tier vocabulary, five rules, a JSON Schema and a validator. Written so another VLR city
+can record these judgments in a form a tool can read. `python3 probe/validate_crosswalk.py` checks
+this repo's own crosswalk against it.
+
 ## The deadline
 
 **Builders' Day — Tue 22 Sep 2026, 10:00–18:00, Google NY (HUD315).** UN Data Commons goes

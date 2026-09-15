@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sarapis.github.io/undatacommons-nyc/spec/comparability-v0.1.schema.json",
+  "title": "City ↔ UN Comparability Crosswalk v0.1",
+  "description": "A record of whether two statistics may be compared, and what the comparison is worth. See https://sarapis.github.io/undatacommons-nyc/spec/",
+  "type": "object",
+  "required": ["spec_version", "pairs"],
+  "properties": {
+    "spec_version": {"const": "0.1"},
+    "publisher": {"type": "string", "description": "Who maintains this crosswalk."},
+    "pairs": {"type": "array", "items": {"$ref": "#/$defs/pair"}}
+  },
+  "$defs": {
+    "method_class": {
+      "enum": ["administrative_count", "survey_estimate", "modelled_estimate"],
+      "description": "How the figure was produced. Required: a modelled estimate beside an administrative count is the most common way a defensible-looking chart misleads."
+    },
+    "side": {
+      "type": "object",
+      "required": ["source"],
+      "properties": {
+        "source": {"type": "string", "description": "Dataset or variable identifier."},
+        "place": {"type": "string"},
+        "unit": {"type": "string", "description": "Including the denominator where the figure is a rate."},
+        "method_class": {"$ref": "#/$defs/method_class"},
+        "provenance_url": {"type": "string", "format": "uri"}
+      }
+    },
+    "pair": {
+      "type": "object",
+      "required": ["id", "grade", "tier", "comparator"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "label": {"type": "string"},
+        "framework_id": {"type": "string", "description": "e.g. an SDG indicator number."},
+        "grade": {
+          "enum": ["DIRECT", "PROXY", "CONTEXT", "RANK-ONLY", "BLOCKED", "NO-SOURCE", "NO-SIGNAL"],
+          "description": "A human judgment. Tools MUST NOT compute or override it."
+        },
+        "tier": {
+          "enum": [1, 2, 3],
+          "description": "1 = against other countries' city aggregates; 2 = urban aggregates; 3 = whole nations."
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 20,
+          "description": "REQUIRED for every grade other than DIRECT. Should name the specific difference, not restate the grade."
+        },
+        "comparator": {"$ref": "#/$defs/side"},
+        "local": {"oneOf": [{"$ref": "#/$defs/side"}, {"type": "null"}]},
+        "derive": {
+          "type": "object",
+          "description": "Declared transformations a tool executes, so an assumption is data rather than prose.",
+          "properties": {
+            "per_capita": {"type": "boolean"},
+            "unit": {"type": "string"},
+            "note": {"type": "string"}
+          }
+        }
+      },
+      "allOf": [{
+        "if": {"properties": {"grade": {"not": {"const": "DIRECT"}}}},
+        "then": {"required": ["reason"]}
+      }]
+    }
+  }
+}
