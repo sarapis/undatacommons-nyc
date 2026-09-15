@@ -1,7 +1,16 @@
 # City open data portal inventory
 
-Surveyed 2026-09-15. **There is no global registry of open data portals.** Every canonical one
-has rotted:
+Surveyed 2026-09-15.
+
+> **Correction.** This file previously claimed no global registry of CKAN portals exists. That was
+> wrong. The **[CKAN Ecosystem Catalog](https://ecosystem.ckan.org)** — a 2025 NSF POSE II project
+> from the CKAN core team, WPRDC and datHere — lists **199 instances, 97 of them local or regional
+> government**, with machine-readable data at
+> [`ckan/ckan-instances`](https://github.com/ckan/ckan-instances). We found only its dead
+> predecessors because we searched for the registries we already knew about. It is now the primary
+> CKAN source here; the site itself sits behind Cloudflare, so fetch the GitHub repo.
+
+The older registries have genuinely rotted, which is what misled us:
 
 | Source | Status |
 |---|---|
@@ -36,6 +45,10 @@ python3 portals/probe_ckan.py        # -> ckan-live.json   (needs portals.csv fr
 
 ## The finding worth carrying
 
-**39 of 631 OKFN candidates are live CKAN — about 6%.** That is not a statement about CKAN's
-popularity; it is a statement about link rot in the only surviving registry. Any project that
-assumes a maintained list of city portals exists is building on sand.
+**39 of 631 OKFN candidates answer — about 6%.** That measures link rot in an abandoned registry,
+not CKAN's popularity, and it is why the maintained CKAN Ecosystem Catalog matters.
+
+And "does not answer" is not "is dead". Of the official catalog's 174 additional entries only ~50
+answer an anonymous `package_search`, but `data.gov`, `govdata.de` and `data.overheid.nl` are
+plainly alive and simply refuse the probe. The count measures *what responds to this specific
+anonymous API call*, and the inventory says so rather than calling the rest dead.

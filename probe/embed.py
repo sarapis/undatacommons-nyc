@@ -108,12 +108,24 @@ class Index:
                             ids=np.array([d["id"] for d in self.datasets]))
 
     def search(self, query, k=5):
+        """Top-k matches, each carrying a z-score as well as a raw similarity.
+
+        The raw cosine cannot be thresholded across catalogs -- measured on the
+        hand-judged set in probe/match_eval.json, the good matches span 0.42-0.70
+        in NYC but 0.37-0.59 in Madrid and 0.50-0.55 in Chicago, so one cutoff is
+        simultaneously too strict and too loose. The z-score asks how far the
+        match stands above *this* catalog's own distribution for *this* query,
+        which does travel.
+        """
         v = self.model.encode([query], show_progress_bar=False)[0]
         v = v / self.np.linalg.norm(v)
         sims = self.vectors @ v
+        mean, std = float(sims.mean()), float(sims.std()) or 1e-9
         out = []
         for i in self.np.argsort(-sims)[:k]:
             d = dict(self.datasets[int(i)])
-            d["score"] = round(float(sims[int(i)]), 3)
+            s = float(sims[int(i)])
+            d["score"] = round(s, 3)
+            d["z"] = round((s - mean) / std, 2)
             out.append(d)
         return out

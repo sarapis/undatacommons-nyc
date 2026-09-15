@@ -7,10 +7,10 @@ title: Portal inventory — 2026-09-15
 
 **There is no global registry of open data portals.** Socrata's `/domains` endpoint, `ckan.org/about/instances`, the dataportals.org API and opendatainception all return 404 or broken payloads, and data.gov and data.gov.uk block their CKAN APIs. This inventory is therefore *constructed* — harvested from Socrata's Discovery catalog and fingerprinted for CKAN — and has to be re-verified rather than looked up.
 
-- **198** portals surveyed · **198** responding with a dataset count
-- by platform: **159** socrata · **39** ckan
-- by level: **58** city · **46** unclassified · **30** state · **23** other · **22** county · **19** national
-- total datasets across responding portals: **224,915**
+- **372** portals surveyed · **223** responding with a dataset count
+- by platform: **159** socrata · **64** ckan
+- by level: **58** city · **46** unclassified · **32** other · **30** state · **23** national · **22** county · **12** city-or-region
+- total datasets across responding portals: **543,126**
 
 Level is a crude domain/title heuristic — it separates municipal portals from state and national ones well enough to count them, and will misclassify edge cases.
 
@@ -81,12 +81,18 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 
 | Datasets | Portal | Platform | Level |
 |---:|---|---|---|
+| 188,847 | [data.qld.gov.au](http://data.qld.gov.au) | ckan | city-or-region |
+| 68,183 | [data.gov.uk](http://data.gov.uk) | ckan | national |
 | 36,959 | [data.gov.ua](https://data.gov.ua) | ckan | national |
-| 36,655 | [open.alberta.ca](https://open.alberta.ca) | ckan | state |
+| 36,680 | [open.alberta.ca](https://open.alberta.ca) | ckan | state |
 | 22,720 | [data.gov.ie](https://data.gov.ie) | ckan | national |
 | 22,637 | [data.gov.gr](https://data.gov.gr) | ckan | national |
+| 17,990 | [edx.netl.doe.gov](https://edx.netl.doe.gov) | ckan | national |
 | 16,170 | [opendata.swiss](https://opendata.swiss) | ckan | national |
+| 13,922 | [iatiregistry.org](http://iatiregistry.org) | ckan | other |
 | 12,439 | [dati.toscana.it](https://dati.toscana.it) | ckan | state |
+| 9,761 | [datos.codeandomexico.org](http://datos.codeandomexico.org) | ckan | city-or-region |
+| 9,761 | [datamx.io](http://datamx.io) | ckan | other |
 | 8,388 | [www.datos.gov.co](https://www.datos.gov.co) | socrata | national |
 | 6,077 | [open.nrw](https://open.nrw) | ckan | state |
 | 3,357 | [www.data.gov.bc.ca](https://www.data.gov.bc.ca) | ckan | state |
@@ -96,39 +102,50 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 | 2,602 | [dati.comune.milano.it](https://dati.comune.milano.it) | ckan | city |
 | 2,427 | [opendata.aragon.es](https://opendata.aragon.es) | ckan | state |
 | 2,400 | [data.cityofnewyork.us](https://data.cityofnewyork.us) | socrata | city |
+| 2,006 | [journaldata.zbw.eu](http://journaldata.zbw.eu) | ckan | other |
 | 1,974 | [data.bayareametro.gov](https://data.bayareametro.gov) | socrata | state |
 | 1,749 | [datos.gob.mx](https://datos.gob.mx) | ckan | national |
 | 1,530 | [opendata.maryland.gov](https://opendata.maryland.gov) | socrata | state |
 | 1,437 | [dati.trentino.it](https://dati.trentino.it) | ckan | state |
 | 1,421 | [data.edmonton.ca](https://data.edmonton.ca) | socrata | city |
+| 1,377 | [datosabiertos.malaga.eu](http://datosabiertos.malaga.eu) | ckan | city-or-region |
 | 1,296 | [data.london.gov.uk](https://data.london.gov.uk) | ckan | national |
 | 1,081 | [data.cdc.gov](https://data.cdc.gov) | socrata | national |
 | 1,070 | [data.wa.gov](https://data.wa.gov) | socrata | state |
 | 1,033 | [data.ny.gov](https://data.ny.gov) | socrata | state |
+| 942 | [data.stadt-zuerich.ch](https://data.stadt-zuerich.ch) | ckan | city-or-region |
 | 932 | [performance.seattle.gov](https://performance.seattle.gov) | socrata | city |
+| 930 | [dati.retecivica.bz.it](http://dati.retecivica.bz.it/it) | ckan | city-or-region |
 | 915 | [data.cityofchicago.org](https://data.cityofchicago.org) | socrata | city |
 | 900 | [internal.open.piercecountywa.gov](https://internal.open.piercecountywa.gov) | socrata | county |
 | 897 | [performance.smcgov.org](https://performance.smcgov.org) | socrata | county |
 | 826 | [data.texas.gov](https://data.texas.gov) | socrata | unclassified |
 | 712 | [data.novascotia.ca](https://data.novascotia.ca) | socrata | state |
 | 707 | [datahub.austintexas.gov](https://datahub.austintexas.gov) | socrata | city |
+| 700 | [dataportal.aquacross.eu](http://dataportal.aquacross.eu) | ckan | other |
 | 672 | [datos.madrid.es](https://datos.madrid.es) | ckan | city |
 | 641 | [leedsdatamill.org](https://leedsdatamill.org) | ckan | city |
 | 639 | [data.colorado.gov](https://data.colorado.gov) | socrata | unclassified |
 | 637 | [dados.fortaleza.ce.gov.br](https://dados.fortaleza.ce.gov.br) | ckan | city |
+| 631 | [portal.opendata.dk](http://portal.opendata.dk) | ckan | city-or-region |
 | 606 | [dados.pbh.gov.br](https://dados.pbh.gov.br) | ckan | city |
 | 602 | [data.ct.gov](https://data.ct.gov) | socrata | state |
+| 562 | [datastore.landcareresearch.co.nz](http://datastore.landcareresearch.co.nz) | ckan | other |
+| 534 | [niagaraopendata.ca](http://niagaraopendata.ca) | ckan | other |
 | 530 | [data.oregon.gov](https://data.oregon.gov) | socrata | unclassified |
 | 526 | [www.datahub.va.gov](https://www.datahub.va.gov) | socrata | national |
 | 522 | [datacatalog.cookcountyil.gov](https://datacatalog.cookcountyil.gov) | socrata | county |
+| 492 | [data.uni-hannover.de](https://data.uni-hannover.de) | ckan | other |
 | 482 | [dados.prefeitura.sp.gov.br](https://dados.prefeitura.sp.gov.br) | ckan | city |
 | 473 | [data.montgomerycountymd.gov](https://data.montgomerycountymd.gov) | socrata | county |
 | 454 | [data.buenosaires.gob.ar](https://data.buenosaires.gob.ar) | ckan | city |
 | 443 | [datahub.smcgov.org](https://datahub.smcgov.org) | socrata | county |
 | 434 | [stat.montgomerycountymd.gov](https://stat.montgomerycountymd.gov) | socrata | county |
+| 430 | [data.nantou.gov.tw](http://data.nantou.gov.tw) | ckan | city-or-region |
 | 422 | [datahub.transportation.gov](https://datahub.transportation.gov) | socrata | national |
 | 416 | [data.calgary.ca](https://data.calgary.ca) | socrata | city |
 | 412 | [dados.rs.gov.br](https://dados.rs.gov.br) | ckan | state |
+| 406 | [dati.lazio.it](http://dati.lazio.it) | ckan | city-or-region |
 | 404 | [donnees.ville.montreal.qc.ca](https://donnees.ville.montreal.qc.ca) | ckan | city |
 | 397 | [performance.commerce.gov](https://performance.commerce.gov) | socrata | national |
 | 395 | [data.ok.gov](https://data.ok.gov) | ckan | state |
@@ -164,9 +181,12 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 | 202 | [data.kcmo.org](https://data.kcmo.org) | socrata | city |
 | 200 | [data.bloomington.in.gov](https://data.bloomington.in.gov) | socrata | state |
 | 199 | [data.zagreb.hr](https://data.zagreb.hr) | ckan | city |
+| 180 | [datos.ciudaddemendoza.gob.ar](http://datos.ciudaddemendoza.gob.ar) | ckan | city-or-region |
+| 180 | [datos.ciudaddemendoza.gov.ar](http://datos.ciudaddemendoza.gov.ar) | ckan | city-or-region |
 | 174 | [data.delaware.gov](https://data.delaware.gov) | socrata | unclassified |
 | 172 | [data.vermont.gov](https://data.vermont.gov) | socrata | unclassified |
 | 170 | [data.sanjoseca.gov](https://data.sanjoseca.gov) | ckan | city |
+| 161 | [opendata.unex.es](http://opendata.unex.es) | ckan | other |
 | 160 | [usc.data.socrata.com](https://usc.data.socrata.com) | socrata | other |
 | 153 | [data.bts.gov](https://data.bts.gov) | socrata | unclassified |
 | 151 | [transparenz.karlsruhe.de](https://transparenz.karlsruhe.de) | ckan | city |
@@ -197,9 +217,11 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 | 73 | [performance.ci.janesville.wi.us](https://performance.ci.janesville.wi.us) | socrata | city |
 | 72 | [data.honolulu.gov](https://data.honolulu.gov) | socrata | unclassified |
 | 71 | [www.opendata.hu](https://www.opendata.hu) | ckan | unclassified |
+| 71 | [opendata.hu](http://opendata.hu) | ckan | other |
 | 68 | [gainesville-govstat.demo.socrata.com](https://gainesville-govstat.demo.socrata.com) | socrata | city |
 | 65 | [opendata.ugr.es](https://opendata.ugr.es) | ckan | unclassified |
 | 64 | [performance.cityofcamas.us](https://performance.cityofcamas.us) | socrata | city |
+| 63 | [datos.jus.gov.ar](http://datos.jus.gov.ar) | ckan | national |
 | 60 | [data.roseville.ca.us](https://data.roseville.ca.us) | socrata | city |
 | 56 | [opendata.fcc.gov](https://opendata.fcc.gov) | socrata | unclassified |
 | 56 | [transparencyarchive.michigan.gov](https://transparencyarchive.michigan.gov) | socrata | unclassified |
@@ -207,6 +229,7 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 | 53 | [data.energystar.gov](https://data.energystar.gov) | socrata | unclassified |
 | 52 | [data.orcities.org](https://data.orcities.org) | socrata | unclassified |
 | 48 | [internal-data.ct.gov](https://internal-data.ct.gov) | socrata | state |
+| 48 | [ckan.jbrj.gov.br](http://ckan.jbrj.gov.br) | ckan | national |
 | 47 | [data.marincounty.gov](https://data.marincounty.gov) | socrata | county |
 | 46 | [data.macoupincountyil.gov](https://data.macoupincountyil.gov) | socrata | county |
 | 45 | [data.datacenterresearch.org](https://data.datacenterresearch.org) | socrata | unclassified |
@@ -259,6 +282,7 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 | 8 | [cityofcamas.demo.socrata.com](https://cityofcamas.demo.socrata.com) | socrata | city |
 | 8 | [pinellasparkpd.data.socrata.com](https://pinellasparkpd.data.socrata.com) | socrata | other |
 | 8 | [dados.pb.gov.br](https://dados.pb.gov.br) | ckan | unclassified |
+| 7 | [datosabiertos.rivasciudad.es](http://datosabiertos.rivasciudad.es) | ckan | city-or-region |
 | 6 | [metroairports.data.socrata.com](https://metroairports.data.socrata.com) | socrata | other |
 | 6 | [atlanta.data.socrata.com](https://atlanta.data.socrata.com) | socrata | other |
 | 6 | [cityoffairfaxpd.data.socrata.com](https://cityoffairfaxpd.data.socrata.com) | socrata | city |
@@ -274,15 +298,165 @@ Level is a crude domain/title heuristic — it separates municipal portals from 
 | 2 | [data.oxnard.org](https://data.oxnard.org) | socrata | unclassified |
 | 2 | [hidot-contracts.data.socrata.com](https://hidot-contracts.data.socrata.com) | socrata | other |
 | 2 | [kirklandwa.data.socrata.com](https://kirklandwa.data.socrata.com) | socrata | city |
+| 2 | [www.datos.misiones.gov.ar](http://www.datos.misiones.gov.ar) | ckan | city-or-region |
 | 1 | [data.transportation.gov](https://data.transportation.gov) | socrata | national |
 | 1 | [parksreporting.parks.ca.gov](https://parksreporting.parks.ca.gov) | socrata | state |
 | 1 | [nasa-test-0.demo.socrata.com](https://nasa-test-0.demo.socrata.com) | socrata | national |
 | 1 | [openinformation.novascotia.ca](https://openinformation.novascotia.ca) | socrata | state |
 | 1 | [bronx-lehman-cuny-staging.data.socrata.com](https://bronx-lehman-cuny-staging.data.socrata.com) | socrata | other |
 
-## Not responding (0)
+## Not responding (149)
 
 Reachable when first surveyed, or listed in a registry, but returning no count now. Link rot in this space is severe and ongoing.
 
 | Portal | Platform | Error |
 |---|---|---|
+| data.gv.at | ckan | HTTPError |
+| dados.gov.br | ckan | HTTPError |
+| govdata.de | ckan | HTTPError |
+| data.overheid.nl | ckan | HTTPError |
+| data.gov.sk | ckan | JSONDecodeError |
+| data.gov | ckan | HTTPError |
+| opingogn.is | ckan | HTTPError |
+| data.nsw.gov.au | ckan | HTTPError |
+| data.gov.au | ckan | HTTPError |
+| data.sa.gov.au | ckan | HTTPError |
+| data.ottawa.ca | ckan | HTTPError |
+| www.hri.fi | ckan | HTTPError |
+| daten.berlin.de | ckan | HTTPError |
+| daten.hamburg.de | ckan | URLError |
+| www.daten.rlp.de | ckan | JSONDecodeError |
+| opendata.comune.bari.it | ckan | URLError |
+| www.opendata.provincia.roma.it | ckan | URLError |
+| datagm.org.uk | ckan | URLError |
+| data.denvergov.org | ckan | JSONDecodeError |
+| data.cityofsantacruz.com | ckan | URLError |
+| data.lexingtonky.gov | ckan | HTTPError |
+| dadosabertos.senado.gov.br | ckan | JSONDecodeError |
+| open-data.europa.eu | ckan | URLError |
+| publicdata.eu | ckan | HTTPError |
+| www.odaa.dk | ckan | JSONDecodeError |
+| data.linz.gv.at | ckan | JSONDecodeError |
+| data.graz.gv.at | ckan | HTTPError |
+| datahub.io | ckan | HTTPError |
+| offenedaten.de | ckan | URLError |
+| opencolorado.org | ckan | HTTPError |
+| www.opendatahub.it | ckan | URLError |
+| www.nosdonnees.fr | ckan | URLError |
+| hubofdata.ru | ckan | JSONDecodeError |
+| datacatalogs.org | ckan | HTTPError |
+| africaopendata.org | ckan | HTTPError |
+| data.openva.com | ckan | URLError |
+| data.ohouston.org | ckan | URLError |
+| opendatadc.org | ckan | HTTPError |
+| catalogue.datalocale.fr | ckan | URLError |
+| data.gc.ca | ckan | URLError |
+| opendatacanarias.es | ckan | HTTPError |
+| data.edostate.gov.ng | ckan | HTTPError |
+| datospublicos.gob.ar | ckan | URLError |
+| dartportal.leeds.ac.uk | ckan | URLError |
+| bermuda.io | ckan | URLError |
+| opendata.cmt.es | ckan | URLError |
+| dati.gov.it | ckan | HTTPError |
+| data.glasgow.gov.uk | ckan | HTTPError |
+| opendata.awt.be | ckan | JSONDecodeError |
+| data.gov.ro | ckan | URLError |
+| www.openumea.se | ckan | URLError |
+| data.surrey.ca | ckan | JSONDecodeError |
+| rotterdamopendata.nl | ckan | HTTPError |
+| opendata.caceres.es | ckan | URLError |
+| data.kk.dk | ckan | URLError |
+| data.noaa.gov | ckan | HTTPError |
+| data.ug | ckan | JSONDecodeError |
+| datapoa.com.br | ckan | JSONDecodeError |
+| data.rio.rj.gov.br | ckan | JSONDecodeError |
+| opendatagortynia.gr | ckan | HTTPError |
+| donnees.ville.sherbrooke.qc.ca | ckan | URLError |
+| portal.openbelgium.be | ckan | URLError |
+| datosabiertos.ec | ckan | HTTPError |
+| www.offene-daten.me | ckan | URLError |
+| udct-data.aigid.jp | ckan | URLError |
+| data.grcity.us | ckan | HTTPError |
+| cities.opendatahub.gr | ckan | URLError |
+| opendatahub.gr | ckan | URLError |
+| www.civicdata.io | ckan | JSONDecodeError |
+| ckan.gsi.go.jp | ckan | URLError |
+| oppnadata.se | ckan | URLError |
+| dataforjapan.org | ckan | URLError |
+| data.yokohamaopendata.jp | ckan | URLError |
+| datameti.go.jp | ckan | URLError |
+| www.data.go.jp | ckan | HTTPError |
+| ckan.sabae.jrrk.org | ckan | URLError |
+| opendata.lisra.jp | ckan | URLError |
+| www.amsterdamopendata.nl | ckan | URLError |
+| gisdata.mn.gov | ckan | JSONDecodeError |
+| data.salzburgerland.com | ckan | URLError |
+| geothermaldata.org | ckan | URLError |
+| annuario.comune.fi.it | ckan | HTTPError |
+| data.bris.ac.uk | ckan | TimeoutError |
+| drdsi.jrc.ec.europa.eu | ckan | RemoteDisconnected |
+| opendatareno.org | ckan | URLError |
+| data.tainan.gov.tw | ckan | HTTPError |
+| hdx.rwlabs.org | ckan | URLError |
+| dati.openexpo2015.it | ckan | HTTPError |
+| datos.gov.py | ckan | JSONDecodeError |
+| datos.santander.es | ckan | HTTPError |
+| data.go.id | ckan | HTTPError |
+| 130.179.67.140 | ckan | URLError |
+| dados.al.gov.br | ckan | HTTPError |
+| etsin.avointiede.fi | ckan | URLError |
+| datahub.cmap.illinois.gov | ckan | HTTPError |
+| opendata.riik.ee | ckan | URLError |
+| catalogue.data.gov.bc.ca | ckan | JSONDecodeError |
+| data.vic.gov.au | ckan | HTTPError |
+| opendata.aachen.de | ckan | URLError |
+| dados.ima.sp.gov.br | ckan | URLError |
+| taijiang.tw | ckan | URLError |
+| data.wu.ac.at | ckan | URLError |
+| data.barrowbc.gov.uk | ckan | URLError |
+| www.opendatabc.ca | ckan | URLError |
+| opendataportal.at | ckan | JSONDecodeError |
+| data.gov.hr | ckan | JSONDecodeError |
+| data.suwon.go.kr | ckan | JSONDecodeError |
+| go.arenysdemunt.cat | ckan | URLError |
+| datar.noip.me | ckan | URLError |
+| ecaidata.org | ckan | URLError |
+| www.ecds.se | ckan | URLError |
+| data.wa.gov.au | ckan | HTTPError |
+| data-gov-ua.org | ckan | URLError |
+| www.europeandataportal.eu | ckan | JSONDecodeError |
+| data.gov.bf | ckan | URLError |
+| www.datarefuge.org | ckan | HTTPError |
+| opendata.praha.eu | ckan | JSONDecodeError |
+| datos.labcd.mx | ckan | HTTPError |
+| catalogo.governoaberto.sp.gov.br | ckan | URLError |
+| yuj.it | ckan | URLError |
+| www.fsl.com | ckan | HTTPError |
+| 52.34.40.179 | ckan | URLError |
+| www.wprdc.org | ckan | HTTPError |
+| dados.contraosagrotoxicos.org | ckan | HTTPError |
+| energydata.uct.ac.za | ckan | URLError |
+| www.opendatanetwork.it | ckan | URLError |
+| dados.ufrn.br | ckan | URLError |
+| www.donneesquebec.ca | ckan | HTTPError |
+| data.jrc.ec.europa.eu | ckan | HTTPError |
+| data.brisbane.qld.gov.au | ckan | HTTPError |
+| datos.alcobendas.org | ckan | HTTPError |
+| magonia.ibict.br | ckan | URLError |
+| data.illinois.gov | ckan | HTTPError |
+| opendata.ozwillo.com | ckan | URLError |
+| prato-tet.routetopa.eu | ckan | URLError |
+| dublin-tet.routetopa.eu | ckan | URLError |
+| search.vi-seem.eu | ckan | URLError |
+| data.industrie.gov.tn | ckan | URLError |
+| www.opendatanepal.com | ckan | URLError |
+| trouver.datasud.fr | ckan | URLError |
+| opendata.oorlogsbronnen.nl | ckan | URLError |
+| ckan.dataplatform.nl | ckan | URLError |
+| ckan.parchemins.bzh | ckan | URLError |
+| www.dataplatform.nl | ckan | URLError |
+| portal0.cf.opendata.inter.sandbox-toronto.ca | ckan | URLError |
+| demo.ckan.org | ckan | HTTPError |
+| datos.gob.sv | ckan | URLError |
+| www.adere.org.ar | ckan | URLError |
+| barcelona.cat | ckan | HTTPError |

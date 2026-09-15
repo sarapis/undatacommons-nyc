@@ -42,11 +42,23 @@ We predicted CKAN cities would be handicapped because CKAN does not publish colu
 catalog API and Socrata does. Chicago publishes field names on **915 of 915** datasets and found
 *fewer* candidates than Boston, which publishes **none**. The hypothesis is dead.
 
-### 3. The similarity threshold does not transfer between catalogs
+### 3. The threshold is now calibrated per catalog — after one wrong attempt
 
-0.50 was calibrated against NYC's 2,400-dataset catalog. In a smaller catalog the nearest
-neighbour is simply whatever is least unrelated, so the same number admits nonsense: Boston's
-top-scoring match pairs *Food waste* with *Trash Schedules by Address* at 0.57.
+0.50 was calibrated against NYC and does not transfer: good matches span **0.42–0.70 in NYC,
+0.50–0.55 in Chicago, 0.37–0.59 in Madrid**. One number is simultaneously too strict and too loose.
+
+**The first fix was wrong.** We tried a z-score — how many standard deviations the top match sits
+above the catalog's own distribution — and it let through 60 of 80 indicators. Two reasons, both
+worth recording. The calibration set was drawn from candidates that had *already passed* the 0.50
+filter, so it measured z on a pre-selected population. And z measures how *peaked* a distribution
+is, not how good its winner is: against a catalog whose scores cluster near zero, the top hit is
+many σ above the mean whether it is right or garbage.
+
+What actually varies between catalogs, and is the right thing to normalise, is the distribution of
+**top-1 scores across all probed indicators**. The cutoff is now the best `KEEP_FRACTION` (20%) of
+that distribution, with an absolute floor so a uniformly hopeless catalog cannot contribute its
+least-bad rows anyway. In practice the cutoff lands at 0.450 for Milan, 0.457 Boston, 0.473
+Chicago, 0.515 Madrid — and each city yields a worksheet of 12–16 rather than 0 or 69.
 
 Reviewing all 13 English-city candidates by hand, roughly **2–3 per city are plausible** — and
 **not one substantive SDG indicator matched in any city.** No air quality, no homicide, no waste

@@ -1,0 +1,37 @@
+{
+  "_comment": "Hand-judged matches for calibrating the similarity cutoff. 'good' means a local analyst would plausibly investigate this pairing -- not that it is comparable, which is a separate human grade. NYC rows are the verified pairs from crosswalk.json; the rest were judged by reading the candidate lists. Labels are contestable: edit and re-run `python3 probe/calibrate.py`.",
+  "cases": [
+    {"city": "nyc", "indicator": "Annual mean levels of fine particulate matter (population-weighted)", "dataset": "c3uy-2p5r", "good": true},
+    {"city": "nyc", "indicator": "Number of victims of intentional homicide per 100,000 population", "dataset": "qgea-i56i", "good": true},
+    {"city": "nyc", "indicator": "Proportion of municipal waste recycled", "dataset": "ebb7-mvp5", "good": true},
+    {"city": "nyc", "indicator": "Death rate due to road traffic injuries", "dataset": "h9gi-nx95", "good": true},
+    {"city": "nyc", "indicator": "Maternal mortality ratio", "dataset": "27x4-cbi6", "good": true},
+
+    {"city": "boston", "indicator": "Land area", "good": true},
+    {"city": "boston", "indicator": "Total bugetary revenue of the central government as a proportion of GDP", "good": true},
+    {"city": "boston", "indicator": "Food waste", "good": false},
+    {"city": "boston", "indicator": "Performance index of data Infrastructure (Pillar 5 of Statistical Performance Indicators)", "good": false},
+    {"city": "boston", "indicator": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space", "good": false},
+    {"city": "boston", "indicator": "Level of achievement regarding legal frameworks that promote, enforce and monitor equality and non-discrimination on the basis of sex", "good": false},
+
+    {"city": "chicago", "indicator": "Total bugetary revenue of the central government as a proportion of GDP", "good": true},
+    {"city": "chicago", "indicator": "Land area", "good": false},
+    {"city": "chicago", "indicator": "Share of renewable energy in the total final energy consumption", "good": false},
+    {"city": "chicago", "indicator": "Performance index of data Infrastructure (Pillar 5 of Statistical Performance Indicators)", "good": false},
+    {"city": "chicago", "indicator": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space", "good": false},
+
+    {"city": "madrid", "indicator": "Installed renewable electricity-generating capacity", "good": true},
+    {"city": "madrid", "indicator": "Level of achievement regarding legal frameworks that promote, enforce and monitor equality and non-discrimination on the basis of sex", "good": true},
+    {"city": "madrid", "indicator": "Permanent water area of lakes and rivers", "good": false},
+    {"city": "madrid", "indicator": "Seasonal water area of lakes and rivers", "good": false},
+    {"city": "madrid", "indicator": "Change in permanent water area of lakes and rivers", "good": false},
+    {"city": "madrid", "indicator": "Change in seasonal water area of lakes and rivers", "good": false},
+    {"city": "madrid", "indicator": "Minimum reservoir water area", "good": false},
+
+    {"city": "milan", "indicator": "Installed renewable electricity-generating capacity", "good": true},
+    {"city": "milan", "indicator": "Share of renewable energy in the total final energy consumption", "good": true},
+    {"city": "milan", "indicator": "Energy intensity level of primary energy", "good": true},
+    {"city": "milan", "indicator": "Annual inflation (consumer prices)", "good": true},
+    {"city": "milan", "indicator": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space", "good": false}
+  ]
+}

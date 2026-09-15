@@ -135,25 +135,58 @@ def socrata_count(domain):
 
 
 def ckan_count(url):
-    try:
-        d = _get(f"{url.rstrip('/')}/api/3/action/package_search", {"rows": 1})
-        return (d.get("result") or {}).get("count"), None
-    except Exception as exc:                       # noqa: BLE001
-        return None, f"{type(exc).__name__}"
+    """Ask a CKAN portal how many datasets it holds.
+
+    The official catalog lists http:// URLs recorded years ago, so a bare
+    request misses portals that now require https. A failure here means "did not
+    answer an anonymous package_search", NOT "is dead" -- data.gov and
+    govdata.de are plainly alive and both refuse this probe.
+    """
+    base = url.rstrip("/")
+    candidates = [base]
+    if base.startswith("http://"):
+        candidates.append("https://" + base[len("http://"):])
+    last = None
+    for b in candidates:
+        try:
+            d = _get(f"{b}/api/3/action/package_search", {"rows": 1})
+            n = (d.get("result") or {}).get("count")
+            if n is not None:
+                return n, None
+        except Exception as exc:                   # noqa: BLE001
+            last = f"{type(exc).__name__}"
+    return None, last
 
 
 def main():
     soc = json.loads((HERE / "socrata-domains.json").read_text())
     ckan = json.loads((HERE / "ckan-live.json").read_text())
+    # The official CKAN Ecosystem Catalog list (ckan/ckan-instances on GitHub),
+    # which we initially and wrongly reported as non-existent -- the registries
+    # we probed first were its dead predecessors.
+    official = json.loads((HERE / "ckan-instances-official.json").read_text())
 
     rows = []
     for dom in soc:
         rows.append({"portal": dom, "url": f"https://{dom}", "platform": "socrata",
-                     "country": "", "title": "", "version": ""})
+                     "country": "", "title": "", "version": "", "source": "socrata-catalog"})
     for c in ckan:
         rows.append({"portal": urllib.parse.urlparse(c["url"]).netloc, "url": c["url"],
                      "platform": "ckan", "country": c.get("country", ""),
-                     "title": c.get("title", ""), "version": c.get("ckan", "")})
+                     "title": c.get("title", ""), "version": c.get("ckan", ""),
+                     "source": "okfn-probed"})
+    seen = {r["portal"] for r in rows}
+    for x in official:
+        host = urllib.parse.urlparse(x.get("url", "")).netloc
+        if not host or host in seen:
+            continue
+        seen.add(host)
+        facets = {f.get("key"): f.get("value") for f in (x.get("facets") or [])}
+        rows.append({"portal": host, "url": x["url"].rstrip("/"), "platform": "ckan",
+                     "country": "", "title": x.get("title", ""), "version": "",
+                     "source": "ckan-ecosystem",
+                     "declared_type": facets.get("Type", ""),
+                     "region": facets.get("Region", "")})
 
     print(f"querying {len(rows)} portals for live dataset counts...", file=sys.stderr)
 
@@ -162,7 +195,16 @@ def main():
                   else ckan_count(r["url"]))
         r["datasets"] = n
         r["error"] = err
-        r["level"] = level(r["portal"], r["title"])
+        declared = (r.get("declared_type") or "").lower()
+        if "local" in declared or "regional" in declared:
+            r["level"] = "city-or-region"
+        elif "national" in declared:
+            r["level"] = "national"
+        elif declared:
+            r["level"] = {"academic": "other", "community": "other",
+                          "other organizations": "other"}.get(declared, "other")
+        else:
+            r["level"] = level(r["portal"], r["title"])
         return r
 
     with cf.ThreadPoolExecutor(max_workers=12) as ex:

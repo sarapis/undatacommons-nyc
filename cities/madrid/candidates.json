@@ -31,14 +31,8 @@
      "name": "Consumo de energ\u00eda en edificios municipales. Datos mensuales",
      "url": "https://datos.madrid.es/dataset/300430-0-consumo-energia-edificios",
      "updated": "2026-08-25",
-     "similarity": 0.547
-    },
-    {
-     "id": "300466-0-instalaciones-fotovoltaicas",
-     "name": "Inventario de instalaciones fotovoltaicas",
-     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
-     "updated": "2026-07-24",
-     "similarity": 0.514
+     "similarity": 0.547,
+     "z": 6.37
     }
    ]
   },
@@ -51,18 +45,12 @@
    },
    "candidates": [
     {
-     "id": "300466-0-instalaciones-fotovoltaicas",
-     "name": "Inventario de instalaciones fotovoltaicas",
-     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "id": "300663-0-oficinas-tramites",
+     "name": "Oficinas y tr\u00e1mites",
+     "url": "https://datos.madrid.es/dataset/300663-0-oficinas-tramites",
      "updated": "2026-07-24",
-     "similarity": 0.562
-    },
-    {
-     "id": "300430-0-consumo-energia-edificios",
-     "name": "Consumo de energ\u00eda en edificios municipales. Datos mensuales",
-     "url": "https://datos.madrid.es/dataset/300430-0-consumo-energia-edificios",
-     "updated": "2026-08-25",
-     "similarity": 0.507
+     "similarity": 0.562,
+     "z": 5.43
     }
    ]
   },
@@ -79,14 +67,16 @@
      "name": "Consumo de energ\u00eda en edificios municipales. Datos mensuales",
      "url": "https://datos.madrid.es/dataset/300430-0-consumo-energia-edificios",
      "updated": "2026-08-25",
-     "similarity": 0.566
+     "similarity": 0.566,
+     "z": 6.77
     },
     {
-     "id": "300466-0-instalaciones-fotovoltaicas",
-     "name": "Inventario de instalaciones fotovoltaicas",
-     "url": "https://datos.madrid.es/dataset/300466-0-instalaciones-fotovoltaicas",
+     "id": "300663-0-oficinas-tramites",
+     "name": "Oficinas y tr\u00e1mites",
+     "url": "https://datos.madrid.es/dataset/300663-0-oficinas-tramites",
      "updated": "2026-07-24",
-     "similarity": 0.552
+     "similarity": 0.552,
+     "z": 6.57
     }
    ]
   },
@@ -103,45 +93,24 @@
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.551
+     "similarity": 0.551,
+     "z": 6.3
     },
     {
      "id": "300051-0-fuentes",
      "name": "Fuentes de agua para beber",
      "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
      "updated": "2026-09-15",
-     "similarity": 0.546
+     "similarity": 0.546,
+     "z": 6.24
     },
     {
      "id": "300149-0-agua-regenerada",
      "name": "Volumen del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300149-0-agua-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.521
-    }
-   ]
-  },
-  {
-   "indicator": {
-    "dcid": "undata/sdg/EN_H2O_WBAMBQ",
-    "name": "Proportion of bodies of water with good ambient water quality",
-    "grade_un_side": "AMBER",
-    "panel_coverage": 6
-   },
-   "candidates": [
-    {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
-     "updated": "2026-09-15",
-     "similarity": 0.513
-    },
-    {
-     "id": "300154-0-calidad-aguas-regenerada",
-     "name": "Calidad del agua regenerada",
-     "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
-     "updated": "2026-09-09",
-     "similarity": 0.503
+     "similarity": 0.521,
+     "z": 5.89
     }
    ]
   },
@@ -158,21 +127,24 @@
      "name": "Fuentes de agua para mascotas",
      "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
      "updated": "2026-09-15",
-     "similarity": 0.585
+     "similarity": 0.585,
+     "z": 6.38
     },
     {
      "id": "300154-0-calidad-aguas-regenerada",
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.574
+     "similarity": 0.574,
+     "z": 6.23
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.555
+     "similarity": 0.555,
+     "z": 5.96
     }
    ]
   },
@@ -189,21 +161,24 @@
      "name": "Fuentes de agua para mascotas",
      "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
      "updated": "2026-09-15",
-     "similarity": 0.585
+     "similarity": 0.585,
+     "z": 6.26
     },
     {
      "id": "300154-0-calidad-aguas-regenerada",
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.578
+     "similarity": 0.578,
+     "z": 6.16
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.556
+     "similarity": 0.556,
+     "z": 5.86
     }
    ]
   },
@@ -220,21 +195,24 @@
      "name": "Fuentes de agua para mascotas",
      "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
      "updated": "2026-09-15",
-     "similarity": 0.583
+     "similarity": 0.583,
+     "z": 6.27
     },
     {
      "id": "300154-0-calidad-aguas-regenerada",
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.568
+     "similarity": 0.568,
+     "z": 6.06
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.547
+     "similarity": 0.547,
+     "z": 5.76
     }
    ]
   },
@@ -251,21 +229,24 @@
      "name": "Fuentes de agua para mascotas",
      "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
      "updated": "2026-09-15",
-     "similarity": 0.56
+     "similarity": 0.56,
+     "z": 5.95
     },
     {
      "id": "300154-0-calidad-aguas-regenerada",
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.529
+     "similarity": 0.529,
+     "z": 5.51
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.52
+     "similarity": 0.52,
+     "z": 5.38
     }
    ]
   },
@@ -282,21 +263,24 @@
      "name": "Fuentes de agua para mascotas",
      "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
      "updated": "2026-09-15",
-     "similarity": 0.562
+     "similarity": 0.562,
+     "z": 5.97
     },
     {
      "id": "300154-0-calidad-aguas-regenerada",
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.538
+     "similarity": 0.538,
+     "z": 5.63
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.528
+     "similarity": 0.528,
+     "z": 5.49
     }
    ]
   },
@@ -313,21 +297,24 @@
      "name": "Fuentes de agua para mascotas",
      "url": "https://datos.madrid.es/dataset/50055-0-fuentes-mascotas",
      "updated": "2026-09-15",
-     "similarity": 0.589
+     "similarity": 0.589,
+     "z": 6.13
     },
     {
      "id": "300154-0-calidad-aguas-regenerada",
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.575
+     "similarity": 0.575,
+     "z": 5.92
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.556
+     "similarity": 0.556,
+     "z": 5.66
     }
    ]
   },
@@ -344,7 +331,8 @@
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.522
+     "similarity": 0.522,
+     "z": 5.91
     }
    ]
   },
@@ -361,21 +349,16 @@
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.573
+     "similarity": 0.573,
+     "z": 6.13
     },
     {
      "id": "300641-0-tanques-tormentas",
      "name": "Tanques de tormentas",
      "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
      "updated": "2026-07-29",
-     "similarity": 0.533
-    },
-    {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
-     "updated": "2026-09-15",
-     "similarity": 0.513
+     "similarity": 0.533,
+     "z": 5.54
     }
    ]
   },
@@ -392,55 +375,8 @@
      "name": "Calidad del agua regenerada",
      "url": "https://datos.madrid.es/dataset/300154-0-calidad-aguas-regenerada",
      "updated": "2026-09-09",
-     "similarity": 0.525
-    },
-    {
-     "id": "300641-0-tanques-tormentas",
-     "name": "Tanques de tormentas",
-     "url": "https://datos.madrid.es/dataset/300641-0-tanques-tormentas",
-     "updated": "2026-07-29",
-     "similarity": 0.501
-    }
-   ]
-  },
-  {
-   "indicator": {
-    "dcid": "undata/sdg/ER_H2O_IWRMD_EE",
-    "name": "Degree of implementation of integrated water resources management: enabling environment",
-    "grade_un_side": "AMBER",
-    "panel_coverage": 6
-   },
-   "candidates": [
-    {
-     "id": "300051-0-fuentes",
-     "name": "Fuentes de agua para beber",
-     "url": "https://datos.madrid.es/dataset/300051-0-fuentes",
-     "updated": "2026-09-15",
-     "similarity": 0.507
-    }
-   ]
-  },
-  {
-   "indicator": {
-    "dcid": "undata/sdg/GR_G14_GDP",
-    "name": "Total bugetary revenue of the central government as a proportion of GDP",
-    "grade_un_side": "GREEN",
-    "panel_coverage": 6
-   },
-   "candidates": [
-    {
-     "id": "300657-0-presupuestos-proyecto-2026",
-     "name": "Presupuestos. Proyecto de Presupuesto General 2026",
-     "url": "https://datos.madrid.es/dataset/300657-0-presupuestos-proyecto-2026",
-     "updated": "2026-07-10",
-     "similarity": 0.507
-    },
-    {
-     "id": "300666-0-presupuesto-general-curso",
-     "name": "Presupuestos. Presupuesto General 2026",
-     "url": "https://datos.madrid.es/dataset/300666-0-presupuesto-general-curso",
-     "updated": "2026-07-10",
-     "similarity": 0.502
+     "similarity": 0.525,
+     "z": 5.85
     }
    ]
   },
@@ -453,11 +389,12 @@
    },
    "candidates": [
     {
-     "id": "300577-0-iguala-vulnerabilidad",
-     "name": "IGUALA. \u00cdndice de vulnerabilidad territorial agregado del Ayuntamiento de Madrid",
-     "url": "https://datos.madrid.es/dataset/300577-0-iguala-vulnerabilidad",
+     "id": "300378-0-edificios-ruina",
+     "name": "Relaci\u00f3n de los edificios declarados en ruina legal y f\u00edsica",
+     "url": "https://datos.madrid.es/dataset/300378-0-edificios-ruina",
      "updated": "2026-07-23",
-     "similarity": 0.535
+     "similarity": 0.535,
+     "z": 3.83
     }
    ]
   },
@@ -470,11 +407,12 @@
    },
    "candidates": [
     {
-     "id": "300577-0-iguala-vulnerabilidad",
-     "name": "IGUALA. \u00cdndice de vulnerabilidad territorial agregado del Ayuntamiento de Madrid",
-     "url": "https://datos.madrid.es/dataset/300577-0-iguala-vulnerabilidad",
+     "id": "300378-0-edificios-ruina",
+     "name": "Relaci\u00f3n de los edificios declarados en ruina legal y f\u00edsica",
+     "url": "https://datos.madrid.es/dataset/300378-0-edificios-ruina",
      "updated": "2026-07-23",
-     "similarity": 0.515
+     "similarity": 0.515,
+     "z": 3.67
     }
    ]
   },
@@ -491,7 +429,8 @@
      "name": "La violencia sexual en la ciudad de Madrid",
      "url": "https://datos.madrid.es/dataset/8562-0-la-violencia-sexual-en-la-ciudad-de-madrid",
      "updated": "2026-07-29",
-     "similarity": 0.565
+     "similarity": 0.565,
+     "z": 5.73
     }
    ]
   }

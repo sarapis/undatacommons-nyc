@@ -30,7 +30,25 @@ REGISTRY = ROOT / "cities" / "registry.json"
 SCREENED = ROOT / "probe" / "cache" / "screened.json"
 
 USABLE = ("GREEN", "AMBER", "RANK-ONLY")
-MIN_SIMILARITY = 0.50
+# Calibrate the cutoff to THIS catalog's own top-score distribution.
+#
+# An absolute cosine cutoff does not transfer: good matches span 0.42-0.70 in
+# NYC, 0.50-0.55 in Chicago and 0.37-0.59 in Madrid, so one number is at once
+# too strict and too loose.
+#
+# A z-score does not work either, and the first version of this file used one.
+# For any query the top hit sits many standard deviations above a catalog whose
+# scores cluster near zero, so z is high whether the match is good or garbage --
+# it measures how peaked the distribution is, not how good the winner is. It let
+# through 60 of 80 indicators.
+#
+# What does vary between catalogs, and is what we actually want to normalise, is
+# the distribution of TOP-1 scores across all probed indicators. Keeping the
+# best KEEP_FRACTION of those adapts to the catalog while bounding the
+# worksheet, and an absolute floor stops a uniformly hopeless catalog from
+# contributing its least-bad rows anyway.
+KEEP_FRACTION = 0.20
+ABSOLUTE_FLOOR = 0.45
 
 
 def load_city(key):
@@ -78,10 +96,24 @@ def main():
         indicators = indicators[:a.limit]
     print(f"   {len(indicators)} city-scoped indicators to match", file=sys.stderr)
 
-    results = []
+    # First pass: score everything, then set the cutoff from the distribution.
+    scored = []
     for ind in indicators:
-        cands = [c for c in index.search(ind.get("name") or "", k=3)
-                 if c["score"] >= MIN_SIMILARITY]
+        hits = index.search(ind.get("name") or "", k=3)
+        if hits:
+            scored.append((ind, hits))
+    tops = sorted((h[0]["score"] for _, h in scored), reverse=True)
+    if tops:
+        cut = max(tops[max(0, int(len(tops) * KEEP_FRACTION) - 1)], ABSOLUTE_FLOOR)
+    else:
+        cut = ABSOLUTE_FLOOR
+    print(f"   cutoff for this catalog: {cut:.3f} "
+          f"(top {int(KEEP_FRACTION*100)}% of {len(tops)} indicators, floor "
+          f"{ABSOLUTE_FLOOR})", file=sys.stderr)
+
+    results = []
+    for ind, hits in scored:
+        cands = [c for c in hits if c["score"] >= cut]
         if cands:
             results.append({
                 "indicator": {"dcid": ind["dcid"], "name": ind.get("name"),
@@ -89,7 +121,8 @@ def main():
                               "panel_coverage": ind.get("panel_coverage")},
                 "candidates": [{"id": c["id"], "name": c["name"],
                                 "url": c.get("url"), "updated": c.get("updated"),
-                                "similarity": c["score"]} for c in cands],
+                                "similarity": c["score"], "z": c.get("z")}
+                               for c in cands],
             })
 
     today = dt.date.today().isoformat()
@@ -112,16 +145,17 @@ def main():
           f"- catalog: **{len(catalog)}** datasets "
           f"({with_cols} publish field names — matching is weaker without them)",
           f"- indicators probed: **{len(indicators)}** (city-scoped, usable UN coverage)",
-          f"- with at least one candidate above {MIN_SIMILARITY}: **{len(results)}**", ""]
+          f"- with at least one candidate above this catalog's cutoff: "
+          f"**{len(results)}**", ""]
     if not city.get("population"):
         md += ["> ⚠ **No sourced population denominator for this city.** Rate-based indicators "
                "(most SDG health and safety measures are per 100,000) cannot be completed until "
                "one is recorded in `cities/registry.json` with its source.", ""]
-    md += ["| Sim | UN indicator | Candidate dataset | Grade (fill in) |",
-           "|---|---|---|---|"]
-    for r in sorted(results, key=lambda r: -r["candidates"][0]["similarity"])[:80]:
+    md += ["| z | Sim | UN indicator | Candidate dataset | Grade (fill in) |",
+           "|---|---|---|---|---|"]
+    for r in sorted(results, key=lambda r: -r["candidates"][0].get("z", 0))[:80]:
         i, c = r["indicator"], r["candidates"][0]
-        md.append(f"| {c['similarity']:.2f} | {(i['name'] or '')[:52]} | "
+        md.append(f"| {c.get('z', 0):.1f} | {c['similarity']:.2f} | {(i['name'] or '')[:52]} | "
                   f"[{(c['name'] or '')[:42]}]({c.get('url') or ''}) | |")
     md += ["", f"*{len(results)} rows; showing the top 80. "
            f"Regenerate with `python3 probe/bootstrap.py --city {city['key']}`.*", ""]

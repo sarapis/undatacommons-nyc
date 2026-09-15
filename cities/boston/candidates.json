@@ -30,25 +30,46 @@
    },
    "candidates": [
     {
-     "id": "trash-schedules-by-address",
-     "name": "Trash Schedules by Address",
-     "url": "https://data.boston.gov/dataset/trash-schedules-by-address",
+     "id": "vision-zero-crash-records",
+     "name": "Vision Zero Crash Records",
+     "url": "https://data.boston.gov/dataset/vision-zero-crash-records",
      "updated": "2026-09-14",
-     "similarity": 0.575
+     "similarity": 0.575,
+     "z": 5.77
     },
     {
      "id": "big-belly-alerts-2014",
      "name": "Big Belly Alerts 2014",
      "url": "https://data.boston.gov/dataset/big-belly-alerts-2014",
      "updated": "2019-05-18",
-     "similarity": 0.544
+     "similarity": 0.544,
+     "z": 5.43
     },
     {
      "id": "big-belly-locations",
      "name": "Big Belly Locations",
      "url": "https://data.boston.gov/dataset/big-belly-locations",
      "updated": "2019-05-18",
-     "similarity": 0.508
+     "similarity": 0.508,
+     "z": 5.04
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_LND_FRSTBIOPHA",
+    "name": "Above-ground biomass in forest",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "tree-canopy-change-assessment",
+     "name": "Canopy Change Assessment",
+     "url": "https://data.boston.gov/dataset/tree-canopy-change-assessment",
+     "updated": "2026-02-24",
+     "similarity": 0.457,
+     "z": 4.74
     }
    ]
   },
@@ -65,14 +86,96 @@
      "name": "City Land Audit (Public)",
      "url": "https://data.boston.gov/dataset/city-land-audit-public1",
      "updated": "2024-12-05",
-     "similarity": 0.557
+     "similarity": 0.557,
+     "z": 3.79
     },
     {
      "id": "2016-land-cover",
      "name": "2016 Land Cover",
      "url": "https://data.boston.gov/dataset/2016-land-cover",
      "updated": "2023-07-09",
-     "similarity": 0.527
+     "similarity": 0.527,
+     "z": 3.5
+    },
+    {
+     "id": "department-of-neighborhood-development-property-inventory",
+     "name": "DND - Property Inventory",
+     "url": "https://data.boston.gov/dataset/department-of-neighborhood-development-property-inventory",
+     "updated": "2019-05-21",
+     "similarity": 0.467,
+     "z": 2.9
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_RNEW",
+    "name": "Installed renewable electricity-generating capacity",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "city-hall-electricity-usage",
+     "name": "City Hall Electricity Usage",
+     "url": "https://data.boston.gov/dataset/city-hall-electricity-usage",
+     "updated": "2020-06-30",
+     "similarity": 0.487,
+     "z": 4.07
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_FEC_RNEW",
+    "name": "Share of renewable energy in the total final energy consumption",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "city-of-boston-utility-data",
+     "name": "City of Boston Utility Data",
+     "url": "https://data.boston.gov/dataset/city-of-boston-utility-data",
+     "updated": "2026-03-01",
+     "similarity": 0.487,
+     "z": 4.27
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_ATM_CO2GDP",
+    "name": "Carbon dioxide emissions per unit of GDP at purchaning power parity rates",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "building-emissions-reduction-and-disclosure-ordinance",
+     "name": "Building Emissions Reduction and Disclosure Ordinance (BERDO)",
+     "url": "https://data.boston.gov/dataset/building-emissions-reduction-and-disclosure-ordinance",
+     "updated": "2026-03-03",
+     "similarity": 0.465,
+     "z": 4.45
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_H2O_IWRMD_IP",
+    "name": "Degree of implementation of integrated water resources management: institutions and participation",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "buildbps-facilities-and-educational-data-for-boston-public-schools",
+     "name": "BuildBPS: Facilities and Educational Data for Boston Public Schools",
+     "url": "https://data.boston.gov/dataset/buildbps-facilities-and-educational-data-for-boston-public-schools",
+     "updated": "2019-05-14",
+     "similarity": 0.469,
+     "z": 2.73
     }
    ]
   },
@@ -89,7 +192,26 @@
      "name": "Revenue Budget",
      "url": "https://data.boston.gov/dataset/revenue-budget",
      "updated": "2026-08-03",
-     "similarity": 0.572
+     "similarity": 0.572,
+     "z": 5.36
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IQ_SPI_PIL4",
+    "name": "Performance index of data sources (Pillar 4 of Statistical Performance Indicators)",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "economic-indicators-legacy-portal",
+     "name": "Economic Indicators",
+     "url": "https://data.boston.gov/dataset/economic-indicators-legacy-portal",
+     "updated": "2026-08-19",
+     "similarity": 0.466,
+     "z": 3.57
     }
    ]
   },
@@ -106,7 +228,62 @@
      "name": "Economic Indicators",
      "url": "https://data.boston.gov/dataset/economic-indicators-legacy-portal",
      "updated": "2026-08-19",
-     "similarity": 0.5
+     "similarity": 0.5,
+     "z": 3.96
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/NE_CON_GOVT_KD_ZG",
+    "name": "Annual growth of final consumption expenditure of the general government",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "building-and-property-violations1",
+     "name": "Building and Property Violations",
+     "url": "https://data.boston.gov/dataset/building-and-property-violations1",
+     "updated": "2026-09-15",
+     "similarity": 0.462,
+     "z": 3.35
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/NY_GDP_MKTP_KD_ZG",
+    "name": "Annual GDP growth",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "economic-indicators-legacy-portal",
+     "name": "Economic Indicators",
+     "url": "https://data.boston.gov/dataset/economic-indicators-legacy-portal",
+     "updated": "2026-08-19",
+     "similarity": 0.47,
+     "z": 4.08
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/NY_GDP_PCAP",
+    "name": "Annual growth rate of real GDP per capita",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "economic-indicators-legacy-portal",
+     "name": "Economic Indicators",
+     "url": "https://data.boston.gov/dataset/economic-indicators-legacy-portal",
+     "updated": "2026-08-19",
+     "similarity": 0.457,
+     "z": 3.91
     }
    ]
   },
@@ -123,21 +300,24 @@
      "name": "Boston Urban Forest Plan",
      "url": "https://data.boston.gov/dataset/boston-urban-forest-plan",
      "updated": "2025-07-24",
-     "similarity": 0.525
+     "similarity": 0.525,
+     "z": 2.63
     },
     {
      "id": "capital-budget",
      "name": "Capital Plan",
      "url": "https://data.boston.gov/dataset/capital-budget",
      "updated": "2026-08-03",
-     "similarity": 0.511
+     "similarity": 0.511,
+     "z": 2.49
     },
     {
      "id": "economic-indicators-legacy-portal",
      "name": "Economic Indicators",
      "url": "https://data.boston.gov/dataset/economic-indicators-legacy-portal",
      "updated": "2026-08-19",
-     "similarity": 0.504
+     "similarity": 0.504,
+     "z": 2.41
     }
    ]
   },
@@ -154,14 +334,16 @@
      "name": "FY23 Budget Survey Data",
      "url": "https://data.boston.gov/dataset/fy23-budget-survey-data",
      "updated": "2026-02-04",
-     "similarity": 0.51
+     "similarity": 0.51,
+     "z": 3.46
     },
     {
-     "id": "city-of-boston-discretionary-spending",
-     "name": "City of Boston Discretionary Spending",
-     "url": "https://data.boston.gov/dataset/city-of-boston-discretionary-spending",
-     "updated": "2026-09-14",
-     "similarity": 0.508
+     "id": "building-and-property-violations1",
+     "name": "Building and Property Violations",
+     "url": "https://data.boston.gov/dataset/building-and-property-violations1",
+     "updated": "2026-09-15",
+     "similarity": 0.508,
+     "z": 3.43
     }
    ]
   },
@@ -174,11 +356,12 @@
    },
    "candidates": [
     {
-     "id": "boston-jobs-policy-compliance-reports",
-     "name": "Boston Jobs Policy Compliance Reports",
-     "url": "https://data.boston.gov/dataset/boston-jobs-policy-compliance-reports",
-     "updated": "2026-09-14",
-     "similarity": 0.517
+     "id": "research-statistics",
+     "name": "Research Statistics",
+     "url": "https://data.boston.gov/dataset/research-statistics",
+     "updated": "2026-09-15",
+     "similarity": 0.517,
+     "z": 3.58
     }
    ]
   }

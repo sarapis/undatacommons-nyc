@@ -31,21 +31,24 @@
      "name": "Energia elettrica erogata da A2A - totale giornaliero",
      "url": "https://dati.comune.milano.it/dataset/ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
      "updated": "2026-05-08",
-     "similarity": 0.602
+     "similarity": 0.602,
+     "z": 7.03
     },
     {
      "id": "ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
      "name": "Produzione netta di energia elettrica degli impianti fotovoltaici - Serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.594
+     "similarity": 0.594,
+     "z": 6.93
     },
     {
      "id": "ds1537-consumi-di-energia-elettrica-serie-storica",
      "name": "Consumi di energia elettrica - serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1537-consumi-di-energia-elettrica-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.561
+     "similarity": 0.561,
+     "z": 6.49
     }
    ]
   },
@@ -62,21 +65,24 @@
      "name": "Produzione netta di energia elettrica degli impianti fotovoltaici - Serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.668
+     "similarity": 0.668,
+     "z": 6.9
     },
     {
      "id": "ds1541-potenza-media-di-impianto-delle-installazioni-fotovoltaiche-serie-storica",
      "name": "Potenza media per impianto delle installazioni fotovoltaiche - Serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1541-potenza-media-di-impianto-delle-installazioni-fotovoltaiche-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.623
+     "similarity": 0.623,
+     "z": 6.38
     },
     {
      "id": "ds1542-densita-degli-impianti-fotovoltaici-serie-storica",
      "name": "Densit\u00e0 degli impianti fotovoltaici - Serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1542-densita-degli-impianti-fotovoltaici-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.587
+     "similarity": 0.587,
+     "z": 5.95
     }
    ]
   },
@@ -93,21 +99,86 @@
      "name": "Produzione netta di energia elettrica degli impianti fotovoltaici - Serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1540-produzione-netta-di-energia-elettrica-degli-impianti-fotovoltaici-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.615
+     "similarity": 0.615,
+     "z": 7.48
     },
     {
      "id": "ds1537-consumi-di-energia-elettrica-serie-storica",
      "name": "Consumi di energia elettrica - serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1537-consumi-di-energia-elettrica-serie-storica",
      "updated": "2026-05-08",
-     "similarity": 0.588
+     "similarity": 0.588,
+     "z": 7.11
     },
     {
      "id": "ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
      "name": "Energia elettrica erogata da A2A - totale giornaliero",
      "url": "https://dati.comune.milano.it/dataset/ds1574-energia-elettrica-erogata-a2a-totale-giornaliero",
      "updated": "2026-05-08",
-     "similarity": 0.574
+     "similarity": 0.574,
+     "z": 6.92
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MXWAP",
+    "name": "Maximum reservoir water area as a proportion of total land area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds625-case-dell-acqua-nel-comune-di-milano",
+     "name": "Case dell'acqua nel Comune di Milano",
+     "url": "https://dati.comune.milano.it/dataset/ds625-case-dell-acqua-nel-comune-di-milano",
+     "updated": "2026-09-13",
+     "similarity": 0.467,
+     "z": 5.12
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_RSRV_MNWAP",
+    "name": "Minimum reservoir water area as a proportion of total land area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds625-case-dell-acqua-nel-comune-di-milano",
+     "name": "Case dell'acqua nel Comune di Milano",
+     "url": "https://dati.comune.milano.it/dataset/ds625-case-dell-acqua-nel-comune-di-milano",
+     "updated": "2026-09-13",
+     "similarity": 0.478,
+     "z": 4.81
+    },
+    {
+     "id": "ds339-territorioambiente-aree-verdi-zona-superficie-2014",
+     "name": "Ambiente: Aree verdi per zona e superficie",
+     "url": "https://dati.comune.milano.it/dataset/ds339-territorioambiente-aree-verdi-zona-superficie-2014",
+     "updated": "2026-05-08",
+     "similarity": 0.461,
+     "z": 4.55
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_H2O_WUEYST",
+    "name": "Water use efficiency",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds523_consumo-di-acqua-ed-energia-pro-capite-2000-2011",
+     "name": "Consumo di acqua ed energia pro capite (2000 - 2011)",
+     "url": "https://dati.comune.milano.it/dataset/ds523_consumo-di-acqua-ed-energia-pro-capite-2000-2011",
+     "updated": "2026-05-08",
+     "similarity": 0.495,
+     "z": 5.6
     }
    ]
   },
@@ -124,21 +195,76 @@
      "name": "Tasso di inflazione mensile - serie storica dal 1971",
      "url": "https://dati.comune.milano.it/dataset/ds1499-tasso-di-inflazione-mensile-serie-storica-dal-1971",
      "updated": "2026-08-18",
-     "similarity": 0.6
+     "similarity": 0.6,
+     "z": 3.68
     },
     {
      "id": "ds1821-tasso-inflazione-annuale",
      "name": "Tasso di inflazione annuale - serie storica",
      "url": "https://dati.comune.milano.it/dataset/ds1821-tasso-inflazione-annuale",
      "updated": "2026-05-08",
-     "similarity": 0.586
+     "similarity": 0.586,
+     "z": 3.57
     },
     {
      "id": "ds2242_prezzi-al-consumo-dicembre-2022-indice-nic-per-sottoclassi-di-spesa",
      "name": "Prezzi al consumo dicembre 2022: indice NIC per sottoclassi di spesa",
      "url": "https://dati.comune.milano.it/dataset/ds2242_prezzi-al-consumo-dicembre-2022-indice-nic-per-sottoclassi-di-spesa",
      "updated": "2026-05-08",
-     "similarity": 0.575
+     "similarity": 0.575,
+     "z": 3.48
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/GR_G14_GDP",
+    "name": "Total bugetary revenue of the central government as a proportion of GDP",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds284-ammcomunale-piano-esecutivo-gestione-spese-correnti-consuntivo-2013",
+     "name": "Bilancio trasparente: Spese correnti - Piano Esecutivo di Gestione, consuntivo",
+     "url": "https://dati.comune.milano.it/dataset/ds284-ammcomunale-piano-esecutivo-gestione-spese-correnti-consuntivo-2013",
+     "updated": "2026-05-08",
+     "similarity": 0.48,
+     "z": 3.59
+    },
+    {
+     "id": "ds285-ammcomunale-piano-esecutivo-gestione-entrate-correnti-consuntivo-2013",
+     "name": "Bilancio trasparente: Entrate correnti - Piano Esecutivo di Gestione, consuntivo",
+     "url": "https://dati.comune.milano.it/dataset/ds285-ammcomunale-piano-esecutivo-gestione-entrate-correnti-consuntivo-2013",
+     "updated": "2026-05-08",
+     "similarity": 0.473,
+     "z": 3.51
+    },
+    {
+     "id": "ds227-ammcomunale-spesa-corrente-missioni-consuntivo-assestato-previsioni-2012-2014",
+     "name": "Bilancio trasparente: Spesa corrente per missioni e programmi",
+     "url": "https://dati.comune.milano.it/dataset/ds227-ammcomunale-spesa-corrente-missioni-consuntivo-assestato-previsioni-2012-2014",
+     "updated": "2026-05-08",
+     "similarity": 0.455,
+     "z": 3.28
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IQ_SPI_PIL5",
+    "name": "Performance index of data Infrastructure (Pillar 5 of Statistical Performance Indicators)",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds2980-prezzi-al-consumo-indice-nic-variazioni-per-tipologia-di-prodotto-dal-2026",
+     "name": "Prezzi al consumo: indice NIC e variazioni per tipologia di prodotto dal 2026",
+     "url": "https://dati.comune.milano.it/dataset/ds2980-prezzi-al-consumo-indice-nic-variazioni-per-tipologia-di-prodotto-dal-2026",
+     "updated": "2026-08-18",
+     "similarity": 0.452,
+     "z": 2.89
     }
    ]
   },
@@ -155,14 +281,76 @@
      "name": "Nuclei d'Identit\u00e0 Locale (NIL) VIGENTI - PGT 2030",
      "url": "https://dati.comune.milano.it/dataset/ds964-nil-vigenti-pgt-2030",
      "updated": "2026-05-08",
-     "similarity": 0.551
+     "similarity": 0.551,
+     "z": 3.61
     },
     {
      "id": "ds345-popolazione-pendolarismo-in-uscita-2011c",
      "name": "Censimento 2011: Pendolarismo in uscita dal comune di Milano",
      "url": "https://dati.comune.milano.it/dataset/ds345-popolazione-pendolarismo-in-uscita-2011c",
      "updated": "2026-05-08",
-     "similarity": 0.526
+     "similarity": 0.526,
+     "z": 3.3
+    },
+    {
+     "id": "ds2845-territorio-localizzazione-delle-sezioni-di-censimento-anno-2021",
+     "name": "Territorio: localizzazione delle sezioni di Censimento anno 2021",
+     "url": "https://dati.comune.milano.it/dataset/ds2845-territorio-localizzazione-delle-sezioni-di-censimento-anno-2021",
+     "updated": "2026-05-08",
+     "similarity": 0.495,
+     "z": 2.9
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SE_GPI_PTNPRE",
+    "name": "Adjusted gender parity index for participation rate in organized learning (one year before the official primary entry age)",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds1675_personale_a_tempo_indeterminato_per_fascia_di_eta_e_categoria_2021",
+     "name": "Personale a tempo indeterminato per fascia di et\u00e0 e categoria - anno 2021",
+     "url": "https://dati.comune.milano.it/dataset/ds1675_personale_a_tempo_indeterminato_per_fascia_di_eta_e_categoria_2021",
+     "updated": "2026-05-08",
+     "similarity": 0.461,
+     "z": 2.88
+    },
+    {
+     "id": "ds430_personale_a_tempo_indeterminato_per_fascia_di_eta_e_categoria_2018",
+     "name": "Personale a tempo indeterminato per fascia di et\u00e0 e categoria - anno 2018",
+     "url": "https://dati.comune.milano.it/dataset/ds430_personale_a_tempo_indeterminato_per_fascia_di_eta_e_categoria_2018",
+     "updated": "2026-05-08",
+     "similarity": 0.457,
+     "z": 2.82
+    },
+    {
+     "id": "ds2188-personale-a-tempo-indeterminato-per-fascia-di-eta-e-categoria-anno-2022",
+     "name": "Personale a tempo indeterminato per fascia di et\u00e0 e categoria - anno 2022",
+     "url": "https://dati.comune.milano.it/dataset/ds2188-personale-a-tempo-indeterminato-per-fascia-di-eta-e-categoria-anno-2022",
+     "updated": "2026-05-08",
+     "similarity": 0.455,
+     "z": 2.8
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SE_PRE_PARTN",
+    "name": "Participation rate in organized learning (one year before the official primary entry age)",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "ds1675_personale_a_tempo_indeterminato_per_fascia_di_eta_e_categoria_2021",
+     "name": "Personale a tempo indeterminato per fascia di et\u00e0 e categoria - anno 2021",
+     "url": "https://dati.comune.milano.it/dataset/ds1675_personale_a_tempo_indeterminato_per_fascia_di_eta_e_categoria_2021",
+     "updated": "2026-05-08",
+     "similarity": 0.46,
+     "z": 3.48
     }
    ]
   }
