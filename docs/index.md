@@ -20,6 +20,21 @@ waste — an indicator the **US does not report at all**, where the caveat rever
 Against the US, NYC's homicide trend reads as a success story; against the world it sits in the
 bottom half. Same number, different comparator, opposite conclusion.
 
+## Beyond NYC
+
+The pipeline now runs against **any city** on Socrata or CKAN
+([`cities/`](https://github.com/sarapis/undatacommons-nyc/tree/main/cities)), and the first
+five-city run is mostly a **negative result worth having**: the plumbing generalises, the matching
+does not. Cross-language matching fails outright (Madrid 0.27, Milan 0.29, against Boston 0.58 —
+Milan has a larger catalog than NYC and matches nothing), and the similarity threshold calibrated
+on NYC admits nonsense in smaller catalogs. Roughly 2–3 candidates per English city are plausible
+and no substantive SDG indicator matched anywhere.
+
+There is also **no global registry of city open data portals** — every canonical one has rotted —
+so [`portals/`](https://github.com/sarapis/undatacommons-nyc/tree/main/portals) constructs one:
+159 live Socrata domains and 39 confirmed CKAN instances, the latter being 6% of the only
+surviving candidate list.
+
 ## The spec
 
 **[City ↔ UN Comparability Spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/)** — the
@@ -187,6 +202,10 @@ building against.
 - [x] Screening re-keyed onto a 6-country coverage panel — 442 usable, 130 the US never reports
 - [x] City-scope filter replaced with a measured classifier (precision 0.69 → 0.83, recall 1.00)
 - [x] Demo at five cards — three trends, one rank-only, one with no comparator
+- [x] Multi-city bootstrapping over Socrata + CKAN — plumbing works, matcher does not transfer
+- [x] Portal inventory constructed (159 Socrata, 39 CKAN) — no global registry survives
+- [ ] Multilingual embedding model — the blocker for every non-anglophone city
+- [ ] Per-catalog threshold calibration — an absolute cosine score does not travel
 - [ ] **17 Sep: re-run every probe against the public launch and diff the DCIDs**
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [x] **MCP server** composing UN DC with NYC Open Data — `mcp/server.py`, refuses on
