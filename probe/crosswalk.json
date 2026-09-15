@@ -310,6 +310,44 @@
       "nyc": null,
       "grade": "NO-SIGNAL",
       "reason": "The UN series sits at or near 100% for the US across the whole window, as it would for NYC. A chart of two flat lines at 100 tells a policy analyst nothing. Recorded as deliberately excluded rather than overlooked -- a ceiling effect is a reason not to build a view, and that judgment should be written down."
+    },
+    {
+      "id": "municipal-waste",
+      "sdg": "11.6.1",
+      "tier": 3,
+      "label": "Municipal waste collected",
+      "un": {
+        "dcid": "undata/sdg/EN_MWT_COLLV",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/MEX"
+        ]
+      },
+      "nyc": {
+        "dataset": "ebb7-mvp5",
+        "unit": "kg per capita",
+        "year_field": "yr",
+        "value_field": "value",
+        "soql": {
+          "$select": "substring(month,1,4) AS yr, sum(coalesce(refusetonscollected,0) + coalesce(papertonscollected,0) + coalesce(mgptonscollected,0) + coalesce(resorganicstons,0) + coalesce(schoolorganictons,0) + coalesce(leavesorganictons,0) + coalesce(xmastreetons,0) + coalesce(otherorganicstons,0)) AS value",
+          "$where": "substring(month,1,4) >= '2005'",
+          "$group": "yr",
+          "$order": "yr",
+          "$limit": "60"
+        }
+      },
+      "grade": "PROXY",
+      "reason": "The US reports this indicator to nobody -- EN_MWT_COLLV has ZERO US observations in every year, while 90 other countries report it, so NYC's only comparator is the world. Both sides are derived to kg per capita, so the raw units differ by design (UN tonnes, NYC tons). TWO CAVEATS. DSNY collects from residences and institutions only and the UN definition includes commercial waste, so NYC's figure is an UNDERCOUNT and its true rank is worse -- the opposite direction to the recycling pair, where the same gap flatters the comparator instead. And DSNY publishes 'Tons' without saying short or metric; US short tons assumed, and if they are metric every NYC figure is ~10% low.",
+      "derive": {
+        "per_capita": true,
+        "unit": "kg per capita",
+        "nyc_multiplier": 907.18474,
+        "un_multiplier": 1000,
+        "note": "DSNY publishes 'Tons' without specifying short or metric; US short tons assumed. If metric, NYC figures are ~10% low."
+      }
     }
   ]
 }

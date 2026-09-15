@@ -29,6 +29,8 @@ UN System Data Commons.
 
 - `docs/` — the briefing hub, served at https://sarapis.github.io/undatacommons-nyc/
 - `docs/artifacts/` — generated outputs; regenerate rather than hand-edit
+- `mcp/` — the benchmark MCP server. `server.py` serves the graded crosswalk and REFUSES on
+  pairs a human graded incomparable; `smoke.py` asserts its figures against the published demo.
 - `probe/` — probes and the enumeration pipeline (stdlib only)
   - `corpus.py` → `screen.py` → `catalog.py` → `match_nyc.py`: enumerate the SDG corpus,
     screen for US coverage, cache the NYC catalog, propose candidates by embedding search.

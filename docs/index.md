@@ -182,8 +182,9 @@ building against.
 - [x] Demo at five cards — three trends, one rank-only, one with no comparator
 - [ ] **17 Sep: re-run every probe against the public launch and diff the DCIDs**
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
-- [ ] Bridge service composing UN DC MCP with NYC Open Data
-- [ ] Ship our crosswalk as a `SKILL.md` MCP resource, mirroring the platform's own convention
+- [x] **MCP server** composing UN DC with NYC Open Data — `mcp/server.py`, refuses on
+  incomparable pairs and says why ([README](https://github.com/sarapis/undatacommons-nyc/tree/main/mcp))
+- [x] Crosswalk shipped as a `SKILL.md` MCP resource, mirroring the platform's own convention
 
 ## Map
 
