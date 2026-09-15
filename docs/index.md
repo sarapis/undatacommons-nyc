@@ -31,9 +31,11 @@ on NYC admits nonsense in smaller catalogs. Roughly 2–3 candidates per English
 and no substantive SDG indicator matched anywhere.
 
 There is also **no global registry of city open data portals** — every canonical one has rotted —
-so [`portals/`](https://github.com/sarapis/undatacommons-nyc/tree/main/portals) constructs one:
-159 live Socrata domains and 39 confirmed CKAN instances, the latter being 6% of the only
-surviving candidate list.
+so [`portals/`](https://github.com/sarapis/undatacommons-nyc/tree/main/portals) constructs one.
+The **[portal inventory](https://sarapis.github.io/undatacommons-nyc/artifacts/portals-latest)**
+is the result: **198 portals, all responding, 58 municipal**, holding 150k+ datasets between
+them. 159 are Socrata and 39 CKAN — the latter being 6% of the only surviving candidate list,
+which measures link rot rather than CKAN's popularity.
 
 ## The spec
 
