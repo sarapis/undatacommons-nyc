@@ -19,6 +19,9 @@ nav:
   - title: Summary
     id: summary
     url: /
+  - title: Demo
+    id: demo
+    url: /demo/benchmarks.html
   - title: Activity feed
     id: activity
     url: /activity/
