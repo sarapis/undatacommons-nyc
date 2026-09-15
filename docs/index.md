@@ -22,23 +22,38 @@ bottom half. Same number, different comparator, opposite conclusion.
 
 ## Beyond NYC
 
-The pipeline now runs against **any city** on Socrata or CKAN
-([`cities/`](https://github.com/sarapis/undatacommons-nyc/tree/main/cities)), and the first
-five-city run is mostly a **negative result worth having**: the plumbing generalises, the matching
-does not. Cross-language matching needed a **multilingual embedding model**, now selected per catalog
-language — Madrid went 0 → 19 candidates and Milan 0 → 5, with Milan's largely plausible. That fix
-is a trade-off, not an upgrade: on the NYC ground truth the English model ranks the correct dataset
-at median **23** and the multilingual one at **81**, so English cities keep the English model. The
-**similarity threshold still does not transfer between catalogs**, which is now the main blocker —
-roughly 2–3 candidates per English city are plausible and no substantive SDG indicator matched
-outside NYC.
+The pipeline runs against **any city** on Socrata or CKAN
+([`cities/`](https://github.com/sarapis/undatacommons-nyc/tree/main/cities)). Two blockers found
+in the first five-city run are now fixed, and the honest summary is that **the plumbing
+generalises and the recommender is serviceable rather than good**.
 
-There is also **no global registry of city open data portals** — every canonical one has rotted —
-so [`portals/`](https://github.com/sarapis/undatacommons-nyc/tree/main/portals) constructs one.
-The **[portal inventory](https://sarapis.github.io/undatacommons-nyc/artifacts/portals-latest)**
-is the result: **198 portals, all responding, 58 municipal**, holding 150k+ datasets between
-them. 159 are Socrata and 39 CKAN — the latter being 6% of the only surviving candidate list,
-which measures link rot rather than CKAN's popularity.
+**Language.** Madrid and Milan returned nothing until a multilingual model was added, now chosen
+per catalog language. It is a trade-off, not an upgrade: on the NYC ground truth the English model
+ranks the correct dataset at median **23** and the multilingual one at **81**, so English cities
+keep the English model.
+
+**Threshold.** An absolute similarity cutoff cannot travel — good matches span 0.42–0.70 in NYC,
+0.50–0.55 in Chicago, 0.37–0.59 in Madrid. The cutoff is now derived from each catalog's own
+top-score distribution, landing at 0.450 (Milan) to 0.515 (Madrid) and yielding worksheets of
+12–16 indicators per city instead of 0 or 69. A z-score was tried first and was wrong twice over;
+[the write-up](https://sarapis.github.io/undatacommons-nyc/activity) says why, because the failure is more instructive than the fix.
+
+Still true: **no substantive SDG indicator has matched outside NYC**. The good pairs in NYC were
+found by a person who knew the data, and nothing here shows the matcher can lead.
+
+### The portal inventory
+
+The **[inventory](https://sarapis.github.io/undatacommons-nyc/artifacts/portals-latest)** covers **372 portals surveyed, 70 municipal**,
+holding **543,000 datasets** between them — 159 Socrata and the rest CKAN.
+
+The primary CKAN source is the **[CKAN Ecosystem Catalog](https://ecosystem.ckan.org)** (NSF POSE
+II, 2025): 199 instances, 97 local or regional government. We previously reported that no global
+registry existed — that was **wrong**, and we found only its dead predecessors. The abandoned OKFN
+list really has rotted (39 of 631 answer), which is what misled us.
+
+One caveat the inventory now states plainly: a portal that does not answer an anonymous
+`package_search` is **not** thereby dead. `data.gov` and `govdata.de` refuse the probe and are
+obviously alive.
 
 ## The spec
 
@@ -208,9 +223,9 @@ building against.
 - [x] City-scope filter replaced with a measured classifier (precision 0.69 → 0.83, recall 1.00)
 - [x] Demo at five cards — three trends, one rank-only, one with no comparator
 - [x] Multi-city bootstrapping over Socrata + CKAN — plumbing works, matcher does not transfer
-- [x] Portal inventory constructed (159 Socrata, 39 CKAN) — no global registry survives
+- [x] Portal inventory: 372 surveyed, 70 municipal, 543k datasets — CKAN Ecosystem Catalog adopted
 - [x] Multilingual embedding model, selected per catalog language (Madrid 0→19, Milan 0→5)
-- [ ] Per-catalog threshold calibration — an absolute cosine score does not travel
+- [x] Per-catalog threshold calibration — cutoff derived from each catalog's own score distribution
 - [ ] **17 Sep: re-run every probe against the public launch and diff the DCIDs**
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
 - [x] **MCP server** composing UN DC with NYC Open Data — `mcp/server.py`, refuses on
