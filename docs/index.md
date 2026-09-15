@@ -38,13 +38,12 @@ top-score distribution, landing at 0.450 (Milan) to 0.515 (Madrid) and yielding 
 12–16 indicators per city instead of 0 or 69. A z-score was tried first and was wrong twice over;
 [the write-up](https://sarapis.github.io/undatacommons-nyc/activity) says why, because the failure is more instructive than the fix.
 
-**Our matcher finds no substantive SDG indicator outside NYC — but the data is there.** Direct
-inspection shows Chicago publishing *Traffic Crashes*, *Crimes 2001–Present* and *Open Air
-Chicago*, and Boston publishing *Vision Zero Fatality Records*. Querying Boston for "death rate due
-to road traffic injuries" ranks that file **23rd of 235, below a contract-award dataset**.
-
-So this is a **retrieval failure, not an absence** — the good NYC pairs were found by a person who
-knew the data, and nothing here shows the matcher can lead. An earlier version of this page said
+**The matcher used to miss what the cities plainly hold — now fixed.** Boston publishes *Vision
+Zero Fatality Records*; it ranked 23rd of 235 for "death rate due to road traffic injuries", below
+a contract-award file. The cause was document representation, not the query: a static embedding
+averaged 60 characters of exactly-right title and tags into 1,500 characters of programme
+boilerplate. Scoring title/tags/columns and description as **separate vectors and taking the max**
+puts it at **rank 1**, and improves NYC's ground-truth median from **23 to 14** at the same time. An earlier version of this page said
 "no substantive SDG indicator has matched outside NYC" without that distinction, which read as a
 claim about the cities; see the [correction](https://sarapis.github.io/undatacommons-nyc/activity).
 

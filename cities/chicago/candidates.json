@@ -34,8 +34,24 @@
      "name": "Boundaries - Community Areas",
      "url": "https://data.cityofchicago.org/d/igwz-8jzy",
      "updated": "2026-03-25",
-     "similarity": 0.552,
-     "z": 2.9
+     "similarity": 0.606,
+     "z": 3.11
+    },
+    {
+     "id": "fe34-kcci",
+     "name": "Central_Business_District",
+     "url": "https://data.cityofchicago.org/d/fe34-kcci",
+     "updated": "2024-04-10",
+     "similarity": 0.513,
+     "z": 2.39
+    },
+    {
+     "id": "aksk-kvfp",
+     "name": "City-Owned Land Inventory",
+     "url": "https://data.cityofchicago.org/d/aksk-kvfp",
+     "updated": "2026-09-14",
+     "similarity": 0.499,
+     "z": 2.28
     }
    ]
   },
@@ -48,12 +64,46 @@
    },
    "candidates": [
     {
+     "id": "5yjb-v3mj",
+     "name": "Population by 2010 Census Block",
+     "url": "https://data.cityofchicago.org/d/5yjb-v3mj",
+     "updated": "2025-02-07",
+     "similarity": 0.528,
+     "z": 5.49
+    },
+    {
      "id": "85cm-7uqa",
      "name": "Chicago Population Counts",
      "url": "https://data.cityofchicago.org/d/85cm-7uqa",
      "updated": "2026-08-31",
-     "similarity": 0.474,
-     "z": 4.46
+     "similarity": 0.513,
+     "z": 5.26
+    },
+    {
+     "id": "8yq3-m6wp",
+     "name": "Energy Usage 2010",
+     "url": "https://data.cityofchicago.org/d/8yq3-m6wp",
+     "updated": "2018-07-11",
+     "similarity": 0.506,
+     "z": 5.15
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_EGY_RNEW",
+    "name": "Installed renewable electricity-generating capacity",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "z2qz-687z",
+     "name": "Performance Metrics - Buildings - Time To Issue Green Permits",
+     "url": "https://data.cityofchicago.org/d/z2qz-687z",
+     "updated": "2014-08-04",
+     "similarity": 0.49,
+     "z": 5.63
     }
    ]
   },
@@ -70,15 +120,15 @@
      "name": "Energy Usage 2010",
      "url": "https://data.cityofchicago.org/d/8yq3-m6wp",
      "updated": "2018-07-11",
-     "similarity": 0.552,
-     "z": 7.24
+     "similarity": 0.526,
+     "z": 6.43
     }
    ]
   },
   {
    "indicator": {
-    "dcid": "undata/sdg/EN_ATM_CO2GDP",
-    "name": "Carbon dioxide emissions per unit of GDP at purchaning power parity rates",
+    "dcid": "undata/sdg/EN_MAR_BEALIT_PUSA",
+    "name": "Beach litter items per unit of surface area (Number of items per 100 square meters)",
     "grade_un_side": "GREEN",
     "panel_coverage": 6
    },
@@ -88,26 +138,44 @@
      "name": "Chicago Energy Benchmarking",
      "url": "https://data.cityofchicago.org/d/xq83-jr8c",
      "updated": "2025-02-05",
-     "similarity": 0.476,
-     "z": 4.65
+     "similarity": 0.501,
+     "z": 4.34
     }
    ]
   },
   {
    "indicator": {
-    "dcid": "undata/sdg/ER_H2O_IWRMD_IP",
-    "name": "Degree of implementation of integrated water resources management: institutions and participation",
-    "grade_un_side": "AMBER",
+    "dcid": "undata/sdg/EN_MAT_DOMCMPG",
+    "name": "Domestic material consumption per unit of GDP",
+    "grade_un_side": "GREEN",
     "panel_coverage": 6
    },
    "candidates": [
     {
-     "id": "xczi-kmtf",
-     "name": "Performance Metrics - Family & Support Services - Youth Services Program Monthly Utilization",
-     "url": "https://data.cityofchicago.org/d/xczi-kmtf",
-     "updated": "2023-08-14",
-     "similarity": 0.48,
-     "z": 3.49
+     "id": "8yq3-m6wp",
+     "name": "Energy Usage 2010",
+     "url": "https://data.cityofchicago.org/d/8yq3-m6wp",
+     "updated": "2018-07-11",
+     "similarity": 0.493,
+     "z": 4.34
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/ER_FFS_CMPT_GDP",
+    "name": "Fossil-fuel subsidies (consumption and production) as a proportion of total GDP",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "8yq3-m6wp",
+     "name": "Energy Usage 2010",
+     "url": "https://data.cityofchicago.org/d/8yq3-m6wp",
+     "updated": "2018-07-11",
+     "similarity": 0.491,
+     "z": 3.75
     }
    ]
   },
@@ -124,8 +192,24 @@
      "name": "ACS 5 Year Data by Community Area",
      "url": "https://data.cityofchicago.org/d/t68z-cikk",
      "updated": "2025-02-06",
-     "similarity": 0.492,
-     "z": 4.69
+     "similarity": 0.519,
+     "z": 4.66
+    },
+    {
+     "id": "awnk-6fvc",
+     "name": "ACS 5 Year Data by Ward",
+     "url": "https://data.cityofchicago.org/d/awnk-6fvc",
+     "updated": "2025-02-06",
+     "similarity": 0.515,
+     "z": 4.61
+    },
+    {
+     "id": "kn9c-c2s2",
+     "name": "Census Data - Selected socioeconomic indicators in Chicago, 2008 \u2013 2012",
+     "url": "https://data.cityofchicago.org/d/kn9c-c2s2",
+     "updated": "2026-08-31",
+     "similarity": 0.488,
+     "z": 4.26
     }
    ]
   },
@@ -142,8 +226,8 @@
      "name": "Illinois Income Tax LGDF",
      "url": "https://data.cityofchicago.org/d/czxm-mzs7",
      "updated": "2026-03-16",
-     "similarity": 0.526,
-     "z": 4.43
+     "similarity": 0.532,
+     "z": 4.55
     }
    ]
   },
@@ -160,8 +244,16 @@
      "name": "Performance Metrics - Transportation",
      "url": "https://data.cityofchicago.org/d/eaff-5ff2",
      "updated": "2019-04-05",
-     "similarity": 0.497,
-     "z": 3.96
+     "similarity": 0.514,
+     "z": 3.73
+    },
+    {
+     "id": "zfg3-p7xv",
+     "name": "Performance Metrics - Innovation & Technology - Site Availability",
+     "url": "https://data.cityofchicago.org/d/zfg3-p7xv",
+     "updated": "2015-03-16",
+     "similarity": 0.488,
+     "z": 3.4
     }
    ]
   },
@@ -174,12 +266,20 @@
    },
    "candidates": [
     {
+     "id": "zfg3-p7xv",
+     "name": "Performance Metrics - Innovation & Technology - Site Availability",
+     "url": "https://data.cityofchicago.org/d/zfg3-p7xv",
+     "updated": "2015-03-16",
+     "similarity": 0.533,
+     "z": 3.77
+    },
+    {
      "id": "eaff-5ff2",
      "name": "Performance Metrics - Transportation",
      "url": "https://data.cityofchicago.org/d/eaff-5ff2",
      "updated": "2019-04-05",
-     "similarity": 0.504,
-     "z": 3.66
+     "similarity": 0.508,
+     "z": 3.46
     }
    ]
   },
@@ -192,28 +292,20 @@
    },
    "candidates": [
     {
-     "id": "qm7s-3ctt",
-     "name": "Tax Increment Financing (TIF) Annual Report - Analysis of Special Tax Allocation Fund",
-     "url": "https://data.cityofchicago.org/d/qm7s-3ctt",
-     "updated": "2026-09-01",
-     "similarity": 0.488,
-     "z": 3.02
+     "id": "pner-h2in",
+     "name": "TIF Funding Sources and Uses by TIF, Fiscal Year, and Type - 1998-2014",
+     "url": "https://data.cityofchicago.org/d/pner-h2in",
+     "updated": "2019-08-14",
+     "similarity": 0.546,
+     "z": 3.63
     },
     {
-     "id": "qnek-cfpp",
-     "name": "Budget - 2015 Budget Ordinance - Appropriations",
-     "url": "https://data.cityofchicago.org/d/qnek-cfpp",
-     "updated": "2014-11-19",
-     "similarity": 0.483,
-     "z": 2.98
-    },
-    {
-     "id": "8ix6-nb7q",
-     "name": "Budget - 2012 Budget Ordinance - Appropriations",
-     "url": "https://data.cityofchicago.org/d/8ix6-nb7q",
-     "updated": "2012-10-10",
-     "similarity": 0.482,
-     "z": 2.96
+     "id": "hezc-e4be",
+     "name": "TIF Balance Sheets - 2009",
+     "url": "https://data.cityofchicago.org/d/hezc-e4be",
+     "updated": "2019-08-14",
+     "similarity": 0.49,
+     "z": 3.05
     }
    ]
   },
@@ -230,68 +322,8 @@
      "name": "Tax Increment Financing (TIF) Annual Report - Itemized List of Expenditures from the Special Tax Allocation Fund",
      "url": "https://data.cityofchicago.org/d/umwj-yc4m",
      "updated": "2026-08-31",
-     "similarity": 0.489,
-     "z": 3.44
-    },
-    {
-     "id": "qm7s-3ctt",
-     "name": "Tax Increment Financing (TIF) Annual Report - Analysis of Special Tax Allocation Fund",
-     "url": "https://data.cityofchicago.org/d/qm7s-3ctt",
-     "updated": "2026-09-01",
-     "similarity": 0.483,
-     "z": 3.37
-    }
-   ]
-  },
-  {
-   "indicator": {
-    "dcid": "undata/sdg/NY_GDP_PCAP",
-    "name": "Annual growth rate of real GDP per capita",
-    "grade_un_side": "GREEN",
-    "panel_coverage": 6
-   },
-   "candidates": [
-    {
-     "id": "j6cj-r444",
-     "name": "Public Health Statistics - Selected underlying causes of death in Chicago, 2006\u20132010 - Historical",
-     "url": "https://data.cityofchicago.org/d/j6cj-r444",
-     "updated": "2026-08-31",
-     "similarity": 0.478,
-     "z": 3.7
-    }
-   ]
-  },
-  {
-   "indicator": {
-    "dcid": "undata/sdg/SD_CPA_UPRDP",
-    "name": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
-    "grade_un_side": "AMBER",
-    "panel_coverage": 6
-   },
-   "candidates": [
-    {
-     "id": "9fit-fndz",
-     "name": "Boundaries - Special Service Areas (deprecated January 2020)",
-     "url": "https://data.cityofchicago.org/d/9fit-fndz",
-     "updated": "2020-01-13",
-     "similarity": 0.508,
-     "z": 2.45
-    },
-    {
-     "id": "i35c-ftqu",
-     "name": "Boundaries - Special Service Areas (deprecated January 2022)",
-     "url": "https://data.cityofchicago.org/d/i35c-ftqu",
-     "updated": "2022-08-23",
-     "similarity": 0.507,
-     "z": 2.44
-    },
-    {
-     "id": "uhab-t2hm",
-     "name": "Boundaries - Special Service Areas (deprecated January 2023)",
-     "url": "https://data.cityofchicago.org/d/uhab-t2hm",
-     "updated": "2023-02-10",
-     "similarity": 0.492,
-     "z": 2.26
+     "similarity": 0.497,
+     "z": 3.59
     }
    ]
   },
@@ -308,16 +340,8 @@
      "name": "Budget Transfer Report Source Data",
      "url": "https://data.cityofchicago.org/d/7x7d-3zgj",
      "updated": "2026-07-15",
-     "similarity": 0.509,
-     "z": 2.81
-    },
-    {
-     "id": "dawh-m56b",
-     "name": "Employee Payroll Data (FMPS Payroll Costing)",
-     "url": "https://data.cityofchicago.org/d/dawh-m56b",
-     "updated": "2026-05-18",
-     "similarity": 0.473,
-     "z": 2.43
+     "similarity": 0.487,
+     "z": 2.76
     }
    ]
   },
@@ -330,38 +354,30 @@
    },
    "candidates": [
     {
-     "id": "qemx-3d9f",
-     "name": "Chicago Public Schools \u2013 High School Progress Report Card (2012-2013)",
-     "url": "https://data.cityofchicago.org/d/qemx-3d9f",
-     "updated": "2013-11-26",
-     "similarity": 0.486,
-     "z": 3.12
-    },
-    {
      "id": "9xs2-f89t",
      "name": "Chicago Public Schools - Progress Report Cards (2011-2012)",
      "url": "https://data.cityofchicago.org/d/9xs2-f89t",
      "updated": "2018-09-14",
-     "similarity": 0.479,
-     "z": 3.02
+     "similarity": 0.485,
+     "z": 3.27
     }
    ]
   },
   {
    "indicator": {
-    "dcid": "undata/sdg/SG_LGL_GENEQVAW",
-    "name": "Level of achievement regarding legal frameworks that promote, enforce and monitor gender equality with respect to violence against women (Area 2)",
+    "dcid": "undata/sdg/SG_LGL_GENEQEMP",
+    "name": "Level of achievement regarding legal frameworks that promote, enforce and monitor gender equality with respect to employment and economic benefits (Area 3)",
     "grade_un_side": "AMBER",
     "panel_coverage": 6
    },
    "candidates": [
     {
-     "id": "28me-84fj",
-     "name": "Police Sentiment Scores",
-     "url": "https://data.cityofchicago.org/d/28me-84fj",
-     "updated": "2025-02-05",
-     "similarity": 0.473,
-     "z": 3.93
+     "id": "2ui7-wiq8",
+     "name": "Socioeconomically Disadvantaged Areas",
+     "url": "https://data.cityofchicago.org/d/2ui7-wiq8",
+     "updated": "2026-08-31",
+     "similarity": 0.498,
+     "z": 3.84
     }
    ]
   }

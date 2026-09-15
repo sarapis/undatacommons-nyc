@@ -54,12 +54,35 @@ def available():
         return False
 
 
-def dataset_text(d):
-    """Text to embed. Columns, tags and category carry real signal.
+# Bumped whenever the text representation changes, because cached vectors built
+# under an older scheme are silently wrong and there is no other way to notice.
+REPR_VERSION = "v2"
 
-    Adding them moved 'Proportion of municipal waste recycled' -> DSNY Monthly
-    Tonnage from rank 882 to 23, because the title never says "recycled".
+
+def dataset_head(d):
+    """The structured, high-signal fields: title, category, tags, column names."""
+    return ". ".join(p for p in [
+        d.get("name", ""), d.get("category", ""),
+        " ".join(d.get("tags") or []),
+        ", ".join((d.get("columns") or [])[:25]),
+    ] if p)
+
+
+def dataset_body(d, limit=600):
+    """Prose: the description, truncated, plus any column descriptions.
+
+    Truncated because prose is where boilerplate lives. Boston's Vision Zero
+    Fatality Records carries 1,500 characters of programme mission statement,
+    and a static embedding averages over every token -- so the mission statement
+    drowns a title and tag set that were already exactly right.
     """
+    text = ((d.get("description") or "")[:limit] + " " +
+            " ".join((d.get("column_descriptions") or [])[:10])).strip()
+    return text or d.get("name", "")
+
+
+def dataset_text(d):
+    """Legacy single-string representation, kept for the coverage report."""
     parts = [d.get("name", ""), d.get("category", ""), " ".join(d.get("tags", []) or []),
              d.get("description", "")]
     cols = d.get("columns") or []
@@ -91,20 +114,25 @@ class Index:
         # The model is part of the cache identity: vectors from two different
         # models are not interchangeable and must never be reused across them.
         tag = "" if self.model_name == MODEL else "-ml"
-        vec_path = (VECTORS if (cache_key == "nyc" and not tag)
-                    else CACHE / f"{cache_key}{tag}_catalog_vectors.npz")
+        # Model AND representation version are both part of the cache identity:
+        # vectors from a different scheme are not interchangeable, and reusing
+        # them produces wrong rankings with no visible symptom.
+        vec_path = CACHE / f"{cache_key}{tag}_{REPR_VERSION}_vectors.npz"
         if vec_path.exists():
             cached = np.load(vec_path, allow_pickle=True)
-            if len(cached["ids"]) == len(self.datasets):
-                self.vectors = cached["vectors"]
+            if "head" in cached and len(cached["ids"]) == len(self.datasets):
+                self.head, self.body = cached["head"], cached["body"]
                 return
         print(f"  embedding {len(self.datasets)} datasets ({cache_key}, "
               f"{self.model_name.split('/')[-1]})...", file=sys.stderr)
-        vecs = self.model.encode([dataset_text(d) for d in self.datasets],
+        head = self.model.encode([dataset_head(d) for d in self.datasets],
                                  show_progress_bar=False)
-        self.vectors = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
+        body = self.model.encode([dataset_body(d) for d in self.datasets],
+                                 show_progress_bar=False)
+        self.head = head / np.linalg.norm(head, axis=1, keepdims=True)
+        self.body = body / np.linalg.norm(body, axis=1, keepdims=True)
         vec_path.parent.mkdir(parents=True, exist_ok=True)
-        np.savez_compressed(vec_path, vectors=self.vectors,
+        np.savez_compressed(vec_path, head=self.head, body=self.body,
                             ids=np.array([d["id"] for d in self.datasets]))
 
     def search(self, query, k=5):
@@ -119,7 +147,12 @@ class Index:
         """
         v = self.model.encode([query], show_progress_bar=False)[0]
         v = v / self.np.linalg.norm(v)
-        sims = self.vectors @ v
+        # Score on whichever field actually carries the signal. A dataset named
+        # for a programme ("Vision Zero Fatality Records") is found by its title
+        # and tags; one with a thin title is found by its description. Taking the
+        # max of the two beats concatenating them, which lets long boilerplate
+        # dilute short precise metadata.
+        sims = self.np.maximum(self.head @ v, self.body @ v)
         mean, std = float(sims.mean()), float(sims.std()) or 1e-9
         out = []
         for i in self.np.argsort(-sims)[:k]:
