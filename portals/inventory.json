@@ -13,7 +13,16 @@
    "source": "socrata-catalog",
    "datasets": 342,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 7,
+   "catalog_sampled": 342,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 7,
+   "above_0.5": 2,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.53
   },
   {
    "portal": "datahub.austintexas.gov",
@@ -25,7 +34,16 @@
    "source": "socrata-catalog",
    "datasets": 707,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 707,
+   "match_language": "en",
+   "cutoff": 0.513,
+   "above_0.45": 33,
+   "above_0.5": 16,
+   "above_0.55": 5,
+   "above_0.6": 2,
+   "best": 0.652
   },
   {
    "portal": "data.ny.gov",
@@ -49,7 +67,16 @@
    "source": "socrata-catalog",
    "datasets": 27,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 8,
+   "catalog_sampled": 27,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 8,
+   "above_0.5": 3,
+   "above_0.55": 1,
+   "above_0.6": 0,
+   "best": 0.592
   },
   {
    "portal": "data.cityofchicago.org",
@@ -61,7 +88,16 @@
    "source": "socrata-catalog",
    "datasets": 915,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 13,
+   "catalog_sampled": 915,
+   "match_language": "en",
+   "cutoff": 0.464,
+   "above_0.45": 15,
+   "above_0.5": 6,
+   "above_0.55": 1,
+   "above_0.6": 1,
+   "best": 0.606
   },
   {
    "portal": "data.cdc.gov",
@@ -109,7 +145,16 @@
    "source": "socrata-catalog",
    "datasets": 2400,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 1500,
+   "match_language": "en",
+   "cutoff": 0.536,
+   "above_0.45": 33,
+   "above_0.5": 25,
+   "above_0.55": 8,
+   "above_0.6": 3,
+   "best": 0.61
   },
   {
    "portal": "opendata.howardcountymd.gov",
@@ -229,7 +274,16 @@
    "source": "socrata-catalog",
    "datasets": 363,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 363,
+   "match_language": "en",
+   "cutoff": 0.516,
+   "above_0.45": 25,
+   "above_0.5": 16,
+   "above_0.55": 5,
+   "above_0.6": 3,
+   "best": 0.705
   },
   {
    "portal": "data.montgomerycountymd.gov",
@@ -289,7 +343,16 @@
    "source": "socrata-catalog",
    "datasets": 121,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 121,
+   "match_language": "en",
+   "cutoff": 0.507,
+   "above_0.45": 16,
+   "above_0.5": 12,
+   "above_0.55": 9,
+   "above_0.6": 7,
+   "best": 0.751
   },
   {
    "portal": "data.calgary.ca",
@@ -301,7 +364,16 @@
    "source": "socrata-catalog",
    "datasets": 416,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 414,
+   "match_language": "en",
+   "cutoff": 0.563,
+   "above_0.45": 39,
+   "above_0.5": 25,
+   "above_0.55": 15,
+   "above_0.6": 6,
+   "best": 0.771
   },
   {
    "portal": "data.pa.gov",
@@ -337,7 +409,16 @@
    "source": "socrata-catalog",
    "datasets": 103,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 103,
+   "match_language": "en",
+   "cutoff": 0.455,
+   "above_0.45": 13,
+   "above_0.5": 8,
+   "above_0.55": 2,
+   "above_0.6": 1,
+   "best": 0.657
   },
   {
    "portal": "data.honolulu.gov",
@@ -373,7 +454,16 @@
    "source": "socrata-catalog",
    "datasets": 147,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 6,
+   "catalog_sampled": 147,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 6,
+   "above_0.5": 1,
+   "above_0.55": 1,
+   "above_0.6": 0,
+   "best": 0.582
   },
   {
    "portal": "data.delaware.gov",
@@ -409,7 +499,16 @@
    "source": "socrata-catalog",
    "datasets": 87,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 3,
+   "catalog_sampled": 87,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 3,
+   "above_0.5": 2,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.531
   },
   {
    "portal": "data.cambridgema.gov",
@@ -421,7 +520,16 @@
    "source": "socrata-catalog",
    "datasets": 281,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 281,
+   "match_language": "en",
+   "cutoff": 0.528,
+   "above_0.45": 25,
+   "above_0.5": 18,
+   "above_0.55": 5,
+   "above_0.6": 4,
+   "best": 0.75
   },
   {
    "portal": "data.transportation.gov",
@@ -469,7 +577,16 @@
    "source": "socrata-catalog",
    "datasets": 102,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 1,
+   "catalog_sampled": 102,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.456
   },
   {
    "portal": "data.texas.gov",
@@ -517,7 +634,16 @@
    "source": "socrata-catalog",
    "datasets": 209,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 7,
+   "catalog_sampled": 209,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 7,
+   "above_0.5": 3,
+   "above_0.55": 2,
+   "above_0.6": 2,
+   "best": 0.675
   },
   {
    "portal": "internal-data.ct.gov",
@@ -541,7 +667,16 @@
    "source": "socrata-catalog",
    "datasets": 89,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 10,
+   "catalog_sampled": 89,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 10,
+   "above_0.5": 6,
+   "above_0.55": 3,
+   "above_0.6": 1,
+   "best": 0.687
   },
   {
    "portal": "data.sonomacounty.ca.gov",
@@ -589,7 +724,16 @@
    "source": "socrata-catalog",
    "datasets": 1421,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 1421,
+   "match_language": "en",
+   "cutoff": 0.574,
+   "above_0.45": 24,
+   "above_0.5": 17,
+   "above_0.55": 15,
+   "above_0.6": 7,
+   "best": 0.702
   },
   {
    "portal": "data.brla.gov",
@@ -601,7 +745,16 @@
    "source": "socrata-catalog",
    "datasets": 239,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 9,
+   "catalog_sampled": 239,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 9,
+   "above_0.5": 6,
+   "above_0.55": 2,
+   "above_0.6": 1,
+   "best": 0.82
   },
   {
    "portal": "data.nasa.gov",
@@ -625,7 +778,16 @@
    "source": "socrata-catalog",
    "datasets": 313,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 10,
+   "catalog_sampled": 313,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 10,
+   "above_0.5": 2,
+   "above_0.55": 2,
+   "above_0.6": 1,
+   "best": 0.679
   },
   {
    "portal": "internal-sandiegocounty.data.socrata.com",
@@ -661,7 +823,16 @@
    "source": "socrata-catalog",
    "datasets": 235,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 235,
+   "match_language": "en",
+   "cutoff": 0.502,
+   "above_0.45": 20,
+   "above_0.5": 12,
+   "above_0.55": 5,
+   "above_0.6": 3,
+   "best": 0.705
   },
   {
    "portal": "www.data.act.gov.au",
@@ -781,7 +952,16 @@
    "source": "socrata-catalog",
    "datasets": 202,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 202,
+   "match_language": "en",
+   "cutoff": 0.493,
+   "above_0.45": 17,
+   "above_0.5": 10,
+   "above_0.55": 4,
+   "above_0.6": 2,
+   "best": 0.7
   },
   {
    "portal": "performance.commerce.gov",
@@ -853,7 +1033,16 @@
    "source": "socrata-catalog",
    "datasets": 44,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 44,
+   "match_language": "en",
+   "cutoff": 0.459,
+   "above_0.45": 13,
+   "above_0.5": 7,
+   "above_0.55": 3,
+   "above_0.6": 1,
+   "best": 0.616
   },
   {
    "portal": "healthdata.nj.gov",
@@ -877,7 +1066,16 @@
    "source": "socrata-catalog",
    "datasets": 303,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 303,
+   "match_language": "en",
+   "cutoff": 0.487,
+   "above_0.45": 20,
+   "above_0.5": 10,
+   "above_0.55": 3,
+   "above_0.6": 0,
+   "best": 0.593
   },
   {
    "portal": "janesville.data.socrata.com",
@@ -889,7 +1087,16 @@
    "source": "socrata-catalog",
    "datasets": 42,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 5,
+   "catalog_sampled": 42,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 5,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.472
   },
   {
    "portal": "data.dumfriesva.gov",
@@ -937,7 +1144,16 @@
    "source": "socrata-catalog",
    "datasets": 121,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 121,
+   "match_language": "en",
+   "cutoff": 0.456,
+   "above_0.45": 14,
+   "above_0.5": 4,
+   "above_0.55": 3,
+   "above_0.6": 1,
+   "best": 0.916
   },
   {
    "portal": "data.richmondgov.com",
@@ -949,7 +1165,16 @@
    "source": "socrata-catalog",
    "datasets": 31,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 31,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.415
   },
   {
    "portal": "bronx.lehman.cuny.edu",
@@ -1045,7 +1270,16 @@
    "source": "socrata-catalog",
    "datasets": 33,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 1,
+   "catalog_sampled": 33,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.47
   },
   {
    "portal": "data.readingpa.gov",
@@ -1093,7 +1327,16 @@
    "source": "socrata-catalog",
    "datasets": 9,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 3,
+   "catalog_sampled": 9,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 3,
+   "above_0.5": 2,
+   "above_0.55": 2,
+   "above_0.6": 1,
+   "best": 0.715
   },
   {
    "portal": "data.macoupincountyil.gov",
@@ -1141,7 +1384,16 @@
    "source": "socrata-catalog",
    "datasets": 35,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 1,
+   "catalog_sampled": 35,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.493
   },
   {
    "portal": "datamgmt.nassaucountyny.gov",
@@ -1213,7 +1465,16 @@
    "source": "socrata-catalog",
    "datasets": 932,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 8,
+   "catalog_sampled": 932,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 8,
+   "above_0.5": 6,
+   "above_0.55": 4,
+   "above_0.6": 2,
+   "best": 0.635
   },
   {
    "portal": "www.transparentrichmond.org",
@@ -1225,7 +1486,16 @@
    "source": "socrata-catalog",
    "datasets": 141,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 141,
+   "match_language": "en",
+   "cutoff": 0.469,
+   "above_0.45": 18,
+   "above_0.5": 9,
+   "above_0.55": 4,
+   "above_0.6": 0,
+   "best": 0.598
   },
   {
    "portal": "data.urbanaillinois.us",
@@ -1273,7 +1543,16 @@
    "source": "socrata-catalog",
    "datasets": 2,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 2,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.412
   },
   {
    "portal": "dashboard.plano.gov",
@@ -1357,7 +1636,16 @@
    "source": "socrata-catalog",
    "datasets": 21,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 21,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.404
   },
   {
    "portal": "data.mesaaz.gov",
@@ -1369,7 +1657,16 @@
    "source": "socrata-catalog",
    "datasets": 18,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 1,
+   "catalog_sampled": 18,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 1,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.509
   },
   {
    "portal": "data.bloomington.in.gov",
@@ -1441,7 +1738,16 @@
    "source": "socrata-catalog",
    "datasets": 60,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 60,
+   "match_language": "en",
+   "cutoff": 0.463,
+   "above_0.45": 13,
+   "above_0.5": 4,
+   "above_0.55": 2,
+   "above_0.6": 2,
+   "best": 0.652
   },
   {
    "portal": "openinformation.novascotia.ca",
@@ -1489,7 +1795,16 @@
    "source": "socrata-catalog",
    "datasets": 15,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 15,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.443
   },
   {
    "portal": "opendata.fcgov.com",
@@ -1693,7 +2008,16 @@
    "source": "socrata-catalog",
    "datasets": 4,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 1,
+   "catalog_sampled": 4,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.454
   },
   {
    "portal": "cityofcamas.demo.socrata.com",
@@ -1705,7 +2029,16 @@
    "source": "socrata-catalog",
    "datasets": 8,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 1,
+   "catalog_sampled": 8,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 1,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.521
   },
   {
    "portal": "stat.montgomerycountymd.gov",
@@ -1729,7 +2062,16 @@
    "source": "socrata-catalog",
    "datasets": 64,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 7,
+   "catalog_sampled": 64,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 7,
+   "above_0.5": 1,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.535
   },
   {
    "portal": "cityoffairfaxpd.data.socrata.com",
@@ -1741,7 +2083,16 @@
    "source": "socrata-catalog",
    "datasets": 6,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 6,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.411
   },
   {
    "portal": "gainesville-govstat.demo.socrata.com",
@@ -1753,7 +2104,16 @@
    "source": "socrata-catalog",
    "datasets": 68,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 2,
+   "catalog_sampled": 68,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 2,
+   "above_0.5": 1,
+   "above_0.55": 1,
+   "above_0.6": 1,
+   "best": 0.614
   },
   {
    "portal": "johnstonia.data.socrata.com",
@@ -1837,7 +2197,16 @@
    "source": "socrata-catalog",
    "datasets": 134,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 134,
+   "match_language": "en",
+   "cutoff": 0.504,
+   "above_0.45": 17,
+   "above_0.5": 12,
+   "above_0.55": 6,
+   "above_0.6": 3,
+   "best": 0.739
   },
   {
    "portal": "carsoncity.data.socrata.com",
@@ -1861,7 +2230,16 @@
    "source": "socrata-catalog",
    "datasets": 73,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 9,
+   "catalog_sampled": 73,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 9,
+   "above_0.5": 5,
+   "above_0.55": 1,
+   "above_0.6": 0,
+   "best": 0.558
   },
   {
    "portal": "mesa-az.demo.socrata.com",
@@ -1945,7 +2323,16 @@
    "source": "okfn-probed",
    "datasets": 672,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 672,
+   "match_language": "es",
+   "cutoff": 0.574,
+   "above_0.45": 29,
+   "above_0.5": 20,
+   "above_0.55": 16,
+   "above_0.6": 9,
+   "best": 0.761
   },
   {
    "portal": "data.buenosaires.gob.ar",
@@ -1957,7 +2344,12 @@
    "source": "okfn-probed",
    "datasets": 454,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 454,
+   "match_language": "es",
+   "cutoff": 0.504,
+   "abs_error": "PortalError"
   },
   {
    "portal": "datos.gob.cl",
@@ -1981,7 +2373,16 @@
    "source": "okfn-probed",
    "datasets": 235,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 235,
+   "match_language": "en",
+   "cutoff": 0.458,
+   "above_0.45": 12,
+   "above_0.5": 6,
+   "above_0.55": 4,
+   "above_0.6": 3,
+   "best": 0.692
   },
   {
    "portal": "data.sanjoseca.gov",
@@ -1993,7 +2394,16 @@
    "source": "okfn-probed",
    "datasets": 170,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 170,
+   "match_language": "en",
+   "cutoff": 0.458,
+   "above_0.45": 13,
+   "above_0.5": 6,
+   "above_0.55": 3,
+   "above_0.6": 2,
+   "best": 0.648
   },
   {
    "portal": "dati.comune.matera.it",
@@ -2005,7 +2415,16 @@
    "source": "okfn-probed",
    "datasets": 249,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 11,
+   "catalog_sampled": 249,
+   "match_language": "it",
+   "cutoff": 0.45,
+   "above_0.45": 11,
+   "above_0.5": 5,
+   "above_0.55": 2,
+   "above_0.6": 1,
+   "best": 0.649
   },
   {
    "portal": "dati.comune.milano.it",
@@ -2017,7 +2436,16 @@
    "source": "okfn-probed",
    "datasets": 2602,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 10,
+   "catalog_sampled": 1500,
+   "match_language": "it",
+   "cutoff": 0.45,
+   "above_0.45": 10,
+   "above_0.5": 5,
+   "above_0.55": 4,
+   "above_0.6": 4,
+   "best": 0.684
   },
   {
    "portal": "opendata.swiss",
@@ -2053,7 +2481,16 @@
    "source": "okfn-probed",
    "datasets": 199,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 199,
+   "match_language": "hr",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.445
   },
   {
    "portal": "data.gov.gr",
@@ -2113,7 +2550,8 @@
    "source": "okfn-probed",
    "datasets": 641,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates_error": "PortalError"
   },
   {
    "portal": "data.london.gov.uk",
@@ -2173,7 +2611,8 @@
    "source": "okfn-probed",
    "datasets": 282,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates_error": "PortalError"
   },
   {
    "portal": "www.opendata.hu",
@@ -2257,7 +2696,16 @@
    "source": "okfn-probed",
    "datasets": 404,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 0,
+   "catalog_sampled": 404,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.382
   },
   {
    "portal": "data.gov.ua",
@@ -2281,7 +2729,16 @@
    "source": "okfn-probed",
    "datasets": 151,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 13,
+   "catalog_sampled": 151,
+   "match_language": "de",
+   "cutoff": 0.47,
+   "above_0.45": 15,
+   "above_0.5": 7,
+   "above_0.55": 3,
+   "above_0.6": 2,
+   "best": 0.67
   },
   {
    "portal": "dados.fortaleza.ce.gov.br",
@@ -2293,7 +2750,16 @@
    "source": "okfn-probed",
    "datasets": 637,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 637,
+   "match_language": "pt",
+   "cutoff": 0.503,
+   "above_0.45": 20,
+   "above_0.5": 12,
+   "above_0.55": 7,
+   "above_0.6": 6,
+   "best": 0.678
   },
   {
    "portal": "dados.recife.pe.gov.br",
@@ -2305,7 +2771,16 @@
    "source": "okfn-probed",
    "datasets": 223,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 223,
+   "match_language": "pt",
+   "cutoff": 0.526,
+   "above_0.45": 20,
+   "above_0.5": 15,
+   "above_0.55": 8,
+   "above_0.6": 0,
+   "best": 0.599
   },
   {
    "portal": "dados.rs.gov.br",
@@ -2341,7 +2816,16 @@
    "source": "okfn-probed",
    "datasets": 482,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 483,
+   "match_language": "pt",
+   "cutoff": 0.53,
+   "above_0.45": 22,
+   "above_0.5": 15,
+   "above_0.55": 7,
+   "above_0.6": 0,
+   "best": 0.57
   },
   {
    "portal": "dados.pb.gov.br",
@@ -2365,7 +2849,16 @@
    "source": "okfn-probed",
    "datasets": 606,
    "error": null,
-   "level": "city"
+   "level": "city",
+   "candidates": 12,
+   "catalog_sampled": 606,
+   "match_language": "pt",
+   "cutoff": 0.537,
+   "above_0.45": 29,
+   "above_0.5": 22,
+   "above_0.55": 9,
+   "above_0.6": 5,
+   "best": 0.732
   },
   {
    "portal": "opendata.transport.nsw.gov.au",
@@ -2517,7 +3010,16 @@
    "region": "Australasia",
    "datasets": 188847,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 12,
+   "catalog_sampled": 1500,
+   "match_language": "en",
+   "cutoff": 0.571,
+   "above_0.45": 32,
+   "above_0.5": 20,
+   "above_0.55": 14,
+   "above_0.6": 8,
+   "best": 0.731
   },
   {
    "portal": "data.gov.au",
@@ -2951,7 +3453,16 @@
    "region": "North America",
    "datasets": 9761,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 0,
+   "catalog_sampled": 1500,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.442
   },
   {
    "portal": "opendatadc.org",
@@ -3077,7 +3588,16 @@
    "region": "Europe",
    "datasets": 1377,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 0,
+   "catalog_sampled": 1377,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.352
   },
   {
    "portal": "opendata.cmt.es",
@@ -3637,7 +4157,16 @@
    "region": "South America",
    "datasets": 2,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 0,
+   "catalog_sampled": 2,
+   "match_language": "es",
+   "cutoff": 0.45,
+   "above_0.45": 0,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.321
   },
   {
    "portal": "edx.netl.doe.gov",
@@ -3721,7 +4250,16 @@
    "region": "Asia",
    "datasets": 430,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 8,
+   "catalog_sampled": 430,
+   "match_language": "en",
+   "cutoff": 0.45,
+   "above_0.45": 8,
+   "above_0.5": 1,
+   "above_0.55": 1,
+   "above_0.6": 0,
+   "best": 0.576
   },
   {
    "portal": "hdx.rwlabs.org",
@@ -4029,7 +4567,8 @@
    "region": "Europe",
    "datasets": 406,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates_error": "PortalError"
   },
   {
    "portal": "datastore.landcareresearch.co.nz",
@@ -4323,7 +4862,16 @@
    "region": "South America",
    "datasets": 180,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 5,
+   "catalog_sampled": 180,
+   "match_language": "es",
+   "cutoff": 0.45,
+   "above_0.45": 5,
+   "above_0.5": 3,
+   "above_0.55": 2,
+   "above_0.6": 2,
+   "best": 0.702
   },
   {
    "portal": "datos.ciudaddemendoza.gov.ar",
@@ -4337,7 +4885,16 @@
    "region": "South America",
    "datasets": 180,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 5,
+   "catalog_sampled": 180,
+   "match_language": "es",
+   "cutoff": 0.45,
+   "above_0.45": 5,
+   "above_0.5": 3,
+   "above_0.55": 2,
+   "above_0.6": 2,
+   "best": 0.702
   },
   {
    "portal": "energydata.uct.ac.za",
@@ -4379,7 +4936,16 @@
    "region": "Europe",
    "datasets": 930,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 12,
+   "catalog_sampled": 930,
+   "match_language": "it",
+   "cutoff": 0.615,
+   "above_0.45": 39,
+   "above_0.5": 29,
+   "above_0.55": 19,
+   "above_0.6": 13,
+   "best": 0.738
   },
   {
    "portal": "www.opendatanetwork.it",
@@ -4407,7 +4973,16 @@
    "region": "Europe",
    "datasets": 942,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 12,
+   "catalog_sampled": 942,
+   "match_language": "de",
+   "cutoff": 0.51,
+   "above_0.45": 23,
+   "above_0.5": 16,
+   "above_0.55": 5,
+   "above_0.6": 3,
+   "best": 0.691
   },
   {
    "portal": "dados.ufrn.br",
@@ -4477,7 +5052,16 @@
    "region": "Europe",
    "datasets": 631,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 12,
+   "catalog_sampled": 631,
+   "match_language": "da",
+   "cutoff": 0.52,
+   "above_0.45": 28,
+   "above_0.5": 16,
+   "above_0.55": 6,
+   "above_0.6": 4,
+   "best": 0.774
   },
   {
    "portal": "data.brisbane.qld.gov.au",
@@ -4519,7 +5103,16 @@
    "region": "Europe",
    "datasets": 7,
    "error": null,
-   "level": "city-or-region"
+   "level": "city-or-region",
+   "candidates": 1,
+   "catalog_sampled": 7,
+   "match_language": "es",
+   "cutoff": 0.45,
+   "above_0.45": 1,
+   "above_0.5": 0,
+   "above_0.55": 0,
+   "above_0.6": 0,
+   "best": 0.47
   },
   {
    "portal": "datos.jus.gov.ar",

@@ -31,3 +31,6 @@ nav:
   - title: Portal inventory
     id: portals
     url: /artifacts/portals-latest/
+  - title: Municipal readiness
+    id: readiness
+    url: /artifacts/readiness-latest/
