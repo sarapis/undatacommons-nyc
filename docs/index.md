@@ -25,10 +25,13 @@ bottom half. Same number, different comparator, opposite conclusion.
 The pipeline now runs against **any city** on Socrata or CKAN
 ([`cities/`](https://github.com/sarapis/undatacommons-nyc/tree/main/cities)), and the first
 five-city run is mostly a **negative result worth having**: the plumbing generalises, the matching
-does not. Cross-language matching fails outright (Madrid 0.27, Milan 0.29, against Boston 0.58 —
-Milan has a larger catalog than NYC and matches nothing), and the similarity threshold calibrated
-on NYC admits nonsense in smaller catalogs. Roughly 2–3 candidates per English city are plausible
-and no substantive SDG indicator matched anywhere.
+does not. Cross-language matching needed a **multilingual embedding model**, now selected per catalog
+language — Madrid went 0 → 19 candidates and Milan 0 → 5, with Milan's largely plausible. That fix
+is a trade-off, not an upgrade: on the NYC ground truth the English model ranks the correct dataset
+at median **23** and the multilingual one at **81**, so English cities keep the English model. The
+**similarity threshold still does not transfer between catalogs**, which is now the main blocker —
+roughly 2–3 candidates per English city are plausible and no substantive SDG indicator matched
+outside NYC.
 
 There is also **no global registry of city open data portals** — every canonical one has rotted —
 so [`portals/`](https://github.com/sarapis/undatacommons-nyc/tree/main/portals) constructs one.
@@ -206,7 +209,7 @@ building against.
 - [x] Demo at five cards — three trends, one rank-only, one with no comparator
 - [x] Multi-city bootstrapping over Socrata + CKAN — plumbing works, matcher does not transfer
 - [x] Portal inventory constructed (159 Socrata, 39 CKAN) — no global registry survives
-- [ ] Multilingual embedding model — the blocker for every non-anglophone city
+- [x] Multilingual embedding model, selected per catalog language (Madrid 0→19, Milan 0→5)
 - [ ] Per-catalog threshold calibration — an absolute cosine score does not travel
 - [ ] **17 Sep: re-run every probe against the public launch and diff the DCIDs**
 - [ ] Comparability grader using unit DCID + observationPeriod as machine-checkable inputs
