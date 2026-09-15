@@ -59,7 +59,7 @@ handful can honestly share an axis.
 - **BLOCKED** — a comparison cannot be made at all. Say why.
 - **RANK-ONLY** — NYC can be placed among countries for a single year and cannot
   be tracked against them over time.
-- **NO-NYC-SOURCE / NO-SIGNAL** — no NYC counterpart, or the indicator is flat
+- **NO-SOURCE / NO-SIGNAL** — no local counterpart, or the indicator is flat
   everywhere and carries no information.
 
 `benchmark` refuses on anything outside PROXY/DIRECT. That refusal is the
