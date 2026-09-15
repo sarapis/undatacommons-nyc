@@ -1,0 +1,606 @@
+{
+ "ready": [
+  {
+   "portal": "data.cityofnewyork.us",
+   "url": "https://data.cityofnewyork.us",
+   "platform": "socrata",
+   "datasets": 2400,
+   "city": "New York",
+   "state_fips": "36",
+   "place_fips": "51000",
+   "population": 8258035,
+   "denominator": "Census ACS 1-year B01003_001E, place 51000 / state 36"
+  },
+  {
+   "portal": "performance.seattle.gov",
+   "url": "https://performance.seattle.gov",
+   "platform": "socrata",
+   "datasets": 932,
+   "city": "Seattle",
+   "state_fips": "53",
+   "place_fips": "63000",
+   "population": 755081,
+   "denominator": "Census ACS 1-year B01003_001E, place 63000 / state 53"
+  },
+  {
+   "portal": "data.cityofchicago.org",
+   "url": "https://data.cityofchicago.org",
+   "platform": "socrata",
+   "datasets": 915,
+   "city": "Chicago",
+   "state_fips": "17",
+   "place_fips": "14000",
+   "population": 2664454,
+   "denominator": "Census ACS 1-year B01003_001E, place 14000 / state 17"
+  },
+  {
+   "portal": "datahub.austintexas.gov",
+   "url": "https://datahub.austintexas.gov",
+   "platform": "socrata",
+   "datasets": 707,
+   "city": "Austin",
+   "state_fips": "48",
+   "place_fips": "05000",
+   "population": 979700,
+   "denominator": "Census ACS 1-year B01003_001E, place 05000 / state 48"
+  },
+  {
+   "portal": "www.dallasopendata.com",
+   "url": "https://www.dallasopendata.com",
+   "platform": "socrata",
+   "datasets": 342,
+   "city": "Dallas",
+   "state_fips": "48",
+   "place_fips": "19000",
+   "population": 1302859,
+   "denominator": "Census ACS 1-year B01003_001E, place 19000 / state 48"
+  },
+  {
+   "portal": "data.oaklandca.gov",
+   "url": "https://data.oaklandca.gov",
+   "platform": "socrata",
+   "datasets": 313,
+   "city": "Oakland",
+   "state_fips": "06",
+   "place_fips": "53000",
+   "population": 436508,
+   "denominator": "Census ACS 1-year B01003_001E, place 53000 / state 06"
+  },
+  {
+   "portal": "citydata.mesaaz.gov",
+   "url": "https://citydata.mesaaz.gov",
+   "platform": "socrata",
+   "datasets": 303,
+   "city": "Mesa",
+   "state_fips": "04",
+   "place_fips": "46000",
+   "population": 511624,
+   "denominator": "Census ACS 1-year B01003_001E, place 46000 / state 04"
+  },
+  {
+   "portal": "data.cambridgema.gov",
+   "url": "https://data.cambridgema.gov",
+   "platform": "socrata",
+   "datasets": 281,
+   "city": "Cambridge",
+   "state_fips": "25",
+   "place_fips": "11000",
+   "population": 118208,
+   "denominator": "Census ACS 1-year B01003_001E, place 11000 / state 25"
+  },
+  {
+   "portal": "data.boston.gov",
+   "url": "https://data.boston.gov",
+   "platform": "ckan",
+   "datasets": 235,
+   "city": "Boston",
+   "state_fips": "25",
+   "place_fips": "07000",
+   "population": 652442,
+   "denominator": "Census ACS 1-year B01003_001E, place 07000 / state 25"
+  },
+  {
+   "portal": "data.sanjoseca.gov",
+   "url": "https://data.sanjoseca.gov",
+   "platform": "ckan",
+   "datasets": 170,
+   "city": "San Jose",
+   "state_fips": "06",
+   "place_fips": "68000",
+   "population": 969615,
+   "denominator": "Census ACS 1-year B01003_001E, place 68000 / state 06"
+  },
+  {
+   "portal": "cos-data.seattle.gov",
+   "url": "https://cos-data.seattle.gov",
+   "platform": "socrata",
+   "datasets": 147,
+   "city": "Seattle",
+   "state_fips": "53",
+   "place_fips": "63000",
+   "population": 755081,
+   "denominator": "Census ACS 1-year B01003_001E, place 63000 / state 53"
+  },
+  {
+   "portal": "data.providenceri.gov",
+   "url": "https://data.providenceri.gov",
+   "platform": "socrata",
+   "datasets": 121,
+   "city": "Providence",
+   "state_fips": "44",
+   "place_fips": "59000",
+   "population": 190791,
+   "denominator": "Census ACS 1-year B01003_001E, place 59000 / state 44"
+  },
+  {
+   "portal": "data.everettwa.gov",
+   "url": "https://data.everettwa.gov",
+   "platform": "socrata",
+   "datasets": 121,
+   "city": "Everett",
+   "state_fips": "53",
+   "place_fips": "22640",
+   "population": 111147,
+   "denominator": "Census ACS 1-year B01003_001E, place 22640 / state 53"
+  },
+  {
+   "portal": "data.norfolk.gov",
+   "url": "https://data.norfolk.gov",
+   "platform": "socrata",
+   "datasets": 103,
+   "city": "Norfolk",
+   "state_fips": "51",
+   "place_fips": "57000",
+   "population": 230930,
+   "denominator": "Census ACS 1-year B01003_001E, place 57000 / state 51"
+  },
+  {
+   "portal": "data.cincinnati-oh.gov",
+   "url": "https://data.cincinnati-oh.gov",
+   "platform": "socrata",
+   "datasets": 102,
+   "city": "Cincinnati",
+   "state_fips": "39",
+   "place_fips": "15000",
+   "population": 311112,
+   "denominator": "Census ACS 1-year B01003_001E, place 15000 / state 39"
+  },
+  {
+   "portal": "data.cityofgainesville.org",
+   "url": "https://data.cityofgainesville.org",
+   "platform": "socrata",
+   "datasets": 89,
+   "city": "Gainesville",
+   "state_fips": "12",
+   "place_fips": "25175",
+   "population": 145800,
+   "denominator": "Census ACS 1-year B01003_001E, place 25175 / state 12"
+  },
+  {
+   "portal": "performance.ci.janesville.wi.us",
+   "url": "https://performance.ci.janesville.wi.us",
+   "platform": "socrata",
+   "datasets": 73,
+   "city": "Janesville",
+   "state_fips": "55",
+   "place_fips": "37825",
+   "population": 66113,
+   "denominator": "Census ACS 1-year B01003_001E, place 37825 / state 55"
+  },
+  {
+   "portal": "gainesville-govstat.demo.socrata.com",
+   "url": "https://gainesville-govstat.demo.socrata.com",
+   "platform": "socrata",
+   "datasets": 68,
+   "city": "Gainesville",
+   "state_fips": "12",
+   "place_fips": "25175",
+   "population": 145800,
+   "denominator": "Census ACS 1-year B01003_001E, place 25175 / state 12"
+  },
+  {
+   "portal": "data.roseville.ca.us",
+   "url": "https://data.roseville.ca.us",
+   "platform": "socrata",
+   "datasets": 60,
+   "city": "Roseville",
+   "state_fips": "06",
+   "place_fips": "62938",
+   "population": 159126,
+   "denominator": "Census ACS 1-year B01003_001E, place 62938 / state 06"
+  },
+  {
+   "portal": "data.cityofberkeley.info",
+   "url": "https://data.cityofberkeley.info",
+   "platform": "socrata",
+   "datasets": 44,
+   "city": "Berkeley",
+   "state_fips": "06",
+   "place_fips": "06000",
+   "population": 118962,
+   "denominator": "Census ACS 1-year B01003_001E, place 06000 / state 06"
+  },
+  {
+   "portal": "janesville.data.socrata.com",
+   "url": "https://janesville.data.socrata.com",
+   "platform": "socrata",
+   "datasets": 42,
+   "city": "Janesville",
+   "state_fips": "55",
+   "place_fips": "37825",
+   "population": 66113,
+   "denominator": "Census ACS 1-year B01003_001E, place 37825 / state 55"
+  },
+  {
+   "portal": "data.somervillema.gov",
+   "url": "https://data.somervillema.gov",
+   "platform": "socrata",
+   "datasets": 33,
+   "city": "Somerville",
+   "state_fips": "25",
+   "place_fips": "62535",
+   "population": 80407,
+   "denominator": "Census ACS 1-year B01003_001E, place 62535 / state 25"
+  },
+  {
+   "portal": "data.cityoforlando.net",
+   "url": "https://data.cityoforlando.net",
+   "platform": "socrata",
+   "datasets": 27,
+   "city": "Orlando",
+   "state_fips": "12",
+   "place_fips": "53000",
+   "population": 320753,
+   "denominator": "Census ACS 1-year B01003_001E, place 53000 / state 12"
+  },
+  {
+   "portal": "data.mesaaz.gov",
+   "url": "https://data.mesaaz.gov",
+   "platform": "socrata",
+   "datasets": 18,
+   "city": "Mesa",
+   "state_fips": "04",
+   "place_fips": "46000",
+   "population": 511624,
+   "denominator": "Census ACS 1-year B01003_001E, place 46000 / state 04"
+  },
+  {
+   "portal": "fiscalfocus.pittsburghpa.gov",
+   "url": "https://fiscalfocus.pittsburghpa.gov",
+   "platform": "socrata",
+   "datasets": 15,
+   "city": "Pittsburgh",
+   "state_fips": "42",
+   "place_fips": "61000",
+   "population": 303254,
+   "denominator": "Census ACS 1-year B01003_001E, place 61000 / state 42"
+  },
+  {
+   "portal": "opendata.cityofmesquite.com",
+   "url": "https://opendata.cityofmesquite.com",
+   "platform": "socrata",
+   "datasets": 4,
+   "city": "Mesquite",
+   "state_fips": "48",
+   "place_fips": "47892",
+   "population": 147522,
+   "denominator": "Census ACS 1-year B01003_001E, place 47892 / state 48"
+  },
+  {
+   "portal": "kirklandwa.data.socrata.com",
+   "url": "https://kirklandwa.data.socrata.com",
+   "platform": "socrata",
+   "datasets": 2,
+   "city": "Kirkland",
+   "state_fips": "53",
+   "place_fips": "35940",
+   "population": 91190,
+   "denominator": "Census ACS 1-year B01003_001E, place 35940 / state 53"
+  }
+ ],
+ "ambiguous": [
+  {
+   "portal": "data.richmondgov.com",
+   "url": "https://data.richmondgov.com",
+   "platform": "socrata",
+   "datasets": 31,
+   "reason": "ambiguous: Richmond city, California; Richmond city, Virginia"
+  },
+  {
+   "portal": "www.transparentrichmond.org",
+   "url": "https://www.transparentrichmond.org",
+   "platform": "socrata",
+   "datasets": 141,
+   "reason": "ambiguous: Richmond city, California; Richmond city, Virginia"
+  }
+ ],
+ "no_denominator": [
+  {
+   "portal": "data.lacity.org",
+   "url": "https://data.lacity.org",
+   "platform": "socrata",
+   "datasets": 363,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "data.calgary.ca",
+   "url": "https://data.calgary.ca",
+   "platform": "socrata",
+   "datasets": 416,
+   "reason": "non-US domain (ca); ACS does not cover it"
+  },
+  {
+   "portal": "controllerdata.lacity.org",
+   "url": "https://controllerdata.lacity.org",
+   "platform": "socrata",
+   "datasets": 87,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "data.nola.gov",
+   "url": "https://data.nola.gov",
+   "platform": "socrata",
+   "datasets": 209,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "data.edmonton.ca",
+   "url": "https://data.edmonton.ca",
+   "platform": "socrata",
+   "datasets": 1421,
+   "reason": "non-US domain (ca); ACS does not cover it"
+  },
+  {
+   "portal": "data.brla.gov",
+   "url": "https://data.brla.gov",
+   "platform": "socrata",
+   "datasets": 239,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "data.winnipeg.ca",
+   "url": "https://data.winnipeg.ca",
+   "platform": "socrata",
+   "datasets": 235,
+   "reason": "non-US domain (ca); ACS does not cover it"
+  },
+  {
+   "portal": "data.kcmo.org",
+   "url": "https://data.kcmo.org",
+   "platform": "socrata",
+   "datasets": 202,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "openperformance.edmonton.ca",
+   "url": "https://openperformance.edmonton.ca",
+   "platform": "socrata",
+   "datasets": 9,
+   "reason": "non-US domain (ca); ACS does not cover it"
+  },
+  {
+   "portal": "performance.cityofrc.us",
+   "url": "https://performance.cityofrc.us",
+   "platform": "socrata",
+   "datasets": 35,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "covid19.buffalony.gov",
+   "url": "https://covid19.buffalony.gov",
+   "platform": "socrata",
+   "datasets": 21,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "cityofcamas.demo.socrata.com",
+   "url": "https://cityofcamas.demo.socrata.com",
+   "platform": "socrata",
+   "datasets": 8,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "performance.cityofcamas.us",
+   "url": "https://performance.cityofcamas.us",
+   "platform": "socrata",
+   "datasets": 64,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "cityoffairfaxpd.data.socrata.com",
+   "url": "https://cityoffairfaxpd.data.socrata.com",
+   "platform": "socrata",
+   "datasets": 6,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "data.sustainablesm.org",
+   "url": "https://data.sustainablesm.org",
+   "platform": "socrata",
+   "datasets": 134,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "datos.madrid.es",
+   "url": "https://datos.madrid.es",
+   "platform": "ckan",
+   "datasets": 672,
+   "reason": "non-US domain (es); ACS does not cover it"
+  },
+  {
+   "portal": "data.buenosaires.gob.ar",
+   "url": "https://data.buenosaires.gob.ar",
+   "platform": "ckan",
+   "datasets": 454,
+   "reason": "non-US domain (ar); ACS does not cover it"
+  },
+  {
+   "portal": "dati.comune.matera.it",
+   "url": "https://dati.comune.matera.it",
+   "platform": "ckan",
+   "datasets": 249,
+   "reason": "non-US domain (it); ACS does not cover it"
+  },
+  {
+   "portal": "dati.comune.milano.it",
+   "url": "https://dati.comune.milano.it",
+   "platform": "ckan",
+   "datasets": 2602,
+   "reason": "non-US domain (it); ACS does not cover it"
+  },
+  {
+   "portal": "data.zagreb.hr",
+   "url": "https://data.zagreb.hr",
+   "platform": "ckan",
+   "datasets": 199,
+   "reason": "non-US domain (hr); ACS does not cover it"
+  },
+  {
+   "portal": "leedsdatamill.org",
+   "url": "https://leedsdatamill.org",
+   "platform": "ckan",
+   "datasets": 641,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "www.opendata-hro.de",
+   "url": "https://www.opendata-hro.de",
+   "platform": "ckan",
+   "datasets": 282,
+   "reason": "non-US domain (de); ACS does not cover it"
+  },
+  {
+   "portal": "dados.recife.pe.gov.br",
+   "url": "https://dados.recife.pe.gov.br",
+   "platform": "ckan",
+   "datasets": 223,
+   "reason": "non-US domain (br); ACS does not cover it"
+  },
+  {
+   "portal": "donnees.ville.montreal.qc.ca",
+   "url": "https://donnees.ville.montreal.qc.ca",
+   "platform": "ckan",
+   "datasets": 404,
+   "reason": "non-US domain (ca); ACS does not cover it"
+  },
+  {
+   "portal": "transparenz.karlsruhe.de",
+   "url": "https://transparenz.karlsruhe.de",
+   "platform": "ckan",
+   "datasets": 151,
+   "reason": "non-US domain (de); ACS does not cover it"
+  },
+  {
+   "portal": "dados.fortaleza.ce.gov.br",
+   "url": "https://dados.fortaleza.ce.gov.br",
+   "platform": "ckan",
+   "datasets": 637,
+   "reason": "non-US domain (br); ACS does not cover it"
+  },
+  {
+   "portal": "dados.recife.pe.gov.br",
+   "url": "https://dados.recife.pe.gov.br",
+   "platform": "ckan",
+   "datasets": 223,
+   "reason": "non-US domain (br); ACS does not cover it"
+  },
+  {
+   "portal": "dados.prefeitura.sp.gov.br",
+   "url": "https://dados.prefeitura.sp.gov.br",
+   "platform": "ckan",
+   "datasets": 482,
+   "reason": "non-US domain (br); ACS does not cover it"
+  },
+  {
+   "portal": "dados.pbh.gov.br",
+   "url": "https://dados.pbh.gov.br",
+   "platform": "ckan",
+   "datasets": 606,
+   "reason": "non-US domain (br); ACS does not cover it"
+  },
+  {
+   "portal": "data.qld.gov.au",
+   "url": "http://data.qld.gov.au",
+   "platform": "ckan",
+   "datasets": 188847,
+   "reason": "non-US domain (au); ACS does not cover it"
+  },
+  {
+   "portal": "datos.codeandomexico.org",
+   "url": "http://datos.codeandomexico.org",
+   "platform": "ckan",
+   "datasets": 9761,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "datosabiertos.malaga.eu",
+   "url": "http://datosabiertos.malaga.eu",
+   "platform": "ckan",
+   "datasets": 1377,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "www.datos.misiones.gov.ar",
+   "url": "http://www.datos.misiones.gov.ar",
+   "platform": "ckan",
+   "datasets": 2,
+   "reason": "non-US domain (ar); ACS does not cover it"
+  },
+  {
+   "portal": "data.nantou.gov.tw",
+   "url": "http://data.nantou.gov.tw",
+   "platform": "ckan",
+   "datasets": 430,
+   "reason": "no ACS place matches this portal name"
+  },
+  {
+   "portal": "dati.lazio.it",
+   "url": "http://dati.lazio.it",
+   "platform": "ckan",
+   "datasets": 406,
+   "reason": "non-US domain (it); ACS does not cover it"
+  },
+  {
+   "portal": "datos.ciudaddemendoza.gob.ar",
+   "url": "http://datos.ciudaddemendoza.gob.ar",
+   "platform": "ckan",
+   "datasets": 180,
+   "reason": "non-US domain (ar); ACS does not cover it"
+  },
+  {
+   "portal": "datos.ciudaddemendoza.gov.ar",
+   "url": "http://datos.ciudaddemendoza.gov.ar",
+   "platform": "ckan",
+   "datasets": 180,
+   "reason": "non-US domain (ar); ACS does not cover it"
+  },
+  {
+   "portal": "dati.retecivica.bz.it",
+   "url": "http://dati.retecivica.bz.it/it",
+   "platform": "ckan",
+   "datasets": 930,
+   "reason": "non-US domain (it); ACS does not cover it"
+  },
+  {
+   "portal": "data.stadt-zuerich.ch",
+   "url": "https://data.stadt-zuerich.ch",
+   "platform": "ckan",
+   "datasets": 942,
+   "reason": "non-US domain (ch); ACS does not cover it"
+  },
+  {
+   "portal": "portal.opendata.dk",
+   "url": "http://portal.opendata.dk",
+   "platform": "ckan",
+   "datasets": 631,
+   "reason": "non-US domain (dk); ACS does not cover it"
+  },
+  {
+   "portal": "datosabiertos.rivasciudad.es",
+   "url": "http://datosabiertos.rivasciudad.es",
+   "platform": "ckan",
+   "datasets": 7,
+   "reason": "non-US domain (es); ACS does not cover it"
+  }
+ ]
+}
