@@ -25,6 +25,42 @@ UN System Data Commons.
 - **Every datapoint keeps its attribution.** The platform requires it and our QA approach
   promises it.
 
+### Denominators — the expensive ones
+
+- **Never let a denominator resolver fall back to a default.** `probe/population.py` used to drop
+  through to NYC's ACS place code when a city declared none, so Chicago and Boston both returned
+  New York's 8.5M — every Chicago rate would have been 3× too low with nothing in the output
+  looking wrong. It now raises. Keep it that way.
+- **Eurostat `urb_cpop1` is GREATER cities, not municipalities.** It is the obvious single source
+  for Europe and it is wrong here: Madrid 5,115,272 vs 3,520,396 for the municipality, Milan
+  3,580,530 vs 1,399,079. Using it would push Milan rates 60% too low, silently. Denominators come
+  from each city's own statistical publication.
+- **A missing ACS year is a gap, never an interpolation.** There is no ACS 1-year for 2020.
+
+### Matching — what transfers and what does not
+
+- **A null result from the matcher is not evidence of absence.** Boston's *Vision Zero Fatality
+  Records* ranked 23rd of 235 for "road traffic deaths", below a contract-award file. We wrote
+  "no substantive SDG indicator matched outside NYC" and it read as a claim about the cities,
+  which was false. Precision is roughly half; treat silence as untested.
+- **Score document fields separately and take the max** (`dataset_head` / `dataset_body`). A
+  static embedding averages every token, so 1,500 characters of programme boilerplate drown a
+  title and tags that were exactly right. Concatenating everything cost NYC median rank 23 → 14
+  and put Boston's right answer at 23rd instead of 1st.
+- **The vector cache is keyed by model AND `REPR_VERSION`.** Change how documents are built and
+  bump it, or stale vectors are silently reused with no symptom.
+- **An absolute similarity cutoff does not travel between catalogs** (good matches span 0.42–0.70
+  in NYC, 0.37–0.59 in Madrid), and **a per-catalog percentile cutoff is top-coded** — it keeps
+  ~20% by construction, so 28 cities scored exactly 12 and the column carried no information.
+  Calibrated cutoffs are for bounding one city's worksheet; fixed bars are for comparing cities.
+  Neither does the other's job.
+- **A z-score does not work** and was tried: against a catalog whose scores cluster near zero the
+  top hit is many σ above the mean whether it is right or garbage.
+- **The embedding model is chosen per catalog language.** English catalogs keep
+  `potion-base-32M`; anything else gets `potion-multilingual-128M`. Swapping wholesale costs
+  English accuracy (NYC median 23 → 81); using English everywhere returns literally zero for
+  Madrid and Milan.
+
 ## Layout
 
 - `docs/` — the briefing hub, served at https://sarapis.github.io/undatacommons-nyc/
@@ -38,6 +74,25 @@ UN System Data Commons.
   - Needs `pip3 install model2vec` for embedding search. Without it the matcher falls back to
     keyword overlap, which measured median rank 1535 of 2400 — worse than a coin flip.
   - `pair_probe.py`: verify both sides of every crosswalk mapping.
+  - `population.py` / `denominators.py`: per-city population, from a cited source.
+  - `scope.py` + `scope_eval.json`: is an indicator something a city could report?
+    (embedding classifier, precision 0.83 at recall 1.00 — `python3 probe/scope.py --eval`)
+  - `bootstrap.py`: generate a grading worksheet for any city in `cities/registry.json`.
+  - `validate_crosswalk.py`: check the crosswalk against comparability spec v0.1.
+- `cities/` — the multi-city registry, per-city worksheets and denominators
+- `portals/` — the constructed inventory of city open data portals and its analysis
+- `spec/` — the comparability spec's JSON Schema
+
+## Environment
+
+- **`git` needs `DEVELOPER_DIR=/Library/Developer/CommandLineTools`** on this machine.
+  `/usr/bin/git` shims to Xcode.app, which refuses to run until someone accepts its licence
+  (`sudo xcodebuild -license`). Exporting `DEVELOPER_DIR` uses the CommandLineTools toolchain and
+  changes no system state.
+- **`CENSUS_API_KEY` lives in a gitignored `.env`.** This repo is public. Verified absent from
+  every tracked file and the full history; keep it that way.
+- **Do not pipe a long background job through `tail`** — the pipeline buffers and you get no
+  progress until it ends. Write to a log and poll the log.
 
 ## Conventions
 
