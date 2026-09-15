@@ -74,3 +74,43 @@ shares words with indicator names.
    found by a person who knew the data; the matcher confirmed them.
 
 Until at least (1) and (2), treat this as infrastructure with a known-poor recommender attached.
+
+## Denominators
+
+Most SDG indicators are rates per 100,000, so a chart needs a population figure — and a wrong
+denominator produces a rate that looks exactly like a right one. Every source is named in
+`registry.json` and resolved by a declared method (`probe/population.py`).
+
+**27 US cities** clear the bar today via Census ACS 1-year, which publishes for places above
+roughly 65,000 people. `python3 probe/denominators.py` lists them, and reports Richmond CA vs
+Richmond VA as *ambiguous* rather than choosing (spec R5).
+
+### Eurostat is the obvious shortcut and it is wrong
+
+Eurostat's Urban Audit (`urb_cpop1`) covers European cities annually and looks like the answer.
+It publishes **greater cities**, not municipalities:
+
+| City | Eurostat "greater city" | Municipality | Error if used |
+|---|---:|---:|---|
+| Madrid | 5,115,272 | **3,520,396** | rates ~31% too low |
+| Milan | 3,580,530 | ~1,370,000 | rates ~60% too low |
+
+A city's open data covers its municipality. Dividing municipal counts by a metropolitan
+denominator is precisely the mismatch this project exists to catch, so Eurostat is not used.
+
+### Denominators come from the city's own publication
+
+Better provenance too — numerator and denominator then share a publisher. Madrid is wired this
+way, from its **Padrón municipal** (`200076-0-padron`, summing the four Spanish/foreign ×
+male/female columns): **3,520,396** as of 2026-09-01.
+
+That figure is a **snapshot, not a series**. Madrid's historic padrón is a separate dataset
+(`209163-0-padron-municipal-historico`) and is not wired, so Madrid supports level comparisons and
+not trends.
+
+### The remaining 25
+
+Each non-US city needs the same treatment: find its statistical publication, record the source and
+extraction in `registry.json`, done. The mechanism is built; the per-city work is not, and it is
+not automatable — finding that Madrid's figure lives in the padrón rather than in Eurostat took
+reading, and getting it wrong would have been invisible.

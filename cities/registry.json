@@ -66,9 +66,24 @@
       "platform": "ckan",
       "domain": "https://datos.madrid.es",
       "language": "es",
-      "population": null,
-      "status": "candidates-only",
-      "note": "Spanish-language catalog. No sourced denominator yet, so rate-based indicators are blocked."
+      "population": {
+        "source": "Padr\u00f3n municipal, Ayuntamiento de Madrid \u2014 datos.madrid.es dataset 200076-0-padron",
+        "module": "portal_csv",
+        "dataset": "200076-0-padron",
+        "format": "CSV",
+        "delimiter": ";",
+        "encoding": "utf-8-sig",
+        "sum_columns": [
+          "ESPANOLESHOMBRES",
+          "ESPANOLESMUJERES",
+          "EXTRANJEROSHOMBRES",
+          "EXTRANJEROSMUJERES"
+        ],
+        "as_of": "2026-09-01",
+        "annual": false,
+        "note": "Municipality, not greater city. Eurostat urb_cpop1 reports 5,115,272 for 'Madrid (greater city)' against 3,520,396 here \u2014 using Eurostat would push every Madrid rate about 31% too low. Single snapshot: the historic series lives in dataset 209163-0-padron-municipal-historico and is not wired yet, so trend rates are not available."
+      },
+      "status": "candidates-only"
     },
     {
       "key": "milan",
