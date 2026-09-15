@@ -12,7 +12,9 @@
       "population": {
         "source": "Census ACS 1-year B01003_001E, place 51000 / state 36",
         "module": "census",
-        "annual": true
+        "annual": true,
+        "state": "36",
+        "place": "51000"
       },
       "status": "crosswalked",
       "note": "The reference implementation. 12 graded pairs in probe/crosswalk.json."
@@ -27,7 +29,9 @@
       "population": {
         "source": "Census ACS 1-year B01003_001E, place 14000 / state 17",
         "module": "census",
-        "annual": true
+        "annual": true,
+        "state": "17",
+        "place": "14000"
       },
       "status": "candidates-only"
     },
@@ -41,7 +45,9 @@
       "population": {
         "source": "Census ACS 1-year B01003_001E, place 07000 / state 25",
         "module": "census",
-        "annual": true
+        "annual": true,
+        "state": "25",
+        "place": "07000"
       },
       "status": "candidates-only"
     },
@@ -55,7 +61,9 @@
       "population": {
         "source": "Census ACS 1-year B01003_001E, place 68000 / state 06",
         "module": "census",
-        "annual": true
+        "annual": true,
+        "state": "06",
+        "place": "68000"
       },
       "status": "candidates-only"
     },

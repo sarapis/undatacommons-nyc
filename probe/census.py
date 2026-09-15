@@ -56,6 +56,32 @@ def _ctx():
         return ssl.create_default_context()
 
 
+def population_for(state_fips, place_fips, years):
+    """{year: population} for any ACS place. Missing years are simply absent."""
+    key = _key()
+    out, gaps = {}, []
+    for year in years:
+        if year in NO_ACS1:
+            gaps.append(year)
+            continue
+        qs = urllib.parse.urlencode({
+            "get": f"NAME,{TOTAL_POPULATION}",
+            "for": f"place:{place_fips}", "in": f"state:{state_fips}", "key": key})
+        url = f"https://api.census.gov/data/{year}/acs/acs1?{qs}"
+        try:
+            with urllib.request.urlopen(url, timeout=60, context=_ctx()) as r:
+                rows = json.loads(r.read().decode())
+            out[year] = int(rows[1][1])
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                gaps.append(year)
+                continue
+            raise CensusError(f"ACS {year} place {place_fips}: HTTP {exc.code}") from exc
+        except (ValueError, IndexError, KeyError) as exc:
+            raise CensusError(f"ACS {year} place {place_fips}: {exc}") from exc
+    return out, sorted(gaps)
+
+
 def nyc_population(years):
     """{year: population} for the years available. Missing years are simply absent."""
     key = _key()

@@ -47,12 +47,23 @@ class PopulationError(RuntimeError):
 
 
 def _census(city, years):
+    """US Census ACS 1-year, by explicit place FIPS.
+
+    There is deliberately NO fallback. An earlier version dropped through to
+    NYC's place code when a city declared no codes of its own, so Chicago and
+    Boston both silently returned New York's 8.5 million -- every Chicago rate
+    would have come out three times too low, and nothing in the output would
+    have looked wrong.
+    """
     import census as census_mod
     spec = city["population"]
-    if spec.get("place") and spec.get("state"):
-        return census_mod.population_for(spec["state"], spec["place"], years)
-    pops, gaps = census_mod.nyc_population(years)       # NYC's original path
-    return pops, gaps
+    state, place = spec.get("state"), spec.get("place")
+    if not (state and place):
+        raise PopulationError(
+            f"{city['key']} uses the census module but declares no state/place FIPS. "
+            f"Refusing to guess: a wrong denominator is invisible in the output.")
+    pops, gaps = census_mod.population_for(state, place, years)
+    return pops, {"snapshot": False, "source": spec["source"], "years_missing": gaps}
 
 
 def _portal_csv(city, years):

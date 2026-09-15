@@ -58,6 +58,17 @@ before. Better, and still a worksheet for a person rather than a set of mappings
 [spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/) a grade is a human judgment, so the bootstrapper emits
 `is_crosswalk: false` by construction.
 
+### Denominators
+
+Rates need a population figure, and a wrong one is invisible in the output. **27 US cities**
+resolve via Census ACS; **Madrid** (padrón municipal, 3,520,396) and **Milan** (popolazione
+calcolata, an annual series 1880–2025) are wired from their own publications.
+
+Eurostat's Urban Audit is the obvious single source for Europe and is **wrong for this purpose** —
+it publishes *greater cities*. Madrid's is 5,115,272 against 3,520,396 for the municipality;
+Milan's is 3,580,530 against 1,399,079. Using it would have pushed Milan's rates 60% too low,
+silently.
+
 ### The portal inventory
 
 The **[inventory](https://sarapis.github.io/undatacommons-nyc/artifacts/portals-latest)** covers **372 portals surveyed, 70 municipal**,
