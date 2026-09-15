@@ -87,7 +87,46 @@ def _portal_csv(city, years):
                                        "source": spec["source"]}
 
 
-RESOLVERS = {"census": _census, "portal_csv": _portal_csv}
+def _portal_csv_series(city, years):
+    """An annual series from a CSV on the city's own portal: year column + value column.
+
+    Better than a snapshot -- it supports trends, not just levels. Milan's
+    'Popolazione calcolata' runs 1880-2025 (ISTAT to 2002, then the city's own
+    anagrafe), which is both authoritative and same-publisher for the years that
+    matter.
+    """
+    spec = city["population"]
+    base = city["domain"].rstrip("/")
+    meta_url = f"{base}/api/3/action/package_show?id={urllib.parse.quote(spec['dataset'])}"
+    with urllib.request.urlopen(meta_url, timeout=90, context=_ctx()) as r:
+        pkg = json.loads(r.read().decode())["result"]
+    url = next((res["url"] for res in pkg.get("resources", [])
+                if (res.get("format") or "").upper() == spec.get("format", "CSV")), None)
+    if not url:
+        raise PopulationError(f"no {spec.get('format','CSV')} resource on {spec['dataset']}")
+
+    req = urllib.request.Request(url, headers={"User-Agent": "undatacommons-nyc"})
+    with urllib.request.urlopen(req, timeout=300, context=_ctx()) as r:
+        raw = r.read().decode(spec.get("encoding", "utf-8-sig"), errors="replace")
+
+    series = {}
+    for row in csv.DictReader(io.StringIO(raw), delimiter=spec.get("delimiter", ",")):
+        y = (row.get(spec["year_column"]) or "").strip()[:4]
+        v = (row.get(spec["value_column"]) or "").strip().replace(".", "").replace(",", "")
+        if y.isdigit() and v.isdigit():
+            series[int(y)] = int(v)
+    if not series:
+        raise PopulationError(f"parsed no rows; check year/value columns for {city['key']}")
+
+    got = {y: series[y] for y in years if y in series}
+    missing = sorted(set(years) - set(got))
+    return got, {"snapshot": False, "source": spec["source"],
+                 "covers": f"{min(series)}-{max(series)}",
+                 "years_missing": missing}
+
+
+RESOLVERS = {"census": _census, "portal_csv": _portal_csv,
+             "portal_csv_series": _portal_csv_series}
 
 
 def resolve(city, years):

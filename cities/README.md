@@ -108,7 +108,18 @@ That figure is a **snapshot, not a series**. Madrid's historic padrón is a sepa
 (`209163-0-padron-municipal-historico`) and is not wired, so Madrid supports level comparisons and
 not trends.
 
-### The remaining 25
+### Milan: a series, not a snapshot
+
+Milan publishes **Popolazione calcolata** (`ds1494`), a year-end series running **1880–2025** —
+ISTAT to 2002, then the city's own anagrafe. **1,399,079** in 2025, against Eurostat's 3,580,530
+for the greater city: a factor of **2.6**, which would have pushed every Milan rate 60% too low.
+
+Because it is a series rather than a snapshot, Milan supports **trends** as well as levels — the
+first non-US city that does. That needed a second resolver (`portal_csv_series`, year column plus
+value column) alongside Madrid's column-summing one; city statistical publications do not share a
+shape.
+
+### The remaining 24
 
 Each non-US city needs the same treatment: find its statistical publication, record the source and
 extraction in `registry.json`, done. The mechanism is built; the per-city work is not, and it is

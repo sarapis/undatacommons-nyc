@@ -92,9 +92,19 @@
       "platform": "ckan",
       "domain": "https://dati.comune.milano.it",
       "language": "it",
-      "population": null,
-      "status": "candidates-only",
-      "note": "Italian-language catalog. No sourced denominator yet."
+      "population": {
+        "source": "Popolazione calcolata, Comune di Milano \u2014 dati.comune.milano.it dataset ds1494 (ISTAT to 2002, Anagrafe della popolazione residente from 2003)",
+        "module": "portal_csv_series",
+        "dataset": "ds1494-popolazione-calcolata-nel-comune-di-milano-dal-1880",
+        "format": "CSV",
+        "delimiter": ";",
+        "encoding": "utf-8-sig",
+        "year_column": "Anno",
+        "value_column": "Popolazione",
+        "annual": true,
+        "note": "Comune di Milano, not the greater city. Eurostat urb_cpop1 reports 3,580,530 for 'Milano (greater city)' against 1,399,079 here \u2014 a factor of 2.6, which would push every Milan rate 60% too low. Year-end calculated population, annual 1880-2025, so Milan supports trends as well as levels."
+      },
+      "status": "candidates-only"
     },
     {
       "key": "buenos-aires",
