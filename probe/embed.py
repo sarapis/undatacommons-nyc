@@ -48,29 +48,46 @@ def dataset_text(d):
     Adding them moved 'Proportion of municipal waste recycled' -> DSNY Monthly
     Tonnage from rank 882 to 23, because the title never says "recycled".
     """
-    return (f"{d['name']}. {d.get('category','')}. {' '.join(d.get('tags', []))}. "
-            f"{d.get('description','')} "
-            f"Fields: {', '.join(d.get('columns', [])[:25])}. "
-            f"{' '.join(d.get('column_descriptions', [])[:15])}")
+    parts = [d.get("name", ""), d.get("category", ""), " ".join(d.get("tags", []) or []),
+             d.get("description", "")]
+    cols = d.get("columns") or []
+    if cols:
+        parts.append("Fields: " + ", ".join(cols[:25]))
+    parts.append(" ".join((d.get("column_descriptions") or [])[:15]))
+    # CKAN portals almost never publish field names, so this degrades to
+    # title + description + tags there. That is a real coverage asymmetry
+    # between platforms, not a bug.
+    return ". ".join(p for p in parts if p)
 
 
 class Index:
-    def __init__(self):
+    """Embedding index over one city's catalog.
+
+    `datasets` may be passed directly (any city, via probe/portal.py) or left
+    None to load the cached NYC catalog, which is how the original NYC-only
+    pipeline calls it.
+    """
+
+    def __init__(self, datasets=None, cache_key="nyc"):
         import numpy as np
         from model2vec import StaticModel
         self.np = np
-        self.datasets = json.loads(CATALOG.read_text())["datasets"]
+        self.datasets = (datasets if datasets is not None
+                         else json.loads(CATALOG.read_text())["datasets"])
         self.model = StaticModel.from_pretrained(MODEL)
-        if VECTORS.exists():
-            cached = np.load(VECTORS, allow_pickle=True)
+        vec_path = (VECTORS if cache_key == "nyc"
+                    else CACHE / f"{cache_key}_catalog_vectors.npz")
+        if vec_path.exists():
+            cached = np.load(vec_path, allow_pickle=True)
             if len(cached["ids"]) == len(self.datasets):
                 self.vectors = cached["vectors"]
                 return
-        print("  embedding catalog (one-off, ~30s)...", file=sys.stderr)
+        print(f"  embedding {len(self.datasets)} datasets ({cache_key})...", file=sys.stderr)
         vecs = self.model.encode([dataset_text(d) for d in self.datasets],
                                  show_progress_bar=False)
         self.vectors = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
-        np.savez_compressed(VECTORS, vectors=self.vectors,
+        vec_path.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(vec_path, vectors=self.vectors,
                             ids=np.array([d["id"] for d in self.datasets]))
 
     def search(self, query, k=5):

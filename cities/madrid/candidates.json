@@ -1,0 +1,21 @@
+{
+ "generated": "2026-09-15",
+ "city": {
+  "key": "madrid",
+  "name": "Madrid",
+  "country": "ES",
+  "platform": "ckan",
+  "domain": "https://datos.madrid.es",
+  "language": "es",
+  "population": null,
+  "status": "candidates-only",
+  "note": "Spanish-language catalog. No sourced denominator yet, so rate-based indicators are blocked."
+ },
+ "spec_version": "0.1",
+ "is_crosswalk": false,
+ "note": "Candidates only. Under comparability spec v0.1 a grade is a human judgment, so this is the input to grading, not a crosswalk. Nothing here may be charted until a person grades it.",
+ "catalog_size": 672,
+ "catalog_datasets_with_field_names": 0,
+ "indicators_probed": 80,
+ "results": []
+}

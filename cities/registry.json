@@ -1,0 +1,63 @@
+{
+  "_comment": "Cities this pipeline can bootstrap a crosswalk for. Drawn from the verified inventory in portals/. 'population' is REQUIRED for rate-based indicators and MUST cite a source -- an uncited denominator is how a rate becomes fiction, so it is null where we have not sourced one and the bootstrapper says so.",
+  "spec_version": "0.1",
+  "cities": [
+    {
+      "key": "nyc", "name": "New York City", "country": "US",
+      "platform": "socrata", "domain": "data.cityofnewyork.us",
+      "language": "en",
+      "population": {"source": "Census ACS 1-year B01003_001E, place 51000 / state 36",
+                     "module": "census", "annual": true},
+      "status": "crosswalked",
+      "note": "The reference implementation. 12 graded pairs in probe/crosswalk.json."
+    },
+    {
+      "key": "chicago", "name": "Chicago", "country": "US",
+      "platform": "socrata", "domain": "data.cityofchicago.org",
+      "language": "en",
+      "population": {"source": "Census ACS 1-year B01003_001E, place 14000 / state 17",
+                     "module": "census", "annual": true},
+      "status": "candidates-only"
+    },
+    {
+      "key": "boston", "name": "Boston", "country": "US",
+      "platform": "ckan", "domain": "https://data.boston.gov",
+      "language": "en",
+      "population": {"source": "Census ACS 1-year B01003_001E, place 07000 / state 25",
+                     "module": "census", "annual": true},
+      "status": "candidates-only"
+    },
+    {
+      "key": "san-jose", "name": "San José", "country": "US",
+      "platform": "ckan", "domain": "https://data.sanjoseca.gov",
+      "language": "en",
+      "population": {"source": "Census ACS 1-year B01003_001E, place 68000 / state 06",
+                     "module": "census", "annual": true},
+      "status": "candidates-only"
+    },
+    {
+      "key": "madrid", "name": "Madrid", "country": "ES",
+      "platform": "ckan", "domain": "https://datos.madrid.es",
+      "language": "es",
+      "population": null,
+      "status": "candidates-only",
+      "note": "Spanish-language catalog. No sourced denominator yet, so rate-based indicators are blocked."
+    },
+    {
+      "key": "milan", "name": "Milan", "country": "IT",
+      "platform": "ckan", "domain": "https://dati.comune.milano.it",
+      "language": "it",
+      "population": null,
+      "status": "candidates-only",
+      "note": "Italian-language catalog. No sourced denominator yet."
+    },
+    {
+      "key": "buenos-aires", "name": "Buenos Aires", "country": "AR",
+      "platform": "ckan", "domain": "https://data.buenosaires.gob.ar",
+      "language": "es",
+      "population": null,
+      "status": "candidates-only",
+      "note": "Spanish-language catalog. No sourced denominator yet."
+    }
+  ]
+}

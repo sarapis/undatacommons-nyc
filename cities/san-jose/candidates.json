@@ -1,0 +1,100 @@
+{
+ "generated": "2026-09-15",
+ "city": {
+  "key": "san-jose",
+  "name": "San Jos\u00e9",
+  "country": "US",
+  "platform": "ckan",
+  "domain": "https://data.sanjoseca.gov",
+  "language": "en",
+  "population": {
+   "source": "Census ACS 1-year B01003_001E, place 68000 / state 06",
+   "module": "census",
+   "annual": true
+  },
+  "status": "candidates-only"
+ },
+ "spec_version": "0.1",
+ "is_crosswalk": false,
+ "note": "Candidates only. Under comparability spec v0.1 a grade is a human judgment, so this is the input to grading, not a crosswalk. Nothing here may be charted until a person grades it.",
+ "catalog_size": 170,
+ "catalog_datasets_with_field_names": 0,
+ "indicators_probed": 80,
+ "results": [
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_LND_TOTL",
+    "name": "Land area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "tree-canopy-and-land-use-classification",
+     "name": "Tree Canopy and Land Use Classification",
+     "url": "https://data.sanjoseca.gov/dataset/tree-canopy-and-land-use-classification",
+     "updated": "2026-09-11",
+     "similarity": 0.526
+    },
+    {
+     "id": "park",
+     "name": "Park",
+     "url": "https://data.sanjoseca.gov/dataset/park",
+     "updated": "2026-09-11",
+     "similarity": 0.511
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_ATM_CO2",
+    "name": "Carbon dioxide emissions from fuel combustion",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "building-performance-ordinance",
+     "name": "Building Performance Ordinance",
+     "url": "https://data.sanjoseca.gov/dataset/building-performance-ordinance",
+     "updated": "2025-12-04",
+     "similarity": 0.578
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EN_ATM_CO2GDP",
+    "name": "Carbon dioxide emissions per unit of GDP at purchaning power parity rates",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "building-performance-ordinance",
+     "name": "Building Performance Ordinance",
+     "url": "https://data.sanjoseca.gov/dataset/building-performance-ordinance",
+     "updated": "2025-12-04",
+     "similarity": 0.519
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SD_CPA_UPRDP",
+    "name": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "neighborhood-business-districts",
+     "name": "Neighborhood Business Districts",
+     "url": "https://data.sanjoseca.gov/dataset/neighborhood-business-districts",
+     "updated": "2026-09-11",
+     "similarity": 0.531
+    }
+   ]
+  }
+ ]
+}

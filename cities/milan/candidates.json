@@ -1,0 +1,21 @@
+{
+ "generated": "2026-09-15",
+ "city": {
+  "key": "milan",
+  "name": "Milan",
+  "country": "IT",
+  "platform": "ckan",
+  "domain": "https://dati.comune.milano.it",
+  "language": "it",
+  "population": null,
+  "status": "candidates-only",
+  "note": "Italian-language catalog. No sourced denominator yet."
+ },
+ "spec_version": "0.1",
+ "is_crosswalk": false,
+ "note": "Candidates only. Under comparability spec v0.1 a grade is a human judgment, so this is the input to grading, not a crosswalk. Nothing here may be charted until a person grades it.",
+ "catalog_size": 2602,
+ "catalog_datasets_with_field_names": 0,
+ "indicators_probed": 80,
+ "results": []
+}

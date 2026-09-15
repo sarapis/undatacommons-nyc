@@ -1,0 +1,134 @@
+{
+ "generated": "2026-09-15",
+ "city": {
+  "key": "chicago",
+  "name": "Chicago",
+  "country": "US",
+  "platform": "socrata",
+  "domain": "data.cityofchicago.org",
+  "language": "en",
+  "population": {
+   "source": "Census ACS 1-year B01003_001E, place 14000 / state 17",
+   "module": "census",
+   "annual": true
+  },
+  "status": "candidates-only"
+ },
+ "spec_version": "0.1",
+ "is_crosswalk": false,
+ "note": "Candidates only. Under comparability spec v0.1 a grade is a human judgment, so this is the input to grading, not a crosswalk. Nothing here may be charted until a person grades it.",
+ "catalog_size": 915,
+ "catalog_datasets_with_field_names": 915,
+ "indicators_probed": 80,
+ "results": [
+  {
+   "indicator": {
+    "dcid": "undata/sdg/AG_LND_TOTL",
+    "name": "Land area",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "igwz-8jzy",
+     "name": "Boundaries - Community Areas",
+     "url": "https://data.cityofchicago.org/d/igwz-8jzy",
+     "updated": "2026-03-25",
+     "similarity": 0.552
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/EG_FEC_RNEW",
+    "name": "Share of renewable energy in the total final energy consumption",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "8yq3-m6wp",
+     "name": "Energy Usage 2010",
+     "url": "https://data.cityofchicago.org/d/8yq3-m6wp",
+     "updated": "2018-07-11",
+     "similarity": 0.552
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/GR_G14_GDP",
+    "name": "Total bugetary revenue of the central government as a proportion of GDP",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "czxm-mzs7",
+     "name": "Illinois Income Tax LGDF",
+     "url": "https://data.cityofchicago.org/d/czxm-mzs7",
+     "updated": "2026-03-16",
+     "similarity": 0.526
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/IQ_SPI_PIL5",
+    "name": "Performance index of data Infrastructure (Pillar 5 of Statistical Performance Indicators)",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "eaff-5ff2",
+     "name": "Performance Metrics - Transportation",
+     "url": "https://data.cityofchicago.org/d/eaff-5ff2",
+     "updated": "2019-04-05",
+     "similarity": 0.504
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SD_CPA_UPRDP",
+    "name": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
+    "grade_un_side": "AMBER",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "9fit-fndz",
+     "name": "Boundaries - Special Service Areas (deprecated January 2020)",
+     "url": "https://data.cityofchicago.org/d/9fit-fndz",
+     "updated": "2020-01-13",
+     "similarity": 0.508
+    },
+    {
+     "id": "i35c-ftqu",
+     "name": "Boundaries - Special Service Areas (deprecated January 2022)",
+     "url": "https://data.cityofchicago.org/d/i35c-ftqu",
+     "updated": "2022-08-23",
+     "similarity": 0.507
+    }
+   ]
+  },
+  {
+   "indicator": {
+    "dcid": "undata/sdg/SD_XPD_ESED",
+    "name": "Proportion of total government spending on essential services, education [UIS methodology]",
+    "grade_un_side": "GREEN",
+    "panel_coverage": 6
+   },
+   "candidates": [
+    {
+     "id": "7x7d-3zgj",
+     "name": "Budget Transfer Report Source Data",
+     "url": "https://data.cityofchicago.org/d/7x7d-3zgj",
+     "updated": "2026-07-15",
+     "similarity": 0.509
+    }
+   ]
+  }
+ ]
+}
