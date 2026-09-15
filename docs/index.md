@@ -15,7 +15,8 @@ provenance and grade on every card, then the eight that fail and why. Each card 
 among **every reporting country** in 2019. Public, no sign-in.
 
 The headline finding: NYC ranks **#5 of 186** on city air quality, **#18 of 196** on road deaths
-(four times safer than the US), and **#85 of 137** on homicide.
+(four times safer than the US), and **#85 of 137** on homicide. A fifth card covers municipal
+waste — an indicator the **US does not report at all**, where the caveat reverses the reading.
 Against the US, NYC's homicide trend reads as a success story; against the world it sits in the
 bottom half. Same number, different comparator, opposite conclusion.
 
