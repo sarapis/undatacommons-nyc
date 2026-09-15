@@ -1,0 +1,275 @@
+[
+ {
+  "url": "https://open.alberta.ca",
+  "title": "Alberta",
+  "country": "CA",
+  "class": "",
+  "ckan": "2.10.6"
+ },
+ {
+  "url": "https://opendata.aragon.es",
+  "title": "Arag\u00f3n Open Data",
+  "country": "ES",
+  "class": "",
+  "ckan": "2.10.4"
+ },
+ {
+  "url": "https://datos.madrid.es",
+  "title": "Datos abiertos",
+  "country": "ES",
+  "class": "Government",
+  "ckan": "2.9.11"
+ },
+ {
+  "url": "https://data.buenosaires.gob.ar",
+  "title": "Buenos Aires Data",
+  "country": "AR",
+  "class": "",
+  "ckan": "2.11.0"
+ },
+ {
+  "url": "https://datos.gob.cl",
+  "title": "datos.gob.cl",
+  "country": "CL",
+  "class": "",
+  "ckan": "2.10.4"
+ },
+ {
+  "url": "https://data.boston.gov",
+  "title": "Analyze Boston",
+  "country": "US",
+  "class": "Government",
+  "ckan": "2.9.11"
+ },
+ {
+  "url": "https://data.sanjoseca.gov",
+  "title": "City of San Jose",
+  "country": "US",
+  "class": "Government",
+  "ckan": "2.9.11"
+ },
+ {
+  "url": "https://dati.comune.matera.it",
+  "title": "Portale Dati aperti del Comune di Matera",
+  "country": "IT",
+  "class": "Government",
+  "ckan": "2.6.2"
+ },
+ {
+  "url": "https://dati.comune.milano.it",
+  "title": "City of Milan Open Data",
+  "country": "IT",
+  "class": "",
+  "ckan": "2.8.12"
+ },
+ {
+  "url": "https://opendata.swiss",
+  "title": "Offene Beh\u00f6rdendaten der Schweiz",
+  "country": "CH",
+  "class": "Government",
+  "ckan": "2.11.6"
+ },
+ {
+  "url": "https://data.gov.ie",
+  "title": "data.gov.ie",
+  "country": "IE",
+  "class": "Government",
+  "ckan": "2.9.15"
+ },
+ {
+  "url": "https://data.zagreb.hr",
+  "title": "data.zagreb.hr Official Open Data Portal",
+  "country": "HR",
+  "class": "Government",
+  "ckan": "2.10.3"
+ },
+ {
+  "url": "https://data.gov.gr",
+  "title": "Greece National Data Portal",
+  "country": "gr",
+  "class": "",
+  "ckan": "2.11.3"
+ },
+ {
+  "url": "https://dati.emilia-romagna.it",
+  "title": "dati.emilia-romagna.it",
+  "country": "IT",
+  "class": "",
+  "ckan": "2.8.9"
+ },
+ {
+  "url": "https://catalogodatos.gub.uy",
+  "title": "datos.gub.uy - Cat\u00e1logo de Datos Abiertos",
+  "country": "",
+  "class": "",
+  "ckan": "2.10.6"
+ },
+ {
+  "url": "https://www.data.gov.bc.ca",
+  "title": "British Columbia (DataBC)",
+  "country": "CA",
+  "class": "",
+  "ckan": "2.9.5"
+ },
+ {
+  "url": "https://leedsdatamill.org",
+  "title": "Leeds Data Mill",
+  "country": "UK",
+  "class": "Government",
+  "ckan": "datapress"
+ },
+ {
+  "url": "https://data.london.gov.uk",
+  "title": "London Datastore",
+  "country": "GB",
+  "class": "",
+  "ckan": "datapress"
+ },
+ {
+  "url": "https://datos.gob.mx",
+  "title": "datos.gob.mx - Sitio oficial de datos abiertos del Gobierno de la Rep\u00fablica",
+  "country": "MX",
+  "class": "Government",
+  "ckan": "2.11.5"
+ },
+ {
+  "url": "https://data.ok.gov",
+  "title": "Oklahoma",
+  "country": "US",
+  "class": "",
+  "ckan": "2.9.11"
+ },
+ {
+  "url": "https://dati.trentino.it",
+  "title": "Open Data Trentino",
+  "country": "IT",
+  "class": "",
+  "ckan": "2.9.5"
+ },
+ {
+  "url": "https://www.opendata-hro.de",
+  "title": "OpenData.HRO - Portal f\u00fcr offene Data der Hansestadt Rostock",
+  "country": "DE",
+  "class": "",
+  "ckan": "2.12.0"
+ },
+ {
+  "url": "https://www.opendata.hu",
+  "title": "Opendata.hu",
+  "country": "HU",
+  "class": "Community",
+  "ckan": "2.0"
+ },
+ {
+  "url": "https://opendata.gov.je",
+  "title": "opendata.gov.je",
+  "country": "JE",
+  "class": "Government",
+  "ckan": "2.8.12"
+ },
+ {
+  "url": "https://opendata.ugr.es",
+  "title": "Bienvenido a OpenData UGR",
+  "country": "ES",
+  "class": "Government",
+  "ckan": "2.9.5"
+ },
+ {
+  "url": "https://open.nrw",
+  "title": "open NRW",
+  "country": "DE",
+  "class": "Government",
+  "ckan": "2.11.6"
+ },
+ {
+  "url": "https://dados.recife.pe.gov.br",
+  "title": "Recife City Open Data",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.11.5"
+ },
+ {
+  "url": "https://dati.toscana.it",
+  "title": "Open Data Regione Toscana",
+  "country": "IT",
+  "class": "",
+  "ckan": "2.10.4"
+ },
+ {
+  "url": "https://donnees.ville.montreal.qc.ca",
+  "title": "Montr\u00e9al, Qu\u00e9bec",
+  "country": "CA",
+  "class": "",
+  "ckan": "2.11.5"
+ },
+ {
+  "url": "https://data.gov.ua",
+  "title": "Official Ukrainian Government Portal",
+  "country": "Ukraine",
+  "class": "Government",
+  "ckan": "2.7.2"
+ },
+ {
+  "url": "https://transparenz.karlsruhe.de",
+  "title": "Transparency Portal for the City of Karlsruhe, Germany",
+  "country": "DE",
+  "class": "Government",
+  "ckan": "2.11.3"
+ },
+ {
+  "url": "https://dados.fortaleza.ce.gov.br",
+  "title": "Fortaleza Dados Abertos",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.9.2"
+ },
+ {
+  "url": "https://dados.recife.pe.gov.br",
+  "title": "Dados Recife",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.11.5"
+ },
+ {
+  "url": "https://dados.rs.gov.br",
+  "title": "Dados RS",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.11.0"
+ },
+ {
+  "url": "https://dados.portoalegre.rs.gov.br",
+  "title": "Dados Abertos POA",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.7.2"
+ },
+ {
+  "url": "https://dados.prefeitura.sp.gov.br",
+  "title": "Portal de Dados Abertos da Cidade de S\u00e3o Paulo",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.7.7"
+ },
+ {
+  "url": "https://dados.pb.gov.br",
+  "title": "Dados PB",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.11.4"
+ },
+ {
+  "url": "https://dados.pbh.gov.br",
+  "title": "Portal de Dados Abertos \u2013 Prefeitura de Belo Horizonte",
+  "country": "BR",
+  "class": "Government",
+  "ckan": "2.10.5"
+ },
+ {
+  "url": "https://opendata.transport.nsw.gov.au",
+  "title": "Transport for NSW Open Data Hub",
+  "country": "AU",
+  "class": "Government",
+  "ckan": "2.11.3"
+ }
+]
