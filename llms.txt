@@ -24,6 +24,8 @@ first. It is written to be read in one pass and links onward to everything else.
   689 indicators and 773,335 observations, with verified errors and what was suppressed as structural.
 - [Data quality report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report): five verified
   errors written up for the UN platform team, with evidence, mechanism and suggested correction.
+- [Electoral data gap](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-electoral-data-gap): zero of 519 named
+  SDG indicators mention elections; 23 cities publish 469 electoral datasets.
 - [Decision log](https://sarapis.github.io/undatacommons-nyc/decisions): choices made and why, newest first.
 
 ## Source

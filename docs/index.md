@@ -141,6 +141,12 @@ Going the other way, **123 of 689 indicators were nearest to no municipal datase
 are honestly national (ODA, external debt). But the list also holds **e-waste and hazardous waste
 per capita** — the same indicators the US does not report, which cities do not publish either.
 
+The elections result is written up for the platform team with the full evidence:
+**[a category of city data the SDG framework has no words for](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-electoral-data-gap)**
+— **zero of 519 named indicators** mention elections, voting or turnout, against **469 electoral
+datasets across 23 cities**, 64% of them in the bottom quartile of their own catalog. For 35 of
+them the closest concept in the entire framework is *municipal waste collected*.
+
 **In five more languages.** The same run over 5,956 datasets from 11 Italian, Portuguese, Spanish,
 German and Croatian city portals ([results](https://sarapis.github.io/undatacommons-nyc/artifacts/inverse-non-en-latest))
 corroborates two themes across disjoint cities and different embedding models: **elections**
@@ -361,6 +367,7 @@ building against.
 | Launch diff (every DCID the crosswalk expects) | [https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest) |
 | UN graph smell test (data-quality sweep) | [https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest) |
 | **Data quality report for the platform team** | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report) |
+| **Electoral data gap, for the platform team** | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-electoral-data-gap](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-electoral-data-gap) |
 | Decision log | [https://sarapis.github.io/undatacommons-nyc/decisions](https://sarapis.github.io/undatacommons-nyc/decisions) |
 | Probe harness source | <https://github.com/sarapis/undatacommons-nyc/tree/main/probe> |
 | Machine index | [https://sarapis.github.io/undatacommons-nyc/llms.txt](https://sarapis.github.io/undatacommons-nyc/llms.txt) |
