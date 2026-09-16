@@ -91,9 +91,11 @@ UN System Data Commons.
   - Needs `pip3 install model2vec` for embedding search. Without it the matcher falls back to
     keyword overlap, which measured median rank 1535 of 2400 — worse than a coin flip.
   - `pair_probe.py`: verify both sides of every crosswalk mapping.
-  - `smell.py`: plausibility checks over the whole corpus (442 indicators, 768k observations,
-    one `get_child_observations` call each). `--recheck` re-runs the checks over cached raw
-    observations and fetches nothing — always use it when changing a check.
+  - `smell.py`: plausibility checks over the corpus (689 indicators, 773k observations, one
+    `get_child_observations` call each). `--recheck` re-runs the checks over cached raw
+    observations and fetches nothing — always use it when changing a check. `--all` sweeps every
+    base indicator rather than the 442 screened usable; it adds 0.65% more data, because 207 of
+    the extra 247 hold no country observations at all.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.

@@ -9,9 +9,9 @@ Plausibility checks run against the UN System Data Commons from outside it. The 
 
 **This flags; it does not judge.** A gross enrolment ratio above 100% is *correct*. A flatline can be a country that genuinely did not change. Every row below is a question for someone who knows the indicator, not a defect report. The indicator name is printed against every row so that person can answer it.
 
-**Scope:** the 442 indicators screened usable (GREEN/AMBER/RANK-ONLY) — **442 indicators**, **768,279 observations** across every reporting country and year.
+**Scope:** all 689 enumerated SDG base indicators — **689 indicators**, **773,335 observations** across every reporting country and year.
 
-**2,457 findings** across 8 checks.
+**2,503 findings** across 8 checks.
 
 ### What the checks reach
 
@@ -19,29 +19,30 @@ Range checks depend on knowing what the unit means. Most of the corpus is percen
 
 | Unit kind | Indicators | Observations | Range checks |
 |---|---:|---:|---|
-| percent | 222 | 364,461 | yes — 0–100 |
-| other | 123 | 248,457 | **no** — unit-agnostic checks only |
-| count | 76 | 114,302 | yes — non-negative |
-| scaled | 21 | 41,059 | yes — capped by denominator |
+| percent | 238 | 365,782 | yes — 0–100 |
+| other | 346 | 251,332 | **no** — unit-agnostic checks only |
+| count | 83 | 115,046 | yes — non-negative |
+| scaled | 22 | 41,175 | yes — capped by denominator |
 
 | Check | Severity | Findings | Indicators | What it means |
 |---|---|---:|---:|---|
-| `outlier` | HIGH | 50 | 16 | At least 20x the indicator's own 99th percentile across every country and year. Scale-free, so it survives when an absolute range check has been suppressed as structural — and it is the only check that reaches units with no meaningful range. |
+| `outlier` | HIGH | 51 | 17 | At least 20x the indicator's own 99th percentile across every country and year. Scale-free, so it survives when an absolute range check has been suppressed as structural — and it is the only check that reaches units with no meaningful range. |
 | `percent_negative` | HIGH | 38 | 11 | A percentage below zero is not a measurement. |
 | `rate_over_scale` | HIGH | 4 | 1 | The rate exceeds its own denominator. Written expecting 'more events than there are people to have them' — but all four hits are disaster-affected persons per 100,000, where a person counts once per disaster, so exceeding the population is correct for a country hit repeatedly in one year. The check stands because the same shape on a rate that cannot repeat would be a real error; the premise, as written, was wrong. |
-| `jump` | MEDIUM | 523 | 92 | Changed by a factor of 10+ in one year, by a margin worth 5%+ of the series' own range. A real shock, a revision, or a units change. Only run on non-negative counts, rates and percentages — a ratio means nothing on a signed index. |
+| `jump` | MEDIUM | 539 | 99 | Changed by a factor of 10+ in one year, by a margin worth 5%+ of the series' own range. A real shock, a revision, or a units change. Only run on non-negative counts, rates and percentages — a ratio means nothing on a signed index. |
 | `percent_over_100` | MEDIUM | 205 | 18 | Above 100%. Sometimes correct — gross enrolment ratios count pupils outside the nominal age band in the numerator only, and Kuwait's water stress genuinely exceeds its renewable resources — and sometimes it is Malaysia recycling 147.7% of its municipal waste. Needs a human. |
 | `shared_value` | MEDIUM | 175 | 10 | An identical value carrying 3+ decimals, in 5+ countries for the same year. Countries do not agree to that precision by chance; this is the shape of a modelled default. |
-| `flatline` | LOW | 803 | 76 | 6+ consecutive identical non-zero values. Either nothing changed, or a figure is being carried forward. |
-| `flatline_zero` | LOW | 659 | 82 | 10+ consecutive zeros. Often true of small states; occasionally a missing value written as 0. |
+| `flatline` | LOW | 814 | 80 | 6+ consecutive identical non-zero values. Either nothing changed, or a figure is being carried forward. |
+| `flatline_zero` | LOW | 677 | 84 | 10+ consecutive zeros. Often true of small states; occasionally a missing value written as 0. |
 
-## `outlier` — HIGH · 50 findings
+## `outlier` — HIGH · 51 findings
 
 At least 20x the indicator's own 99th percentile across every country and year. Scale-free, so it survives when an absolute range check has been suppressed as structural — and it is the only check that reaches units with no meaningful range.
 
 | Indicator | Place | Year | Value | Unit | Detail |
 |---|---|---:|---:|---|---|
 | Electronic waste collected per capita | Guadeloupe | 2022 | 13951.2 | `WEIGHT_KG` | 110x the indicator's p99 (127.2); median 6.56 |
+| Electronic waste recycled per capita | Guadeloupe | 2022 | 13951.2 | `WEIGHT_KG` | 110x the indicator's p99 (127.2); median 5.54 |
 | Hazardous waste exported | Australia | 2007 | 3.83761e+07 | `WEIGHT_TN` | 23x the indicator's p99 (1.647e+06); median 9,557 |
 | Hazardous waste exported | Canada | 2007 | 4.52398e+08 | `WEIGHT_TN` | 275x the indicator's p99 (1.647e+06); median 9,557 |
 | Hazardous waste exported | Japan | 2007 | 4.9e+07 | `WEIGHT_TN` | 30x the indicator's p99 (1.647e+06); median 9,557 |
@@ -148,11 +149,11 @@ The rate exceeds its own denominator. Written expecting 'more events than there 
 | Number of directly affected persons attributed to disasters per  | Marshall Islands | 2022 | 132031 | `RATIO_COUNT_PER_100000_COUNT_POP` | cap 100,000 |
 | Number of directly affected persons attributed to disasters per  | Palau | 2021 | 112467 | `RATIO_COUNT_PER_100000_COUNT_POP` | cap 100,000 |
 
-## `jump` — MEDIUM · 523 findings
+## `jump` — MEDIUM · 539 findings
 
 Changed by a factor of 10+ in one year, by a margin worth 5%+ of the series' own range. A real shock, a revision, or a units change. Only run on non-negative counts, rates and percentages — a ratio means nothing on a signed index.
 
-*Showing the first 60 of 523. The full set is in the JSON beside this page.*
+*Showing the first 60 of 539. The full set is in the JSON beside this page.*
 
 | Indicator | Place | Year | Value | Unit | Detail |
 |---|---|---:|---:|---|---|
@@ -355,11 +356,11 @@ An identical value carrying 3+ decimals, in 5+ countries for the same year. Coun
 | Alternative conversion factor used by the Development Economics  | 17 countries | 2021 | 0.845494 | `RATIO` | Austria, Belgium, Estonia, Finland, France, Germany, Greece, Ireland + |
 | Alternative conversion factor used by the Development Economics  | 13 countries | 2021 | 554.531 | `RATIO` | Burkina Faso, Cameroon, Central African Republic, Congo [Republic], Cô |
 
-## `flatline` — LOW · 803 findings
+## `flatline` — LOW · 814 findings
 
 6+ consecutive identical non-zero values. Either nothing changed, or a figure is being carried forward.
 
-*Showing the first 60 of 803. The full set is in the JSON beside this page.*
+*Showing the first 60 of 814. The full set is in the JSON beside this page.*
 
 | Indicator | Place | Year | Value | Unit | Detail |
 |---|---|---:|---:|---|---|
@@ -424,11 +425,11 @@ An identical value carrying 3+ decimals, in 5+ countries for the same year. Coun
 | Population in moderate or severe food insecurity | Montenegro | 2015 | 100000 | `COUNT` | 9 consecutive years 2015–2023 |
 | Population in moderate or severe food insecurity | Samoa | 2017 | 100000 | `COUNT` | 7 consecutive years 2017–2023 |
 
-## `flatline_zero` — LOW · 659 findings
+## `flatline_zero` — LOW · 677 findings
 
 10+ consecutive zeros. Often true of small states; occasionally a missing value written as 0.
 
-*Showing the first 60 of 659. The full set is in the JSON beside this page.*
+*Showing the first 60 of 677. The full set is in the JSON beside this page.*
 
 | Indicator | Place | Year | Value | Unit | Detail |
 |---|---|---:|---:|---|---|
@@ -497,9 +498,9 @@ An identical value carrying 3+ decimals, in 5+ countries for the same year. Coun
 
 A rule violated by most of an indicator's observations is not a violation, it is the definition. These (indicator, check) pairs fired often enough to be structural and were dropped from the findings above — listed here because the list is itself a result.
 
-**165 suppressed groups** covering 38,943 would-be findings.
+**173 suppressed groups** covering 39,005 would-be findings.
 
-### `jump` — 71 indicators
+### `jump` — 76 indicators
 
 | Indicator | Unit | Fired | Of | Share |
 |---|---|---:|---:|---:|
@@ -571,9 +572,14 @@ A rule violated by most of an indicator's observations is not a violation, it is
 | Gross receipts by developing countries of official sustainable developme | `CR_USD` | 11 | 898 observations | 1% |
 | Agricultural export subsidies | `CR_USD` | 8 | 635 observations | 1% |
 | Total electronic waste collected | `WEIGHT_TN` | 8 | 785 observations | 1% |
+| Total electronic waste recycled | `WEIGHT_TN` | 8 | 722 observations | 1% |
+| Number of conflict-related deaths (civilians) | `COUNT` | 6 | 126 observations | 5% |
 | Electronic waste generated per capita | `WEIGHT_KG` | 4 | 352 observations | 1% |
 | Total electronic waste generated | `WEIGHT_TN` | 4 | 352 observations | 1% |
 | [World Bank] Proportion of population covered by labour market programs | `Percent` | 4 | 294 observations | 1% |
+| Number of total conflict-related deaths | `COUNT` | 4 | 117 observations | 3% |
+| Number of total conflict-related deaths per 100,000 population | `RATIO_COUNT_PER_100000_COUNT_POP` | 4 | 116 observations | 3% |
+| Number of conflict-related deaths (unknown) | `COUNT` | 3 | 24 observations | 12% |
 
 ### `flatline` — 37 indicators
 
@@ -645,6 +651,30 @@ A rule violated by most of an indicator's observations is not a violation, it is
 | Rate of return on assets | `Percent` | 132 | 2,292 observations | 6% |
 | Growth rates of household expenditure or income per capita | `Percent` | 35 | 121 observations | 29% |
 
+### `percent_over_100` — 19 indicators
+
+| Indicator | Unit | Fired | Of | Share |
+|---|---|---:|---:|---:|
+| Primary government expenditures as a proportion of original approved bud | `Percent` | 1,000 | 2,484 observations | 40% |
+| Merchandise trade as a proportion of GDP | `Percent` | 681 | 4,963 observations | 14% |
+| Level of water stress: freshwater withdrawal as a proportion of availabl | `Percent` | 371 | 4,223 observations | 9% |
+| Ratio of liquid assets to short term liabilities | `Percent` | 301 | 2,128 observations | 14% |
+| External debt stocks as a proportion of GNI | `Percent` | 290 | 2,899 observations | 10% |
+| Change in seasonal water area of lakes and rivers | `Percent` | 245 | 4,158 observations | 6% |
+| Proportion of hazardous waste that is treated or disposed | `Percent` | 142 | 900 observations | 16% |
+| Change in permanent water area of lakes and rivers | `Percent` | 134 | 4,194 observations | 3% |
+| Ratio of net open position in foreign exchange to capital | `Percent` | 117 | 1,805 observations | 6% |
+| Gross public sector debt, Central Government, as a proportion of GDP | `Percent` | 100 | 1,023 observations | 10% |
+| Change in minimum reservoir water area | `Percent` | 68 | 3,266 observations | 2% |
+| Proportion of domestic budget funded by domestic taxes | `Percent` | 57 | 3,282 observations | 2% |
+| Ratio of non-performing loans (net of provisions) to capital | `Percent` | 55 | 2,199 observations | 2% |
+| Foreign direct investment, net inflows, as a proportion of GDP | `Percent` | 54 | 4,796 observations | 1% |
+| Proportion of electronic waste that is collected | `Percent` | 16 | 116 observations | 14% |
+| Proportion of electronic waste that is recycled | `Percent` | 16 | 462 observations | 3% |
+| Proportion of wastewater treated | `Percent` | 14 | 72 observations | 19% |
+| Proportion of wastewater safely treated | `Percent` | 5 | 42 observations | 12% |
+| Proportion of population that feel safe walking alone around the area th | `Percent` | 3 | 258 observations | 1% |
+
 ### `flatline_zero` — 18 indicators
 
 | Indicator | Unit | Fired | Of | Share |
@@ -667,27 +697,6 @@ A rule violated by most of an indicator's observations is not a violation, it is
 | Monetary amount committed to public-private partnerships for infrastruct | `CR_USD` | 54 | 128 series | 42% |
 | Monetary amount committed to public-private partnerships for infrastruct | `CR_USD_K` | 52 | 128 series | 41% |
 | Agricultural export subsidies | `CR_USD` | 9 | 33 series | 27% |
-
-### `percent_over_100` — 16 indicators
-
-| Indicator | Unit | Fired | Of | Share |
-|---|---|---:|---:|---:|
-| Primary government expenditures as a proportion of original approved bud | `Percent` | 1,000 | 2,484 observations | 40% |
-| Merchandise trade as a proportion of GDP | `Percent` | 681 | 4,963 observations | 14% |
-| Level of water stress: freshwater withdrawal as a proportion of availabl | `Percent` | 371 | 4,223 observations | 9% |
-| Ratio of liquid assets to short term liabilities | `Percent` | 301 | 2,128 observations | 14% |
-| External debt stocks as a proportion of GNI | `Percent` | 290 | 2,899 observations | 10% |
-| Change in seasonal water area of lakes and rivers | `Percent` | 245 | 4,158 observations | 6% |
-| Proportion of hazardous waste that is treated or disposed | `Percent` | 142 | 900 observations | 16% |
-| Change in permanent water area of lakes and rivers | `Percent` | 134 | 4,194 observations | 3% |
-| Ratio of net open position in foreign exchange to capital | `Percent` | 117 | 1,805 observations | 6% |
-| Gross public sector debt, Central Government, as a proportion of GDP | `Percent` | 100 | 1,023 observations | 10% |
-| Change in minimum reservoir water area | `Percent` | 68 | 3,266 observations | 2% |
-| Proportion of domestic budget funded by domestic taxes | `Percent` | 57 | 3,282 observations | 2% |
-| Ratio of non-performing loans (net of provisions) to capital | `Percent` | 55 | 2,199 observations | 2% |
-| Foreign direct investment, net inflows, as a proportion of GDP | `Percent` | 54 | 4,796 observations | 1% |
-| Proportion of wastewater treated | `Percent` | 14 | 72 observations | 19% |
-| Proportion of population that feel safe walking alone around the area th | `Percent` | 3 | 258 observations | 1% |
 
 
 ## Reproducing

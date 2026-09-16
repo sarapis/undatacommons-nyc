@@ -150,6 +150,10 @@ shared; the Pages mirror is the one to present from).
 - **`search_indicators` results move even when the graph does not.** 44 → 56 candidates between 14
   and 16 Sep with no code change, nine topics gaining and none losing. The coverage report's grade
   mix (30/9/5 → 36/11/9) moved for that reason alone. Never resolve a DCID by search at showtime.
+- **`screen.py`'s six-country panel is validated, not assumed.** Its `NO-DATA` grade could only
+  ever mean "these six do not report it"; sweeping all 689 indicators showed 207 of the 247 it
+  excluded hold **no country data at all**, and the excluded set adds 0.65% of the corpus. 442 is
+  the right denominator.
 - **`screened.json` row order used to be whatever the server answered in**, so two runs with
   *identical* results produced a 2,648-line diff — the noise a real change hides in. `screen.py`
   now sorts by DCID. Knock-on: `match_nyc.py` and `bootstrap.py` sort by coverage/depth with

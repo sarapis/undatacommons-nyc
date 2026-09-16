@@ -86,16 +86,16 @@ obviously alive.
 ## Data quality — a smell test on the graph
 
 **[UN graph smell test](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest)** —
-plausibility checks over **442 indicators and 768,279 observations**, every reporting country and
-year. Malaysia's 147.7% recycling rate was found by accident; this is the systematic version.
-**2,457 findings, 92 HIGH.** Five verified errors so far:
+plausibility checks over the **whole corpus: 689 indicators, 773,335 observations**, every
+reporting country and year. Malaysia's 147.7% recycling rate was found by accident; this is the
+systematic version. **2,503 findings, 93 HIGH.** Five verified errors so far:
 
 | Indicator | What it says | Why it is wrong |
 |---|---|---|
 | Feel safe walking alone after dark (16.1.4) | Kyrgyzstan **6,710–6,990%**, 2021–23 | Every other observation is 22.8–95.0. ÷100 continues its own trend exactly |
 | Municipal waste recycled | South Africa **1.86bn tonnes** | ~90% of all municipal waste on Earth; its own prior years are ~5×10⁵ |
 | Hazardous waste per capita | Brunei **12,580 tonnes per person** | Global median 22 **kg**; looks like a national total in a per-capita field |
-| E-waste collected per capita | Guadeloupe **13,950 kg**, 2022 | Series runs 8.5→13.7; ÷1,000 resumes it perfectly |
+| E-waste, **four** indicators | Guadeloupe ×1,000 in 2022 | 13.71→13,950 kg/capita and 5,472→5,367,000 t, collected *and* recycled. Makes a territory of 380,000 the world's largest e-waste recycler, 6× the previous maximum |
 | Average remittance cost | Malawi **−0.1%, −0.93%** | A cost, negative for two years between normal values |
 
 And one that is **not** an error and matters more: the **United States recorded 345,600 disaster
@@ -103,6 +103,12 @@ deaths in 2020 and 470,600 in 2021** — COVID-19, classified as a disaster and 
 `VC_DSR_MORT`, where every other country's median is 42. Two numbers sharing a variable, a unit
 and an axis that are not the same measurement. That is the case for the comparability grade,
 made by a check that knows nothing about disasters.
+
+Sweeping all 689 rather than the 442 screened usable added only **5,056 observations (0.65%)**,
+and **207 of the extra 247 indicators returned no country data at all** — which retroactively
+validates `screen.py`'s six-country panel, whose grade could not in principle distinguish "the
+panel does not report this" from "nobody does". It distinguishes them 84% of the time, so **442
+remains the right denominator** downstream.
 
 The report also publishes what it **suppressed** (165 groups, 38,943 would-be findings) and what
 it cannot reach (123 indicators whose units have no meaningful range). The `Percent` unit in the
