@@ -83,6 +83,33 @@ One caveat the inventory now states plainly: a portal that does not answer an an
 `package_search` is **not** thereby dead. `data.gov` and `govdata.de` refuse the probe and are
 obviously alive.
 
+## Data quality — a smell test on the graph
+
+**[UN graph smell test](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest)** —
+plausibility checks over **442 indicators and 768,279 observations**, every reporting country and
+year. Malaysia's 147.7% recycling rate was found by accident; this is the systematic version.
+**2,457 findings, 92 HIGH.** Five verified errors so far:
+
+| Indicator | What it says | Why it is wrong |
+|---|---|---|
+| Feel safe walking alone after dark (16.1.4) | Kyrgyzstan **6,710–6,990%**, 2021–23 | Every other observation is 22.8–95.0. ÷100 continues its own trend exactly |
+| Municipal waste recycled | South Africa **1.86bn tonnes** | ~90% of all municipal waste on Earth; its own prior years are ~5×10⁵ |
+| Hazardous waste per capita | Brunei **12,580 tonnes per person** | Global median 22 **kg**; looks like a national total in a per-capita field |
+| E-waste collected per capita | Guadeloupe **13,950 kg**, 2022 | Series runs 8.5→13.7; ÷1,000 resumes it perfectly |
+| Average remittance cost | Malawi **−0.1%, −0.93%** | A cost, negative for two years between normal values |
+
+And one that is **not** an error and matters more: the **United States recorded 345,600 disaster
+deaths in 2020 and 470,600 in 2021** — COVID-19, classified as a disaster and reported under
+`VC_DSR_MORT`, where every other country's median is 42. Two numbers sharing a variable, a unit
+and an axis that are not the same measurement. That is the case for the comparability grade,
+made by a check that knows nothing about disasters.
+
+The report also publishes what it **suppressed** (165 groups, 38,943 would-be findings) and what
+it cannot reach (123 indicators whose units have no meaningful range). The `Percent` unit in the
+graph covers both bounded proportions and signed growth rates, with nothing in the unit string to
+tell them apart — which is why an indicator has to be judged against its own distribution rather
+than against what its unit is supposed to mean.
+
 ## The spec
 
 **[City ↔ UN Comparability Spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/)** — the
@@ -286,6 +313,7 @@ building against.
 | Platform probe findings | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe) |
 | Latest coverage report | [https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) |
 | Launch diff (every DCID the crosswalk expects) | [https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest) |
+| UN graph smell test (data-quality sweep) | [https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest) |
 | Decision log | [https://sarapis.github.io/undatacommons-nyc/decisions](https://sarapis.github.io/undatacommons-nyc/decisions) |
 | Probe harness source | <https://github.com/sarapis/undatacommons-nyc/tree/main/probe> |
 | Machine index | [https://sarapis.github.io/undatacommons-nyc/llms.txt](https://sarapis.github.io/undatacommons-nyc/llms.txt) |

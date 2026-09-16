@@ -31,6 +31,14 @@ UN System Data Commons.
   detects drift rather than merely failing to find it.
 - **The SDG goal trees expose StatVarPeerGroups (`undata/svpg/...`), not variables.** Follow the
   `->member` arc to real DCIDs. Rewriting the prefix is DCID guessing and returns nothing.
+- **An indicator is its own control group — never judge a value by what its unit implies.** The
+  graph's `Percent` unit covers bounded proportions *and* signed growth rates and balances, so a
+  flat "percentages are 0–100" rule returned 23,172 false positives. `probe/smell.py` suppresses a
+  check per-indicator when it fires often enough to be structural, and compares values against the
+  indicator's own 99th percentile.
+- **Never gate a check on a list of unit strings.** A whitelist of percent/count/rate units
+  silently discarded Mauritius' food waste going 207 → 177,570 tonnes because `WEIGHT_TN` was not
+  on it. Gate on a property of the values instead.
 - **Every datapoint keeps its attribution.** The platform requires it and our QA approach
   promises it.
 
@@ -83,6 +91,9 @@ UN System Data Commons.
   - Needs `pip3 install model2vec` for embedding search. Without it the matcher falls back to
     keyword overlap, which measured median rank 1535 of 2400 — worse than a coin flip.
   - `pair_probe.py`: verify both sides of every crosswalk mapping.
+  - `smell.py`: plausibility checks over the whole corpus (442 indicators, 768k observations,
+    one `get_child_observations` call each). `--recheck` re-runs the checks over cached raw
+    observations and fetches nothing — always use it when changing a check.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.

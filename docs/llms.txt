@@ -20,6 +20,8 @@ first. It is written to be read in one pass and links onward to everything else.
   can actually carry a chart, graded GREEN/AMBER/RED.
 - [Launch diff](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest): every DCID the crosswalk
   expects, resolved against the live platform and diffed against a recorded baseline.
+- [UN graph smell test](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest): plausibility checks over
+  442 indicators and 768,279 observations, with verified errors and what was suppressed as structural.
 - [Decision log](https://sarapis.github.io/undatacommons-nyc/decisions): choices made and why, newest first.
 
 ## Source

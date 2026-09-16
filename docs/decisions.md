@@ -7,6 +7,34 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-16 — An indicator is its own control group
+
+The smell test's first sweep returned 41,350 findings — 5.4% of every observation in the graph,
+which is a broken instrument rather than a result. 23,172 of them were negative percentages, and
+nearly every one was correct: the `Percent` unit covers bounded proportions *and* signed growth
+rates, balances and changes, with nothing in the unit string to separate them.
+
+What separates them is frequency. A rule broken by most of an indicator's observations is its
+definition; a rule broken by three country-years out of three thousand is an error. So checks are
+suppressed per-indicator when they fire often enough to be structural, and the `outlier` check
+compares each value against its own indicator's 99th percentile rather than against what a unit
+is supposed to mean.
+
+**Suppressions are published, not dropped.** The list of indicators that publish signed values
+under a `Percent` unit is a finding about the graph's vocabulary, and a report that hid it would
+look cleaner than the data is.
+
+## 2026-09-16 — Gate checks on the shape of the data, never on a list of units
+
+The first attempt to quiet the jump check whitelisted percent/count/rate units. It worked, and it
+silently discarded Mauritius' food waste going 207 tonnes to 177,570 tonnes in one year, because
+`WEIGHT_TN` was not on the list — precisely what the check exists to find. Unit vocabularies are
+long, inconsistent and not ours to enumerate.
+
+The durable test is a property of the values: does this indicator ever go negative anywhere? If
+so it has no meaningful zero and no ratio on it means anything. That one question replaced the
+whitelist and costs nothing to maintain.
+
 ## 2026-09-16 — The launch check is a diff against a recorded baseline, not a health check
 
 A health check asks "does it answer?" and the platform would have passed one all week. The thing

@@ -8,3 +8,4 @@ secrets.json
 # Census key and any other local secrets
 .env
 probe/cache/nyc_catalog_vectors.npz
+probe/cache/smell-raw.json
