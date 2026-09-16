@@ -120,9 +120,25 @@ class Index:
         vec_path = CACHE / f"{cache_key}{tag}_{REPR_VERSION}_vectors.npz"
         if vec_path.exists():
             cached = np.load(vec_path, allow_pickle=True)
-            if "head" in cached and len(cached["ids"]) == len(self.datasets):
-                self.head, self.body = cached["head"], cached["body"]
-                return
+            if "head" in cached:
+                # Match on IDS, never on count. A portal re-fetched later returns
+                # the same datasets in a DIFFERENT ORDER -- measured: 24 of 45
+                # city catalogs did exactly that -- and a length check accepts it
+                # silently, handing every dataset another dataset's vector. There
+                # is no symptom: scores stay in range and rankings look ordinary.
+                cached_ids = [str(x) for x in cached["ids"]]
+                mine = [str(d.get("id")) for d in self.datasets]
+                if cached_ids == mine:
+                    self.head, self.body = cached["head"], cached["body"]
+                    return
+                pos = {d: i for i, d in enumerate(cached_ids)}
+                if len(pos) == len(cached_ids) and set(mine) <= set(pos):
+                    # Same datasets, re-ordered: permute rather than re-embed.
+                    order = np.array([pos[d] for d in mine])
+                    self.head, self.body = cached["head"][order], cached["body"][order]
+                    np.savez_compressed(vec_path, head=self.head, body=self.body,
+                                        ids=np.array(mine))
+                    return
         print(f"  embedding {len(self.datasets)} datasets ({cache_key}, "
               f"{self.model_name.split('/')[-1]})...", file=sys.stderr)
         head = self.model.encode([dataset_head(d) for d in self.datasets],

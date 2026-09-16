@@ -119,6 +119,33 @@ graph covers both bounded proportions and signed growth rates, with nothing in t
 tell them apart — which is why an indicator has to be judged against its own distribution rather
 than against what its unit is supposed to mean.
 
+## The inverse crosswalk
+
+**[What cities measure that the SDGs do not](https://sarapis.github.io/undatacommons-nyc/artifacts/inverse-latest)** —
+11,206 datasets from 37 city portals, each matched to its nearest neighbour among all 689 SDG
+indicators. Everything else here runs city → UN, which can only find what the framework already
+asks about; this runs it backwards.
+
+Themes recurring across many independent catalogs and sitting in the bottom quartile of every one:
+**building permits and code enforcement (23 cities)**, **records-access request logs (15)**, bike
+and active-travel space (13), street sweeping and parking enforcement (10), **call-centre response
+performance (10)**, pedestrian and bicycle counts (9), property sales (8), for-hire vehicle trips
+(7), fire stations (7), special events (6).
+
+The sharpest is records access. Fifteen cities publish request logs — filed, answered, how long it
+took. The nearest SDG indicator is 16.10.2, *"countries that adopt and implement … guarantees for
+public access to information"*: the framework asks whether a **law exists**, the cities publish
+whether the law **works**. A country can score full marks and answer nothing.
+
+Going the other way, **123 of 689 indicators were nearest to no municipal dataset at all**. Many
+are honestly national (ODA, external debt). But the list also holds **e-waste and hazardous waste
+per capita** — the same indicators the US does not report, which cities do not publish either.
+
+Stated plainly: **one positive control in seven failed** (NYC's *Housing Maintenance Code
+Violations*, a verified 11.1.1 match, landed at the 24th percentile), and **14 of 40 clusters are
+published as diffuse rather than read as themes**. The unit of evidence is cities, not datasets,
+precisely because of that.
+
 ## The spec
 
 **[City ↔ UN Comparability Spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/)** — the

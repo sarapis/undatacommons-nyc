@@ -8,7 +8,7 @@ platform goes public **17 Sep** — tomorrow.
 ## 1. The one idea
 
 **Every automated check in this project has, at least once, produced a confident answer that was
-wrong — and each time a person reading the output for five minutes caught it.** Seven so far:
+wrong — and each time a person reading the output for five minutes caught it.** Nine so far:
 
 | What passed | What was actually true |
 |---|---|
@@ -19,10 +19,12 @@ wrong — and each time a person reading the output for five minutes caught it.*
 | 28 cities scoring exactly 12 | the cutoff keeps 20% by construction |
 | Calgary → Gary, Indiana | substring match, denominator 20× too small |
 | "all 12 crosswalk DCIDs missing from the graph" | `get_variable_metadata` needs `entity_dcids`; without it the server returns an empty 200 |
+| 41,350 smell-test findings (5.4% of all data) | growth rates are signed by construction; an indicator is its own control group |
+| inverse-crosswalk clusters, e.g. "school" = building violations | `embed.Index` reused cached vectors on a LENGTH check; 24 of 45 catalogs had re-ordered |
 
 The project's thesis and its own failure mode are the same thing. **Verify counts by printing a
-table across all cases, not by testing one.** That is how five of those seven were caught —
-including the seventh, by the launch diff, about itself.
+table across all cases, not by testing one.** That is how seven of those nine were caught —
+including the launch diff's bug, about itself.
 
 ---
 
@@ -75,7 +77,8 @@ shared; the Pages mirror is the one to present from).
    city declares no FIPS. A fallback put NYC's population on Chicago.
 3. **Never interpolate a missing year.** No ACS 1-year exists for 2020; rates skip it.
 4. **Bump `REPR_VERSION` in `probe/embed.py`** whenever document text changes, or stale vectors
-   are reused invisibly.
+   are reused invisibly. And **cached vectors match on IDS, never on count** — a re-fetched portal
+   re-orders its catalog and a length check hands every dataset the wrong vector, silently.
 5. **Discover DCIDs through MCP, never REST**, and never guess one — a guess returns empty, not
    an error.
 6. **The bootstrapper must not emit a crosswalk.** Spec v0.1 makes a grade a human judgment; it

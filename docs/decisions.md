@@ -7,6 +7,32 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-16 — A cluster carries its own coherence, or it is not a finding
+
+k-means returns *k* clusters whether or not *k* themes exist in the data. The inverse crosswalk's
+first run reported 24 of them as "themes"; reading the rows showed roughly half were mush — one
+labelled "school" held building violations and lobbyist registrations.
+
+Every cluster now carries the mean cosine of its members to its own centroid, and below 0.62 it is
+published as **diffuse** rather than read as a theme. Cluster labels also require a term to cover a
+fifth of the members, not merely to be distinctive: lift alone labelled a 144-member cluster
+"inch, sea, rise" off a handful of coastal datasets.
+
+The rule generalises past clustering: any method that always returns an answer has to be made to
+report how much of an answer it actually found.
+
+## 2026-09-16 — Evidence in the inverse crosswalk is counted in cities, never in datasets
+
+A dataset far from every SDG indicator may be a gap in the framework, or may be a dataset the
+matcher missed — and we cannot tell which from the dataset alone. A positive control proved it:
+NYC's *Housing Maintenance Code Violations* is a hand-verified match for 11.1.1 and lands at the
+24th percentile, inside the tail.
+
+So a theme counts only through the number of **independent city catalogs** it appears in. One city
+publishing forty parking files is a filing habit; twenty cities each publishing one is a category
+of municipal governance. This is the same discipline as reporting a table across all cases rather
+than testing one, applied to a corpus instead of a function.
+
 ## 2026-09-16 — An indicator is its own control group
 
 The smell test's first sweep returned 41,350 findings — 5.4% of every observation in the graph,

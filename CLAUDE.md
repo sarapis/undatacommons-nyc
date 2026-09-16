@@ -31,6 +31,10 @@ UN System Data Commons.
   detects drift rather than merely failing to find it.
 - **The SDG goal trees expose StatVarPeerGroups (`undata/svpg/...`), not variables.** Follow the
   `->member` arc to real DCIDs. Rewriting the prefix is DCID guessing and returns nothing.
+- **Cached embedding vectors must be matched on IDS, never on count.** A portal re-fetched later
+  returns the same datasets in a different order — 24 of 45 city catalogs did — and a length check
+  accepts it silently, handing every dataset another dataset's vector. Scores stay in range and
+  nothing errors. `embed.Index` now compares id lists and permutes when the set matches.
 - **An indicator is its own control group — never judge a value by what its unit implies.** The
   graph's `Percent` unit covers bounded proportions *and* signed growth rates and balances, so a
   flat "percentages are 0–100" rule returned 23,172 false positives. `probe/smell.py` suppresses a
@@ -99,6 +103,9 @@ UN System Data Commons.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.
+  - `fetch_municipal.py` → `inverse.py`: the inverse crosswalk — cache every city catalog, then
+    match each dataset to its nearest SDG indicator and cluster the far tail. Answers what
+    municipal data the framework has no vocabulary for.
   - `population.py` / `denominators.py`: per-city population, from a cited source.
   - `scope.py` + `scope_eval.json`: is an indicator something a city could report?
     (embedding classifier, precision 0.83 at recall 1.00 — `python3 probe/scope.py --eval`)

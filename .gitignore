@@ -9,3 +9,4 @@ secrets.json
 .env
 probe/cache/nyc_catalog_vectors.npz
 probe/cache/smell-raw.json
+probe/cache/municipal-catalogs.json
