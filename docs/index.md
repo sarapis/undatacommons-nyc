@@ -141,6 +141,16 @@ Going the other way, **123 of 689 indicators were nearest to no municipal datase
 are honestly national (ODA, external debt). But the list also holds **e-waste and hazardous waste
 per capita** — the same indicators the US does not report, which cities do not publish either.
 
+**In five more languages.** The same run over 5,956 datasets from 11 Italian, Portuguese, Spanish,
+German and Croatian city portals ([results](https://sarapis.github.io/undatacommons-nyc/artifacts/inverse-non-en-latest))
+corroborates two themes across disjoint cities and different embedding models: **elections**
+(6 cities there, 10 in English — the tightest cluster anywhere in this project at coherence 0.90,
+241 datasets of polling-station results) and **COVID-19 case reporting** (7 and 6). The framework
+has no indicator for electoral administration or city-level pandemic surveillance. Three themes
+appear only there: **property market valuations** (Italy's OMI, 113 datasets), **weights-and-measures
+inspection** (Brazil's Ipem), and **public-employee working arrangements**. Its controls are
+*better* than the English run's — 11 of 11 against 8 of 9 — with Portuguese the weakest link.
+
 Stated plainly: **one positive control in seven failed** (NYC's *Housing Maintenance Code
 Violations*, a verified 11.1.1 match, landed at the 24th percentile), and **14 of 40 clusters are
 published as diffuse rather than read as themes**. The unit of evidence is cities, not datasets,

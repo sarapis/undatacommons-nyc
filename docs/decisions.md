@@ -7,6 +7,32 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-16 — Match against the 519 named indicators, not all 689
+
+170 of the 689 base indicators carry no name in any source we hold: they return neither metadata
+nor observations. The inverse crosswalk originally fell back to the DCID mnemonic, so a quarter of
+"the framework" was represented by query strings like `DI ILL OUT`.
+
+Nothing can match that. It inflated the tail — datasets looked further from the framework than they
+were — and put mnemonics in the nearest-indicator column, where `VC VAW SXVLN` was reported as a
+cluster's closest SDG concept. Excluding them moved every weak positive control up by 4–16
+percentile points.
+
+The count of what was excluded is printed on the page. An analysis that quietly matches against
+garbage text and reports the resulting distance as a finding is measuring its own inputs.
+
+## 2026-09-16 — Pool the non-English catalogs into one run, never one run per language
+
+Cosine similarities from two different embedding models are not comparable, so the language groups
+cannot be merged after the fact. But per-language runs would give five score spaces with two to
+four cities each, and the evidence unit in this analysis is *how many independent cities* a theme
+appears in — which two cities cannot support.
+
+Pooled under the multilingual model they share one space and eleven cities. The cost is that the
+weakest language sets the floor: Portuguese controls land at the 32nd and 44th percentile against
+89th for Italian, so the Brazilian portion of the tail is the least trustworthy part of the run,
+and the page says so.
+
 ## 2026-09-16 — A cluster carries its own coherence, or it is not a finding
 
 k-means returns *k* clusters whether or not *k* themes exist in the data. The inverse crosswalk's

@@ -1,0 +1,1636 @@
+{
+ "generated": "2026-09-16",
+ "language": "non-en",
+ "portals": 11,
+ "datasets": 5956,
+ "indicators": 519,
+ "indicators_excluded_unnamed": 170,
+ "tail_fraction": 0.25,
+ "tail_size": 1516,
+ "controls": [
+  {
+   "label": "Deaths from road traffic accidents (3.6.1)",
+   "portal": "dados.fortaleza.ce.gov.br",
+   "found": true,
+   "name": "N\u00famero de \u00d3bitos por Acidentes de Tr\u00e2nsito em Fortaleza",
+   "city": "Fortaleza",
+   "affinity": 0.333,
+   "percentile": 43.8,
+   "in_tail": false,
+   "nearest": "Average proportion of Freshwater Key Biodiversity Areas (KBAs) covered by protected areas"
+  },
+  {
+   "label": "Road traffic accidents with victims (3.6.1)",
+   "portal": "dados.recife.pe.gov.br",
+   "found": true,
+   "name": "Acidentes de Tr\u00e2nsito com V\u00edtimas 2016",
+   "city": "Recife",
+   "affinity": 0.394,
+   "percentile": 31.8,
+   "in_tail": false,
+   "nearest": "Extent of use of country-owned results frameworks and planning tools by providers of development cooperation - data by recipient"
+  },
+  {
+   "label": "Air quality, hourly (11.6.2)",
+   "portal": "datos.madrid.es",
+   "found": true,
+   "name": "Calidad del aire. Datos horarios desde 2001",
+   "city": "Madrid",
+   "affinity": 0.462,
+   "percentile": 70.8,
+   "in_tail": false,
+   "nearest": "Proportion of results indicators which will be monitored using government sources and monitoring systems - data by provider"
+  },
+  {
+   "label": "Road traffic accidents (3.6.1)",
+   "portal": "datos.madrid.es",
+   "found": true,
+   "name": "Accidentes de tr\u00e1fico con implicaci\u00f3n de bicicletas",
+   "city": "Madrid",
+   "affinity": 0.535,
+   "percentile": 89.7,
+   "in_tail": false,
+   "nearest": "Number of deaths rate due to road traffic injuries"
+  },
+  {
+   "label": "Road traffic accidents and injuries (3.6.1)",
+   "portal": "dati.comune.milano.it",
+   "found": true,
+   "name": "Mobilit\u00e0: incidenti stradali e persone infortunate per mese (Anni 2001-2024)",
+   "city": "Milan",
+   "affinity": 0.516,
+   "percentile": 89.5,
+   "in_tail": false,
+   "nearest": "Number of deaths rate due to road traffic injuries"
+  },
+  {
+   "label": "Municipal waste collected (11.6.1)",
+   "portal": "dati.comune.milano.it",
+   "found": true,
+   "name": "Rifiuti raccolti a Milano e nei comuni limitrofi (2000-2016)",
+   "city": "Milan",
+   "affinity": 0.489,
+   "percentile": 87.8,
+   "in_tail": false,
+   "nearest": "Municipal waste collected"
+  },
+  {
+   "label": "Monthly road traffic accidents (3.6.1)",
+   "portal": "dati.comune.matera.it",
+   "found": true,
+   "name": "Bilancio mensile incidenti stradali anno 2018 di Matera",
+   "city": "Matera",
+   "affinity": 0.477,
+   "percentile": 71.5,
+   "in_tail": false,
+   "nearest": "Number of deaths rate due to road traffic injuries"
+  },
+  {
+   "label": "Municipal waste collection (11.6.1)",
+   "portal": "dados.pbh.gov.br",
+   "found": true,
+   "name": "Coleta de Res\u00edduos",
+   "city": "Belo Horizonte",
+   "affinity": 0.474,
+   "percentile": 78.9,
+   "in_tail": false,
+   "nearest": "Municipal waste collected"
+  },
+  {
+   "label": "Water quality (6.3.2)",
+   "portal": "data.buenosaires.gob.ar",
+   "found": true,
+   "name": "Calidad del Agua",
+   "city": "Buenos Aires",
+   "affinity": 0.418,
+   "percentile": 61.2,
+   "in_tail": false,
+   "nearest": "Maxiumum reservoir water area"
+  },
+  {
+   "label": "Population structure (demographics)",
+   "portal": "www.opendata-hro.de",
+   "found": true,
+   "name": "Bev\u00f6lkerungsstruktur 2005",
+   "city": "Rostock",
+   "affinity": 0.633,
+   "percentile": 91.1,
+   "in_tail": false,
+   "nearest": "Countries that have conducted at least one population and housing census in the last 10 years"
+  },
+  {
+   "label": "Drinking water quality (6.1.1)",
+   "portal": "transparenz.karlsruhe.de",
+   "found": true,
+   "name": "Jahresmittelwerte zur Trinkwasserqualit\u00e4t",
+   "city": "Karlsruhe",
+   "affinity": 0.408,
+   "percentile": 57.0,
+   "in_tail": false,
+   "nearest": "Water use efficiency"
+  }
+ ],
+ "clusters": [
+  {
+   "terms": [
+    "elezioni",
+    "sezione",
+    "risultati",
+    "referendum",
+    "abrogativo",
+    "del",
+    "per"
+   ],
+   "n": 241,
+   "n_cities": 6,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Milan"
+   ],
+   "mean_affinity": 0.294,
+   "coherence": 0.895,
+   "diffuse": false,
+   "examples": [
+    "Elezioni Europee 2019: Indirizzi e plessi elettorali \u2014 Milan",
+    "Elecciones Auton\u00f3micas de la Comunidad de Madrid 4 de mayo 2021: colegios, callejero y mesas electorales \u2014 Madrid",
+    "Resultado Concurso PBH Ativos 001/2018 \u2014 Belo Horizonte",
+    "Partidos pol\u00edticos reconocidos en CABA. \u2014 Buenos Aires",
+    "Elezione diretta del Sindaco e del Consiglio Comunale della citt\u00e0 di Matera 31 Maggio 2015 \u2014 Matera",
+    "Europawahl 2019 \u2014 Karlsruhe",
+    "Elezioni: elenco delle sedi per le consultazioni del 13/5/2001 \u2014 Milan",
+    "Elezioni: stradario per le consultazioni del 13/5/2001 \u2014 Milan"
+   ],
+   "central": [
+    "Elezioni Politiche 1996 - Senato: Risultati di Sezione \u2014 Milan",
+    "Elezioni Politiche 1996 - Camera - Quota Maggioritaria: Risultati di Sezione \u2014 Milan",
+    "Elezioni Politiche 1996 - Camera - Quota Proporzionale: Risultati di Sezione \u2014 Milan",
+    "Elezioni Comunali 2011 - Sindaco - Turno di ballottaggio: Risultati di Sezione \u2014 Milan",
+    "Elezioni Comunali 2011 - Sindaco: Risultati di Sezione \u2014 Milan"
+   ],
+   "nearest_indicator_most_common": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space"
+  },
+  {
+   "terms": [
+    "omi",
+    "quotazioni",
+    "immobiliari",
+    "semestre",
+    "locazione",
+    "perimetri",
+    "compravendita"
+   ],
+   "n": 113,
+   "n_cities": 5,
+   "cities": [
+    "Buenos Aires",
+    "Madrid",
+    "Matera",
+    "Milan",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.32,
+   "coherence": 0.861,
+   "diffuse": false,
+   "examples": [
+    "Quotazioni Immobiliari OMI: Compravendita - Semestre 2021/2 \u2014 Milan",
+    "Concesiones de quioscos \u2014 Madrid",
+    "BASE DE DADOS DA SUBPREFEITURA M'BOI MIRIM 2026 \u2014 S\u00e3o Paulo",
+    "Seguimiento de Obras Adjudicadas (SOA). \u2014 Buenos Aires",
+    "Elenco Farmacie \u2014 Matera",
+    "Quotazioni Immobiliari OMI: Locazione - Semestre 2021/2 \u2014 Milan",
+    "Quotazioni Immobiliari OMI: Compravendita e Locazione - Riepilogo \u2014 Milan",
+    "Zone e Perimetri OMI: 2021/2 \u2014 Milan"
+   ],
+   "central": [
+    "Quotazioni Immobiliari OMI: Locazione - Semestre 2004/1 \u2014 Milan",
+    "Quotazioni Immobiliari OMI: Locazione - Semestre 2004/2 \u2014 Milan",
+    "Quotazioni Immobiliari OMI: Compravendita - Semestre 2014/1 \u2014 Milan",
+    "Quotazioni Immobiliari OMI: Compravendita - Semestre 2014/2 \u2014 Milan",
+    "Quotazioni Immobiliari OMI: Compravendita - Semestre 2004/1 \u2014 Milan"
+   ],
+   "nearest_indicator_most_common": "Performance index of data Infrastructure (Pillar 5 of Statistical Performance Indicators)"
+  },
+  {
+   "terms": [
+    "orari",
+    "categoria",
+    "accessi",
+    "area",
+    "storica",
+    "serie",
+    "per"
+   ],
+   "n": 71,
+   "n_cities": 3,
+   "cities": [
+    "Belo Horizonte",
+    "Matera",
+    "Milan"
+   ],
+   "mean_affinity": 0.306,
+   "coherence": 0.711,
+   "diffuse": false,
+   "examples": [
+    "Parco veicolare circolante: consistenza, immatricolazioni e radiazioni - serie storica \u2014 Milan",
+    "Mapa Altim\u00e9trico 2015 \u2014 Belo Horizonte",
+    "Trasporti Pubblici Locali Comune di Matera - GTFS \u2014 Matera",
+    "ATM - Orari linee di superficie urbane \u2014 Milan",
+    "ATM - Orari linee metropolitane \u2014 Milan",
+    "Imprese attive per settore merceologico - serie storica \u2014 Milan",
+    "Sanit\u00e0: prestazioni ambulatoriali \u2014 Milan",
+    "Interventi del 118 Milano: tipologia e criticit\u00e0 (2004 - 2015) \u2014 Milan"
+   ],
+   "central": [
+    "AREA C: accessi orari 2012 distinti per veicoli di servizio \u2014 Milan",
+    "Parco veicolare, suddiviso per categoria - Serie storica \u2014 Milan",
+    "AREA C: accessi orari 2014 distinti per veicoli di servizio \u2014 Milan",
+    "AREA C: accessi orari 2014 suddivisi per categoria veicolo \u2014 Milan",
+    "AREA C: accessi orari 2015 distinti per veicoli di servizio \u2014 Milan"
+   ],
+   "nearest_indicator_most_common": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space"
+  },
+  {
+   "terms": [
+    "telelavoro",
+    "personale",
+    "indeterminato",
+    "tempo",
+    "anno"
+   ],
+   "n": 33,
+   "n_cities": 5,
+   "cities": [
+    "Buenos Aires",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Milan"
+   ],
+   "mean_affinity": 0.316,
+   "coherence": 0.698,
+   "diffuse": false,
+   "examples": [
+    "Inail: infortuni sul lavoro denunciati dalle aziende - Suddivisione per genere \u2014 Milan",
+    "Mentoring \u2014 Madrid",
+    "Centros de Jubilados \u2014 Buenos Aires",
+    "Popolazione Scolastica Istruzione Inferiore Pubblica di Matera A.S. 2014-2015 \u2014 Matera",
+    "Kindertagesbetreuung \u2014 Karlsruhe",
+    "Patrocini,Patronati e Comitati di Onore nel Comune di Milano \u2014 Milan",
+    "Personale dipendente del Comune Milano - anno 2014 \u2014 Milan",
+    "Personale assunto con contratto a tempo indeterminato - anno 2015 \u2014 Milan"
+   ],
+   "central": [
+    "Personale a tempo indeterminato in Telelavoro - anno 2018 \u2014 Milan",
+    "Personale a tempo indeterminato in Telelavoro - anno 2014 \u2014 Milan",
+    "Personale a tempo indeterminato in Telelavoro - anno 2019 \u2014 Milan",
+    "Personale a tempo indeterminato in Telelavoro - anno 2021 \u2014 Milan",
+    "Personale a tempo indeterminato in Telelavoro - anno 2017 \u2014 Milan"
+   ],
+   "nearest_indicator_most_common": "Proportion of project objectives of new development interventions drawn from country-led result frameworks - data by provider"
+  },
+  {
+   "terms": [
+    "pirf",
+    "zeis"
+   ],
+   "n": 51,
+   "n_cities": 4,
+   "cities": [
+    "Belo Horizonte",
+    "Fortaleza",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.261,
+   "coherence": 0.679,
+   "diffuse": false,
+   "examples": [
+    "Plano B\u00e1sico de Zona de Prote\u00e7\u00e3o de Helipontos  - PBZPH \u2014 Fortaleza",
+    "Servidores cedidos para PBH \u2014 Belo Horizonte",
+    "PSTDA - SUB CAMPO LIMPO \u2014 S\u00e3o Paulo",
+    "Raskri\u017eja sa zvu\u010dnim signalizatorima \u2014 Zagreb",
+    "PDA SMS \u2014 Fortaleza",
+    "Zona de Prote\u00e7\u00e3o do Aer\u00f3dromo Feij\u00f3 - ZPA \u2014 Fortaleza",
+    "PDA SCSP \u2014 Fortaleza",
+    "PDA IPM \u2014 Fortaleza"
+   ],
+   "central": [
+    "PIRF ZEIS Pici - Prop. Equipamentos - Zeis Pici \u2014 Fortaleza",
+    "PIRF ZEIS Pici - Prop. Espa\u00e7os Livres - Zeis Pici \u2014 Fortaleza",
+    "PIRF ZEIS Pici - Vazios Subutilizados - Zeis Pici \u2014 Fortaleza",
+    "PIRF ZEIS Pici - Espa\u00e7os Livres - Zeis Pici \u2014 Fortaleza",
+    "PIRF ZEIS Pirambu - Alargamento  - Zeis Pirambu \u2014 Fortaleza"
+   ],
+   "nearest_indicator_most_common": "Degree of implementation of integrated water resources management: institutions and participation"
+  },
+  {
+   "terms": [
+    "milanesi",
+    "accademico",
+    "universit",
+    "nelle",
+    "anno",
+    "per"
+   ],
+   "n": 51,
+   "n_cities": 2,
+   "cities": [
+    "Fortaleza",
+    "Milan"
+   ],
+   "mean_affinity": 0.312,
+   "coherence": 0.676,
+   "diffuse": false,
+   "examples": [
+    "Open Wifi Milano: Utenti unici giornalieri per zona \u2014 Milan",
+    "Audit Dataset \u2014 Fortaleza",
+    "Istruzione: Scuole dell'infanzia - unit\u00e0 scolastiche, classi e alunni per municipio e tipologia di gestione (a.s. 2002/2003-2023/2024) \u2014 Milan",
+    "Istruzione: Scuole primarie - unit\u00e0 scolastiche, classi e alunni per municipio e tipologia di gestione (a.s. 2002/2003-2023/2024) \u2014 Milan",
+    "Istruzione: Scuole secondarie di I grado - unit\u00e0 scolastiche, classi e alunni per municipio e tipologia di gestione (a.s. 2002/2003-2023/2024) \u2014 Milan",
+    "Istituto penale per minori C.Beccaria: flussi di utenza SERIE STORICA (2002-2025) \u2014 Milan",
+    "Istituto penale per minori C.Beccaria: flussi di utenza DETTAGLIO 2013 \u2014 Milan",
+    "Detenuti presenti nel Sistema Carcerario Milanese per posizione giuridica (2010-2020) \u2014 Milan"
+   ],
+   "central": [
+    "Iscritti nelle Universit\u00e0 Milanesi Anno Accademico 2010-2011 \u2014 Milan",
+    "Iscritti nelle Universit\u00e0 Milanesi Anno Accademico 2011-2012 \u2014 Milan",
+    "Immatricolati nelle Universit\u00e0 Milanesi Anno Accademico 2017-2018 \u2014 Milan",
+    "Immatricolati nelle Universit\u00e0 Milanesi Anno Accademico 2010-2011 \u2014 Milan",
+    "Immatricolati nelle Universit\u00e0 Milanesi Anno Accademico 2016-2017 \u2014 Milan"
+   ],
+   "nearest_indicator_most_common": "Open Data Inventory (ODIN) Coverage Index"
+  },
+  {
+   "terms": [
+    "covid-"
+   ],
+   "n": 39,
+   "n_cities": 7,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Madrid",
+    "Recife",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.307,
+   "coherence": 0.644,
+   "diffuse": false,
+   "examples": [
+    "COVID-19. Intervenciones del Cuerpo de Bomberos \u2014 Madrid",
+    "Transpar\u00eancia - Servidores 2020 \u2014 Fortaleza",
+    "Contratos Covid-19 \u2014 Belo Horizonte",
+    "Execu\u00e7\u00e3o Or\u00e7ament\u00e1ria - COVID-19 \u2014 S\u00e3o Paulo",
+    "Reporte COVID-19.. \u2014 Buenos Aires",
+    "Perfil das Pessoas Vacinadas - Covid-19 \u2014 Recife",
+    "Izdvojene ordinacije za pregled bolesnika pod sumnjom na zara\u017eenost koronavirusom \u2014 Zagreb",
+    "Estudio de consecuencias de la pandemia por COVID-19 en la poblaci\u00f3n de la ciudad de Madrid, octubre 2020 \u2014 Madrid"
+   ],
+   "central": [
+    "Llamados 107 COVID-19 \u2014 Buenos Aires",
+    "Casos Graves \u2013 Covid-19 \u2014 Recife",
+    "Casos Leves \u2013 Covid-19 \u2014 Recife",
+    "Tos COVID-19 \u2014 Buenos Aires",
+    "Casos COVID-19 \u2014 Buenos Aires"
+   ],
+   "nearest_indicator_most_common": "Number of new HIV infections per 1,000 uninfected population"
+  },
+  {
+   "terms": [
+    "ipem"
+   ],
+   "n": 69,
+   "n_cities": 6,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Karlsruhe",
+    "Madrid",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.273,
+   "coherence": 0.633,
+   "diffuse": false,
+   "examples": [
+    "Elecciones Asamblea de Madrid 1983-2023 \u2014 Madrid",
+    "Relat\u00f3rio Quantitativo de Ouvidoria 2024 \u2014 Fortaleza",
+    "Coeficiente CN Cen\u00e1rio 2021 \u2014 Belo Horizonte",
+    "DICION\u00c1RIO DE DADOS DA SUBPREFEITURA M'BOI MIRIM 2026 \u2014 S\u00e3o Paulo",
+    "Elecciones 2023 \u2014 Buenos Aires",
+    "Ergebnisbericht B\u00fcrgerumfrage 2024 - Lebensqualit\u00e4t und Zukunftsfragen \u2014 Karlsruhe",
+    "Elecciones Senado 2000-2023 \u2014 Madrid",
+    "Elecciones Ayuntamiento de Madrid 1983-2023 \u2014 Madrid"
+   ],
+   "central": [
+    "Verifica\u00e7\u00f5es Ipem 04/2023 \u2014 Fortaleza",
+    "Produtos Pr\u00e9-medidos 04/2023 \u2014 Fortaleza",
+    "Verifica\u00e7\u00f5es Ipem 02/2023 \u2014 Fortaleza",
+    "Execu\u00e7\u00e3o Ipem 04/2023 \u2014 Fortaleza",
+    "Produtos Pr\u00e9-medidos 02/2023 \u2014 Fortaleza"
+   ],
+   "nearest_indicator_most_common": "Universal health coverage (UHC) service coverage index, 2025 methodology"
+  },
+  {
+   "terms": [
+    "geologia",
+    "sica",
+    "lote"
+   ],
+   "n": 26,
+   "n_cities": 2,
+   "cities": [
+    "Belo Horizonte",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.325,
+   "coherence": 0.62,
+   "diffuse": true,
+   "examples": [
+    "Planta de Parcelamento do Solo Aprovada \u2014 Belo Horizonte",
+    "Situa\u00e7\u00e3o Geral dos Processos de Outorga Onerosa do Direito de Construir \u2014 S\u00e3o Paulo",
+    "Lote Aprovado \u2014 Belo Horizonte",
+    "Divisa F\u00edsica Lote \u2014 Belo Horizonte",
+    "Execu\u00e7\u00e3o Or\u00e7ament\u00e1ria \u2014 Belo Horizonte",
+    "Edifica\u00e7\u00e3o \u2014 Belo Horizonte",
+    "Tipologia de Uso e Ocupa\u00e7\u00e3o Lote 2017 \u2014 Belo Horizonte",
+    "Tipologia de Uso e Ocupa\u00e7\u00e3o Lote 2011 \u2014 Belo Horizonte"
+   ],
+   "central": [
+    "Geologia B\u00e1sica Contato \u2014 Belo Horizonte",
+    "Geologia B\u00e1sica  Limite \u2014 Belo Horizonte",
+    "Geologia B\u00e1sica Litotipo Ocorr\u00eancia Pontual \u2014 Belo Horizonte",
+    "Geologia B\u00e1sica Zona de Cisalhamento \u2014 Belo Horizonte",
+    "Geologia B\u00e1sica  Dique Cl\u00e1stico \u2014 Belo Horizonte"
+   ],
+   "nearest_indicator_most_common": "Total greenhouse gas emissions (including land use, land-use changes and forestry)"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 69,
+   "n_cities": 10,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Milan",
+    "Rostock",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.311,
+   "coherence": 0.611,
+   "diffuse": true,
+   "examples": [
+    "Comandi Decentrati della Polizia Locale \u2014 Milan",
+    "Personas que viven solas por edad seg\u00fan distrito y barrio, y por sexo (explotaci\u00f3n estad\u00edstica) \u2014 Madrid",
+    "Programa Gente de Valor \u2014 Fortaleza",
+    "Sondagem Geot\u00e9cnica \u2014 Belo Horizonte",
+    "Ortofotos -  Articula\u00e7\u00e3o, RGB e IRGB. \u2014 S\u00e3o Paulo",
+    "Mapa de Violencia de G\u00e9nero - DG de la Mujer \u2014 Buenos Aires",
+    "Adressen \u2014 Rostock",
+    "Caditoie geolocalizzate nel comune di Matera \u2014 Matera"
+   ],
+   "central": [
+    "Open Location Codes (Plus codes) \u2014 Rostock",
+    "Adressen \u2014 Rostock",
+    "Sosta riservata Bus GT \u2014 Milan",
+    "Informagiovani \u2014 Milan",
+    "Points of Interest - Entsorgungseinrichtungen \u2014 Karlsruhe"
+   ],
+   "nearest_indicator_most_common": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas"
+  },
+  {
+   "terms": [
+    "kvaliteti",
+    "zraka",
+    "zagrebu",
+    "podaci",
+    "gradu"
+   ],
+   "n": 11,
+   "n_cities": 7,
+   "cities": [
+    "Buenos Aires",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Recife",
+    "Rostock",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.31,
+   "coherence": 0.599,
+   "diffuse": true,
+   "examples": [
+    "Datos meteorol\u00f3gicos. Datos diarios desde 2019 \u2014 Madrid",
+    "Mapa de Ruido \u2014 Buenos Aires",
+    "M\u00fcllsammelaktionen \u2014 Rostock",
+    "Bollettini della criticit\u00e0 regionale della Protezione Civile di Basilicata \u2014 Matera",
+    "Naufr\u00e1gios do Recife \u2014 Recife",
+    "Podaci o kvaliteti zraka u Gradu Zagrebu - MP \u0110or\u0111i\u0107eva ulica 2023 \u2014 Zagreb",
+    "LUBW Wetterdaten \u2014 Karlsruhe",
+    "Datos meteorol\u00f3gicos. Datos horarios desde 2019 \u2014 Madrid"
+   ],
+   "central": [
+    "Podaci o kvaliteti zraka u Gradu Zagrebu - MP \u0110or\u0111i\u0107eva ulica 2023 \u2014 Zagreb",
+    "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Ksaverska cesta 2023 \u2014 Zagreb",
+    "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Prilaz baruna Filipovi\u0107a 2023 \u2014 Zagreb",
+    "Datos meteorol\u00f3gicos. Datos horarios desde 2019 \u2014 Madrid",
+    "Datos meteorol\u00f3gicos. Datos diarios desde 2019 \u2014 Madrid"
+   ],
+   "nearest_indicator_most_common": "Carbon dioxide emissions per unit of GDP at purchaning power parity rates"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 90,
+   "n_cities": 10,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Recife",
+    "Rostock",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.321,
+   "coherence": 0.594,
+   "diffuse": true,
+   "examples": [
+    "Dep\u00f3sitos de la gr\u00faa  del Ayuntamiento de Madrid \u2014 Madrid",
+    "Mapa de hor\u00e1rios e rotas de onibus \u2014 Fortaleza",
+    "Usu\u00e1rios Transporte P\u00fablico - Dados de Destino por Regi\u00e3o H3 \u2014 Belo Horizonte",
+    "Sistema de Gerenciamento de Transporte P\u00fablico - SGTP | T\u00e1xi \u2014 S\u00e3o Paulo",
+    "Estaciones de Ferrocarril. \u2014 Buenos Aires",
+    "Bewohnerparkgebiete \u2014 Rostock",
+    "Stalli diversamente abili del comune di Matera \u2014 Matera",
+    "Pesquisa Origem-Destino Metropolitana 2018 \u2014 Recife"
+   ],
+   "central": [
+    "Esta\u00e7\u00e3o de \u00d4nibus \u2014 Belo Horizonte",
+    "Tarjeta Azul de transportes para autob\u00fas (EMT) y metro \u2014 Madrid",
+    "Haltestellen \u2014 Rostock",
+    "Stazioni Ferroviarie e Autobus 2018 \u2014 Matera",
+    "Matriz Origem / Destino dos Usu\u00e1rios do Transporte P\u00fablico - Bilhetagem Eletr\u00f4nica \u2014 Belo Horizonte"
+   ],
+   "nearest_indicator_most_common": "Death rate due to road traffic injuries"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 120,
+   "n_cities": 11,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Milan",
+    "Recife",
+    "Rostock",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.315,
+   "coherence": 0.585,
+   "diffuse": true,
+   "examples": [
+    "Elenco degli Operatori accreditati ai Servizi da Formazione nel Comune di Milano \u2014 Milan",
+    "Monumentos de la ciudad de Madrid \u2014 Madrid",
+    "resumo de acoes e eventos dos equipamentos esportivo de grande porte \u2014 Fortaleza",
+    "Equipamento Cultural \u2014 Belo Horizonte",
+    "RELAT\u00d3RIO DE PROGRAMA\u00c7\u00c3O DE EVENTOS - CULTURA - 2026 \u2014 S\u00e3o Paulo",
+    "Polideportivos \u2014 Buenos Aires",
+    "38. Internationaler Hansetag Rostock \u2014 Rostock",
+    "Classifica Primo Contest Open Matera \u2014 Matera"
+   ],
+   "central": [
+    "\u00c1reas de actividades deportivas \u2014 Madrid",
+    "Polideportivos \u2014 Buenos Aires",
+    "Geoportal javna sportska igrali\u0161ta \u2014 Zagreb",
+    "Sportangebot der Sportvereine in Karlsruhe \u2014 Karlsruhe",
+    "Deportes. Competiciones deportivas municipales de deportes colectivos. Temporada en curso \u2014 Madrid"
+   ],
+   "nearest_indicator_most_common": "Total public expenditure per capita on cultural and natural heritage at purchansing-power parity rates"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 72,
+   "n_cities": 9,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Recife",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.324,
+   "coherence": 0.557,
+   "diffuse": true,
+   "examples": [
+    "Aparcamientos municipales para residentes (PAR) \u2014 Madrid",
+    "Esta\u00e7\u00f5es Bicicletar \u2014 Fortaleza",
+    "Rota Ciclovi\u00e1ria \u2014 Belo Horizonte",
+    "Distribui\u00e7\u00e3o das crian\u00e7as e adolescentes cadastradas no Cad\u00danico em situa\u00e7\u00e3o de trabalho infantil \u2014 S\u00e3o Paulo",
+    "Subte: Viajes Molinetes. \u2014 Buenos Aires",
+    "Segnaletica verticale del comune di Matera \u2014 Matera",
+    "Malha Ciclovi\u00e1ria do Recife \u2014 Recife",
+    "Geoportal Javna parkirali\u0161ta za bicikle \u2014 Zagreb"
+   ],
+   "central": [
+    "Se\u00f1alizaci\u00f3n vertical \u2014 Madrid",
+    "Bici. Aparcabicis \u2014 Madrid",
+    "Bici. Infraestructura ciclista \u2014 Madrid",
+    "Bicicletas P\u00fablicas. \u2014 Buenos Aires",
+    "Ancho medio de viario \u2014 Madrid"
+   ],
+   "nearest_indicator_most_common": "Proportion of municipal waste recycled"
+  },
+  {
+   "terms": [
+    "licita",
+    "fortaleza"
+   ],
+   "n": 70,
+   "n_cities": 7,
+   "cities": [
+    "Belo Horizonte",
+    "Fortaleza",
+    "Karlsruhe",
+    "Madrid",
+    "Matera",
+    "Recife",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.3,
+   "coherence": 0.552,
+   "diffuse": true,
+   "examples": [
+    "Operaci\u00f3n Asfalto. Madrid 2021 \u2014 Madrid",
+    "Resultado das Licita\u00e7\u00f5es da Prefeitura de Fortaleza  - JAN a MAI/2026 \u2014 Fortaleza",
+    "Obra de Arte em Logradouro P\u00fablico \u2014 Belo Horizonte",
+    "Sistema Aprova Digital (AD) \u2014 S\u00e3o Paulo",
+    "Aereofotogrammetria 1989-2008 \u2014 Matera",
+    "Demandas dos Cidad\u00e3os e Servi\u00e7os - Dados Vivos Recife \u2014 Recife",
+    "3D Geb\u00e4udemodell der Stadt Karlsruhe \u2014 Karlsruhe",
+    "Operaci\u00f3n Asfalto. Madrid 2020 \u2014 Madrid"
+   ],
+   "central": [
+    "Licen\u00e7as de Barrac\u00e3o de Obra Suspenso Emitidas \u2014 Belo Horizonte",
+    "Licen\u00e7as de Mesa e Cadeira \u2014 Belo Horizonte",
+    "Licen\u00e7as de Tapume Emitidas \u2014 Belo Horizonte",
+    "Licen\u00e7as de Muro de Arrimo Emitidas \u2014 Belo Horizonte",
+    "Licen\u00e7as de Ca\u00e7amba \u2014 Belo Horizonte"
+   ],
+   "nearest_indicator_most_common": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space"
+  },
+  {
+   "terms": [
+    "zagreba",
+    "grada"
+   ],
+   "n": 69,
+   "n_cities": 7,
+   "cities": [
+    "Belo Horizonte",
+    "Madrid",
+    "Milan",
+    "Recife",
+    "Rostock",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.295,
+   "coherence": 0.541,
+   "diffuse": true,
+   "examples": [
+    "Associazionismo: organizzazioni di volontariato 2010-2019 \u2014 Milan",
+    "Residencias de mayores y apartamentos tutelados existentes en la ciudad de Madrid (datos georreferenciados) \u2014 Madrid",
+    "\u00c1reas de Especial Interesse Social - AEIS - Lei 7166/96 \u2014 Belo Horizonte",
+    "Rede de Servi\u00e7os Socioassistenciais SMADS \u2014 S\u00e3o Paulo",
+    "Kinder- und Jugendbetreuung \u2014 Rostock",
+    "Manifesta\u00e7\u00f5es recebidas via Ouvidoria \u2014 Recife",
+    "Ugovori o najmu stanova \u2014 Zagreb",
+    "Sedes. Comunidad de Madrid \u2014 Madrid"
+   ],
+   "central": [
+    "Broj smje\u0161tajnih objekata Grada Zagreba \u2014 Zagreb",
+    "\u010clanovi Vije\u0107a Gradskih \u010detvrti Grada Zagreba \u2014 Zagreb",
+    "Dje\u010dji vrti\u0107i Grada Zagreba \u2014 Zagreb",
+    "Zborna mjesta civilne za\u0161tite Grada Zagreba \u2014 Zagreb",
+    "Po\u010dasni gra\u0111ani Grada Zagreba \u2014 Zagreb"
+   ],
+   "nearest_indicator_most_common": "Proportion of countries with alignment of National Biodiversity Strategy and Action Plan (NBSAP) targets to target 9 of the Aichi Biodiversity target 9 set out in the Strategic Plan for Biodiversity 2011-2020"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 35,
+   "n_cities": 4,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Recife"
+   ],
+   "mean_affinity": 0.303,
+   "coherence": 0.535,
+   "diffuse": true,
+   "examples": [
+    "Outorga Onerosa do Direito de Construir - OODC \u2014 Fortaleza",
+    "Articula\u00e7\u00e3o Planta de 1942 \u2014 Belo Horizonte",
+    "Paradas de Taxis. \u2014 Buenos Aires",
+    "Efetivo da Defesa Civil \u2014 Recife",
+    "Volume Tr\u00e1fego Mensal \u2014 Fortaleza",
+    "Vias 50 \u2014 Fortaleza",
+    "Articula\u00e7\u00e3o Planta de 1953 \u2014 Belo Horizonte",
+    "Vados \u2014 Buenos Aires"
+   ],
+   "central": [
+    "Veredas. \u2014 Buenos Aires",
+    "Vados \u2014 Buenos Aires",
+    "Sem\u00e1foros \u2014 Buenos Aires",
+    "Linea Oficial \u2014 Buenos Aires",
+    "Conteo Vehicular \u2014 Buenos Aires"
+   ],
+   "nearest_indicator_most_common": "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 34,
+   "n_cities": 7,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Madrid",
+    "Matera",
+    "Recife",
+    "Rostock",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.327,
+   "coherence": 0.51,
+   "diffuse": true,
+   "examples": [
+    "Bomberos. Parques de bomberos \u2014 Madrid",
+    "Ortofoto 2007 \u2014 Belo Horizonte",
+    "controle de obras SIURB \u2014 S\u00e3o Paulo",
+    "Registro de elevadores y artefactos t\u00e9rmicos \u2014 Buenos Aires",
+    "Abfallbeh\u00e4lter \u2014 Rostock",
+    "Beni confiscati alla criminalit\u00e0 organizzata - Comune di Matera \u2014 Matera",
+    "Registro de Atendimentos da Defesa Civil \u2014 Recife",
+    "Manuten\u00e7\u00e3o de \u00e1reas ajardinadas Itaquera \u2014 S\u00e3o Paulo"
+   ],
+   "central": [
+    "Feuerwachen \u2014 Rostock",
+    "Notfalltreffpunkte/W\u00e4rmeinseln \u2014 Rostock",
+    "Cuarteles y Destacamentos de Bomberos \u2014 Buenos Aires",
+    "Sumideros \u2014 Buenos Aires",
+    "Sitios Posibles de Anegamiento \u2014 Buenos Aires"
+   ],
+   "nearest_indicator_most_common": "Countries that have legislative, administrative and policy framework or measures reported through the Online Reporting System on Compliance of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA)"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 98,
+   "n_cities": 9,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Madrid",
+    "Matera",
+    "Milan",
+    "Recife",
+    "Rostock",
+    "S\u00e3o Paulo"
+   ],
+   "mean_affinity": 0.327,
+   "coherence": 0.503,
+   "diffuse": true,
+   "examples": [
+    "Disposizioni anticipate di trattamento \u2013 D.A.T. - Richieste \u2014 Milan",
+    "Oficinas de Atenci\u00f3n Integral al Contribuyente (OAIC) \u2014 Madrid",
+    "Passagens e di\u00e1rias em viagens de servidores da Prefeitura Municipal de Fortaleza em 2023 \u2014 Fortaleza",
+    "Unidade de Ilumina\u00e7\u00e3o P\u00fablica \u2014 Belo Horizonte",
+    "Compras P\u00fablicas SUB-CS \u2014 S\u00e3o Paulo",
+    "Grilla Salarial. \u2014 Buenos Aires",
+    "Adressenliste \u2014 Rostock",
+    "Bando pubblico per esercizi di vicinato nei rioni Sassi \u2014 Matera"
+   ],
+   "central": [
+    "Obras Registradas \u2014 Buenos Aires",
+    "Juegotecas Barriales. \u2014 Buenos Aires",
+    "Inspecciones a las Obras \u2014 Buenos Aires",
+    "Anotaciones de entrada en el Registro Electr\u00f3nico General del Ayuntamiento de Madrid \u2014 Madrid",
+    "Edificios P\u00fablicos en 3D \u2014 Buenos Aires"
+   ],
+   "nearest_indicator_most_common": "Countries with procedures in law or policy for participation by service users/communities in planning program in water resources planning and management"
+  },
+  {
+   "terms": [
+    "(no term covers a fifth of this cluster)"
+   ],
+   "n": 154,
+   "n_cities": 9,
+   "cities": [
+    "Belo Horizonte",
+    "Buenos Aires",
+    "Fortaleza",
+    "Matera",
+    "Milan",
+    "Recife",
+    "Rostock",
+    "S\u00e3o Paulo",
+    "Zagreb"
+   ],
+   "mean_affinity": 0.316,
+   "coherence": 0.469,
+   "diffuse": true,
+   "examples": [
+    "Osservatorio Milano - Attrattivit\u00e0 \u2014 Milan",
+    "Relat\u00f3rio de Informa\u00e7\u00f5es de  Servidores da PMF \u2014 Fortaleza",
+    "Despesas Or\u00e7ament\u00e1rias \u2014 Belo Horizonte",
+    "Folha de Pagamento - SPTURIS \u2014 S\u00e3o Paulo",
+    "Programa Aprend\u00e9 Programando. \u2014 Buenos Aires",
+    "Baudenkmale und Denkmalbereiche \u2014 Rostock",
+    "PROSPETTO DEGLI IMMOBILI DA ALIENARE AL 2013 \u2014 Matera",
+    "Empresas da Cidade do Recife \u2014 Recife"
+   ],
+   "central": [
+    "Folha de Pagamento - SPTRANS \u2014 S\u00e3o Paulo",
+    "Folha de Pagamento - SPSEC \u2014 S\u00e3o Paulo",
+    "Folha de Pagamento - ADESAMPA \u2014 S\u00e3o Paulo",
+    "Folha de Pagamento - COHAB \u2014 S\u00e3o Paulo",
+    "Folha de Pagamento - SPTURIS \u2014 S\u00e3o Paulo"
+   ],
+   "nearest_indicator_most_common": "Open Data Inventory (ODIN) Coverage Index"
+  }
+ ],
+ "phrases": [],
+ "coherence_floor": 0.62,
+ "indicators_never_nearest": [
+  {
+   "dcid": "undata/sdg/AG_FLS_PCT",
+   "name": "Food loss percentage"
+  },
+  {
+   "dcid": "undata/sdg/AG_FOOD_WST_PC",
+   "name": "Food waste per capita"
+  },
+  {
+   "dcid": "undata/sdg/AG_FPA_HMFP",
+   "name": "Proportion of countries recording abnormally high or moderately high food prices, according to the Indicator of Food Price Anomalies"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_AGRWAG",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of wage rate in agriculture"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_FERTMG",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of management of fertilizers"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_FIES",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of food security"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_FRSTCHG",
+   "name": "Annual forest area change rate"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_NFI",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of net farm income"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_PSTCDSMG",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of management of pesticides"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_RMM",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of risk mitigation mechanisms"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_SUST_PRXCSS",
+   "name": "Progress toward productive and sustainable agriculture, current status score (proxy)"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_SUST_PRXTS",
+   "name": "Progress toward productive and sustainable agriculture, trend score (proxy)"
+  },
+  {
+   "dcid": "undata/sdg/AG_PRD_FIESMS",
+   "name": "Prevalence of moderate or severe food insecurity in the population"
+  },
+  {
+   "dcid": "undata/sdg/AG_PRD_FIESMSN",
+   "name": "Population in moderate or severe food insecurity"
+  },
+  {
+   "dcid": "undata/sdg/AG_PRD_FIESS",
+   "name": "Prevalence of severe food insecurity in the population"
+  },
+  {
+   "dcid": "undata/sdg/BN_CAB_XOKA_GD_ZS",
+   "name": "Current account balance as a proportion of GDP"
+  },
+  {
+   "dcid": "undata/sdg/BX_KLT_DINV_WD_GD_ZS",
+   "name": "Foreign direct investment, net inflows, as a proportion of GDP"
+  },
+  {
+   "dcid": "undata/sdg/BX_TRF_PWKR",
+   "name": "Volume of remittances as a proportion of total GDP"
+  },
+  {
+   "dcid": "undata/sdg/DC_ENVTECH_EXP",
+   "name": "Amount of tracked exported Environmentally Sound Technologies"
+  },
+  {
+   "dcid": "undata/sdg/DC_ENVTECH_REXP",
+   "name": "Amount of tracked re-exported Environmentally Sound Technologies"
+  },
+  {
+   "dcid": "undata/sdg/DC_ENVTECH_RIMP",
+   "name": "Amount of tracked re-imported Environmentally Sound Technologies"
+  },
+  {
+   "dcid": "undata/sdg/DC_FIN_CLIMM",
+   "name": "Climate-specific financial support provided via multilateral channels"
+  },
+  {
+   "dcid": "undata/sdg/DC_FTA_TOTAL",
+   "name": "Total official development assistance (gross disbursement) for technical cooperation"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_BDVL",
+   "name": "Total inbound official development assistance for biodiversity"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_LLDC",
+   "name": "Net outbound official development assistance (ODA) to landlocked developing countries from OECD-DAC countries"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_LLDCG",
+   "name": "Net outbound official development assistance (ODA) to landlocked developing countries as a percentage of OECD-DAC donors' GNI"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_POVDLG",
+   "name": "Outbound official development assistance grants for poverty reduction, as percentage of GNI"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_POVG",
+   "name": "Official development assistance grants for poverty reduction (percentage of GNI)"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_POVLG",
+   "name": "Inbound official development assistance grants for poverty reduction, as a percentage of GNI"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_TOTG",
+   "name": "Net outbound official development assistance (ODA) as a percentage of OECD-DAC donors' GNI"
+  },
+  {
+   "dcid": "undata/sdg/DC_OSSD_GRT",
+   "name": "Gross receipts by developing countries of official sustainable development grants"
+  },
+  {
+   "dcid": "undata/sdg/DC_OSSD_OFFNL",
+   "name": "Gross receipts by developing countries of official non-concessional sustainable development loans"
+  },
+  {
+   "dcid": "undata/sdg/DC_OSSD_PRVGRT",
+   "name": "Gross receipts by developing countries of private grants"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_AGRL",
+   "name": "Total inbound official flows (disbursements) for agriculture"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_SCHIPSL",
+   "name": "Total inbound official flows for scholarships"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_TRDCMDL",
+   "name": "Total outbound official flows (commitments) for Aid for Trade"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_TRDCML",
+   "name": "Total inbound official flows (commitments) for Aid for Trade"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_TRDDBMDL",
+   "name": "Total outbound official flows (disbursement) for Aid for Trade"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_TRDDBML",
+   "name": "Total inbound official flows (disbursement) for Aid for Trade"
+  },
+  {
+   "dcid": "undata/sdg/DC_TRF_TFDV",
+   "name": "Total inbound resource flows for development"
+  },
+  {
+   "dcid": "undata/sdg/DC_TRF_TOTDL",
+   "name": "Total outbound assistance for development"
+  },
+  {
+   "dcid": "undata/sdg/DC_TRF_TOTL",
+   "name": "Total inbound assistance for development"
+  },
+  {
+   "dcid": "undata/sdg/DT_DOD_DECT_GN_ZS",
+   "name": "External debt stocks as a proportion of GNI"
+  },
+  {
+   "dcid": "undata/sdg/EG_TBA_H2CORL",
+   "name": "Proportion of transboundary river and lake basins with an operational arrangement for water cooperation"
+  },
+  {
+   "dcid": "undata/sdg/EN_EWT_GENPCAP",
+   "name": "Electronic waste generated per capita"
+  },
+  {
+   "dcid": "undata/sdg/EN_EWT_RCYV",
+   "name": "Total electronic waste recycled"
+  },
+  {
+   "dcid": "undata/sdg/EN_H2O_OPAMBQ",
+   "name": "Proportion of open water bodies with good ambient water quality"
+  },
+  {
+   "dcid": "undata/sdg/EN_H2O_WBAMBQ",
+   "name": "Proportion of bodies of water with good ambient water quality"
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_EXP",
+   "name": "Hazardous waste exported"
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_GENGDP",
+   "name": "Hazardous waste generated per unit of GDP"
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_GENV",
+   "name": "Hazardous waste generated"
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_IMP",
+   "name": "Hazardous waste imported"
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_PCAP",
+   "name": "Hazardous waste generated, per capita"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAR_BEALIT_BP",
+   "name": "Proportion of beach litter originating from national land-based sources that ends in the beach"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAR_BEALIT_EXP",
+   "name": "Total beach litter originating from national land-based sources that is exported"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAR_BEALIT_OP",
+   "name": "Proportion of beach litter originating from national land-based sources that ends in the ocean"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAR_BEALIT_OV",
+   "name": "Total beach litter originating from national land-based sources that ends in the ocean"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAT_DOMCMPT",
+   "name": "Domestic material consumption"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAT_FTPRPC",
+   "name": "Material footprint per capita"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAT_FTPRTN",
+   "name": "Material footprint"
+  },
+  {
+   "dcid": "undata/sdg/EN_MWT_GENV",
+   "name": "Municipal waste generated"
+  },
+  {
+   "dcid": "undata/sdg/EN_MWT_IMP",
+   "name": "Municipal waste imported"
+  },
+  {
+   "dcid": "undata/sdg/EN_NAA_PLAN",
+   "name": "Countries with national adaptation plans"
+  },
+  {
+   "dcid": "undata/sdg/EN_NAA_PLAN_DV",
+   "name": "Least developed countries and small island developing States with national adaptation plans"
+  },
+  {
+   "dcid": "undata/sdg/EN_NAD_CONTR",
+   "name": "Countries with nationally determined contributions"
+  },
+  {
+   "dcid": "undata/sdg/EN_NAD_CONTR_DV",
+   "name": "Least developed countries and small island developing States with nationally determined contributions"
+  },
+  {
+   "dcid": "undata/sdg/EN_RSRV_MNWAC",
+   "name": "Change in minimum reservoir water area"
+  },
+  {
+   "dcid": "undata/sdg/EN_RVR_MNRVFLC",
+   "name": "Change in minimum river flow (%)"
+  },
+  {
+   "dcid": "undata/sdg/EN_RVR_MNRVFLN",
+   "name": "River flow minimum (m3/s)"
+  },
+  {
+   "dcid": "undata/sdg/EN_RVR_MXRVFLC",
+   "name": "Change in maximum river flow (%)"
+  },
+  {
+   "dcid": "undata/sdg/EN_RVR_MXRVFLN",
+   "name": "River flow maximum (m3/s)"
+  },
+  {
+   "dcid": "undata/sdg/EN_SCP_FSHGDP",
+   "name": "Sustainable fisheries as a proportion of GDP"
+  },
+  {
+   "dcid": "undata/sdg/EN_WBE_INWTL",
+   "name": "Extent of inland wetlands"
+  },
+  {
+   "dcid": "undata/sdg/EN_WBE_MANGC",
+   "name": "Mangrove total area change"
+  },
+  {
+   "dcid": "undata/sdg/EN_WBE_NDQTRVR",
+   "name": "Quantity of nationally derived water fromrivers"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_GEN",
+   "name": "Total wastewater generated"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_TREAT",
+   "name": "Total wastewater treated"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_TREATR",
+   "name": "Proportion of wastewater treated"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_TREATR_SF",
+   "name": "Proportion of wastewater safely treated"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_TREAT_SF",
+   "name": "Total wastewater safely treated"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_WWDS",
+   "name": "Proportion of safely treated domestic wastewater flows"
+  },
+  {
+   "dcid": "undata/sdg/ER_FFS_CMPT_CD",
+   "name": "Fossil-fuel subsidies (consumption and production)"
+  },
+  {
+   "dcid": "undata/sdg/ER_FFS_CMPT_PC_CD",
+   "name": "Fossil-fuel subsidies (consumption and production) per capita"
+  },
+  {
+   "dcid": "undata/sdg/ER_GRF_ANIMKPT_TRB",
+   "name": "Number of transboundary breeds (including extinct ones)"
+  },
+  {
+   "dcid": "undata/sdg/ER_H2O_FWTL",
+   "name": "Proportion of fish stocks within biologically sustainable levels (not overexploited)"
+  },
+  {
+   "dcid": "undata/sdg/ER_H2O_IWRMD_MI",
+   "name": "Degree of implementation of integrated water resources management: management instruments"
+  },
+  {
+   "dcid": "undata/sdg/ER_H2O_STRESS",
+   "name": "Level of water stress: freshwater withdrawal as a proportion of available freshwater resources"
+  },
+  {
+   "dcid": "undata/sdg/ER_IAS_GLOFUN",
+   "name": "Recipient countries of global funding with access to any funding from global financial mechanisms for projects related to invasive alien species management"
+  },
+  {
+   "dcid": "undata/sdg/ER_IAS_GLOFUNP",
+   "name": "Proportion of recipient countries of global funding with access to any funding from global financial mechanisms for projects related to invasive alien species management"
+  },
+  {
+   "dcid": "undata/sdg/ER_IAS_LEGIS",
+   "name": "Countries with a legislation, regulation, or act related to the prevention of introduction and management of Invasive Alien Species"
+  },
+  {
+   "dcid": "undata/sdg/ER_IAS_NATBUD",
+   "name": "Countries with an allocation from the national budget to manage the threat of invasive alien species"
+  },
+  {
+   "dcid": "undata/sdg/ER_IAS_NATBUDP",
+   "name": "Proportion of countries with allocation from the national budget to manage the threat of invasive alien species"
+  },
+  {
+   "dcid": "undata/sdg/ER_MTN_DGRDP",
+   "name": "Proportion of degraded mountain land"
+  },
+  {
+   "dcid": "undata/sdg/ER_MTN_TOTL",
+   "name": "Mountain area"
+  },
+  {
+   "dcid": "undata/sdg/ER_RSK_LBREDS",
+   "name": "Proportion of local breeds classified as being at risk of extinction as a share of local breeds with known level of extinction risk"
+  },
+  {
+   "dcid": "undata/sdg/ER_UNK_TRBBREDN",
+   "name": "Number of transboundary breeds with unknown risk status (number)"
+  },
+  {
+   "dcid": "undata/sdg/FI_FSI_FSANL",
+   "name": "Non-performing loans to total gross loans"
+  },
+  {
+   "dcid": "undata/sdg/FI_FSI_FSERA",
+   "name": "Rate of return on assets"
+  },
+  {
+   "dcid": "undata/sdg/FI_FSI_FSKRTC",
+   "name": "Ratio of regulatory tier-1 capital to risk-weighted assets"
+  },
+  {
+   "dcid": "undata/sdg/FI_RES_TOTL_MO",
+   "name": "Total reserves in months of imports"
+  },
+  {
+   "dcid": "undata/sdg/GB_POP_SCIERD",
+   "name": "Number of full-time-equivalent researchers per million inhabitants"
+  },
+  {
+   "dcid": "undata/sdg/GB_XPD_CULNAT_PBPV",
+   "name": "Total public and private expenditure per capita on cultural and natural heritage at purchasing-power parity rates"
+  },
+  {
+   "dcid": "undata/sdg/GB_XPD_CULNAT_PV",
+   "name": "Total private expenditure per capita spent on cultural and natural heritage at purchasing-power parity rates"
+  },
+  {
+   "dcid": "undata/sdg/GB_XPD_NAT_PBPV",
+   "name": "Total public and private expenditure per capita on natural heritage at purchasing-power parity rates"
+  },
+  {
+   "dcid": "undata/sdg/GC_BAL_CASH_GD_ZS",
+   "name": "Cash surplus/deficit as a proportion of GDP"
+  },
+  {
+   "dcid": "undata/sdg/IT_MOB_2GNTWK",
+   "name": "Proportion of population covered by at least a 2G mobile network"
+  },
+  {
+   "dcid": "undata/sdg/IT_MOB_4GNTWK",
+   "name": "Proportion of population covered by at least a 4G mobile network"
+  },
+  {
+   "dcid": "undata/sdg/IT_MOB_5GNTWK",
+   "name": "Proportion of population covered by at least a 5G mobile network"
+  },
+  {
+   "dcid": "undata/sdg/IT_NET_BBND",
+   "name": "Fixed broadband subscriptions per 100 inhabitants"
+  },
+  {
+   "dcid": "undata/sdg/IT_NET_BBNDN",
+   "name": "Number of fixed broadband subscriptions"
+  },
+  {
+   "dcid": "undata/sdg/IU_DMK_ICRS",
+   "name": "Proportion of population who believe decision-making is inclusive and responsive"
+  },
+  {
+   "dcid": "undata/sdg/NE_CON_GOVT_KD_ZG",
+   "name": "Annual growth of final consumption expenditure of the general government"
+  },
+  {
+   "dcid": "undata/sdg/PD_AGR_LSFP",
+   "name": "Productivity of large-scale food producers (agricultural output per labour day at purchasing-power parity rates)"
+  },
+  {
+   "dcid": "undata/sdg/PD_AGR_SSFP",
+   "name": "Productivity of small-scale food producers (agricultural output per labour day at purchasing-power parity rates)"
+  },
+  {
+   "dcid": "undata/sdg/SD_MDP_ANDIHH",
+   "name": "Average share of weighted deprivations experienced by total households (intensity)"
+  },
+  {
+   "dcid": "undata/sdg/SD_MDP_MUHC",
+   "name": "Proportion of population living in multidimensional poverty"
+  },
+  {
+   "dcid": "undata/sdg/SE_GCEDESD_CUR",
+   "name": "Extent to which global citizenship education and education for sustainable development are mainstreamed in curricula"
+  },
+  {
+   "dcid": "undata/sdg/SG_DMK_PARLMP_UC",
+   "name": "Female representation ratio in parliament (proportion of women in parliament divided by the proportion of women in the national population eligible by age): Upper chamber"
+  },
+  {
+   "dcid": "undata/sdg/SG_HAZ_CMRBASEL",
+   "name": "Parties meeting their commitments and obligations in transmitting information as required by Basel Convention on hazardous waste, and other chemicals"
+  },
+  {
+   "dcid": "undata/sdg/SG_HAZ_CMRMNMT",
+   "name": "Parties meeting their commitments and obligations in transmitting information as required by Minamata Convention on hazardous waste, and other chemicals"
+  },
+  {
+   "dcid": "undata/sdg/SG_LGL_GENEQLFP",
+   "name": "Level of achievement regarding legal frameworks that promote, enforce and monitor gender equality with respect to overarching legal frameworks and public life (Area 1)"
+  },
+  {
+   "dcid": "undata/sdg/SG_REG_DETH75",
+   "name": "Proportion of countries with death registration data that are at least 75 percent complete"
+  },
+  {
+   "dcid": "undata/sdg/SG_STT_NSDSFDOTHR",
+   "name": "Countries with national statistical plans with funding from others"
+  },
+  {
+   "dcid": "undata/sdg/SH_HAP_ASMORT",
+   "name": "Age-standardized mortality rate attributed to household air pollution"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC1",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (maternity care component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC13",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (HPV Vaccine component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC4",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (post-abortion care component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC5",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (contraceptive services component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC7",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (emergency contraception component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHES2",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (contraception and family planning section)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHES3",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (comprehensive sexuality education and information section)"
+  },
+  {
+   "dcid": "undata/sdg/SH_STA_MALR",
+   "name": "Malaria incidence per 1,000 population at risk"
+  },
+  {
+   "dcid": "undata/sdg/SH_TBS_INCD",
+   "name": "Tuberculosis incidence"
+  },
+  {
+   "dcid": "undata/sdg/SH_TRP_INTVN",
+   "name": "Number of people requiring interventions against neglected tropical diseases"
+  },
+  {
+   "dcid": "undata/sdg/SI_AGR_LSFP",
+   "name": "Average income of large-scale food producers, at purchasing-power parity rates"
+  },
+  {
+   "dcid": "undata/sdg/SI_AGR_SSFP",
+   "name": "Average income of small-scale food producers, at purchasing-power parity rates"
+  },
+  {
+   "dcid": "undata/sdg/SI_COV_BENFTS",
+   "name": "[ILO] Proportion of population covered by at least one social protection benefit"
+  },
+  {
+   "dcid": "undata/sdg/SI_POV_DAY1",
+   "name": "Proportion of population below international poverty line"
+  },
+  {
+   "dcid": "undata/sdg/SI_POV_NAHC",
+   "name": "Proportion of population living below the national poverty line"
+  },
+  {
+   "dcid": "undata/sdg/SM_DTH_MIGR",
+   "name": "Total deaths and disappearances recorded during migration"
+  },
+  {
+   "dcid": "undata/sdg/SN_ITK_DEFCN",
+   "name": "Number of undernourished people"
+  },
+  {
+   "dcid": "undata/sdg/SP_DISP_RESOL",
+   "name": "Proportion of the population who have experienced a dispute in the past two years who accessed a formal or informal dispute resolution mechanism"
+  },
+  {
+   "dcid": "undata/sdg/SP_GNP_WNOWNS",
+   "name": "Share of women among owners or rights-bearers of agricultural land"
+  },
+  {
+   "dcid": "undata/sdg/SP_LGL_LNDAGSEC",
+   "name": "Proportion of total agricultural population with ownership or secure rights over agricultural land"
+  },
+  {
+   "dcid": "undata/sdg/TM_TAX_WMPS",
+   "name": "Worldwide weighted tariff-average, preferential status"
+  },
+  {
+   "dcid": "undata/sdg/TX_EXP_GBMRCH",
+   "name": "Developing countries\u2019 and least developed countries\u2019 share of global merchandise exports"
+  },
+  {
+   "dcid": "undata/sdg/TX_IMP_GBMRCH",
+   "name": "Developing countries\u2019 and least developed countries\u2019 share of global merchandise imports"
+  },
+  {
+   "dcid": "undata/sdg/TX_IMP_GBSVR",
+   "name": "Developing countries\u2019 and least developed countries\u2019 share of global services imports"
+  },
+  {
+   "dcid": "undata/sdg/VC_ARM_SZTRACE",
+   "name": "Proportion of seized, found or surrendered arms whose illicit origin or context has been traced or established by a competent authority in line with international instruments"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_AFFCT",
+   "name": "Number of people affected by disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_AGLH",
+   "name": "Direct agriculture loss attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_BSDN",
+   "name": "Number of disruptions to basic services attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_CDAN",
+   "name": "Number of damaged critical infrastructure attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_CHLN",
+   "name": "Direct economic loss to cultural heritage damaged or destroyed attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_CILN",
+   "name": "Direct economic loss resulting from damaged or destroyed critical infrastructure attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_DAFF",
+   "name": "Number of directly affected persons attributed to disasters per 100,000 population"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_DDPA",
+   "name": "Direct economic loss to other damaged or destroyed productive assets attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_EFDN",
+   "name": "Number of destroyed or damaged educational facilities attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_GDPLS",
+   "name": "Direct economic loss attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_HFDN",
+   "name": "Number of destroyed or damaged health facilities attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_HSDN",
+   "name": "Number of disruptions to health services attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_MISS",
+   "name": "Number of missing persons due to disaster"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_MMHN",
+   "name": "Number of deaths and missing persons attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_PDLN",
+   "name": "Number of people whose livelihoods were disrupted or destroyed, attributed to disasters"
+  },
+  {
+   "dcid": "undata/sdg/VC_DTH_TONCVN",
+   "name": "Number of conflict-related deaths (non-civilians)"
+  },
+  {
+   "dcid": "undata/sdg/VC_DTH_TOTN",
+   "name": "Number of total conflict-related deaths"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVFL",
+   "name": "Detected victims of human trafficking for forced labour, servitude and slavery"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVFLR",
+   "name": "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population)"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVOG",
+   "name": "Detected victims of human trafficking for removal of organ"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVOGR",
+   "name": "Detected victims of human trafficking for removal of organ (per 100,000 population)"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVOP",
+   "name": "Detected victims of human trafficking for other purposes"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVSX",
+   "name": "Detected victims of human trafficking for sexual exploitation"
+  },
+  {
+   "dcid": "undata/sdg/VC_IHR_PSRC",
+   "name": "Number of victims of intentional homicide per 100,000 population"
+  },
+  {
+   "dcid": "undata/sdg/VC_PRR_SEXV",
+   "name": "Police reporting rate for sexual assault in the previous 12 months"
+  },
+  {
+   "dcid": "undata/sdg/VC_PRR_SEX_VIO",
+   "name": "Police reporting rate for sexual violence in the previous 12 months"
+  },
+  {
+   "dcid": "undata/sdg/VC_PRS_UNSNT",
+   "name": "Unsentenced detainees as a proportion of overall prison population"
+  },
+  {
+   "dcid": "undata/sdg/VC_VAW_MTUHRAN",
+   "name": "Countries with at least one verified case of killings of human rights defenders, journalists, and trade unionists"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOC_ENFDIS",
+   "name": "Number of cases of enforced disappearance of human rights defenders, journalists and trade unionists"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOC_ENFDISN",
+   "name": "Countries with at least one verified case of enforced disappearance of human rights defenders, journalists, and trade unionists (1 = YES, 0 = NO)"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOH_SXPH",
+   "name": "Proportion of persons victim of non-sexual or sexual harassment, in the previous 12 months"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOV_PHYL",
+   "name": "Proportion of population subjected to physical violence in the previous 12 months"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOV_ROBB",
+   "name": "Proportion of population subjected to robbery in the previous 12 months"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOV_SEX_ASLT",
+   "name": "Proportion of population subjected to sexual assault in the previous 12 months"
+  }
+ ]
+}

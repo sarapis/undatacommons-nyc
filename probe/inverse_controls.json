@@ -1,0 +1,27 @@
+{
+  "_comment": "Hand-built positive controls for the non-English inverse-crosswalk run. The English run derives its controls from probe/crosswalk.json, whose pairs a human graded; no city outside NYC has a graded worksheet, so these are correspondences a reader can verify by eye instead. Each names a dataset whose title plainly corresponds to an SDG concept. They must land ABOVE each catalog's tail; if they fall inside it, the multilingual run is measuring retrieval failure and its themes mean nothing.",
+  "non-en": [
+    {"portal": "dados.fortaleza.ce.gov.br", "match": "Óbitos por Acidentes de Trânsito",
+     "label": "Deaths from road traffic accidents (3.6.1)"},
+    {"portal": "dados.recife.pe.gov.br", "match": "Acidentes de Trânsito com Vítimas",
+     "label": "Road traffic accidents with victims (3.6.1)"},
+    {"portal": "datos.madrid.es", "match": "Calidad del aire. Datos horarios",
+     "label": "Air quality, hourly (11.6.2)"},
+    {"portal": "datos.madrid.es", "match": "Accidentes de tráfico",
+     "label": "Road traffic accidents (3.6.1)"},
+    {"portal": "dati.comune.milano.it", "match": "incidenti stradali e persone infortunate",
+     "label": "Road traffic accidents and injuries (3.6.1)"},
+    {"portal": "dati.comune.milano.it", "match": "Rifiuti raccolti a Milano",
+     "label": "Municipal waste collected (11.6.1)"},
+    {"portal": "dati.comune.matera.it", "match": "Bilancio mensile incidenti stradali",
+     "label": "Monthly road traffic accidents (3.6.1)"},
+    {"portal": "dados.pbh.gov.br", "match": "Coleta de Resíduos",
+     "label": "Municipal waste collection (11.6.1)"},
+    {"portal": "data.buenosaires.gob.ar", "match": "Calidad del Agua",
+     "label": "Water quality (6.3.2)"},
+    {"portal": "www.opendata-hro.de", "match": "Bevölkerungsstruktur",
+     "label": "Population structure (demographics)"},
+    {"portal": "transparenz.karlsruhe.de", "match": "Trinkwasserqualität",
+     "label": "Drinking water quality (6.1.1)"}
+  ]
+}

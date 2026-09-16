@@ -153,6 +153,11 @@ shared; the Pages mirror is the one to present from).
 - **`search_indicators` results move even when the graph does not.** 44 → 56 candidates between 14
   and 16 Sep with no code change, nine topics gaining and none losing. The coverage report's grade
   mix (30/9/5 → 36/11/9) moved for that reason alone. Never resolve a DCID by search at showtime.
+- **The inverse crosswalk runs in two language groups and they corroborate each other.**
+  `probe/inverse.py` (English, 37 cities) and `--language non-en` (11 cities, multilingual model).
+  Elections and COVID-19 reporting appear independently in both — disjoint cities, different
+  models. Non-English controls pass 11/11 but Portuguese is the weak link (p32, p44), so the
+  Brazilian portion of its tail is the least trustworthy part.
 - **`screen.py`'s six-country panel is validated, not assumed.** Its `NO-DATA` grade could only
   ever mean "these six do not report it"; sweeping all 689 indicators showed 207 of the 247 it
   excluded hold **no country data at all**, and the excluded set adds 0.65% of the corpus. 442 is

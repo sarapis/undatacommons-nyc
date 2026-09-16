@@ -103,7 +103,9 @@ UN System Data Commons.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.
-  - `fetch_municipal.py` → `inverse.py`: the inverse crosswalk — cache every city catalog, then
+  - `fetch_municipal.py` → `inverse.py`: the inverse crosswalk (`--language non-en` pools every
+    non-English catalog under the multilingual model; controls for it are hand-built in
+    `probe/inverse_controls.json` since no city outside NYC has a graded worksheet) — cache every city catalog, then
     match each dataset to its nearest SDG indicator and cluster the far tail. Answers what
     municipal data the framework has no vocabulary for.
   - `population.py` / `denominators.py`: per-city population, from a cited source.

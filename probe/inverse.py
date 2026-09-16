@@ -76,17 +76,21 @@ def indicator_texts():
     names = {r["dcid"]: r.get("name") for r in
              json.loads(SCREENED.read_text())["indicators"] if r.get("name")}
     bases = json.loads(CORPUS.read_text())["bases"]
-    out = []
+    out, unnamed = [], []
     for dcid in sorted(bases):
         name = names.get(dcid)
-        if not name:
-            # No screened name: fall back to the DCID's own mnemonic, which is
-            # poor query text. Counted and reported rather than hidden.
-            name = dcid.rsplit("/", 1)[-1].replace("_", " ")
-            out.append((dcid, name, False))
-        else:
+        if name:
             out.append((dcid, name, True))
-    return out
+        else:
+            # 170 of the 689 carry no name in any source we have -- they return
+            # no metadata and no observations. The first version fell back to the
+            # DCID mnemonic, so a quarter of "the framework" was represented by
+            # query strings like "DI ILL OUT", against which nothing can match.
+            # That inflates the tail (datasets look further from the framework
+            # than they are) and puts mnemonics in the nearest-indicator column.
+            # Excluded, and counted.
+            unnamed.append(dcid)
+    return out, unnamed
 
 
 def tokens(text):
@@ -186,7 +190,9 @@ def phrase_themes(rows, min_cities=4, top=40):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--clusters", type=int, default=24)
-    ap.add_argument("--language", default="en")
+    ap.add_argument("--language", default="en",
+                    help="'en', a single language code, or 'non-en' to pool every "
+                         "non-English catalog under the multilingual model")
     ap.add_argument("--min-datasets", type=int, default=25,
                     help="skip portals smaller than this; they cannot support a tail")
     args = ap.parse_args()
@@ -195,25 +201,37 @@ def main():
     from model2vec import StaticModel
 
     cats = json.loads(CATALOGS.read_text())
+    # Every non-English catalog is pooled into ONE run. Cosine similarities from
+    # two different models are not comparable, so a per-language run would give
+    # five ununifiable score spaces -- and with two to four cities each, none of
+    # them could support the cross-city evidence this analysis rests on. Pooled
+    # under the multilingual model they share one space and eleven cities.
+    if args.language == "non-en":
+        keep = lambda v: v.get("language") != "en"          # noqa: E731
+        model_lang = "es"
+    else:
+        keep = lambda v: v.get("language") == args.language  # noqa: E731
+        model_lang = args.language
     portals = [v for v in cats.values()
-               if not v.get("error") and v.get("language") == args.language
+               if not v.get("error") and keep(v)
                and len(v.get("datasets") or []) >= args.min_datasets]
     portals.sort(key=lambda v: -len(v["datasets"]))
     print(f"{len(portals)} portals in language '{args.language}', "
           f"{sum(len(p['datasets']) for p in portals):,} datasets", file=sys.stderr)
 
-    inds = indicator_texts()
-    named = sum(1 for _, _, ok in inds if ok)
-    model = StaticModel.from_pretrained(embed.model_for(args.language))
+    inds, unnamed = indicator_texts()
+    named = len(inds)
+    model = StaticModel.from_pretrained(embed.model_for(model_lang))
     I = model.encode([n for _, n, _ in inds], show_progress_bar=False)
     I = I / np.linalg.norm(I, axis=1, keepdims=True)
-    print(f"{len(inds)} SDG indicators embedded ({named} with a real name)", file=sys.stderr)
+    print(f"{len(inds)} SDG indicators embedded; {len(unnamed)} excluded as unnamed",
+          file=sys.stderr)
 
     rows, heads = [], []
     for p in portals:
         ds = p["datasets"]
         idx = embed.Index(ds, cache_key=p.get("key") or ("inv-" + p["portal"].replace(".", "-")),
-                          language=args.language)
+                          language=model_lang)
         sims = np.maximum(idx.head @ I.T, idx.body @ I.T)      # (n_datasets, n_indicators)
         best = sims.argmax(axis=1)
         aff = sims.max(axis=1)
@@ -233,21 +251,41 @@ def main():
     H = np.vstack(heads)
 
     # --- positive controls -------------------------------------------------
-    cw = json.loads((ROOT / "probe" / "crosswalk.json").read_text())["pairs"]
-    want = {p["nyc"]["dataset"]: p["label"] for p in cw if p.get("nyc")}
-    by_id = {r["id"]: r for r in rows if r["portal"] == "data.cityofnewyork.us"}
-    nyc_aff = sorted(r["affinity"] for r in rows if r["portal"] == "data.cityofnewyork.us")
-    controls = []
-    for did, label in want.items():
-        r = by_id.get(did)
+    by_portal = collections.defaultdict(list)
+    for r in rows:
+        by_portal[r["portal"]].append(r)
+
+    def control_row(portal, pick, label):
+        pool = by_portal.get(portal) or []
+        r = pick(pool)
         if not r:
-            controls.append({"dataset": did, "label": label, "found": False})
-            continue
-        pct = 100.0 * sum(1 for a in nyc_aff if a < r["affinity"]) / max(len(nyc_aff), 1)
-        controls.append({"dataset": did, "label": label, "found": True,
-                         "name": r["name"], "affinity": round(r["affinity"], 3),
-                         "percentile": round(pct, 1), "in_tail": r["in_tail"],
-                         "nearest": r["nearest_name"]})
+            return {"label": label, "portal": portal, "found": False}
+        affs = sorted(x["affinity"] for x in pool)
+        pct = 100.0 * sum(1 for a in affs if a < r["affinity"]) / max(len(affs), 1)
+        return {"label": label, "portal": portal, "found": True, "name": r["name"],
+                "city": r["city"], "affinity": round(r["affinity"], 3),
+                "percentile": round(pct, 1), "in_tail": r["in_tail"],
+                "nearest": r["nearest_name"]}
+
+    controls = []
+    if args.language == "en":
+        cw = json.loads((ROOT / "probe" / "crosswalk.json").read_text())["pairs"]
+        for pr in cw:
+            if not pr.get("nyc"):
+                continue
+            did = pr["nyc"]["dataset"]
+            controls.append(control_row(
+                "data.cityofnewyork.us",
+                lambda pool, d=did: next((x for x in pool if x["id"] == d), None),
+                pr["label"]))
+    else:
+        spec = json.loads((ROOT / "probe" / "inverse_controls.json").read_text())
+        for c in spec.get("non-en", []):
+            controls.append(control_row(
+                c["portal"],
+                lambda pool, m=c["match"]: next(
+                    (x for x in pool if m.lower() in (x["name"] or "").lower()), None),
+                c["label"]))
     ok_controls = [c for c in controls if c.get("found")]
     in_tail = [c for c in ok_controls if c["in_tail"]]
 
@@ -283,6 +321,8 @@ def main():
             # first N returns eight NYC rows, because NYC is the largest catalog
             # and therefore first in row order.
             "examples": _spread_examples(members),
+            "central": [f"{members[i]['name']} — {members[i]['city'] or members[i]['portal']}"
+                        for i in (Xt[sel] @ C[j]).argsort()[::-1][:5]],
             "nearest_indicator_most_common": near.most_common(1)[0][0] if near else None,
         })
     clusters.sort(key=lambda c: (-c["coherence"], -c["n_cities"]))
@@ -299,15 +339,16 @@ def main():
     today = dt.date.today().isoformat()
     out = {"generated": today, "language": args.language,
            "portals": len(portals), "datasets": len(rows), "indicators": len(inds),
-           "indicators_with_real_name": named,
+           "indicators_excluded_unnamed": len(unnamed),
            "tail_fraction": TAIL_FRACTION, "tail_size": len(tail_i),
            "controls": controls, "clusters": clusters, "phrases": phrases,
            "coherence_floor": COHERENCE_FLOOR,
            "indicators_never_nearest": [{"dcid": d, "name": n} for d, n in never]}
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
-    (ARTIFACTS / f"inverse-{today}.json").write_text(json.dumps(out, indent=1))
-    (ARTIFACTS / f"inverse-{today}.md").write_text(render(out))
-    (ARTIFACTS / "inverse-latest.md").write_text(render(out))
+    suffix = "" if args.language == "en" else f"-{args.language}"
+    (ARTIFACTS / f"inverse{suffix}-{today}.json").write_text(json.dumps(out, indent=1))
+    (ARTIFACTS / f"inverse{suffix}-{today}.md").write_text(render(out))
+    (ARTIFACTS / f"inverse{suffix}-latest.md").write_text(render(out))
 
     print(f"\npositive controls: {len(ok_controls)} found, {len(in_tail)} fell in the tail")
     for c in ok_controls:
@@ -318,7 +359,7 @@ def main():
     for c in clusters[:20]:
         print(f"{c['n_cities']:>7}{c['n']:>7}  {', '.join(c['terms'][:6])}")
     print(f"\n{len(never)} of {len(inds)} indicators were nearest to no dataset at all")
-    print(f"wrote docs/artifacts/inverse-{today}.md")
+    print(f"wrote docs/artifacts/inverse{suffix}-{today}.md")
 
 
 def render(o):
@@ -348,11 +389,12 @@ def render(o):
            "in the tail, the tail is measuring retrieval failure and nothing below is "
            "trustworthy.", "",
            f"**{len(ok)} of {len(o['controls'])} located · {len(bad)} fell in the tail.**", "",
-           "| Verified pair | NYC dataset | Affinity | Percentile | In tail? |",
-           "|---|---|---:|---:|---|"]
+           "| Expected correspondence | City | Dataset | Affinity | Percentile | In tail? |",
+           "|---|---|---|---:|---:|---|"]
     for c in sorted(ok, key=lambda c: -c["percentile"]):
-        md.append(f"| {c['label']} | {c['name'][:44]} | {c['affinity']} | "
-                  f"{c['percentile']:.0f} | {'**YES**' if c['in_tail'] else 'no'} |")
+        md.append(f"| {c['label']} | {c.get('city') or '—'} | {c['name'][:42]} | "
+                  f"{c['affinity']} | {c['percentile']:.0f} | "
+                  f"{'**YES**' if c['in_tail'] else 'no'} |")
 
     md += ["", "## What cities publish that the SDGs have no words for", "",
            f"The bottom **{o['tail_fraction']:.0%} of each catalog** by affinity — "
@@ -362,6 +404,11 @@ def render(o):
            "| Cities | Datasets | Phrase |", "|---:|---:|---|"]
     for e in o.get("phrases", []):
         md.append(f"| {e['n_cities']} | {e['n']} | **{e['phrase']}** |")
+    if not o.get("phrases"):
+        md += ["", "*No phrase recurs across four cities. Expected for a run pooling five "
+               "languages — Spanish, Italian, Portuguese, German and Croatian titles share "
+               "essentially no bigrams, so this view is uninformative here by construction "
+               "rather than because nothing recurs. The clusters below carry the result.*"]
 
     md += ["", "### In detail", ""]
     for e in o.get("phrases", [])[:14]:
@@ -390,6 +437,9 @@ def render(o):
         md += [f"**{', '.join(c['terms'][:5])}** — {c['n']} datasets across "
                f"{c['n_cities']} cities (coherence {c['coherence']}, "
                f"mean affinity {c['mean_affinity']})", "",
+               "*Most central to the cluster:*", "",
+               "".join(f"- {t}\n" for t in c.get("central", [])[:5]), "",
+               "*One per city, to show the spread:*", "",
                "".join(f"- {t}\n" for t in c["examples"][:5]), ""]
 
     md += ["", "## Reproducing", "", "```bash",
