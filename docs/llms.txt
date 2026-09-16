@@ -21,7 +21,9 @@ first. It is written to be read in one pass and links onward to everything else.
 - [Launch diff](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest): every DCID the crosswalk
   expects, resolved against the live platform and diffed against a recorded baseline.
 - [UN graph smell test](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest): plausibility checks over
-  442 indicators and 768,279 observations, with verified errors and what was suppressed as structural.
+  689 indicators and 773,335 observations, with verified errors and what was suppressed as structural.
+- [Data quality report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report): five verified
+  errors written up for the UN platform team, with evidence, mechanism and suggested correction.
 - [Decision log](https://sarapis.github.io/undatacommons-nyc/decisions): choices made and why, newest first.
 
 ## Source

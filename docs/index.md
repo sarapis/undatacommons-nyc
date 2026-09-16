@@ -110,6 +110,9 @@ validates `screen.py`'s six-country panel, whose grade could not in principle di
 panel does not report this" from "nobody does". It distinguishes them 84% of the time, so **442
 remains the right denominator** downstream.
 
+Five of these are written up for the platform team with full evidence, mechanism and suggested
+correction: **[data quality report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report)**.
+
 The report also publishes what it **suppressed** (165 groups, 38,943 would-be findings) and what
 it cannot reach (123 indicators whose units have no meaningful range). The `Percent` unit in the
 graph covers both bounded proportions and signed growth rates, with nothing in the unit string to
@@ -320,6 +323,7 @@ building against.
 | Latest coverage report | [https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) |
 | Launch diff (every DCID the crosswalk expects) | [https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest) |
 | UN graph smell test (data-quality sweep) | [https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest) |
+| **Data quality report for the platform team** | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report) |
 | Decision log | [https://sarapis.github.io/undatacommons-nyc/decisions](https://sarapis.github.io/undatacommons-nyc/decisions) |
 | Probe harness source | <https://github.com/sarapis/undatacommons-nyc/tree/main/probe> |
 | Machine index | [https://sarapis.github.io/undatacommons-nyc/llms.txt](https://sarapis.github.io/undatacommons-nyc/llms.txt) |
