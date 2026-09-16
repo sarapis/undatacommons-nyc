@@ -18,6 +18,7 @@ Writes probe/cache/corpus.json.
 
 import argparse
 import json
+import os
 import pathlib
 import ssl
 import sys
@@ -26,7 +27,9 @@ import urllib.parse
 import urllib.request
 from collections import deque
 
-REST = "https://unsd-datacommons.gcp.un-icc.cloud/core/api/v2/node"
+# Overridable for the same reason as the MCP endpoint -- see probe/undc.py.
+REST = os.environ.get(
+    "UNDC_REST", "https://unsd-datacommons.gcp.un-icc.cloud/core/api/v2/node")
 ROOT = "undata/topic/Root"
 
 # The corpus is reachable through three overlapping hierarchies -- the SDG goal

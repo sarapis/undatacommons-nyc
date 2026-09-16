@@ -18,6 +18,8 @@ first. It is written to be read in one pass and links onward to everything else.
   against the live UN Data Commons MCP and REST surfaces.
 - [Latest indicator coverage report](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest): which UN indicators
   can actually carry a chart, graded GREEN/AMBER/RED.
+- [Launch diff](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest): every DCID the crosswalk
+  expects, resolved against the live platform and diffed against a recorded baseline.
 - [Decision log](https://sarapis.github.io/undatacommons-nyc/decisions): choices made and why, newest first.
 
 ## Source

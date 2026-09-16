@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-15** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-16** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
@@ -93,7 +93,9 @@ this repo's own crosswalk against it.
 ## The deadline
 
 **Builders' Day — Tue 22 Sep 2026, 10:00–18:00, Google NY (HUD315).** UN Data Commons goes
-fully public **17 Sep**; we are building against staging until then.
+fully public **17 Sep**. We build against the pre-launch deployment; as of 16 Sep it is unchanged
+and the [launch diff](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest) is
+baselined against it.
 
 | When | What |
 |---|---|
@@ -163,7 +165,10 @@ denominator. That makes part of the comparability check automatic rather than ha
 
 ### Where the demo indicators actually are
 
-From the [latest coverage report](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) — 30 GREEN, 9 AMBER, 5 RED:
+From the [latest coverage report](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) — 36 GREEN, 11 AMBER, 9 RED,
+re-run 16 Sep. It read 30/9/5 on 14 Sep; the mix moved because `search_indicators` began returning
+**more** candidates for the same queries (44 → 56 across nine of fifteen topics, none lost), not
+because any indicator changed. Every row present on both dates is identical in all fifteen fields:
 
 | Strong candidates | Why |
 |---|---|
@@ -230,9 +235,20 @@ building against.
   count-vs-rate pairs work. Requires a free api.census.gov key in `CENSUS_API_KEY` — never
   committed; this repo is public. **Known hole: no ACS 1-year release for 2020**, so 2020
   carries no rate, on the year NYC homicides spiked. Left empty, not interpolated.
+- **Will staging DCIDs survive the launch? As of 16 Sep, nothing has moved.** Re-ran every probe
+  against the live deployment and diffed it against 14 Sep: 689 base indicators and 6,025 variant
+  DCIDs identical, all 689 screened indicators identical in every field, all 57 crosswalk series
+  identical value by value, all 12 crosswalk variables identical, demo figures 8/8. The *search
+  surface* did move — see the coverage note above — which is the argument for hardcoding
+  human-resolved DCIDs rather than searching at runtime.
+  [`probe/launch_diff.py`](https://github.com/sarapis/undatacommons-nyc/blob/main/probe/launch_diff.py)
+  makes the post-launch re-check one command, and
+  [today's diff](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest) is the
+  pre-launch baseline.
 - **For the organizers:** is city-level ingestion on the roadmap? Is there a sanctioned path for
-  a city to *contribute* a series? Will staging DCIDs survive the 17 Sep public launch? Are
-  there rate limits?
+  a city to *contribute* a series? Are there rate limits? And **which host does the public
+  deployment answer on** — as of 16 Sep no public hostname resolves, and we are still pointed at
+  the deployment we have always used.
 
 ## Next steps
 
@@ -269,13 +285,17 @@ building against.
 | Crosswalk status (both sides verified) | [https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest) |
 | Platform probe findings | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe) |
 | Latest coverage report | [https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/coverage-latest) |
+| Launch diff (every DCID the crosswalk expects) | [https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/launch-diff-latest) |
 | Decision log | [https://sarapis.github.io/undatacommons-nyc/decisions](https://sarapis.github.io/undatacommons-nyc/decisions) |
 | Probe harness source | <https://github.com/sarapis/undatacommons-nyc/tree/main/probe> |
 | Machine index | [https://sarapis.github.io/undatacommons-nyc/llms.txt](https://sarapis.github.io/undatacommons-nyc/llms.txt) |
 
 ## Platform reference
 
-- MCP endpoint: `https://unsd-datacommons.gcp.un-icc.cloud/mcp` — no auth, stateless HTTP
-- REST node endpoint: `https://unsd-datacommons.gcp.un-icc.cloud/core/api/v2/node`
-- Staging site: <https://staging.undatacommons.unicc.biz/> · public launch 17 Sep 2026
+- MCP endpoint: `https://unsd-datacommons.gcp.un-icc.cloud/mcp` — no auth, stateless HTTP.
+  Override with `UNDC_ENDPOINT` if the public deployment answers elsewhere.
+- REST node endpoint: `https://unsd-datacommons.gcp.un-icc.cloud/core/api/v2/node` (`UNDC_REST`)
+- Staging site: <https://staging.undatacommons.unicc.biz/> · public launch 17 Sep 2026.
+  No public hostname resolved as of 16 Sep — `undatacommons.unicc.biz` and `datacommons.un.org`
+  both refuse to connect.
 - Integration guide: <https://projects.officialstatistics.org/undata2/undatacommons-mcp/>

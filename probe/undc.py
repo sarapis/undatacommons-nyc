@@ -9,12 +9,23 @@ self-contained JSON-RPC POST. Responses come back as SSE frames; we parse the
 """
 
 import json
+import os
 import ssl
 import time
 import urllib.error
 import urllib.request
 
-ENDPOINT = "https://unsd-datacommons.gcp.un-icc.cloud/mcp"
+# The deployment we measured everything against. The platform goes fully public
+# on 17 Sep 2026 and nobody has told us whether the public deployment answers on
+# this host, so the endpoint is overridable without a code edit:
+#
+#     UNDC_ENDPOINT=https://<new-host>/mcp python3 probe/launch_diff.py
+#
+# launch_diff.py records the host it used and reports a change as drift in its
+# own right, because a moved host and a withdrawn DCID look identical from the
+# inside: an empty result.
+DEFAULT_ENDPOINT = "https://unsd-datacommons.gcp.un-icc.cloud/mcp"
+ENDPOINT = os.environ.get("UNDC_ENDPOINT", DEFAULT_ENDPOINT)
 
 # The server's own instructions forbid guessing DCIDs and require that every
 # datapoint keep its attribution. Both rules are enforced by how this client is

@@ -20,6 +20,15 @@ UN System Data Commons.
 - **`get_variable_metadata` silently truncates above ~10 variables per call** — it returns
   `status: None` and an empty map, not an error. Never raise `BATCH` in `probe/screen.py`
   without re-testing.
+- **`get_variable_metadata` REQUIRES `entity_dcids`.** Omit it and the server answers 200 with a
+  completely empty `structuredContent` — no error, no `status`, no `variables` key at all. A
+  caller that trusts the shape reads that as "every variable is missing from the graph".
+  `probe/launch_diff.py` did exactly this on its first run and reported all twelve crosswalk
+  DCIDs as withdrawn, two days before the launch it was written to check.
+- **Re-run `probe/launch_diff.py` whenever the platform might have moved**, and
+  `--set-baseline` only when the new state has been read and accepted. `UNDC_ENDPOINT` /
+  `UNDC_REST` override the host without a code edit. `--self-test` proves the diff still
+  detects drift rather than merely failing to find it.
 - **The SDG goal trees expose StatVarPeerGroups (`undata/svpg/...`), not variables.** Follow the
   `->member` arc to real DCIDs. Rewriting the prefix is DCID guessing and returns nothing.
 - **Every datapoint keeps its attribution.** The platform requires it and our QA approach
@@ -74,6 +83,9 @@ UN System Data Commons.
   - Needs `pip3 install model2vec` for embedding search. Without it the matcher falls back to
     keyword overlap, which measured median rank 1535 of 2400 — worse than a coin flip.
   - `pair_probe.py`: verify both sides of every crosswalk mapping.
+  - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
+    `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
+    never automatically); `--self-test` to prove the diff still detects drift.
   - `population.py` / `denominators.py`: per-city population, from a cited source.
   - `scope.py` + `scope_eval.json`: is an indicator something a city could report?
     (embedding classifier, precision 0.83 at recall 1.00 — `python3 probe/scope.py --eval`)

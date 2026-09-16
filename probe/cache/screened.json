@@ -123,6 +123,34 @@
    "grade": "AMBER"
   },
   {
+   "dcid": "undata/sdg/AG_LND_FERTMG",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of management of fertilizers",
+   "panel_coverage": 2,
+   "depth": 3.0,
+   "first_year": 2021,
+   "latest_year": 2024,
+   "span_years": 4,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "AMBER"
+  },
+  {
+   "dcid": "undata/sdg/AG_LND_FIES",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of food security",
+   "panel_coverage": 2,
+   "depth": 1.5,
+   "first_year": 2021,
+   "latest_year": 2024,
+   "span_years": 4,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "AMBER"
+  },
+  {
    "dcid": "undata/sdg/AG_LND_FOVH",
    "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of farm output value per hectare",
    "panel_coverage": 2,
@@ -165,32 +193,18 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/AG_LND_FERTMG",
-   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of management of fertilizers",
-   "panel_coverage": 2,
-   "depth": 3.0,
-   "first_year": 2021,
+   "dcid": "undata/sdg/AG_LND_FRSTCERT",
+   "name": "Forest area certified under an independently verified certification scheme",
+   "panel_coverage": 6,
+   "depth": 14.0,
+   "first_year": 1990,
    "latest_year": 2024,
-   "span_years": 4,
-   "unit": "Percent",
+   "span_years": 35,
+   "unit": "AREA_HA",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "AMBER"
-  },
-  {
-   "dcid": "undata/sdg/AG_LND_FIES",
-   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of food security",
-   "panel_coverage": 2,
-   "depth": 1.5,
-   "first_year": 2021,
-   "latest_year": 2024,
-   "span_years": 4,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "AMBER"
+   "us_reports": true,
+   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/AG_LND_FRSTCHG",
@@ -249,18 +263,18 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/AG_LND_FRSTCERT",
-   "name": "Forest area certified under an independently verified certification scheme",
-   "panel_coverage": 6,
-   "depth": 14.0,
-   "first_year": 1990,
+   "dcid": "undata/sdg/AG_LND_H2OAVAIL",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of variation in water availability",
+   "panel_coverage": 3,
+   "depth": 1.3,
+   "first_year": 2016,
    "latest_year": 2024,
-   "span_years": 35,
-   "unit": "AREA_HA",
+   "span_years": 9,
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
+   "us_reports": false,
+   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/AG_LND_LNDSTR",
@@ -319,13 +333,13 @@
    "grade": "AMBER"
   },
   {
-   "dcid": "undata/sdg/AG_LND_H2OAVAIL",
-   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of variation in water availability",
-   "panel_coverage": 3,
-   "depth": 1.3,
-   "first_year": 2016,
+   "dcid": "undata/sdg/AG_LND_SDGRD",
+   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of soil degradation",
+   "panel_coverage": 2,
+   "depth": 1.5,
+   "first_year": 2021,
    "latest_year": 2024,
-   "span_years": 9,
+   "span_years": 4,
    "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
@@ -387,20 +401,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/AG_LND_SDGRD",
-   "name": "Proportion of agricultural land area that has achieved an acceptable or desirable level of soil degradation",
-   "panel_coverage": 2,
-   "depth": 1.5,
-   "first_year": 2021,
-   "latest_year": 2024,
-   "span_years": 4,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/AG_PRD_AGVAS",
@@ -473,6 +473,34 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/AG_PRD_ORTIND",
+   "name": "Agriculture orientation index for government expenditures",
+   "panel_coverage": 6,
+   "depth": 23.8,
+   "first_year": 2001,
+   "latest_year": 2024,
+   "span_years": 24,
+   "unit": "INDEX",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/AG_PRD_XSUBDY",
+   "name": "Agricultural export subsidies",
+   "panel_coverage": 4,
+   "depth": 22.0,
+   "first_year": 1995,
+   "latest_year": 2018,
+   "span_years": 24,
+   "unit": "CR_USD",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/AG_XPD_AGSGB",
    "name": "Agriculture share of Government Expenditure",
    "panel_coverage": 6,
@@ -515,28 +543,28 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/AG_PRD_ORTIND",
-   "name": "Agriculture orientation index for government expenditures",
+   "dcid": "undata/sdg/BX_KLT_DINV_WD_GD_ZS",
+   "name": "Foreign direct investment, net inflows, as a proportion of GDP",
    "panel_coverage": 6,
-   "depth": 23.8,
-   "first_year": 2001,
+   "depth": 25.0,
+   "first_year": 2000,
    "latest_year": 2024,
-   "span_years": 24,
-   "unit": "INDEX",
+   "span_years": 25,
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/AG_PRD_XSUBDY",
-   "name": "Agricultural export subsidies",
-   "panel_coverage": 4,
-   "depth": 22.0,
-   "first_year": 1995,
-   "latest_year": 2018,
+   "dcid": "undata/sdg/BX_TRF_PWKR",
+   "name": "Volume of remittances as a proportion of total GDP",
+   "panel_coverage": 6,
+   "depth": 24.0,
+   "first_year": 2000,
+   "latest_year": 2023,
    "span_years": 24,
-   "unit": "CR_USD",
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": true,
@@ -573,41 +601,6 @@
   {
    "dcid": "undata/sdg/DC_ENVTECH_INV",
    "name": "Total investment in Environment Sound Technologies",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/BX_KLT_DINV_WD_GD_ZS",
-   "name": "Foreign direct investment, net inflows, as a proportion of GDP",
-   "panel_coverage": 6,
-   "depth": 25.0,
-   "first_year": 2000,
-   "latest_year": 2024,
-   "span_years": 25,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/BX_TRF_PWKR",
-   "name": "Volume of remittances as a proportion of total GDP",
-   "panel_coverage": 6,
-   "depth": 24.0,
-   "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/DC_FIN_CLIMM",
-   "name": "Climate-specific financial support provided via multilateral channels",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -662,32 +655,11 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/DC_FTA_TOTAL",
-   "name": "Total official development assistance (gross disbursement) for technical cooperation",
-   "panel_coverage": 4,
-   "depth": 24.0,
-   "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
-   "unit": "CR_USD_K",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/DC_ODA_BDVDL",
-   "name": "Total outbound official development assistance for biodiversity",
-   "panel_coverage": 2,
-   "depth": 22.0,
-   "first_year": 2002,
-   "latest_year": 2023,
-   "span_years": 22,
-   "unit": "CR_USD_K",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
+   "dcid": "undata/sdg/DC_FIN_CLIMM",
+   "name": "Climate-specific financial support provided via multilateral channels",
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/DC_FIN_CLIMT",
@@ -711,9 +683,9 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/DC_ODA_LLDC",
-   "name": "Net outbound official development assistance (ODA) to landlocked developing countries from OECD-DAC countries",
-   "panel_coverage": 2,
+   "dcid": "undata/sdg/DC_FTA_TOTAL",
+   "name": "Total official development assistance (gross disbursement) for technical cooperation",
+   "panel_coverage": 4,
    "depth": 24.0,
    "first_year": 2000,
    "latest_year": 2023,
@@ -721,18 +693,18 @@
    "unit": "CR_USD_K",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
+   "us_reports": false,
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/DC_ODA_LLDCG",
-   "name": "Net outbound official development assistance (ODA) to landlocked developing countries as a percentage of OECD-DAC donors' GNI",
+   "dcid": "undata/sdg/DC_ODA_BDVDL",
+   "name": "Total outbound official development assistance for biodiversity",
    "panel_coverage": 2,
-   "depth": 24.0,
-   "first_year": 2000,
+   "depth": 22.0,
+   "first_year": 2002,
    "latest_year": 2023,
-   "span_years": 24,
-   "unit": "Percent",
+   "span_years": 22,
+   "unit": "CR_USD_K",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": true,
@@ -775,6 +747,34 @@
    "latest_year": 2023,
    "span_years": 24,
    "unit": "CR_USD_K",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_LLDC",
+   "name": "Net outbound official development assistance (ODA) to landlocked developing countries from OECD-DAC countries",
+   "panel_coverage": 2,
+   "depth": 24.0,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "CR_USD_K",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/DC_ODA_LLDCG",
+   "name": "Net outbound official development assistance (ODA) to landlocked developing countries as a percentage of OECD-DAC donors' GNI",
+   "panel_coverage": 2,
+   "depth": 24.0,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": true,
@@ -984,6 +984,34 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/DC_TOF_HLTHL",
+   "name": "Total inbound official development assistance to medical research and basic health sectors, gross disbursement",
+   "panel_coverage": 4,
+   "depth": 24.0,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "CR_USD_K",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_HLTHNT",
+   "name": "Total inbound official development assistance to medical research and basic health sectors, net disbursement",
+   "panel_coverage": 4,
+   "depth": 14.0,
+   "first_year": 2010,
+   "latest_year": 2023,
+   "span_years": 14,
+   "unit": "CR_USD_K",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/DC_TOF_INFRAL",
    "name": "Total inbound official flows for infrastructure",
    "panel_coverage": 4,
@@ -1024,55 +1052,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/DC_TOF_HLTHL",
-   "name": "Total inbound official development assistance to medical research and basic health sectors, gross disbursement",
-   "panel_coverage": 4,
-   "depth": 24.0,
-   "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
-   "unit": "CR_USD_K",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/DC_TOF_HLTHNT",
-   "name": "Total inbound official development assistance to medical research and basic health sectors, net disbursement",
-   "panel_coverage": 4,
-   "depth": 14.0,
-   "first_year": 2010,
-   "latest_year": 2023,
-   "span_years": 14,
-   "unit": "CR_USD_K",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/DC_TOF_WASHL",
-   "name": "Total inbound official development assistance (gross disbursement) for water supply and sanitation",
-   "panel_coverage": 4,
-   "depth": 24.0,
-   "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
-   "unit": "CR_USD_K",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/DC_TRF_TFDV",
-   "name": "Total inbound resource flows for development",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/DC_TOF_TRDCML",
@@ -1117,18 +1096,25 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/DP_DOD_DLD2_CR_CG_Z1",
-   "name": "Gross public sector debt, Central Government, as a proportion of GDP",
+   "dcid": "undata/sdg/DC_TOF_WASHL",
+   "name": "Total inbound official development assistance (gross disbursement) for water supply and sanitation",
    "panel_coverage": 4,
-   "depth": 20.2,
+   "depth": 24.0,
    "first_year": 2000,
-   "latest_year": 2024,
-   "span_years": 25,
-   "unit": "Percent",
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "CR_USD_K",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
+   "us_reports": false,
    "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/DC_TRF_TFDV",
+   "name": "Total inbound resource flows for development",
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/DC_TRF_TOTDL",
@@ -1171,6 +1157,20 @@
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/DP_DOD_DLD2_CR_CG_Z1",
+   "name": "Gross public sector debt, Central Government, as a proportion of GDP",
+   "panel_coverage": 4,
+   "depth": 20.2,
+   "first_year": 2000,
+   "latest_year": 2024,
+   "span_years": 25,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/DT_DOD_DECT_GN_ZS",
@@ -1474,34 +1474,6 @@
    "grade": "AMBER"
   },
   {
-   "dcid": "undata/sdg/EN_EWT_RCYV",
-   "name": "Total electronic waste recycled",
-   "panel_coverage": 1,
-   "depth": 18.0,
-   "first_year": 2006,
-   "latest_year": 2023,
-   "span_years": 18,
-   "unit": "WEIGHT_TN",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "THIN-COVERAGE"
-  },
-  {
-   "dcid": "undata/sdg/EN_H2O_GRAMBQ",
-   "name": "Proportion of groundwater bodies with good ambient water quality",
-   "panel_coverage": 3,
-   "depth": 3.0,
-   "first_year": 2017,
-   "latest_year": 2023,
-   "span_years": 7,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "AMBER"
-  },
-  {
    "dcid": "undata/sdg/EN_EWT_GENV",
    "name": "Total electronic waste generated",
    "panel_coverage": 2,
@@ -1544,18 +1516,32 @@
    "grade": "THIN-COVERAGE"
   },
   {
-   "dcid": "undata/sdg/EN_HAZ_GENGDP",
-   "name": "Hazardous waste generated per unit of GDP",
-   "panel_coverage": 3,
-   "depth": 8.7,
-   "first_year": 2000,
+   "dcid": "undata/sdg/EN_EWT_RCYV",
+   "name": "Total electronic waste recycled",
+   "panel_coverage": 1,
+   "depth": 18.0,
+   "first_year": 2006,
    "latest_year": 2023,
-   "span_years": 24,
-   "unit": "RATIO_WEIGHT_KG_PER_CR_USD_K",
+   "span_years": 18,
+   "unit": "WEIGHT_TN",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": false,
-   "grade": "GREEN"
+   "grade": "THIN-COVERAGE"
+  },
+  {
+   "dcid": "undata/sdg/EN_H2O_GRAMBQ",
+   "name": "Proportion of groundwater bodies with good ambient water quality",
+   "panel_coverage": 3,
+   "depth": 3.0,
+   "first_year": 2017,
+   "latest_year": 2023,
+   "span_years": 7,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/EN_H2O_OPAMBQ",
@@ -1608,6 +1594,20 @@
    "latest_year": 2023,
    "span_years": 14,
    "unit": "WEIGHT_TN",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_GENGDP",
+   "name": "Hazardous waste generated per unit of GDP",
+   "panel_coverage": 3,
+   "depth": 8.7,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "RATIO_WEIGHT_KG_PER_CR_USD_K",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": false,
@@ -1677,6 +1677,20 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/EN_HAZ_TRTDISV",
+   "name": "Hazardous waste treated or disposed",
+   "panel_coverage": 3,
+   "depth": 6.3,
+   "first_year": 2004,
+   "latest_year": 2023,
+   "span_years": 20,
+   "unit": "WEIGHT_TN",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/EN_LGHG_STR",
    "name": "Countries with long-term low greenhouse gas emission development strategies",
    "panel_coverage": 0,
@@ -1719,17 +1733,31 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/EN_HAZ_TRTDISV",
-   "name": "Hazardous waste treated or disposed",
-   "panel_coverage": 3,
-   "depth": 6.3,
-   "first_year": 2004,
-   "latest_year": 2023,
-   "span_years": 20,
-   "unit": "WEIGHT_TN",
+   "dcid": "undata/sdg/EN_LKRV_PWAP",
+   "name": "Permanent water area of lakes and rivers as a proportion of total land area",
+   "panel_coverage": 6,
+   "depth": 23.0,
+   "first_year": 2000,
+   "latest_year": 2022,
+   "span_years": 23,
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": false,
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/EN_LKRV_SWAC",
+   "name": "Change in seasonal water area of lakes and rivers",
+   "panel_coverage": 6,
+   "depth": 18.0,
+   "first_year": 2005,
+   "latest_year": 2022,
+   "span_years": 18,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
    "grade": "GREEN"
   },
   {
@@ -1766,34 +1794,6 @@
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/EN_LKRV_PWAP",
-   "name": "Permanent water area of lakes and rivers as a proportion of total land area",
-   "panel_coverage": 6,
-   "depth": 23.0,
-   "first_year": 2000,
-   "latest_year": 2022,
-   "span_years": 23,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/EN_LKRV_SWAC",
-   "name": "Change in seasonal water area of lakes and rivers",
-   "panel_coverage": 6,
-   "depth": 18.0,
-   "first_year": 2005,
-   "latest_year": 2022,
-   "span_years": 18,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/EN_LKW_QLTRST",
@@ -1845,13 +1845,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/EN_MAR_CHLCONC",
-   "name": "Chlorophyll-a concentration (milligram per liter)",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/EN_MAR_BEALIT_OP",
    "name": "Proportion of beach litter originating from national land-based sources that ends in the ocean",
    "panel_coverage": 6,
@@ -1901,29 +1894,8 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/EN_MAR_PLASDD",
-   "name": "Floating plastic debris density",
-   "panel_coverage": 1,
-   "depth": 4.0,
-   "first_year": 2019,
-   "latest_year": 2022,
-   "span_years": 4,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "THIN-COVERAGE"
-  },
-  {
-   "dcid": "undata/sdg/EN_MAR_TN_MML",
-   "name": "Coastal Eutrophication: Total Nitrogen (micromole per liter)",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/EN_MAR_TP_MML",
-   "name": "Coastal Eutrophication: Total Phosphorus (micromole per liter)",
+   "dcid": "undata/sdg/EN_MAR_CHLCONC",
+   "name": "Chlorophyll-a concentration (milligram per liter)",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -1950,29 +1922,29 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/EN_MAT_DOMCMPT",
-   "name": "Domestic material consumption",
-   "panel_coverage": 6,
-   "depth": 25.0,
-   "first_year": 2000,
-   "latest_year": 2024,
-   "span_years": 25,
-   "unit": "WEIGHT_TN",
+   "dcid": "undata/sdg/EN_MAR_PLASDD",
+   "name": "Floating plastic debris density",
+   "panel_coverage": 1,
+   "depth": 4.0,
+   "first_year": 2019,
+   "latest_year": 2022,
+   "span_years": 4,
+   "unit": "COUNT",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
+   "us_reports": false,
+   "grade": "THIN-COVERAGE"
   },
   {
-   "dcid": "undata/sdg/EN_MAT_FTPRPC",
-   "name": "Material footprint per capita",
+   "dcid": "undata/sdg/EN_MAR_TN_MML",
+   "name": "Coastal Eutrophication: Total Nitrogen (micromole per liter)",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/EN_MAT_FTPRPG",
-   "name": "Material footprint per unit of GDP",
+   "dcid": "undata/sdg/EN_MAR_TP_MML",
+   "name": "Coastal Eutrophication: Total Phosphorus (micromole per liter)",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -2006,20 +1978,13 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/EN_MWT_EXP",
-   "name": "Municipal waste exported",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/EN_MWT_GENV",
-   "name": "Municipal waste generated",
-   "panel_coverage": 4,
-   "depth": 14.5,
+   "dcid": "undata/sdg/EN_MAT_DOMCMPT",
+   "name": "Domestic material consumption",
+   "panel_coverage": 6,
+   "depth": 25.0,
    "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
+   "latest_year": 2024,
+   "span_years": 25,
    "unit": "WEIGHT_TN",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
@@ -2027,8 +1992,15 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/EN_MWT_IMP",
-   "name": "Municipal waste imported",
+   "dcid": "undata/sdg/EN_MAT_FTPRPC",
+   "name": "Material footprint per capita",
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/EN_MAT_FTPRPG",
+   "name": "Material footprint per unit of GDP",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -2055,15 +2027,29 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/EN_MWT_TREATV",
-   "name": null,
+   "dcid": "undata/sdg/EN_MWT_EXP",
+   "name": "Municipal waste exported",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/EN_NAA_PLAN",
-   "name": "Countries with national adaptation plans",
+   "dcid": "undata/sdg/EN_MWT_GENV",
+   "name": "Municipal waste generated",
+   "panel_coverage": 4,
+   "depth": 14.5,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "WEIGHT_TN",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/EN_MWT_IMP",
+   "name": "Municipal waste imported",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -2099,6 +2085,20 @@
   {
    "dcid": "undata/sdg/EN_MWT_TREATR",
    "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/EN_MWT_TREATV",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/EN_NAA_PLAN",
+   "name": "Countries with national adaptation plans",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -2153,6 +2153,34 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/EN_RSRV_MNWAP",
+   "name": "Minimum reservoir water area as a proportion of total land area",
+   "panel_coverage": 6,
+   "depth": 23.0,
+   "first_year": 2000,
+   "latest_year": 2022,
+   "span_years": 23,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/EN_RSRV_MXWAN",
+   "name": "Maxiumum reservoir water area",
+   "panel_coverage": 6,
+   "depth": 23.0,
+   "first_year": 2000,
+   "latest_year": 2022,
+   "span_years": 23,
+   "unit": "AREA_KM2",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/EN_RSRV_MXWAP",
    "name": "Maximum reservoir water area as a proportion of total land area",
    "panel_coverage": 6,
@@ -2189,62 +2217,6 @@
    "latest_year": 2024,
    "span_years": 20,
    "unit": "RATIO_VOL_M3_PER_TIME_SC",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/EN_RSRV_MNWAP",
-   "name": "Minimum reservoir water area as a proportion of total land area",
-   "panel_coverage": 6,
-   "depth": 23.0,
-   "first_year": 2000,
-   "latest_year": 2022,
-   "span_years": 23,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/EN_RSRV_MXWAN",
-   "name": "Maxiumum reservoir water area",
-   "panel_coverage": 6,
-   "depth": 23.0,
-   "first_year": 2000,
-   "latest_year": 2022,
-   "span_years": 23,
-   "unit": "AREA_KM2",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/EN_SCP_FRMN",
-   "name": "Number of companies publishing sustainability reports with disclosure by dimension",
-   "panel_coverage": 6,
-   "depth": 9.0,
-   "first_year": 2015,
-   "latest_year": 2023,
-   "span_years": 9,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/EN_SCP_FSHGDP",
-   "name": "Sustainable fisheries as a proportion of GDP",
-   "panel_coverage": 5,
-   "depth": 6.4,
-   "first_year": 2011,
-   "latest_year": 2023,
-   "span_years": 13,
-   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": true,
@@ -2291,6 +2263,34 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "RANK-ONLY"
+  },
+  {
+   "dcid": "undata/sdg/EN_SCP_FRMN",
+   "name": "Number of companies publishing sustainability reports with disclosure by dimension",
+   "panel_coverage": 6,
+   "depth": 9.0,
+   "first_year": 2015,
+   "latest_year": 2023,
+   "span_years": 9,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/EN_SCP_FSHGDP",
+   "name": "Sustainable fisheries as a proportion of GDP",
+   "panel_coverage": 5,
+   "depth": 6.4,
+   "first_year": 2011,
+   "latest_year": 2023,
+   "span_years": 13,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/EN_TWT_GENV",
@@ -2363,34 +2363,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/EN_WBE_WTLP",
-   "name": "Wetlands area as a proportion of total land area",
-   "panel_coverage": 5,
-   "depth": 1.0,
-   "first_year": 2017,
-   "latest_year": 2017,
-   "span_years": 1,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "RANK-ONLY"
-  },
-  {
-   "dcid": "undata/sdg/EN_WWT_GEN",
-   "name": "Total wastewater generated",
-   "panel_coverage": 3,
-   "depth": 1.0,
-   "first_year": 2022,
-   "latest_year": 2022,
-   "span_years": 1,
-   "unit": "RATIO_VOL_M3_PER_TIME_YR",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "RANK-ONLY"
-  },
-  {
    "dcid": "undata/sdg/EN_WBE_NDQTGRW",
    "name": "Quantity of nationally derived groundwater",
    "panel_coverage": 0,
@@ -2419,9 +2391,23 @@
    "grade": "RANK-ONLY"
   },
   {
-   "dcid": "undata/sdg/EN_WWT_TREAT_SF",
-   "name": "Total wastewater safely treated",
-   "panel_coverage": 1,
+   "dcid": "undata/sdg/EN_WBE_WTLP",
+   "name": "Wetlands area as a proportion of total land area",
+   "panel_coverage": 5,
+   "depth": 1.0,
+   "first_year": 2017,
+   "latest_year": 2017,
+   "span_years": 1,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "RANK-ONLY"
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_GEN",
+   "name": "Total wastewater generated",
+   "panel_coverage": 3,
    "depth": 1.0,
    "first_year": 2022,
    "latest_year": 2022,
@@ -2430,21 +2416,7 @@
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": false,
-   "grade": "THIN-COVERAGE"
-  },
-  {
-   "dcid": "undata/sdg/EN_WWT_WWDS",
-   "name": "Proportion of safely treated domestic wastewater flows",
-   "panel_coverage": 5,
-   "depth": 2.6,
-   "first_year": 2020,
-   "latest_year": 2024,
-   "span_years": 5,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "AMBER"
+   "grade": "RANK-ONLY"
   },
   {
    "dcid": "undata/sdg/EN_WWT_TREAT",
@@ -2489,32 +2461,32 @@
    "grade": "THIN-COVERAGE"
   },
   {
-   "dcid": "undata/sdg/ER_CBD_NAGOYA",
-   "name": "Countries that are parties to the Nagoya Protocol",
-   "panel_coverage": 6,
-   "depth": 5.0,
-   "first_year": 2021,
-   "latest_year": 2025,
-   "span_years": 5,
-   "unit": "COUNT",
+   "dcid": "undata/sdg/EN_WWT_TREAT_SF",
+   "name": "Total wastewater safely treated",
+   "panel_coverage": 1,
+   "depth": 1.0,
+   "first_year": 2022,
+   "latest_year": 2022,
+   "span_years": 1,
+   "unit": "RATIO_VOL_M3_PER_TIME_YR",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
+   "us_reports": false,
+   "grade": "THIN-COVERAGE"
   },
   {
-   "dcid": "undata/sdg/ER_CBD_ORSPGRFA",
-   "name": "Countries that have legislative, administrative and policy framework or measures reported through the Online Reporting System on Compliance of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA)",
-   "panel_coverage": 6,
-   "depth": 10.0,
-   "first_year": 2016,
-   "latest_year": 2025,
-   "span_years": 10,
-   "unit": "COUNT",
+   "dcid": "undata/sdg/EN_WWT_WWDS",
+   "name": "Proportion of safely treated domestic wastewater flows",
+   "panel_coverage": 5,
+   "depth": 2.6,
+   "first_year": 2020,
+   "latest_year": 2024,
+   "span_years": 5,
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
    "us_reports": true,
-   "grade": "GREEN"
+   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/ER_BDY_ABT2NP",
@@ -2552,6 +2524,34 @@
    "first_year": 2014,
    "latest_year": 2025,
    "span_years": 12,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/ER_CBD_NAGOYA",
+   "name": "Countries that are parties to the Nagoya Protocol",
+   "panel_coverage": 6,
+   "depth": 5.0,
+   "first_year": 2021,
+   "latest_year": 2025,
+   "span_years": 5,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/ER_CBD_ORSPGRFA",
+   "name": "Countries that have legislative, administrative and policy framework or measures reported through the Online Reporting System on Compliance of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA)",
+   "panel_coverage": 6,
+   "depth": 10.0,
+   "first_year": 2016,
+   "latest_year": 2025,
+   "span_years": 10,
    "unit": "COUNT",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
@@ -2629,34 +2629,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/ER_GRF_ANIMRCNTN_TRB",
-   "name": "Number of transboundary breeds for which sufficient genetic resources are stored for reconstitution",
-   "panel_coverage": 6,
-   "depth": 7.0,
-   "first_year": 2017,
-   "latest_year": 2025,
-   "span_years": 9,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/ER_GRF_PLNTSTOR",
-   "name": "Plant genetic resources accessions stored ex situ",
-   "panel_coverage": 6,
-   "depth": 15.0,
-   "first_year": 1995,
-   "latest_year": 2024,
-   "span_years": 30,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/ER_GRF_ANIMKPT",
    "name": "Number of local breeds kept in the country",
    "panel_coverage": 6,
@@ -2692,6 +2664,34 @@
    "first_year": 2019,
    "latest_year": 2025,
    "span_years": 7,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/ER_GRF_ANIMRCNTN_TRB",
+   "name": "Number of transboundary breeds for which sufficient genetic resources are stored for reconstitution",
+   "panel_coverage": 6,
+   "depth": 7.0,
+   "first_year": 2017,
+   "latest_year": 2025,
+   "span_years": 9,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/ER_GRF_PLNTSTOR",
+   "name": "Plant genetic resources accessions stored ex situ",
+   "panel_coverage": 6,
+   "depth": 15.0,
+   "first_year": 1995,
+   "latest_year": 2024,
+   "span_years": 30,
    "unit": "COUNT",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
@@ -2769,27 +2769,6 @@
    "grade": "AMBER"
   },
   {
-   "dcid": "undata/sdg/ER_H2O_PARTIC",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/ER_H2O_PRDU",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/ER_H2O_PROCED",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/ER_H2O_IWRMD_MI",
    "name": "Degree of implementation of integrated water resources management: management instruments",
    "panel_coverage": 6,
@@ -2811,8 +2790,22 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/ER_IAS_GLOFUNP",
-   "name": "Proportion of recipient countries of global funding with access to any funding from global financial mechanisms for projects related to invasive alien species management",
+   "dcid": "undata/sdg/ER_H2O_PARTIC",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/ER_H2O_PRDU",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/ER_H2O_PROCED",
+   "name": null,
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -2867,8 +2860,8 @@
    "grade": "AMBER"
   },
   {
-   "dcid": "undata/sdg/ER_IAS_NBSAPP",
-   "name": "Proportion of countries with alignment of National Biodiversity Strategy and Action Plan (NBSAP) targets to target 9 of the Aichi Biodiversity target 9 set out in the Strategic Plan for Biodiversity 2011-2020",
+   "dcid": "undata/sdg/ER_IAS_GLOFUNP",
+   "name": "Proportion of recipient countries of global funding with access to any funding from global financial mechanisms for projects related to invasive alien species management",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -2921,6 +2914,13 @@
    "provenance": "undata/p/SDG",
    "us_reports": false,
    "grade": "AMBER"
+  },
+  {
+   "dcid": "undata/sdg/ER_IAS_NBSAPP",
+   "name": "Proportion of countries with alignment of National Biodiversity Strategy and Action Plan (NBSAP) targets to target 9 of the Aichi Biodiversity target 9 set out in the Strategic Plan for Biodiversity 2011-2020",
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/ER_MRN_MPA",
@@ -3280,20 +3280,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/FI_FSI_FSERA",
-   "name": "Rate of return on assets",
-   "panel_coverage": 6,
-   "depth": 18.2,
-   "first_year": 2005,
-   "latest_year": 2024,
-   "span_years": 20,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/FB_BNK_CAPA_ZS",
    "name": "Bank capital to assets ratio",
    "panel_coverage": 6,
@@ -3326,6 +3312,20 @@
    "name": "Non-performing loans to total gross loans",
    "panel_coverage": 6,
    "depth": 15.7,
+   "first_year": 2005,
+   "latest_year": 2024,
+   "span_years": 20,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/FI_FSI_FSERA",
+   "name": "Rate of return on assets",
+   "panel_coverage": 6,
+   "depth": 18.2,
    "first_year": 2005,
    "latest_year": 2024,
    "span_years": 20,
@@ -3532,20 +3532,6 @@
    "grade": "THIN-COVERAGE"
   },
   {
-   "dcid": "undata/sdg/GF_COM_PPPI",
-   "name": "Monetary amount committed to public-private partnerships for infrastructure in nominal terms",
-   "panel_coverage": 4,
-   "depth": 21.0,
-   "first_year": 2000,
-   "latest_year": 2020,
-   "span_years": 21,
-   "unit": "CR_USD",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/GB_XPD_RSDV",
    "name": "Research and development expenditure as a proportion of GDP",
    "panel_coverage": 6,
@@ -3602,31 +3588,17 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/GR_G14_GDP",
-   "name": "Total bugetary revenue of the central government as a proportion of GDP",
-   "panel_coverage": 6,
-   "depth": 21.3,
+   "dcid": "undata/sdg/GF_COM_PPPI",
+   "name": "Monetary amount committed to public-private partnerships for infrastructure in nominal terms",
+   "panel_coverage": 4,
+   "depth": 21.0,
    "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
-   "unit": "Percent",
+   "latest_year": 2020,
+   "span_years": 21,
+   "unit": "CR_USD",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/GR_G14_XDC",
-   "name": "Total government revenue, in local currency",
-   "panel_coverage": 6,
-   "depth": 21.3,
-   "first_year": 2000,
-   "latest_year": 2023,
-   "span_years": 24,
-   "unit": "CR_LCU",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
+   "us_reports": false,
    "grade": "GREEN"
   },
   {
@@ -3672,6 +3644,48 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/GR_G14_GDP",
+   "name": "Total bugetary revenue of the central government as a proportion of GDP",
+   "panel_coverage": 6,
+   "depth": 21.3,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/GR_G14_XDC",
+   "name": "Total government revenue, in local currency",
+   "panel_coverage": 6,
+   "depth": 21.3,
+   "first_year": 2000,
+   "latest_year": 2023,
+   "span_years": 24,
+   "unit": "CR_LCU",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/IC_FRM_BRIB",
+   "name": "Incidence of bribery (proportion of firms experiencing at least one bribe payment request)",
+   "panel_coverage": 6,
+   "depth": 2.0,
+   "first_year": 2007,
+   "latest_year": 2025,
+   "span_years": 19,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "AMBER"
+  },
+  {
    "dcid": "undata/sdg/IC_GEN_MGTL",
    "name": null,
    "panel_coverage": 0,
@@ -3698,20 +3712,6 @@
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/IC_FRM_BRIB",
-   "name": "Incidence of bribery (proportion of firms experiencing at least one bribe payment request)",
-   "panel_coverage": 6,
-   "depth": 2.0,
-   "first_year": 2007,
-   "latest_year": 2025,
-   "span_years": 19,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/IQ_SPI_PIL4",
@@ -3757,6 +3757,13 @@
   },
   {
    "dcid": "undata/sdg/IS_RDP_PFVOL",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/IS_RDP_PORFVOL",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -3817,13 +3824,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "AMBER"
-  },
-  {
-   "dcid": "undata/sdg/IS_RDP_PORFVOL",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/IT_MOB_OWN",
@@ -4008,6 +4008,20 @@
    "grade": "NO-DATA"
   },
   {
+   "dcid": "undata/sdg/NV_IND_MANF_CD",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/NV_IND_SSIS",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/NV_IND_SSIS_NC",
    "name": null,
    "panel_coverage": 0,
@@ -4034,20 +4048,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/NV_IND_MANF_CD",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/NV_IND_SSIS",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/NY_GDP_PCAP",
@@ -4120,6 +4120,27 @@
    "grade": "AMBER"
   },
   {
+   "dcid": "undata/sdg/SD_MDP_ANDI",
+   "name": "Average proportion of deprivations experienced by multidimensionally poor people",
+   "panel_coverage": 1,
+   "depth": 2.0,
+   "first_year": 2015,
+   "latest_year": 2019,
+   "span_years": 5,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "THIN-COVERAGE"
+  },
+  {
+   "dcid": "undata/sdg/SD_MDP_ANDIHH",
+   "name": "Average share of weighted deprivations experienced by total households (intensity)",
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/SD_MDP_CSMP",
    "name": null,
    "panel_coverage": 0,
@@ -4148,25 +4169,18 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SD_MDP_ANDI",
-   "name": "Average proportion of deprivations experienced by multidimensionally poor people",
-   "panel_coverage": 1,
-   "depth": 2.0,
-   "first_year": 2015,
-   "latest_year": 2019,
-   "span_years": 5,
+   "dcid": "undata/sdg/SD_XPD_ESED",
+   "name": "Proportion of total government spending on essential services, education [UIS methodology]",
+   "panel_coverage": 6,
+   "depth": 17.8,
+   "first_year": 2000,
+   "latest_year": 2025,
+   "span_years": 26,
    "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "THIN-COVERAGE"
-  },
-  {
-   "dcid": "undata/sdg/SD_MDP_ANDIHH",
-   "name": "Average share of weighted deprivations experienced by total households (intensity)",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
+   "us_reports": true,
+   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/SE_ACC_HNDWSH",
@@ -4195,20 +4209,6 @@
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/SD_XPD_ESED",
-   "name": "Proportion of total government spending on essential services, education [UIS methodology]",
-   "panel_coverage": 6,
-   "depth": 17.8,
-   "first_year": 2000,
-   "latest_year": 2025,
-   "span_years": 26,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/SE_ACS_INTNT",
@@ -4246,13 +4246,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SE_AGP_CPRA",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/SE_ADT_AMP_LITR",
    "name": null,
    "panel_coverage": 0,
@@ -4275,6 +4268,13 @@
   },
   {
    "dcid": "undata/sdg/SE_ADT_LITR",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SE_AGP_CPRA",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -4379,13 +4379,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SE_NAP_ACHI",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/SE_GPI_PTNPRE",
    "name": "Adjusted gender parity index for participation rate in organized learning (one year before the official primary entry age)",
    "panel_coverage": 6,
@@ -4415,6 +4408,13 @@
   },
   {
    "dcid": "undata/sdg/SE_LGP_ACHI",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SE_NAP_ACHI",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -4463,6 +4463,13 @@
    "grade": "NO-DATA"
   },
   {
+   "dcid": "undata/sdg/SE_TOT_SESPI",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/SE_TRA_GRDL",
    "name": null,
    "panel_coverage": 0,
@@ -4503,13 +4510,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "AMBER"
-  },
-  {
-   "dcid": "undata/sdg/SE_TOT_SESPI",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/SG_CPA_SDEVP",
@@ -4554,20 +4554,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SG_DMK_PARLMP_UC",
-   "name": "Female representation ratio in parliament (proportion of women in parliament divided by the proportion of women in the national population eligible by age): Upper chamber",
-   "panel_coverage": 5,
-   "depth": 6.0,
-   "first_year": 2021,
-   "latest_year": 2026,
-   "span_years": 6,
-   "unit": "RATIO",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/SG_DMK_PARLCC_JC",
    "name": null,
    "panel_coverage": 0,
@@ -4592,6 +4578,20 @@
    "dcid": "undata/sdg/SG_DMK_PARLMP_LC",
    "name": "Female representation ratio in parliament (proportion of women in parliament divided by the proportion of women in the national population eligible by age): Lower chamber or unicameral",
    "panel_coverage": 6,
+   "depth": 6.0,
+   "first_year": 2021,
+   "latest_year": 2026,
+   "span_years": 6,
+   "unit": "RATIO",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/SG_DMK_PARLMP_UC",
+   "name": "Female representation ratio in parliament (proportion of women in parliament divided by the proportion of women in the national population eligible by age): Upper chamber",
+   "panel_coverage": 5,
    "depth": 6.0,
    "first_year": 2021,
    "latest_year": 2026,
@@ -4701,6 +4701,13 @@
    "grade": "NO-DATA"
   },
   {
+   "dcid": "undata/sdg/SG_GEN_PARL",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/SG_GEN_PARLN",
    "name": null,
    "panel_coverage": 0,
@@ -4748,13 +4755,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "AMBER"
-  },
-  {
-   "dcid": "undata/sdg/SG_GEN_PARL",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/SG_HAZ_CMRMNMT",
@@ -4953,20 +4953,6 @@
    "grade": "AMBER"
   },
   {
-   "dcid": "undata/sdg/SG_PLN_PRVRIMON",
-   "name": "Proportion of results indicators which will be monitored using government sources and monitoring systems - data by provider",
-   "panel_coverage": 2,
-   "depth": 3.0,
-   "first_year": 2016,
-   "latest_year": 2026,
-   "span_years": 11,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "AMBER"
-  },
-  {
    "dcid": "undata/sdg/SG_PLN_MSTKSDG_R",
    "name": "Number of recipient countries reporting progress in multi-stakeholder development effectiveness monitoring frameworks that support the achievement of the sustainable development goals",
    "panel_coverage": 1,
@@ -5011,6 +4997,20 @@
   {
    "dcid": "undata/sdg/SG_PLN_PRVRICTRY",
    "name": "Proportion of results indicators drawn from country-led results frameworks - data by provider",
+   "panel_coverage": 2,
+   "depth": 3.0,
+   "first_year": 2016,
+   "latest_year": 2026,
+   "span_years": 11,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "AMBER"
+  },
+  {
+   "dcid": "undata/sdg/SG_PLN_PRVRIMON",
+   "name": "Proportion of results indicators which will be monitored using government sources and monitoring systems - data by provider",
    "panel_coverage": 2,
    "depth": 3.0,
    "first_year": 2016,
@@ -5086,27 +5086,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SG_REG_CENSUSN",
-   "name": "Countries that have conducted at least one population and housing census in the last 10 years",
-   "panel_coverage": 5,
-   "depth": 1.0,
-   "first_year": 2019,
-   "latest_year": 2022,
-   "span_years": 4,
-   "unit": "CATEGORY_BINARY_TF",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "RANK-ONLY"
-  },
-  {
-   "dcid": "undata/sdg/SG_REG_DETH75",
-   "name": "Proportion of countries with death registration data that are at least 75 percent complete",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/SG_REG_BRTH90",
    "name": "Proportion of countries with birth registration data that are at least 90 percent complete",
    "panel_coverage": 0,
@@ -5135,15 +5114,22 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SG_SCP_PROCN",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
+   "dcid": "undata/sdg/SG_REG_CENSUSN",
+   "name": "Countries that have conducted at least one population and housing census in the last 10 years",
+   "panel_coverage": 5,
+   "depth": 1.0,
+   "first_year": 2019,
+   "latest_year": 2022,
+   "span_years": 4,
+   "unit": "CATEGORY_BINARY_TF",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "RANK-ONLY"
   },
   {
-   "dcid": "undata/sdg/SG_SCP_PROCN_HS",
-   "name": null,
+   "dcid": "undata/sdg/SG_REG_DETH75",
+   "name": "Proportion of countries with death registration data that are at least 75 percent complete",
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
@@ -5178,6 +5164,20 @@
   },
   {
    "dcid": "undata/sdg/SG_SCP_POLINS",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SG_SCP_PROCN",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SG_SCP_PROCN_HS",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -5247,20 +5247,6 @@
    "grade": "THIN-COVERAGE"
   },
   {
-   "dcid": "undata/sdg/SG_STT_ODIN",
-   "name": "Open Data Inventory (ODIN) Coverage Index",
-   "panel_coverage": 6,
-   "depth": 2.0,
-   "first_year": 2022,
-   "latest_year": 2024,
-   "span_years": 3,
-   "unit": "INDEX",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "AMBER"
-  },
-  {
    "dcid": "undata/sdg/SG_STT_NSDSFDGVT",
    "name": "Countries with national statistical plans with funding from government",
    "panel_coverage": 5,
@@ -5315,6 +5301,20 @@
    "provenance": "undata/p/SDG",
    "us_reports": false,
    "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/SG_STT_ODIN",
+   "name": "Open Data Inventory (ODIN) Coverage Index",
+   "panel_coverage": 6,
+   "depth": 2.0,
+   "first_year": 2022,
+   "latest_year": 2024,
+   "span_years": 3,
+   "unit": "INDEX",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/SG_XPD_EDUC",
@@ -5429,6 +5429,20 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/SH_ACS_HPV",
+   "name": "Proportion of the target population who received the final dose of human papillomavirus (HPV) vaccine",
+   "panel_coverage": 5,
+   "depth": 10.8,
+   "first_year": 2010,
+   "latest_year": 2024,
+   "span_years": 15,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/SH_ACS_MCV2",
    "name": "Proportion of the target population who received measles-containing-vaccine second-dose (MCV2)",
    "panel_coverage": 6,
@@ -5476,20 +5490,6 @@
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/SH_ACS_HPV",
-   "name": "Proportion of the target population who received the final dose of human papillomavirus (HPV) vaccine",
-   "panel_coverage": 5,
-   "depth": 10.8,
-   "first_year": 2010,
-   "latest_year": 2024,
-   "span_years": 15,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/SH_BLD_ECOLI",
@@ -5541,6 +5541,13 @@
    "grade": "NO-DATA"
   },
   {
+   "dcid": "undata/sdg/SH_DYN_MORT",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/SH_DYN_MORTN",
    "name": null,
    "panel_coverage": 0,
@@ -5569,7 +5576,7 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SH_DYN_MORT",
+   "dcid": "undata/sdg/SH_FPL_INFMCU",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -5611,11 +5618,18 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/SH_FPL_INFMCU",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
+   "dcid": "undata/sdg/SH_HAP_ASMORT",
+   "name": "Age-standardized mortality rate attributed to household air pollution",
+   "panel_coverage": 6,
+   "depth": 1.0,
+   "first_year": 2019,
+   "latest_year": 2019,
+   "span_years": 1,
+   "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "RANK-ONLY"
   },
   {
    "dcid": "undata/sdg/SH_HAP_HBSAG",
@@ -5667,17 +5681,31 @@
    "grade": "RANK-ONLY"
   },
   {
-   "dcid": "undata/sdg/SH_HAP_ASMORT",
-   "name": "Age-standardized mortality rate attributed to household air pollution",
-   "panel_coverage": 6,
+   "dcid": "undata/sdg/SH_LGR_ACSRHE",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education",
+   "panel_coverage": 4,
    "depth": 1.0,
-   "first_year": 2019,
-   "latest_year": 2019,
+   "first_year": 2022,
+   "latest_year": 2022,
    "span_years": 1,
-   "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+   "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": true,
+   "us_reports": false,
+   "grade": "RANK-ONLY"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC1",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (maternity care component)",
+   "panel_coverage": 4,
+   "depth": 1.0,
+   "first_year": 2022,
+   "latest_year": 2022,
+   "span_years": 1,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
    "grade": "RANK-ONLY"
   },
   {
@@ -5712,34 +5740,6 @@
    "dcid": "undata/sdg/SH_LGR_ACSRHEC12",
    "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (HIV Confidentiality component)",
    "panel_coverage": 5,
-   "depth": 1.0,
-   "first_year": 2022,
-   "latest_year": 2022,
-   "span_years": 1,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "RANK-ONLY"
-  },
-  {
-   "dcid": "undata/sdg/SH_LGR_ACSRHE",
-   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education",
-   "panel_coverage": 4,
-   "depth": 1.0,
-   "first_year": 2022,
-   "latest_year": 2022,
-   "span_years": 1,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "RANK-ONLY"
-  },
-  {
-   "dcid": "undata/sdg/SH_LGR_ACSRHEC1",
-   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (maternity care component)",
-   "panel_coverage": 4,
    "depth": 1.0,
    "first_year": 2022,
    "latest_year": 2022,
@@ -5996,27 +5996,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/SH_STA_ANEM",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/SH_STA_ANEM_NPRG",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/SH_STA_ANEM_PREG",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/SH_SAN_HNDWSH",
    "name": "Proportion of population with basic handwashing facilities on premises",
    "panel_coverage": 3,
@@ -6043,6 +6022,27 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/SH_STA_ANEM",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SH_STA_ANEM_NPRG",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SH_STA_ANEM_PREG",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/SH_STA_ASAIRP",
@@ -6381,13 +6381,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SI_POV_50MI",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/SI_COV_VULN",
    "name": "[ILO] Proportion of vulnerable population receiving social assistance cash benefit",
    "panel_coverage": 6,
@@ -6430,7 +6423,7 @@
    "grade": "RANK-ONLY"
   },
   {
-   "dcid": "undata/sdg/SI_RMT_COST_BC",
+   "dcid": "undata/sdg/SI_POV_50MI",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -6486,6 +6479,13 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/SI_RMT_COST_BC",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/SI_RMT_COST_SC",
    "name": null,
    "panel_coverage": 0,
@@ -6535,6 +6535,20 @@
    "grade": "NO-DATA"
   },
   {
+   "dcid": "undata/sdg/SL_DOM_TSPDDC",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SL_EMP_EARN",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
    "dcid": "undata/sdg/SL_EMP_FTLINJUR",
    "name": null,
    "panel_coverage": 0,
@@ -6563,14 +6577,14 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SL_DOM_TSPDDC",
+   "dcid": "undata/sdg/SL_EMP_PCAP",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SL_EMP_EARN",
+   "dcid": "undata/sdg/SL_EMP_RCOST_MO",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -6603,20 +6617,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/SL_EMP_PCAP",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/SL_EMP_RCOST_MO",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/SL_TLF_CHLDEA",
@@ -6654,20 +6654,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SL_TLF_UEMDIS_19ICLS",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/SL_TLF_UEM_19ICLS",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/SL_TLF_NEET_19ICLS",
    "name": null,
    "panel_coverage": 0,
@@ -6687,6 +6673,34 @@
    "panel_coverage": 0,
    "depth": 0,
    "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SL_TLF_UEMDIS_19ICLS",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SL_TLF_UEM_19ICLS",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SM_DTH_MIGR",
+   "name": "Total deaths and disappearances recorded during migration",
+   "panel_coverage": 6,
+   "depth": 7.7,
+   "first_year": 2014,
+   "latest_year": 2025,
+   "span_years": 12,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/SM_POP_REFG_OR",
@@ -6738,20 +6752,6 @@
    "grade": "NO-DATA"
   },
   {
-   "dcid": "undata/sdg/SM_DTH_MIGR",
-   "name": "Total deaths and disappearances recorded during migration",
-   "panel_coverage": 6,
-   "depth": 7.7,
-   "first_year": 2014,
-   "latest_year": 2025,
-   "span_years": 12,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/SN_STA_OVWGTN",
    "name": null,
    "panel_coverage": 0,
@@ -6795,6 +6795,13 @@
   },
   {
    "dcid": "undata/sdg/SP_DYN_ADKL",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/SP_DYN_MRBF15",
    "name": null,
    "panel_coverage": 0,
    "depth": 0,
@@ -6848,13 +6855,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": false,
    "grade": "RANK-ONLY"
-  },
-  {
-   "dcid": "undata/sdg/SP_DYN_MRBF15",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/SP_LGL_LNDSEC",
@@ -7088,6 +7088,20 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/TM_TAX_WMPS",
+   "name": "Worldwide weighted tariff-average, preferential status",
+   "panel_coverage": 5,
+   "depth": 12.0,
+   "first_year": 2005,
+   "latest_year": 2024,
+   "span_years": 20,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/TM_TRF_ZERO",
    "name": "Proportion of tariff lines applied to imports with zero-tariff",
    "panel_coverage": 6,
@@ -7137,20 +7151,6 @@
    "first_year": 2000,
    "latest_year": 2024,
    "span_years": 25,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/TM_TAX_WMPS",
-   "name": "Worldwide weighted tariff-average, preferential status",
-   "panel_coverage": 5,
-   "depth": 12.0,
-   "first_year": 2005,
-   "latest_year": 2024,
-   "span_years": 20,
    "unit": "Percent",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
@@ -7228,34 +7228,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/VC_DSR_CILN",
-   "name": "Direct economic loss resulting from damaged or destroyed critical infrastructure attributed to disasters",
-   "panel_coverage": 4,
-   "depth": 10.8,
-   "first_year": 2005,
-   "latest_year": 2024,
-   "span_years": 20,
-   "unit": "CR_USD",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/VC_DSR_DAFF",
-   "name": "Number of directly affected persons attributed to disasters per 100,000 population",
-   "panel_coverage": 5,
-   "depth": 13.0,
-   "first_year": 2005,
-   "latest_year": 2025,
-   "span_years": 21,
-   "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/VC_DSR_CDAN",
    "name": "Number of damaged critical infrastructure attributed to disasters",
    "panel_coverage": 5,
@@ -7298,10 +7270,10 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/VC_DSR_GDPLS",
-   "name": "Direct economic loss attributed to disasters",
-   "panel_coverage": 5,
-   "depth": 11.4,
+   "dcid": "undata/sdg/VC_DSR_CILN",
+   "name": "Direct economic loss resulting from damaged or destroyed critical infrastructure attributed to disasters",
+   "panel_coverage": 4,
+   "depth": 10.8,
    "first_year": 2005,
    "latest_year": 2024,
    "span_years": 20,
@@ -7312,18 +7284,18 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/VC_DSR_HFDN",
-   "name": "Number of destroyed or damaged health facilities attributed to disasters",
-   "panel_coverage": 4,
-   "depth": 3.0,
-   "first_year": 2015,
-   "latest_year": 2024,
-   "span_years": 10,
-   "unit": "COUNT",
+   "dcid": "undata/sdg/VC_DSR_DAFF",
+   "name": "Number of directly affected persons attributed to disasters per 100,000 population",
+   "panel_coverage": 5,
+   "depth": 13.0,
+   "first_year": 2005,
+   "latest_year": 2025,
+   "span_years": 21,
+   "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
    "observation_period": "P1Y",
    "provenance": "undata/p/SDG",
-   "us_reports": false,
-   "grade": "AMBER"
+   "us_reports": true,
+   "grade": "GREEN"
   },
   {
    "dcid": "undata/sdg/VC_DSR_DDPA",
@@ -7366,6 +7338,34 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_GDPLS",
+   "name": "Direct economic loss attributed to disasters",
+   "panel_coverage": 5,
+   "depth": 11.4,
+   "first_year": 2005,
+   "latest_year": 2024,
+   "span_years": 20,
+   "unit": "CR_USD",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_HFDN",
+   "name": "Number of destroyed or damaged health facilities attributed to disasters",
+   "panel_coverage": 4,
+   "depth": 3.0,
+   "first_year": 2015,
+   "latest_year": 2024,
+   "span_years": 10,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": false,
+   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/VC_DSR_HOLH",
@@ -7438,6 +7438,34 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/VC_DSR_MMHN",
+   "name": "Number of deaths and missing persons attributed to disasters",
+   "panel_coverage": 5,
+   "depth": 15.6,
+   "first_year": 2005,
+   "latest_year": 2025,
+   "span_years": 21,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_MORT",
+   "name": "Number of deaths due to disaster",
+   "panel_coverage": 5,
+   "depth": 15.2,
+   "first_year": 2005,
+   "latest_year": 2025,
+   "span_years": 21,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/VC_DSR_MTMP",
    "name": "Number of deaths and missing persons attributed to disasters per 100,000 population",
    "panel_coverage": 5,
@@ -7470,34 +7498,6 @@
    "name": "Number of people whose damaged dwellings were attributed to disasters",
    "panel_coverage": 5,
    "depth": 11.8,
-   "first_year": 2005,
-   "latest_year": 2025,
-   "span_years": 21,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/VC_DSR_MMHN",
-   "name": "Number of deaths and missing persons attributed to disasters",
-   "panel_coverage": 5,
-   "depth": 15.6,
-   "first_year": 2005,
-   "latest_year": 2025,
-   "span_years": 21,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/VC_DSR_MORT",
-   "name": "Number of deaths due to disaster",
-   "panel_coverage": 5,
-   "depth": 15.2,
    "first_year": 2005,
    "latest_year": 2025,
    "span_years": 21,
@@ -7606,6 +7606,34 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/VC_HTF_DETVFLR",
+   "name": "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population)",
+   "panel_coverage": 6,
+   "depth": 8.5,
+   "first_year": 2008,
+   "latest_year": 2024,
+   "span_years": 17,
+   "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
+   "dcid": "undata/sdg/VC_HTF_DETVOG",
+   "name": "Detected victims of human trafficking for removal of organ",
+   "panel_coverage": 6,
+   "depth": 3.5,
+   "first_year": 2018,
+   "latest_year": 2022,
+   "span_years": 5,
+   "unit": "COUNT",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "AMBER"
+  },
+  {
    "dcid": "undata/sdg/VC_HTF_DETVOGR",
    "name": "Detected victims of human trafficking for removal of organ (per 100,000 population)",
    "panel_coverage": 6,
@@ -7646,34 +7674,6 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/VC_HTF_DETVFLR",
-   "name": "Detected victims of human trafficking for forced labour, servitude and slavery (per 100,000 population)",
-   "panel_coverage": 6,
-   "depth": 8.5,
-   "first_year": 2008,
-   "latest_year": 2024,
-   "span_years": 17,
-   "unit": "RATIO_COUNT_PER_100000_COUNT_POP",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/VC_HTF_DETVOG",
-   "name": "Detected victims of human trafficking for removal of organ",
-   "panel_coverage": 6,
-   "depth": 3.5,
-   "first_year": 2018,
-   "latest_year": 2022,
-   "span_years": 5,
-   "unit": "COUNT",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "AMBER"
   },
   {
    "dcid": "undata/sdg/VC_HTF_DETVR",
@@ -7746,6 +7746,20 @@
    "grade": "GREEN"
   },
   {
+   "dcid": "undata/sdg/VC_PRR_PHYV",
+   "name": "Police reporting rate for physical assault in the previous 12 months",
+   "panel_coverage": 3,
+   "depth": 6.7,
+   "first_year": 2012,
+   "latest_year": 2024,
+   "span_years": 13,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
+  },
+  {
    "dcid": "undata/sdg/VC_PRR_PHY_VIO",
    "name": "Police reporting rate for physical violence in the previous 12 months",
    "panel_coverage": 4,
@@ -7795,34 +7809,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/VC_PRR_PHYV",
-   "name": "Police reporting rate for physical assault in the previous 12 months",
-   "panel_coverage": 3,
-   "depth": 6.7,
-   "first_year": 2012,
-   "latest_year": 2024,
-   "span_years": 13,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
-   "dcid": "undata/sdg/VC_VAW_MARR",
-   "name": null,
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
-   "dcid": "undata/sdg/VC_VAW_MTUHRA",
-   "name": "Number of cases of killings of human rights defenders, journalists and trade unionists",
-   "panel_coverage": 0,
-   "depth": 0,
-   "grade": "NO-DATA"
-  },
-  {
    "dcid": "undata/sdg/VC_PRR_SEX_VIO",
    "name": "Police reporting rate for sexual violence in the previous 12 months",
    "panel_coverage": 2,
@@ -7863,6 +7849,20 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "AMBER"
+  },
+  {
+   "dcid": "undata/sdg/VC_VAW_MARR",
+   "name": null,
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
+  },
+  {
+   "dcid": "undata/sdg/VC_VAW_MTUHRA",
+   "name": "Number of cases of killings of human rights defenders, journalists and trade unionists",
+   "panel_coverage": 0,
+   "depth": 0,
+   "grade": "NO-DATA"
   },
   {
    "dcid": "undata/sdg/VC_VAW_MTUHRAN",
@@ -7970,20 +7970,6 @@
    "grade": "GREEN"
   },
   {
-   "dcid": "undata/sdg/VC_VOV_SEX_ASLT",
-   "name": "Proportion of population subjected to sexual assault in the previous 12 months",
-   "panel_coverage": 3,
-   "depth": 6.0,
-   "first_year": 2008,
-   "latest_year": 2024,
-   "span_years": 17,
-   "unit": "Percent",
-   "observation_period": "P1Y",
-   "provenance": "undata/p/SDG",
-   "us_reports": true,
-   "grade": "GREEN"
-  },
-  {
    "dcid": "undata/sdg/VC_VOV_PSYCHL",
    "name": "Proportion of population subjected to psychological violence in the previous 12 months",
    "panel_coverage": 2,
@@ -8024,6 +8010,20 @@
    "provenance": "undata/p/SDG",
    "us_reports": true,
    "grade": "AMBER"
+  },
+  {
+   "dcid": "undata/sdg/VC_VOV_SEX_ASLT",
+   "name": "Proportion of population subjected to sexual assault in the previous 12 months",
+   "panel_coverage": 3,
+   "depth": 6.0,
+   "first_year": 2008,
+   "latest_year": 2024,
+   "span_years": 17,
+   "unit": "Percent",
+   "observation_period": "P1Y",
+   "provenance": "undata/p/SDG",
+   "us_reports": true,
+   "grade": "GREEN"
   }
  ]
 }

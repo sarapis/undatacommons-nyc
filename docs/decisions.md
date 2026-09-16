@@ -7,6 +7,32 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-16 — The launch check is a diff against a recorded baseline, not a health check
+
+A health check asks "does it answer?" and the platform would have passed one all week. The thing
+that could break the demo is subtler: a DCID quietly withdrawn or redefined, which returns an
+empty result — the same shape as a country that does not report. So `probe/launch_diff.py` records
+a full snapshot (every crosswalk variable, every series value by value, every peer comparator, the
+enumerated corpus, the tool list) and compares the next run against it field by field.
+
+Two consequences worth keeping. **The baseline is only updated deliberately** (`--set-baseline`),
+because a checker that re-baselines on every run reports "no change" forever. And **the diff has
+its own self-test** (`--self-test`), which injects each drift class into a copy of the baseline and
+asserts it is reported: a diff that returns "no change" and a diff that cannot see change look
+identical from the outside.
+
+## 2026-09-16 — Hardcode human-resolved DCIDs; never resolve by search at runtime
+
+Between 14 and 16 Sep, with no code change on our side, `search_indicators` returned 44 candidate
+variables for our fifteen topic queries and then 56 — nine topics gained, none lost, and every
+row present on both dates identical in every field. The graph did not move; retrieval over it did.
+Notably, "road traffic deaths" began returning `undata/sdg/SH_STA_TRAF`, the exact DCID our
+road-deaths pair uses, which it had not on the 14th.
+
+Discovery through search stays the rule (REST is federated and will answer for other publishers).
+But once a human has resolved and graded a DCID it goes in `crosswalk.json` as a literal. A demo
+that resolves by search at showtime can change its answer while the data stands still.
+
 ## 2026-09-14 — The human grade vetoes every mechanical check
 
 The pair probe initially reported BLOCKED and CONTEXT pairs as chartable: resolution, unit and

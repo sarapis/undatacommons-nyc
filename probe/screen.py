@@ -139,6 +139,18 @@ def screen(client, dcids):
     return rows
 
 
+def _ordered(done):
+    """Rows sorted by DCID, always.
+
+    The screening order follows whatever order the server answered in, and that
+    shifts whenever a batch splits differently. Two runs that found *identical*
+    results then produced a 2,648-line diff of pure reordering -- which is
+    exactly the noise a real change hides in. Sorting costs nothing and makes
+    `git diff probe/cache/screened.json` mean something.
+    """
+    return [done[d] for d in sorted(done)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="screen only the first N")
@@ -164,13 +176,13 @@ def main():
         print(f"  screened {min(i + BATCH, len(todo))}/{len(todo)}", file=sys.stderr)
         if i % (BATCH * 10) == 0:
             SCREENED.write_text(json.dumps(
-                {"screened": len(done), "indicators": list(done.values())}, indent=1))
+                {"screened": len(done), "indicators": _ordered(done)}, indent=1))
 
     missing = [b for b in bases if b not in done]
     if missing:
         print(f"\n  WARNING: {len(missing)} indicator(s) returned no metadata at all",
               file=sys.stderr)
-    rows = list(done.values())
+    rows = _ordered(done)
     counts = {}
     for r in rows:
         counts[r["grade"]] = counts.get(r["grade"], 0) + 1
