@@ -35,6 +35,11 @@ UN System Data Commons.
   an indicator's topic and judges it municipal; it cannot see that *"extent to which countries have
   laws and regulations that guarantee…"* measures a legislature. 28 of the 67 US-silent
   "city-scoped" indicators were country-as-subject. `us_silent.py` filters them lexically.
+- **A cluster is not a count.** k-means returns *k* groups whether or not *k* categories exist,
+  and membership is "nearest to this centroid", not "belongs to this category". The FOIA cluster
+  spanned 15 cities; only 8 publish a dataset whose title says so. Where a category can be counted
+  lexically, publish the lexical count (`probe/category_gaps.py`) and let the cluster be what
+  *found* it.
 - **Cached embedding vectors must be matched on IDS, never on count.** A portal re-fetched later
   returns the same datasets in a different order — 24 of 45 city catalogs did — and a length check
   accepts it silently, handing every dataset another dataset's vector. Scores stay in range and
@@ -107,6 +112,9 @@ UN System Data Commons.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.
+  - `category_gaps.py`: counts a category two ways — how many named SDG indicators carry its
+    vocabulary, and how many municipal datasets do, by city, in six languages. No clustering.
+    Use it whenever a cluster is about to become a published number.
   - `us_silent.py`: the indicators the US does not report but a city could — verifies US
     absence against observations, records the peer group, proposes NYC candidates. Excludes
     country-as-subject indicators lexically; the scope classifier cannot see that

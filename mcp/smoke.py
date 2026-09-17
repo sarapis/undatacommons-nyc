@@ -77,6 +77,25 @@ def demo_checks():
         checks.append((f"funnel {label} = {value}", f"<dd>{value}</dd>" in html))
     checks.append((f"funnel names {len(screened['indicators']) - len(usable)} too thin",
                    f"{len(screened['indicators']) - len(usable)} are too thin" in html))
+
+    # The two category-gap blocks, against probe/category_gaps.py's output.
+    gaps = sorted((ROOT / "docs" / "artifacts").glob("category-gaps-*.json"))
+    if not gaps:
+        checks.append(("category-gaps artifact present", False))
+        return checks
+    g = json.loads(gaps[-1].read_text())
+    el, fo = g["categories"]["elections"], g["categories"]["records access"]
+    checks.append(("elections: framework count is zero", el["n_framework"] == 0))
+    checks.append((f"elections: 0 of {g['named_indicators']} on the page",
+                   f"<span class=\"big\">0 of {g['named_indicators']}</span>" in html))
+    checks.append((f"elections: {el['n_datasets']} datasets / {el['n_cities']} cities on the page",
+                   f"{el['n_datasets']} datasets &middot; {el['n_cities']} cities" in html))
+    checks.append((f"records access: {fo['n_datasets']} logs / {fo['n_cities']} cities on the page",
+                   f"{fo['n_datasets']} logs &middot; {fo['n_cities']} cities" in html))
+    checks.append(("records access: exactly one framework indicator", fo["n_framework"] == 1))
+    waste = [k for n, k in el["nearest_offered"] if "waste" in n.lower()]
+    checks.append(("elections' nearest-concept punchline matches the data",
+                   bool(waste) and f"<strong>{waste[0]}</strong> of those election" in html))
     return checks
 
 

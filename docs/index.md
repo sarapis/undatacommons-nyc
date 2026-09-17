@@ -144,16 +144,28 @@ so the six-country screening proxy and the data agree completely.
 indicators. Everything else here runs city → UN, which can only find what the framework already
 asks about; this runs it backwards.
 
-Themes recurring across many independent catalogs and sitting in the bottom quartile of every one:
-**building permits and code enforcement (23 cities)**, **records-access request logs (15)**, bike
-and active-travel space (13), street sweeping and parking enforcement (10), **call-centre response
-performance (10)**, pedestrian and bicycle counts (9), property sales (8), for-hire vehicle trips
-(7), fire stations (7), special events (6).
+Themes recurring across many independent catalogs and sitting in the bottom quartile of every one,
+by **cluster membership**: building permits and code enforcement (23 cities), records-access
+request logs (15), bike and active-travel space (13), street sweeping and parking enforcement (10),
+call-centre response performance (10), pedestrian and bicycle counts (9), property sales (8),
+for-hire vehicle trips (7), fire stations (7), special events (6).
 
-The sharpest is records access. Fifteen cities publish request logs — filed, answered, how long it
-took. The nearest SDG indicator is 16.10.2, *"countries that adopt and implement … guarantees for
-public access to information"*: the framework asks whether a **law exists**, the cities publish
-whether the law **works**. A country can score full marks and answer nothing.
+**Correction (17 Sep): those city counts are cluster membership, which overstates them.** Counted
+instead by *titles that carry the category's vocabulary* — greppable, in six languages, no
+embedding involved — records access is **8 cities and 73 datasets**, not 15. The cluster had swept
+in *Media Releases* and *City Hall Library Catalog*, which are not request logs. Counted the same
+way, **electoral administration is 23 cities and 469 datasets**. `probe/category_gaps.py` produces
+both, and the smaller numbers are the ones that survive being checked.
+
+The sharpest is still records access. Those 8 cities publish request logs — filed, answered, how
+long it took. The nearest SDG indicator is 16.10.2, *"countries that adopt and implement …
+guarantees for public access to information"*: the framework asks whether a **law exists**, the
+cities publish whether the law **works**. A country can score full marks and answer nothing.
+
+Electoral administration is the larger gap: **zero of the 519 named indicators** mention an
+election, a vote or a turnout, and for **35** of those 469 city datasets the closest concept in the
+whole framework is *municipal waste collected*. Both are now on the
+[demo](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html).
 
 Going the other way, **123 of 689 indicators were nearest to no municipal dataset at all**. Many
 are honestly national (ODA, external debt). But the list also holds **e-waste and hazardous waste

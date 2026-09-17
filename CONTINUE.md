@@ -158,6 +158,10 @@ shared; the Pages mirror is the one to present from).
   country-as-subject indicators ("extent to which countries have laws…"), which no place can hold
   a value for. The real core is 12 waste/water/wetlands indicators against DSNY and DEP series;
   three carry a single year, so level-only. All 39 verified US-absent against observations.
+- **The demo now carries the three new findings**, and `mcp/smoke.py` (24 checks) asserts every
+  figure on it against `screened.json`, `crosswalk.json`, `us-silent-*.json` and
+  `category-gaps-*.json`. The masthead funnel had carried numbers matching no run for days because
+  nothing tied it to the pipeline; it does now.
 - **The inverse crosswalk runs in two language groups and they corroborate each other.**
   `probe/inverse.py` (English, 37 cities) and `--language non-en` (11 cities, multilingual model).
   Elections and COVID-19 reporting appear independently in both — disjoint cities, different

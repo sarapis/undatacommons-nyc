@@ -227,6 +227,16 @@ td.why { color: var(--ink-2); line-height: 1.5; }
 .t-context  { color: var(--serious); }
 .t-nosource { color: var(--ink-3); }
 .t-charted  { color: var(--nyc); }
+.gap-head {
+  font-family: var(--display); font-weight: 600; font-size: 19px;
+  margin: 30px 0 0; letter-spacing: -0.01em;
+}
+.gap-punch {
+  font-size: 16.5px; line-height: 1.55; color: var(--ink-2);
+  border-left: 3px solid var(--nyc); padding-left: 14px; margin: 18px 0 0; max-width: 72ch;
+}
+.gap-punch strong { color: var(--ink); }
+
 .t-open     { color: var(--ink-3); }
 td.numcell  { font-family: var(--display); font-variant-numeric: tabular-nums; white-space: nowrap; }
 td.numcell b { font-size: 17px; }
@@ -726,6 +736,71 @@ coherent group, and every one has a DSNY or DEP series sitting opposite it.</p>
 re-derivable with <code>python3 probe/us_silent.py</code> &middot; reporting-country counts from a
 sweep of every country and year for all 689 enumerated indicators<br>
 <b>NYC candidates</b> embedding search over all 2,400 NYC Open Data datasets &middot; ungraded</p>
+
+
+<h2 style="margin-top:52px">And two the framework has no words for at all</h2>
+<hr class="section-rule">
+<p class="section-note">Everything above runs city &rarr; UN: take an indicator, find the NYC
+series. That direction can only ever surface what the framework already asks about. Run it
+backwards &mdash; take every dataset <strong>45 cities</strong> publish, find each one&rsquo;s
+nearest indicator among all <strong>519</strong> named ones, and look at what is
+left over.</p>
+
+<h3 class="gap-head">Electoral administration</h3>
+<div class="versus">
+  <div>
+    <dt>The framework</dt>
+    <dd><span class="big">0 of 519</span>
+    <small>named indicators mention an election, a vote or a turnout. Searched for
+    <em>election, electoral, vote, voter, voting, turnout, ballot, referendum, suffrage,
+    polling, candidate</em>. It counts parliamentary seats and asks whether people
+    <em>believe</em> decision-making is inclusive &mdash; never how an election ran.</small></dd>
+  </div>
+  <div>
+    <dt>What the cities publish</dt>
+    <dd><span class="big">469 datasets &middot; 23 cities</span>
+    <small>Results by polling station, electoral registers, poll-site locations. Milan&rsquo;s run
+    back to 1996. <strong>64%</strong> sit in the bottom
+    quarter of their own catalog by distance to any indicator.</small></dd>
+  </div>
+</div>
+<p class="gap-punch">For <strong>35</strong> of those election datasets, the closest concept in
+the entire SDG framework is <em>municipal waste collected</em> &mdash; the indicator charted two
+sections above.</p>
+
+<h3 class="gap-head">Records-access requests</h3>
+<div class="versus">
+  <div>
+    <dt>The framework &mdash; SDG 16.10.2</dt>
+    <dd><span class="big">1 indicator</span>
+    <small>&ldquo;Countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information.&rdquo; It asks whether a <strong>law exists</strong>.</small></dd>
+  </div>
+  <div>
+    <dt>What the cities publish</dt>
+    <dd><span class="big">73 logs &middot; 8 cities</span>
+    <small>How many requests were filed, how many answered, how long it took. Whether the law
+    <strong>works</strong>. A country can score full marks on 16.10.2 and answer nothing.</small></dd>
+  </div>
+</div>
+
+<div class="caveat" style="border-top:0;margin-top:22px">
+  <h3>Count the cities, not the datasets</h3>
+  <p>Both categories are dominated by one publisher &mdash; <strong>Milan</strong> is
+  66% of the election datasets, <strong>Chicago</strong>
+  64% of the request logs. One city publishing three
+  hundred files is a filing habit. Twenty-three cities each publishing some is a category of
+  municipal government, and that is the number these claims rest on.</p>
+  <p style="margin-top:10px">This counts <em>titles that carry the vocabulary</em>, in six
+  languages, not datasets an embedding grouped together. An earlier clustering run put records
+  access in 15 cities; only 8 of them publish a dataset that says so, and the rest
+  were things like <em>Media Releases</em> that merely clustered nearby. The smaller number is the
+  one that survives being checked.</p>
+</div>
+
+<p class="prov"><b>Source</b> <code>python3 probe/category_gaps.py</code> &middot;
+17,162 datasets from 45 city portals &middot; framework searched across
+all 519 named SDG base indicators &middot; full method in the
+<a href="https://sarapis.github.io/undatacommons-nyc/artifacts/inverse-latest">inverse crosswalk</a></p>
 
 <h2 style="margin-top:52px">The seven that don't — and why</h2>
 <hr class="section-rule">
