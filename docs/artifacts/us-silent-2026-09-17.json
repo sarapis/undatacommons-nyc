@@ -1,0 +1,1647 @@
+{
+ "generated": "2026-09-17",
+ "us_silent_usable": 130,
+ "classifier_positive": 67,
+ "country_subject_removed": [
+  {
+   "dcid": "undata/sdg/DC_ENVTECH_RIMP",
+   "name": "Amount of tracked re-imported Environmentally Sound Technologies"
+  },
+  {
+   "dcid": "undata/sdg/DC_TOF_INFRAL",
+   "name": "Total inbound official flows for infrastructure"
+  },
+  {
+   "dcid": "undata/sdg/EG_IFF_RANDN",
+   "name": "International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems"
+  },
+  {
+   "dcid": "undata/sdg/ER_REG_UNFCIM",
+   "name": "Degree of implementation of international instruments aiming to combat illegal, unreported and unregulated fishing"
+  },
+  {
+   "dcid": "undata/sdg/ER_WAT_PART",
+   "name": "Countries with users/communities participating in planning programs in water resources planning and management"
+  },
+  {
+   "dcid": "undata/sdg/ER_WAT_PRDU",
+   "name": "Countries with procedures in law or policy for participation by service users/communities in planning program in water resources planning and management"
+  },
+  {
+   "dcid": "undata/sdg/GF_COM_PPPI_KD",
+   "name": "Monetary amount committed to public-private partnerships for infrastructure in real terms"
+  },
+  {
+   "dcid": "undata/sdg/SE_GCEDESD_CUR",
+   "name": "Extent to which global citizenship education and education for sustainable development are mainstreamed in curricula"
+  },
+  {
+   "dcid": "undata/sdg/SE_GCEDESD_SAS",
+   "name": "Extent to which global citizenship education and education for sustainable development are mainstreamed in student assessment"
+  },
+  {
+   "dcid": "undata/sdg/SE_GCEDESD_TED",
+   "name": "Extent to which global citizenship education and education for sustainable development are mainstreamed in teacher education"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHE",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC1",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (maternity care component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC10",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education HIV testing and counsellilng component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC11",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (HIV treatment and care component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC12",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (HIV Confidentiality component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC13",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (HPV Vaccine component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC2",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (life-saving commodities component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC3",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (abortion component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC4",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (post-abortion care component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC5",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (contraceptive services component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC6",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (consent for contraceptive services component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC7",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (emergency contraception component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC8",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (comprehensive sexuality education curriculum laws component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHEC9",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (comprehensive sexuality education curriculum topics component)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHES1",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (maternity care section)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHES2",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (contraception and family planning section)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHES3",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (comprehensive sexuality education and information section)"
+  },
+  {
+   "dcid": "undata/sdg/SH_LGR_ACSRHES4",
+   "name": "Extent to which countries have laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education (HIV and HPV)"
+  }
+ ],
+ "city_scoped": 39,
+ "thin_peer_group": 15,
+ "candidate_floor": 0.45,
+ "screen_disagreements": [],
+ "indicators": [
+  {
+   "dcid": "undata/sdg/AG_LND_DGRD",
+   "name": "Proportion of land that is degraded over total land area",
+   "grade": "AMBER",
+   "depth": 2.0,
+   "unit": "Percent",
+   "first_year": 2015,
+   "latest_year": 2019,
+   "world": {
+    "countries": 121,
+    "n_obs": 240,
+    "us_obs": 0,
+    "first": 2015,
+    "last": 2019,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "64uk-42ks",
+     "name": "Primary Land Use Tax Lot Output (PLUTO)",
+     "score": 0.518,
+     "z": 4.17
+    },
+    {
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "score": 0.5,
+     "z": 3.96
+    },
+    {
+     "id": "4e2n-s75z",
+     "name": "Suitability of City-Owned and Leased Property for Urban Agriculture (LL 48 of 2011)",
+     "score": 0.457,
+     "z": 3.47
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_H2O_GRAMBQ",
+   "name": "Proportion of groundwater bodies with good ambient water quality",
+   "grade": "AMBER",
+   "depth": 3.0,
+   "unit": "Percent",
+   "first_year": 2017,
+   "latest_year": 2023,
+   "world": {
+    "countries": 84,
+    "n_obs": 183,
+    "us_obs": 0,
+    "first": 2017,
+    "last": 2023,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "3y4p-uusw",
+     "name": "Watershed Water Quality - Limnology",
+     "score": 0.516,
+     "z": 5.7
+    },
+    {
+     "id": "shus-qn78",
+     "name": "Watershed Water Quality - Hydrology Qualifiers",
+     "score": 0.507,
+     "z": 5.57
+    },
+    {
+     "id": "kw4v-6nqf",
+     "name": "Watershed Water Quality - Sites",
+     "score": 0.504,
+     "z": 5.53
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_EXP",
+   "name": "Hazardous waste exported",
+   "grade": "GREEN",
+   "depth": 10.0,
+   "unit": "WEIGHT_TN",
+   "first_year": 2010,
+   "latest_year": 2023,
+   "world": {
+    "countries": 97,
+    "n_obs": 1148,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "WEIGHT_TN",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "99xv-he3n",
+     "name": "DSNY Disposal Sites Used by Facilities by Year",
+     "score": 0.521,
+     "z": 6.67
+    },
+    {
+     "id": "8ev8-jjxq",
+     "name": "DSNY Commercial Waste Zones",
+     "score": 0.437,
+     "z": 5.43
+    },
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "score": 0.426,
+     "z": 5.26
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_GENGDP",
+   "name": "Hazardous waste generated per unit of GDP",
+   "grade": "GREEN",
+   "depth": 8.7,
+   "unit": "RATIO_WEIGHT_KG_PER_CR_USD_K",
+   "first_year": 2000,
+   "latest_year": 2023,
+   "world": {
+    "countries": 107,
+    "n_obs": 1140,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "RATIO_WEIGHT_KG_PER_CR_USD_K",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "score": 0.531,
+     "z": 4.6
+    },
+    {
+     "id": "nbun-wekj",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2015 (Data for Calendar Year 2014)",
+     "score": 0.512,
+     "z": 4.35
+    },
+    {
+     "id": "77q4-nkfh",
+     "name": "Energy and Water Data Disclosure for Local Law 84 2016 (Data for Calendar Year 2015)",
+     "score": 0.487,
+     "z": 4.01
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_IMP",
+   "name": "Hazardous waste imported",
+   "grade": "GREEN",
+   "depth": 10.0,
+   "unit": "WEIGHT_TN",
+   "first_year": 2010,
+   "latest_year": 2023,
+   "world": {
+    "countries": 85,
+    "n_obs": 1021,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "WEIGHT_TN",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "99xv-he3n",
+     "name": "DSNY Disposal Sites Used by Facilities by Year",
+     "score": 0.492,
+     "z": 6.3
+    },
+    {
+     "id": "8ev8-jjxq",
+     "name": "DSNY Commercial Waste Zones",
+     "score": 0.428,
+     "z": 5.35
+    },
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "score": 0.399,
+     "z": 4.91
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_TRTDISR",
+   "name": "Proportion of hazardous waste that is treated or disposed",
+   "grade": "GREEN",
+   "depth": 6.3,
+   "unit": "Percent",
+   "first_year": 2004,
+   "latest_year": 2023,
+   "world": {
+    "countries": 88,
+    "n_obs": 900,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "95kh-h6zc",
+     "name": "Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site",
+     "score": 0.506,
+     "z": 6.61
+    },
+    {
+     "id": "99xv-he3n",
+     "name": "DSNY Disposal Sites Used by Facilities by Year",
+     "score": 0.437,
+     "z": 5.54
+    },
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "score": 0.408,
+     "z": 5.1
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_HAZ_TRTDISV",
+   "name": "Hazardous waste treated or disposed",
+   "grade": "GREEN",
+   "depth": 6.3,
+   "unit": "WEIGHT_TN",
+   "first_year": 2004,
+   "latest_year": 2023,
+   "world": {
+    "countries": 93,
+    "n_obs": 986,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "WEIGHT_TN",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "95kh-h6zc",
+     "name": "Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site",
+     "score": 0.51,
+     "z": 6.73
+    },
+    {
+     "id": "99xv-he3n",
+     "name": "DSNY Disposal Sites Used by Facilities by Year",
+     "score": 0.505,
+     "z": 6.67
+    },
+    {
+     "id": "ufxk-pq9j",
+     "name": "Location of Disposal Facilities and Sites Used for DSNY-Managed Waste",
+     "score": 0.418,
+     "z": 5.39
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_MWT_COLLV",
+   "name": "Municipal waste collected",
+   "grade": "GREEN",
+   "depth": 13.2,
+   "unit": "WEIGHT_TN",
+   "first_year": 2000,
+   "latest_year": 2023,
+   "world": {
+    "countries": 133,
+    "n_obs": 1909,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2023,
+    "unit": "WEIGHT_TN",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "score": 0.633,
+     "z": 6.31
+    },
+    {
+     "id": "ufxk-pq9j",
+     "name": "Location of Disposal Facilities and Sites Used for DSNY-Managed Waste",
+     "score": 0.564,
+     "z": 5.35
+    },
+    {
+     "id": "bpea-2i5q",
+     "name": "DSNY Waste Characterization 2023 - Main Sort Results",
+     "score": 0.559,
+     "z": 5.28
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_TWT_GENV",
+   "name": "Total waste generation",
+   "grade": "GREEN",
+   "depth": 5.5,
+   "unit": "WEIGHT_TN",
+   "first_year": 2000,
+   "latest_year": 2022,
+   "world": {
+    "countries": 97,
+    "n_obs": 1043,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2023,
+    "unit": "WEIGHT_TN",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "bibp-6ff7",
+     "name": "DSNY Waste Characterization - Comparative Results",
+     "score": 0.515,
+     "z": 5.18
+    },
+    {
+     "id": "gaq9-z3hz",
+     "name": "Recycling Diversion and Capture Rates",
+     "score": 0.508,
+     "z": 5.07
+    },
+    {
+     "id": "bpea-2i5q",
+     "name": "DSNY Waste Characterization 2023 - Main Sort Results",
+     "score": 0.496,
+     "z": 4.92
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_WBE_HMWTL",
+   "name": "Extent of human made wetlands",
+   "grade": "AMBER",
+   "depth": 1.3,
+   "unit": "AREA_KM2",
+   "first_year": 2021,
+   "latest_year": 2025,
+   "world": {
+    "countries": 55,
+    "n_obs": 72,
+    "us_obs": 0,
+    "first": 2021,
+    "last": 2025,
+    "unit": "AREA_KM2",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "p48c-iqtu",
+     "name": "NYC Wetlands",
+     "score": 0.497,
+     "z": 7.75
+    },
+    {
+     "id": "aq7i-eu5q",
+     "name": "FloodNet: Street Flooding Events Measured by FloodNet Sensors",
+     "score": 0.34,
+     "z": 5.13
+    },
+    {
+     "id": "27ya-gqtm",
+     "name": "Future Floodplain 2050s",
+     "score": 0.277,
+     "z": 4.07
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_GEN",
+   "name": "Total wastewater generated",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "RATIO_VOL_M3_PER_TIME_YR",
+   "first_year": 2022,
+   "latest_year": 2022,
+   "world": {
+    "countries": 84,
+    "n_obs": 84,
+    "us_obs": 0,
+    "first": 2022,
+    "last": 2022,
+    "unit": "RATIO_VOL_M3_PER_TIME_YR",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "score": 0.586,
+     "z": 6.19
+    },
+    {
+     "id": "icbf-663g",
+     "name": "Watershed Water Quality - Wastewater",
+     "score": 0.541,
+     "z": 5.51
+    },
+    {
+     "id": "rmsj-k8gu",
+     "name": "Watershed Water Quality - Wastewater Qualifiers",
+     "score": 0.513,
+     "z": 5.08
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_TREAT",
+   "name": "Total wastewater treated",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "RATIO_VOL_M3_PER_TIME_YR",
+   "first_year": 2022,
+   "latest_year": 2022,
+   "world": {
+    "countries": 94,
+    "n_obs": 94,
+    "us_obs": 0,
+    "first": 2022,
+    "last": 2022,
+    "unit": "RATIO_VOL_M3_PER_TIME_YR",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "icbf-663g",
+     "name": "Watershed Water Quality - Wastewater",
+     "score": 0.542,
+     "z": 6.03
+    },
+    {
+     "id": "95kh-h6zc",
+     "name": "Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site",
+     "score": 0.527,
+     "z": 5.8
+    },
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "score": 0.519,
+     "z": 5.68
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/EN_WWT_TREATR",
+   "name": "Proportion of wastewater treated",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "Percent",
+   "first_year": 2022,
+   "latest_year": 2022,
+   "world": {
+    "countries": 72,
+    "n_obs": 72,
+    "us_obs": 0,
+    "first": 2022,
+    "last": 2022,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "95kh-h6zc",
+     "name": "Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site",
+     "score": 0.519,
+     "z": 6.33
+    },
+    {
+     "id": "icbf-663g",
+     "name": "Watershed Water Quality - Wastewater",
+     "score": 0.498,
+     "z": 6.0
+    },
+    {
+     "id": "b3mq-yvvr",
+     "name": "Wastewater Co-digestion and Biogas-to-grid Performance Indicators",
+     "score": 0.467,
+     "z": 5.5
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/GB_XPD_CULNAT_PB",
+   "name": "Total public expenditure per capita on cultural and natural heritage at purchansing-power parity rates",
+   "grade": "AMBER",
+   "depth": 3.0,
+   "unit": "CR_USD_PPP",
+   "first_year": 2019,
+   "latest_year": 2024,
+   "world": {
+    "countries": 77,
+    "n_obs": 271,
+    "us_obs": 0,
+    "first": 2017,
+    "last": 2024,
+    "unit": "CR_USD_PPP",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "cfz5-6fvh",
+     "name": "City of New York Municipal Solar-Readiness Assessment (Local Law 24 of 2016) data",
+     "score": 0.418,
+     "z": 3.34
+    },
+    {
+     "id": "hzd8-k2vv",
+     "name": "Business Improvement District (BID) Trends Report (FY24)",
+     "score": 0.412,
+     "z": 3.26
+    },
+    {
+     "id": "y6fv-k6p7",
+     "name": "DCLA Programs Funding",
+     "score": 0.401,
+     "z": 3.1
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/IU_COR_BRIB",
+   "name": "Prevalence rate of bribery",
+   "grade": "AMBER",
+   "depth": 2.8,
+   "unit": "Percent",
+   "first_year": 2014,
+   "latest_year": 2023,
+   "world": {
+    "countries": 140,
+    "n_obs": 279,
+    "us_obs": 0,
+    "first": 2004,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "fju2-rdad",
+     "name": "DOHMH HIV/AIDS Annual Report",
+     "score": 0.404,
+     "z": 3.42
+    },
+    {
+     "id": "jstn-jaut",
+     "name": "Policy and Procedure Recommendations (PPR) Portal",
+     "score": 0.371,
+     "z": 2.97
+    },
+    {
+     "id": "2wuc-x56b",
+     "name": "Local Law 33 - Security Indicators Report",
+     "score": 0.371,
+     "z": 2.96
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/IU_DMK_INCL",
+   "name": "Proportion of population who believe decision-making is inclusive",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "Percent",
+   "first_year": 2018,
+   "latest_year": 2023,
+   "world": {
+    "countries": 83,
+    "n_obs": 132,
+    "us_obs": 0,
+    "first": 2015,
+    "last": 2025,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "tncb-agv4",
+     "name": "2015-2016 Demographic Data - Diversity Efforts",
+     "score": 0.48,
+     "z": 4.12
+    },
+    {
+     "id": "k9kq-67vm",
+     "name": "DYCD Participant Demographics",
+     "score": 0.471,
+     "z": 4.0
+    },
+    {
+     "id": "ph5g-sr3v",
+     "name": "Projected Population 2010-2040 - Summary",
+     "score": 0.452,
+     "z": 3.77
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SD_MDP_MUHC",
+   "name": "Proportion of population living in multidimensional poverty",
+   "grade": "GREEN",
+   "depth": 8.5,
+   "unit": "Percent",
+   "first_year": 2010,
+   "latest_year": 2024,
+   "world": {
+    "countries": 76,
+    "n_obs": 612,
+    "us_obs": 0,
+    "first": 2010,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "score": 0.518,
+     "z": 3.84
+    },
+    {
+     "id": "xi7c-iiu2",
+     "name": "New York City Population By Community Districts",
+     "score": 0.513,
+     "z": 3.79
+    },
+    {
+     "id": "x56h-7iwp",
+     "name": "Directory Of Unsheltered Street Homeless To General Population Ratio 2009",
+     "score": 0.495,
+     "z": 3.59
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SG_PLN_RECRIMON",
+   "name": "Proportion of results indicators which will be monitored using government sources and monitoring systems - data by recipient",
+   "grade": "AMBER",
+   "depth": 2.0,
+   "unit": "Percent",
+   "first_year": 2016,
+   "latest_year": 2026,
+   "world": {
+    "countries": 96,
+    "n_obs": 203,
+    "us_obs": 0,
+    "first": 2016,
+    "last": 2026,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "9f5n-qdib",
+     "name": "Evaluation and Monitoring Reports for Program Sites",
+     "score": 0.597,
+     "z": 4.29
+    },
+    {
+     "id": "i8ua-bnkj",
+     "name": "Monthly Performance Management Reports (includes Corruption Lectures and Customer Service indicators)",
+     "score": 0.583,
+     "z": 4.12
+    },
+    {
+     "id": "f34v-uffx",
+     "name": "OneNYC Indicators (Historical)",
+     "score": 0.561,
+     "z": 3.87
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SH_BLD_ECOLI",
+   "name": "Percentage of bloodstream infection due to Escherichia coli resistant to 3rd-generation cephalosporin (e.g., ESBL- E. coli) among patients seeking care and whose blood sample is taken and tested",
+   "grade": "GREEN",
+   "depth": 5.0,
+   "unit": "Percent",
+   "first_year": 2016,
+   "latest_year": 2022,
+   "world": {
+    "countries": 97,
+    "n_obs": 413,
+    "us_obs": 0,
+    "first": 2016,
+    "last": 2022,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "bkwf-xfky",
+     "name": "Drinking Water Quality Distribution Monitoring Data",
+     "score": 0.48,
+     "z": 5.77
+    },
+    {
+     "id": "5uug-f49n",
+     "name": "Harbor Water Quality",
+     "score": 0.405,
+     "z": 4.6
+    },
+    {
+     "id": "7434-7ua6",
+     "name": "DOHMH Covid-19 Milestone Data: Percent of NYC residents tested who tested positive",
+     "score": 0.392,
+     "z": 4.4
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SH_BLD_MRSA",
+   "name": "Percentage of bloodstream infection due to methicillin-resistant Staphylococcus aureus (MRSA) among patients seeking care and whose blood sample is taken and tested",
+   "grade": "GREEN",
+   "depth": 5.0,
+   "unit": "Percent",
+   "first_year": 2016,
+   "latest_year": 2022,
+   "world": {
+    "countries": 98,
+    "n_obs": 404,
+    "us_obs": 0,
+    "first": 2016,
+    "last": 2022,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "7434-7ua6",
+     "name": "DOHMH Covid-19 Milestone Data: Percent of NYC residents tested who tested positive",
+     "score": 0.438,
+     "z": 5.5
+    },
+    {
+     "id": "sj3k-gzyx",
+     "name": "DOHMH Covid-19 Milestone Data: Daily Number of People Admitted to NYC hospitals for Covid-19 like Illness",
+     "score": 0.39,
+     "z": 4.82
+    },
+    {
+     "id": "x98t-3bbk",
+     "name": "DOHMH COVID-19 Antibody-by-Borough",
+     "score": 0.347,
+     "z": 4.22
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SH_HIV_INCD",
+   "name": "Number of new HIV infections per 1,000 uninfected population",
+   "grade": "GREEN",
+   "depth": 18.2,
+   "unit": "RATIO_COUNT_PER_1000_COUNT_POP_UNINFECTED",
+   "first_year": 2000,
+   "latest_year": 2024,
+   "world": {
+    "countries": 146,
+    "n_obs": 3565,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "RATIO_COUNT_PER_1000_COUNT_POP_UNINFECTED",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "ykvb-493p",
+     "name": "HIV/AIDS Diagnoses by Neighborhood, Sex, and Race/Ethnicity (Historical)",
+     "score": 0.597,
+     "z": 5.55
+    },
+    {
+     "id": "dxnu-p2qd",
+     "name": "HIV/AIDS Diagnoses by Neighborhood, Age Group, and Race/Ethnicity (Historical)",
+     "score": 0.59,
+     "z": 5.46
+    },
+    {
+     "id": "fju2-rdad",
+     "name": "DOHMH HIV/AIDS Annual Report",
+     "score": 0.519,
+     "z": 4.53
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SH_SAN_HNDWSH",
+   "name": "Proportion of population with basic handwashing facilities on premises",
+   "grade": "GREEN",
+   "depth": 16.0,
+   "unit": "Percent",
+   "first_year": 2006,
+   "latest_year": 2024,
+   "world": {
+    "countries": 120,
+    "n_obs": 1792,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "i595-2byq",
+     "name": "Radiation Producing Equipment",
+     "score": 0.426,
+     "z": 3.76
+    },
+    {
+     "id": "3kfa-rvez",
+     "name": "NYC Pool Inspections",
+     "score": 0.42,
+     "z": 3.67
+    },
+    {
+     "id": "pwts-g83w",
+     "name": "DOHMH HIV Service Directory",
+     "score": 0.376,
+     "z": 3.05
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SH_STA_MALR",
+   "name": "Malaria incidence per 1,000 population at risk",
+   "grade": "GREEN",
+   "depth": 25.0,
+   "unit": "RATIO_COUNT_PER_1000_COUNT_POP",
+   "first_year": 2000,
+   "latest_year": 2024,
+   "world": {
+    "countries": 109,
+    "n_obs": 2725,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "RATIO_COUNT_PER_1000_COUNT_POP",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "ph5g-sr3v",
+     "name": "Projected Population 2010-2040 - Summary",
+     "score": 0.477,
+     "z": 4.31
+    },
+    {
+     "id": "msid-end4",
+     "name": "Mosquito control events in NYC \u2013 Adult Mosquito Truck Spraying and Aerial Larviciding Events",
+     "score": 0.473,
+     "z": 4.26
+    },
+    {
+     "id": "f7dc-2q9f",
+     "name": "SARS-CoV-2 concentrations measured in NYC Wastewater",
+     "score": 0.463,
+     "z": 4.12
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SI_AGR_LSFP",
+   "name": "Average income of large-scale food producers, at purchasing-power parity rates",
+   "grade": "AMBER",
+   "depth": 1.5,
+   "unit": "CR_USD_PPP",
+   "first_year": 2005,
+   "latest_year": 2021,
+   "world": {
+    "countries": 50,
+    "n_obs": 119,
+    "us_obs": 0,
+    "first": 2001,
+    "last": 2024,
+    "unit": "CR_USD_PPP",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "gffu-ps8j",
+     "name": "Income By Type Of Income And AGI Range",
+     "score": 0.534,
+     "z": 4.13
+    },
+    {
+     "id": "9ck6-2jew",
+     "name": "DOF Condominium Comparable Rental Income in NYC",
+     "score": 0.525,
+     "z": 4.04
+    },
+    {
+     "id": "myei-c3fa",
+     "name": "DOF: Cooperative Comparable Rental Income (Citywide)",
+     "score": 0.521,
+     "z": 3.99
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SI_AGR_SSFP",
+   "name": "Average income of small-scale food producers, at purchasing-power parity rates",
+   "grade": "AMBER",
+   "depth": 1.2,
+   "unit": "CR_USD_PPP",
+   "first_year": 2005,
+   "latest_year": 2021,
+   "world": {
+    "countries": 51,
+    "n_obs": 126,
+    "us_obs": 0,
+    "first": 2001,
+    "last": 2024,
+    "unit": "CR_USD_PPP",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "gffu-ps8j",
+     "name": "Income By Type Of Income And AGI Range",
+     "score": 0.524,
+     "z": 3.9
+    },
+    {
+     "id": "9ck6-2jew",
+     "name": "DOF Condominium Comparable Rental Income in NYC",
+     "score": 0.51,
+     "z": 3.75
+    },
+    {
+     "id": "myei-c3fa",
+     "name": "DOF: Cooperative Comparable Rental Income (Citywide)",
+     "score": 0.51,
+     "z": 3.75
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SI_COV_LMKT",
+   "name": "[World Bank] Proportion of population covered by labour market programs",
+   "grade": "GREEN",
+   "depth": 9.3,
+   "unit": "Percent",
+   "first_year": 2004,
+   "latest_year": 2023,
+   "world": {
+    "countries": 76,
+    "n_obs": 294,
+    "us_obs": 0,
+    "first": 2002,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "xi7c-iiu2",
+     "name": "New York City Population By Community Districts",
+     "score": 0.479,
+     "z": 3.89
+    },
+    {
+     "id": "ph5g-sr3v",
+     "name": "Projected Population 2010-2040 - Summary",
+     "score": 0.469,
+     "z": 3.75
+    },
+    {
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "score": 0.455,
+     "z": 3.56
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SI_COV_SOCINS",
+   "name": "[World Bank] Proportion of population covered by social insurance programs",
+   "grade": "GREEN",
+   "depth": 6.5,
+   "unit": "Percent",
+   "first_year": 2005,
+   "latest_year": 2023,
+   "world": {
+    "countries": 119,
+    "n_obs": 557,
+    "us_obs": 0,
+    "first": 1999,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "x56h-7iwp",
+     "name": "Directory Of Unsheltered Street Homeless To General Population Ratio 2009",
+     "score": 0.444,
+     "z": 3.26
+    },
+    {
+     "id": "gfej-by6h",
+     "name": "Equitable Health Systems - Health Insurance Enrollment",
+     "score": 0.441,
+     "z": 3.22
+    },
+    {
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "score": 0.436,
+     "z": 3.16
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SI_POV_NAHC",
+   "name": "Proportion of population living below the national poverty line",
+   "grade": "GREEN",
+   "depth": 8.2,
+   "unit": "Percent",
+   "first_year": 2000,
+   "latest_year": 2024,
+   "world": {
+    "countries": 156,
+    "n_obs": 1038,
+    "us_obs": 0,
+    "first": 2000,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "rnsn-acs2",
+     "name": "Census Demographics at the Neighborhood Tabulation Area (NTA) level",
+     "score": 0.563,
+     "z": 4.63
+    },
+    {
+     "id": "x56h-7iwp",
+     "name": "Directory Of Unsheltered Street Homeless To General Population Ratio 2009",
+     "score": 0.497,
+     "z": 3.84
+    },
+    {
+     "id": "xi7c-iiu2",
+     "name": "New York City Population By Community Districts",
+     "score": 0.497,
+     "z": 3.84
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SL_EMP_GTOTL",
+   "name": "Labour share of GDP",
+   "grade": "GREEN",
+   "depth": 22.0,
+   "unit": "Percent",
+   "first_year": 2004,
+   "latest_year": 2025,
+   "world": {
+    "countries": 93,
+    "n_obs": 2046,
+    "us_obs": 0,
+    "first": 2004,
+    "last": 2025,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "ipc3-2nbm",
+     "name": "Personal Income By AGI Range",
+     "score": 0.409,
+     "z": 3.66
+    },
+    {
+     "id": "gffu-ps8j",
+     "name": "Income By Type Of Income And AGI Range",
+     "score": 0.385,
+     "z": 3.3
+    },
+    {
+     "id": "2z24-2htf",
+     "name": "Office of Labor Policy & Standards Workplace Inquiries (Historical)",
+     "score": 0.384,
+     "z": 3.28
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SN_ITK_DEFCN",
+   "name": "Number of undernourished people",
+   "grade": "GREEN",
+   "depth": 20.8,
+   "unit": "COUNT",
+   "first_year": 2001,
+   "latest_year": 2023,
+   "world": {
+    "countries": 138,
+    "n_obs": 2710,
+    "us_obs": 0,
+    "first": 2001,
+    "last": 2023,
+    "unit": "COUNT",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "g4tm-nibn",
+     "name": "2017-18 Financial Services for NYCHA Residents - Local Law 163",
+     "score": 0.273,
+     "z": 3.57
+    },
+    {
+     "id": "fkec-mjr6",
+     "name": "DOHMH Cryptosporidiosis by Race/Ethnicity, Age Group, and Borough of Residence",
+     "score": 0.272,
+     "z": 3.56
+    },
+    {
+     "id": "n7ta-pz8k",
+     "name": "Projected Public School Ratio",
+     "score": 0.261,
+     "z": 3.35
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SP_PSR_OSATIS_GOV",
+   "name": "Proportion of population who say that overall they are satisfied with the quality of government services",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "Percent",
+   "first_year": 2022,
+   "latest_year": 2023,
+   "world": {
+    "countries": 46,
+    "n_obs": 75,
+    "us_obs": 0,
+    "first": 2015,
+    "last": 2025,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "5a8g-vpdd",
+     "name": "2013 - 2014 School Survey Data",
+     "score": 0.513,
+     "z": 4.28
+    },
+    {
+     "id": "kizp-4dfk",
+     "name": "311 Customer Satisfaction Survey",
+     "score": 0.468,
+     "z": 3.7
+    },
+    {
+     "id": "irna-apch",
+     "name": "2024 Survey of Volunteerism",
+     "score": 0.457,
+     "z": 3.55
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/SP_PSR_OSATIS_SEC",
+   "name": "Proportion of population who say that overall they are satisfied with the quality of secondary education services",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "Percent",
+   "first_year": 2022,
+   "latest_year": 2023,
+   "world": {
+    "countries": 44,
+    "n_obs": 68,
+    "us_obs": 0,
+    "first": 2015,
+    "last": 2025,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "5a8g-vpdd",
+     "name": "2013 - 2014 School Survey Data",
+     "score": 0.565,
+     "z": 4.05
+    },
+    {
+     "id": "v55h-aeac",
+     "name": "2012 NYC District 75 Schools Survey",
+     "score": 0.495,
+     "z": 3.32
+    },
+    {
+     "id": "xiyj-m4sj",
+     "name": "2012 NYC General Education School Survey",
+     "score": 0.495,
+     "z": 3.32
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/ST_EMP_TRSMN",
+   "name": "Employed persons in the tourism industries (number)",
+   "grade": "GREEN",
+   "depth": 6.8,
+   "unit": "COUNT",
+   "first_year": 2012,
+   "latest_year": 2024,
+   "world": {
+    "countries": 144,
+    "n_obs": 1115,
+    "us_obs": 0,
+    "first": 2008,
+    "last": 2024,
+    "unit": "COUNT",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "9b9u-8989",
+     "name": "NYC Business Acceleration Businesses Served and Jobs Created",
+     "score": 0.437,
+     "z": 3.6
+    },
+    {
+     "id": "423i-ukqr",
+     "name": "Local Law 18 Pay and Demographics Report - Agency Report Table",
+     "score": 0.435,
+     "z": 3.58
+    },
+    {
+     "id": "h65x-gk9r",
+     "name": "Resident Economic Empowerment and Sustainability (REES) for NYCHA Residents \u2013 Council District - Local Law 163",
+     "score": 0.425,
+     "z": 3.43
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_CHLN",
+   "name": "Direct economic loss to cultural heritage damaged or destroyed attributed to disasters",
+   "grade": "GREEN",
+   "depth": 13.5,
+   "unit": "CR_USD",
+   "first_year": 2005,
+   "latest_year": 2024,
+   "world": {
+    "countries": 117,
+    "n_obs": 793,
+    "us_obs": 0,
+    "first": 2005,
+    "last": 2024,
+    "unit": "CR_USD",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "68k5-hdzw",
+     "name": "Recoupment for Damaged City-owned Property",
+     "score": 0.394,
+     "z": 6.02
+    },
+    {
+     "id": "5esv-8c3f",
+     "name": "TLC Vehicles Involved in Crashes (Local Law 31)",
+     "score": 0.318,
+     "z": 4.61
+    },
+    {
+     "id": "5xsi-dfpx",
+     "name": "Sandy Inundation Zone",
+     "score": 0.301,
+     "z": 4.3
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_HFDN",
+   "name": "Number of destroyed or damaged health facilities attributed to disasters",
+   "grade": "AMBER",
+   "depth": 3.0,
+   "unit": "COUNT",
+   "first_year": 2015,
+   "latest_year": 2024,
+   "world": {
+    "countries": 116,
+    "n_obs": 628,
+    "us_obs": 0,
+    "first": 2005,
+    "last": 2025,
+    "unit": "COUNT",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "5esv-8c3f",
+     "name": "TLC Vehicles Involved in Crashes (Local Law 31)",
+     "score": 0.416,
+     "z": 5.02
+    },
+    {
+     "id": "7hi3-kaps",
+     "name": "Staff Injuries - Class A Injuries",
+     "score": 0.396,
+     "z": 4.7
+    },
+    {
+     "id": "bf97-mjsy",
+     "name": "Construction-Related Incidents",
+     "score": 0.375,
+     "z": 4.36
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_MISS",
+   "name": "Number of missing persons due to disaster",
+   "grade": "GREEN",
+   "depth": 15.8,
+   "unit": "COUNT",
+   "first_year": 2005,
+   "latest_year": 2025,
+   "world": {
+    "countries": 152,
+    "n_obs": 1489,
+    "us_obs": 0,
+    "first": 2005,
+    "last": 2025,
+    "unit": "COUNT",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "dwrg-kzni",
+     "name": "DHS Daily Report (Historical)",
+     "score": 0.423,
+     "z": 3.89
+    },
+    {
+     "id": "k46n-sa2m",
+     "name": "DHS Daily Report",
+     "score": 0.417,
+     "z": 3.8
+    },
+    {
+     "id": "x3bb-kg5j",
+     "name": "2018-2019 Daily Attendance",
+     "score": 0.417,
+     "z": 3.8
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/VC_DSR_PDLN",
+   "name": "Number of people whose livelihoods were disrupted or destroyed, attributed to disasters",
+   "grade": "GREEN",
+   "depth": 12.0,
+   "unit": "COUNT",
+   "first_year": 2005,
+   "latest_year": 2024,
+   "world": {
+    "countries": 122,
+    "n_obs": 1051,
+    "us_obs": 0,
+    "first": 2005,
+    "last": 2025,
+    "unit": "COUNT",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "5esv-8c3f",
+     "name": "TLC Vehicles Involved in Crashes (Local Law 31)",
+     "score": 0.34,
+     "z": 4.79
+    },
+    {
+     "id": "5xsi-dfpx",
+     "name": "Sandy Inundation Zone",
+     "score": 0.33,
+     "z": 4.62
+    },
+    {
+     "id": "qx6a-vcwx",
+     "name": "Youth Count",
+     "score": 0.306,
+     "z": 4.25
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/VC_VOV_PHYL",
+   "name": "Proportion of population subjected to physical violence in the previous 12 months",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "Percent",
+   "first_year": 2019,
+   "latest_year": 2020,
+   "world": {
+    "countries": 23,
+    "n_obs": 80,
+    "us_obs": 0,
+    "first": 2011,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "xywu-7bv9",
+     "name": "New York City Population by Borough, 1950 - 2040",
+     "score": 0.451,
+     "z": 3.71
+    },
+    {
+     "id": "uqmk-4y2w",
+     "name": "Youth Risk Behavior Survey (Middle School)",
+     "score": 0.443,
+     "z": 3.6
+    },
+    {
+     "id": "rvmf-4sg6",
+     "name": "The relationship between domestic violence and shooting incidents in New York City",
+     "score": 0.437,
+     "z": 3.52
+    }
+   ],
+   "graded": false
+  },
+  {
+   "dcid": "undata/sdg/VC_VOV_PSYCHL",
+   "name": "Proportion of population subjected to psychological violence in the previous 12 months",
+   "grade": "RANK-ONLY",
+   "depth": 1.0,
+   "unit": "Percent",
+   "first_year": 2019,
+   "latest_year": 2020,
+   "world": {
+    "countries": 13,
+    "n_obs": 40,
+    "us_obs": 0,
+    "first": 2013,
+    "last": 2024,
+    "unit": "Percent",
+    "provenance": "https://unstats.un.org/sdgs/dataportal"
+   },
+   "nyc_candidates": [
+    {
+     "id": "uqmk-4y2w",
+     "name": "Youth Risk Behavior Survey (Middle School)",
+     "score": 0.459,
+     "z": 3.68
+    },
+    {
+     "id": "3qty-g4aq",
+     "name": "Youth Behavior Risk Survey (High School)",
+     "score": 0.432,
+     "z": 3.37
+    },
+    {
+     "id": "xywu-7bv9",
+     "name": "New York City Population by Borough, 1950 - 2040",
+     "score": 0.426,
+     "z": 3.29
+    }
+   ],
+   "graded": false
+  }
+ ],
+ "is_crosswalk": false
+}

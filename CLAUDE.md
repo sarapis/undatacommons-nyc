@@ -31,6 +31,10 @@ UN System Data Commons.
   detects drift rather than merely failing to find it.
 - **The SDG goal trees expose StatVarPeerGroups (`undata/svpg/...`), not variables.** Follow the
   `->member` arc to real DCIDs. Rewriting the prefix is DCID guessing and returns nothing.
+- **"City-scoped" is not the same as "a place can hold a value for it."** `probe/scope.py` reads
+  an indicator's topic and judges it municipal; it cannot see that *"extent to which countries have
+  laws and regulations that guarantee…"* measures a legislature. 28 of the 67 US-silent
+  "city-scoped" indicators were country-as-subject. `us_silent.py` filters them lexically.
 - **Cached embedding vectors must be matched on IDS, never on count.** A portal re-fetched later
   returns the same datasets in a different order — 24 of 45 city catalogs did — and a length check
   accepts it silently, handing every dataset another dataset's vector. Scores stay in range and
@@ -103,6 +107,10 @@ UN System Data Commons.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.
+  - `us_silent.py`: the indicators the US does not report but a city could — verifies US
+    absence against observations, records the peer group, proposes NYC candidates. Excludes
+    country-as-subject indicators lexically; the scope classifier cannot see that
+    "extent to which countries have laws…" is not a quantity a place can hold.
   - `fetch_municipal.py` → `inverse.py`: the inverse crosswalk (`--language non-en` pools every
     non-English catalog under the multilingual model; controls for it are hand-built in
     `probe/inverse_controls.json` since no city outside NYC has a graded worksheet) — cache every city catalog, then

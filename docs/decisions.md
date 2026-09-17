@@ -7,6 +7,23 @@ title: Decision log
 
 Newest first. Record the *why*, not just the what — this is what makes a past choice reviewable.
 
+## 2026-09-17 — "City-scoped" and "a place can hold a value" are different questions
+
+`probe/scope.py` judges whether an indicator is something a city could report, and it is good at
+what it does: it reads the topic — health, water, education — and scores it municipal. It cannot
+see that *"extent to which countries have laws and regulations that guarantee full and equal
+access to sexual and reproductive health care"* measures a **legislature**, not a place. The topic
+is municipal; the subject is a country.
+
+28 of the 67 US-silent "city-scoped" indicators were country-as-subject, 18 of them one family of
+SDG 5.6.2 legal provisions — and the matcher paired every one with NYC's *Local Law 37/2011*, on
+the token "Law".
+
+The filter for this is **lexical, not a second classifier**: an indicator beginning "extent to
+which…", "countries that…", "proportion of countries…" is excluded, while "extent of human made
+wetlands" is not. The distinction is a property of how the sentence is phrased, and a rule that can
+be read and argued with beats a score that cannot. The published count went 67 → 39 as a result.
+
 ## 2026-09-16 — Match against the 519 named indicators, not all 689
 
 170 of the 689 base indicators carry no name in any source we hold: they return neither metadata

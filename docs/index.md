@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-16** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-17** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
@@ -118,6 +118,24 @@ it cannot reach (123 indicators whose units have no meaningful range). The `Perc
 graph covers both bounded proportions and signed growth rates, with nothing in the unit string to
 tell them apart — which is why an indicator has to be judged against its own distribution rather
 than against what its unit is supposed to mean.
+
+## What NYC can say that the US cannot
+
+**[The indicators the United States does not report](https://sarapis.github.io/undatacommons-nyc/artifacts/us-silent-latest)** —
+for **130 of the 442 usable indicators the US reports nothing**, so *NYC vs the US* is not a weaker
+comparison than *NYC vs the world*; it is the only one available. **39 are place-measurable**
+(down from the 67 this page long claimed: 28 of those have a *country* as their subject —
+*"extent to which countries have laws…"* is not a quantity a city can hold, and 18 were one family
+of SDG 5.6.2 legal provisions that the matcher paired with NYC's *Local Law 37/2011* on the token
+"Law").
+
+Twelve form the real answer, and it is waste and water: **municipal waste collected (133 reporting
+countries)**, total waste generation, hazardous waste exported/imported/treated, wastewater
+generated/treated, groundwater quality, human-made wetlands — all DSNY and DEP series NYC already
+publishes. Three carry a single year, so they support a level and not a trend.
+
+All 39 were re-checked against the country observations: **not one has a United States datapoint**,
+so the six-country screening proxy and the data agree completely.
 
 ## The inverse crosswalk
 
@@ -268,8 +286,9 @@ point cannot carry it.
 ## The corpus, and how much of it we have touched
 
 **689 base SDG indicators** in the goal framework. Screened against a six-country panel: **442
-usable**, of which **130 are indicators the United States does not report** and **67 of those are
-city-scoped** — mostly municipal and hazardous waste, wastewater and groundwater. A city can be
+usable**, of which **130 are indicators the United States does not report** and **39 of those are
+place-measurable** (the classifier said 67; 28 of those have a *country* as their subject — see
+the [worksheet](https://sarapis.github.io/undatacommons-nyc/artifacts/us-silent-latest)) — mostly municipal and hazardous waste, wastewater and groundwater. A city can be
 compared internationally on exactly the indicators its own country skips. The 11 hand-built pairs are 1.6% of the corpus and 4% of the usable pool — so
 the crosswalk is a verified sample, not a representative one.
 

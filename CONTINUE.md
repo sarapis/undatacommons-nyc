@@ -52,6 +52,7 @@ crosswalk series and 12 crosswalk variables — **all identical**. The *search s
 | SDG indicators enumerated | 689 | `probe/cache/corpus.json` |
 | Usable on the UN side | 442 | `probe/cache/screened.json` |
 | Crosswalk pairs, hand-graded | 12 | `probe/crosswalk.json` |
+| US-silent indicators a place can hold | 39 | `docs/artifacts/us-silent-latest.md` |
 | Demo cards | 5 | `demo/benchmarks.html` |
 | Portals surveyed / municipal | 372 / 70 | `portals/inventory.json` |
 | Cities with a denominator | 27 US + Madrid + Milan | `cities/denominators.json` |
@@ -153,6 +154,10 @@ shared; the Pages mirror is the one to present from).
 - **`search_indicators` results move even when the graph does not.** 44 → 56 candidates between 14
   and 16 Sep with no code change, nine topics gaining and none losing. The coverage report's grade
   mix (30/9/5 → 36/11/9) moved for that reason alone. Never resolve a DCID by search at showtime.
+- **The US-silent worksheet is 39, not 67.** `probe/us_silent.py`. The old 67 counted 28
+  country-as-subject indicators ("extent to which countries have laws…"), which no place can hold
+  a value for. The real core is 12 waste/water/wetlands indicators against DSNY and DEP series;
+  three carry a single year, so level-only. All 39 verified US-absent against observations.
 - **The inverse crosswalk runs in two language groups and they corroborate each other.**
   `probe/inverse.py` (English, 37 cities) and `--language non-en` (11 cities, multilingual model).
   Elections and COVID-19 reporting appear independently in both — disjoint cities, different
