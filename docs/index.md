@@ -10,7 +10,7 @@ title: Project briefing
 
 ## The demo
 
-**[Eleven Pairs, Three Charts](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html)** — three comparisons that hold with
+**[Twelve Pairs, Three Charts](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html)** — three comparisons that hold with
 provenance and grade on every card, then the eight that fail and why. Each card also places NYC
 among **every reporting country** in 2019. Public, no sign-in.
 
@@ -378,7 +378,7 @@ building against.
 
 | What | Where |
 |---|---|
-| Demo — Eleven Pairs, Three Charts | [https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html) |
+| Demo — Twelve Pairs, Three Charts | [https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html](https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html) |
 | Activity feed (append-only updates) | [https://sarapis.github.io/undatacommons-nyc/activity](https://sarapis.github.io/undatacommons-nyc/activity) |
 | Crosswalk status (both sides verified) | [https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/crosswalk-latest) |
 | Platform probe findings | [https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-14-platform-probe) |

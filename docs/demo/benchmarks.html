@@ -1,4 +1,4 @@
-<title>Eleven Pairs, Three Charts</title>
+<title>Twelve Pairs, Three Charts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
@@ -94,7 +94,7 @@ h1 {
 
 /* ---------- funnel ---------- */
 .funnel {
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr);
   gap: 1px; background: var(--rule);
   border: 1px solid var(--rule); margin: 0 0 56px;
 }
@@ -224,6 +224,13 @@ td.why { color: var(--ink-2); line-height: 1.5; }
 .t-blocked  { color: var(--critical); }
 .t-context  { color: var(--serious); }
 .t-nosource { color: var(--ink-3); }
+.t-charted  { color: var(--nyc); }
+.t-open     { color: var(--ink-3); }
+td.numcell  { font-family: var(--display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.numcell b { font-size: 17px; }
+.level-only { display: block; font-family: var(--body); font-size: 11.5px; color: var(--serious); font-weight: 600; }
+.cand-score { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); margin-top: 3px; }
+
 
 /* ---------- inversion ---------- */
 .inversion {
@@ -278,6 +285,7 @@ footer p { margin: 0 0 10px; max-width: 74ch; }
 .plot { position: relative; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 1000px) { .funnel { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 760px) {
   .funnel { grid-template-columns: repeat(2, 1fr); }
   .readout, .versus { grid-template-columns: 1fr; }
@@ -289,7 +297,7 @@ footer p { margin: 0 0 10px; max-width: 74ch; }
 
 <header class="masthead">
   <p class="eyebrow">UN Data Commons × NYC Open Data · Builders' Day, Google NY, 22 Sep 2026</p>
-  <h1>Eleven pairs. Three can honestly share an axis.</h1>
+  <h1>Twelve pairs. Three can honestly share an axis.</h1>
   <p class="lede">New York published the world's first Voluntary Local Review in 2018. The UN now
   holds the authoritative global series. <strong>Joining them is the easy part.</strong> Knowing
   which joins are legitimate is the whole job — and most of them are not.</p>
@@ -302,13 +310,18 @@ footer p { margin: 0 0 10px; max-width: 74ch; }
     <small>base indicators in the goal framework</small>
   </div>
   <div>
-    <dt>With US data</dt>
-    <dd>248</dd>
-    <small>377 have none at all</small>
+    <dt>Usable series</dt>
+    <dd>442</dd>
+    <small>247 are too thin to chart at all</small>
+  </div>
+  <div>
+    <dt>US reports nothing</dt>
+    <dd>130</dd>
+    <small>on these, NYC against the world is the only comparison there is</small>
   </div>
   <div>
     <dt>Mapped to NYC</dt>
-    <dd>11</dd>
+    <dd>12</dd>
     <small>both sides verified by hand</small>
   </div>
   <div class="last">
@@ -587,6 +600,131 @@ placed among the world precisely because its own country is absent from the tabl
   <b>Unit assumption</b> DSNY publishes "Tons" without specifying short or metric. US short tons assumed (×0.90718). If metric, every NYC figure here is ~10% low.</p>
 </section>
 
+
+<h2 style="margin-top:52px">The US is silent on 130 indicators. Twelve of them, a city can fill.</h2>
+<hr class="section-rule">
+<p class="section-note">The card above is not a curiosity. Of the <strong>442</strong> SDG
+indicators with usable data, the United States reports <strong>nothing at all</strong> for
+<strong>130</strong> — and on those, <em>NYC vs the US</em> is not a weaker comparison than
+<em>NYC vs the world</em>. It is the only one available, and the US is not in it.</p>
+
+<p class="section-note">After removing the indicators whose subject is a <em>country</em> rather
+than a place — &ldquo;extent to which countries have laws and regulations that guarantee&hellip;&rdquo;
+is not a quantity a city can hold a value for — <strong>39</strong> remain. Twelve of those are one
+coherent group, and every one has a DSNY or DEP series sitting opposite it.</p>
+
+<div class="ledger-scroll">
+<table>
+  <thead>
+    <tr><th>Indicator</th><th>Countries<br>reporting</th><th>Years</th><th>NYC series that could fill it</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ind">Municipal waste collected<span>EN_MWT_COLLV</span></td>
+      <td class="numcell"><b>133</b></td>
+      <td class="numcell">2000–2023</td>
+      <td class="why">Recycling Diversion and Capture Rates<br><span class="cand-score">match 0.633 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-charted">Graded &amp; charted above</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Hazardous waste generated per unit of GDP<span>EN_HAZ_GENGDP</span></td>
+      <td class="numcell"><b>107</b></td>
+      <td class="numcell">2000–2024</td>
+      <td class="why">Wastewater Co-digestion and Biogas-to-grid Performance Indicators<br><span class="cand-score">match 0.531 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Hazardous waste exported<span>EN_HAZ_EXP</span></td>
+      <td class="numcell"><b>97</b></td>
+      <td class="numcell">2000–2024</td>
+      <td class="why">DSNY Disposal Sites Used by Facilities by Year<br><span class="cand-score">match 0.521 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Total waste generation<span>EN_TWT_GENV</span></td>
+      <td class="numcell"><b>97</b></td>
+      <td class="numcell">2000–2023</td>
+      <td class="why">DSNY Waste Characterization - Comparative Results<br><span class="cand-score">match 0.515 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Total wastewater treated<span>EN_WWT_TREAT</span></td>
+      <td class="numcell"><b>94</b></td>
+      <td class="numcell">2022<span class="level-only">level only</span></td>
+      <td class="why">Watershed Water Quality - Wastewater<br><span class="cand-score">match 0.542 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Hazardous waste treated or disposed<span>EN_HAZ_TRTDISV</span></td>
+      <td class="numcell"><b>93</b></td>
+      <td class="numcell">2000–2024</td>
+      <td class="why">Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site<br><span class="cand-score">match 0.51 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Proportion of hazardous waste that is treated or disposed<span>EN_HAZ_TRTDISR</span></td>
+      <td class="numcell"><b>88</b></td>
+      <td class="numcell">2000–2024</td>
+      <td class="why">Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site<br><span class="cand-score">match 0.506 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Hazardous waste imported<span>EN_HAZ_IMP</span></td>
+      <td class="numcell"><b>85</b></td>
+      <td class="numcell">2000–2024</td>
+      <td class="why">DSNY Disposal Sites Used by Facilities by Year<br><span class="cand-score">match 0.492 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Proportion of groundwater bodies with good ambient water quality<span>EN_H2O_GRAMBQ</span></td>
+      <td class="numcell"><b>84</b></td>
+      <td class="numcell">2017–2023</td>
+      <td class="why">Watershed Water Quality - Limnology<br><span class="cand-score">match 0.516 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Total wastewater generated<span>EN_WWT_GEN</span></td>
+      <td class="numcell"><b>84</b></td>
+      <td class="numcell">2022<span class="level-only">level only</span></td>
+      <td class="why">Wastewater Co-digestion and Biogas-to-grid Performance Indicators<br><span class="cand-score">match 0.586 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Proportion of wastewater treated<span>EN_WWT_TREATR</span></td>
+      <td class="numcell"><b>72</b></td>
+      <td class="numcell">2022<span class="level-only">level only</span></td>
+      <td class="why">Dewatered Solids and Biosolids Allocations per Biosolids Management Practice Site<br><span class="cand-score">match 0.519 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+    <tr>
+      <td class="ind">Extent of human made wetlands<span>EN_WBE_HMWTL</span></td>
+      <td class="numcell"><b>55</b></td>
+      <td class="numcell">2021–2025</td>
+      <td class="why">NYC Wetlands<br><span class="cand-score">match 0.497 &middot; proposed, not verified</span></td>
+      <td><span class="tag t-open">Ungraded proposal</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="caveat" style="border-top:0;margin-top:0">
+  <h3>Eleven of these twelve are proposals, not mappings</h3>
+  <p>Only <strong>municipal waste collected</strong> is graded and charted on this page. The other
+  eleven are candidates an embedding matcher proposed; on hand-read lists its precision is roughly
+  <strong>half</strong>. Under <a href="https://sarapis.github.io/undatacommons-nyc/spec/">comparability
+  spec v0.1</a> a grade is a human judgment, so none of them is a mapping until a person says so —
+  which is the same rule that keeps seven pairs off the charts below.</p>
+  <p style="margin-top:10px">3 of the twelve carry a <strong>single year</strong>. That
+  supports a level comparison and not a trend — the same finding that removed road safety as this
+  page&rsquo;s headline demo. Not one of the twelve has a single United States datapoint; each was
+  re-checked against the country observations rather than inherited from the screening proxy.</p>
+</div>
+
+<p class="prov"><b>Source</b> <a href="https://sarapis.github.io/undatacommons-nyc/artifacts/us-silent-latest">us-silent worksheet</a>,
+re-derivable with <code>python3 probe/us_silent.py</code> &middot; reporting-country counts from a
+sweep of every country and year for all 689 enumerated indicators<br>
+<b>NYC candidates</b> embedding search over all 2,400 NYC Open Data datasets &middot; ungraded</p>
+
 <h2 style="margin-top:52px">The seven that don't — and why</h2>
 <hr class="section-rule">
 <p class="section-note">A blocked pair is not a failure of the pipeline. Recording <em>why</em> two
@@ -684,15 +822,16 @@ thing we are building against.</p>
 
 <footer>
   <p><b>Method.</b> 689 base indicators enumerated from the SDG goal trees via the UN Data Commons
-  MCP and REST endpoints; 248 screened as having a usable US series; NYC counterparts proposed by
+  MCP and REST endpoints; 442 screened as usable, 312 of them with a US series; NYC counterparts proposed by
   embedding search over all 2,400 NYC Open Data datasets, then graded by hand. Comparability grades
   are human judgments — the harness verifies that a mapping still resolves and that units agree, and
   a human grade vetoes it.</p>
   <p><b>Every number here is re-derivable.</b> Code, crosswalk and full working notes:
   <a href="https://github.com/sarapis/undatacommons-nyc">github.com/sarapis/undatacommons-nyc</a> ·
   <a href="https://sarapis.github.io/undatacommons-nyc/">project briefing</a>.
-  Figures retrieved 14 Sep 2026 against the UN Data Commons staging deployment; the platform goes
-  public 17 Sep 2026.</p>
+  Figures retrieved 14 Sep 2026 and re-verified 17 Sep 2026, the morning the platform went fully
+  public: 57 series, 12 variables and 689 corpus indicators, <b>zero drift</b>
+  (<code>probe/launch_diff.py</code>).</p>
 </footer>
 
 </div>

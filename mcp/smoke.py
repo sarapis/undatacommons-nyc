@@ -6,10 +6,14 @@ on https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html
 """
 import json
 import pathlib
+import re
 import subprocess
 import sys
 
-SERVER = str(pathlib.Path(__file__).resolve().parent / "server.py")
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+SERVER = str(ROOT / "mcp" / "server.py")
+DEMO = ROOT / "demo" / "benchmarks.html"
+DEMO_MIRROR = ROOT / "docs" / "demo" / "benchmarks.html"
 
 
 def rpc(msgs):
@@ -24,6 +28,56 @@ def rpc(msgs):
 def call(i, name, args):
     return {"jsonrpc": "2.0", "id": i, "method": "tools/call",
             "params": {"name": name, "arguments": args}}
+
+
+def demo_checks():
+    """The demo's US-silent table against the worksheet that produced it.
+
+    The twelve rows are generated from docs/artifacts/us-silent-*.json but live
+    in hand-authored HTML, so nothing stops the two drifting apart the next time
+    either is touched. This is the same rule as the figures above: the server and
+    the demo must not disagree, and neither must the demo and the artifact.
+    """
+    checks = []
+    arts = sorted((ROOT / "docs" / "artifacts").glob("us-silent-*.json"))
+    if not arts:
+        return [("us-silent artifact present", False)]
+    o = json.loads(arts[-1].read_text())
+    html = DEMO.read_text()
+    core = [r for r in o["indicators"] if re.search(r"waste|wetland|water", r["name"], re.I)]
+    checks.append(("demo and mirror identical", DEMO.read_text() == DEMO_MIRROR.read_text()))
+    checks.append((f"{len(core)} waste/water rows in the worksheet", len(core) == 12))
+    missing = [r for r in core if r["dcid"].rsplit("/", 1)[-1] not in html]
+    checks.append(("every waste series appears in the demo", not missing))
+    # the country counts printed next to each series must match the artifact
+    bad = []
+    for r in core:
+        series = r["dcid"].rsplit("/", 1)[-1]
+        m = re.search(re.escape(series) + r"</span></td>\s*<td class=\"numcell\"><b>(\d+)</b>",
+                      html)
+        if not m or int(m.group(1)) != r["world"]["countries"]:
+            bad.append(f"{series}: demo {m.group(1) if m else '?'} vs artifact "
+                       f"{r['world']['countries']}")
+    checks.append(("reporting-country counts match the artifact", not bad))
+    if bad:
+        print("   drift:", "; ".join(bad), file=sys.stderr)
+    checks.append(("no US observations in any of the twelve",
+                   all(r["world"]["us_obs"] == 0 for r in core)))
+
+    # The masthead funnel. It read "248 with US data, 377 have none" for three
+    # days -- numbers that matched no run and did not even sum to 689 -- because
+    # nothing tied them to the pipeline. Now something does.
+    screened = json.loads((ROOT / "probe" / "cache" / "screened.json").read_text())
+    usable = [x for x in screened["indicators"]
+              if x.get("grade") in ("GREEN", "AMBER", "RANK-ONLY")]
+    silent = sum(1 for x in usable if not x.get("us_reports"))
+    pairs = len(json.loads((ROOT / "probe" / "crosswalk.json").read_text())["pairs"])
+    for label, value in (("corpus", len(screened["indicators"])), ("usable", len(usable)),
+                         ("US-silent", silent), ("crosswalk pairs", pairs)):
+        checks.append((f"funnel {label} = {value}", f"<dd>{value}</dd>" in html))
+    checks.append((f"funnel names {len(screened['indicators']) - len(usable)} too thin",
+                   f"{len(screened['indicators']) - len(usable)} are too thin" in html))
+    return checks
 
 
 def main():
@@ -49,6 +103,7 @@ def main():
     checks.append(("municipal waste rank 41 of 91", (w["rank"], w["of"]) == (41, 91)))
     checks.append(("municipal waste ~397.9 kg", abs(w["nyc_value"] - 397.9) < 0.5))
     checks.append(("ambiguous name returns candidates", "candidates" in sc(6)))
+    checks += demo_checks()
 
     for label, ok in checks:
         print(f"  {'PASS' if ok else 'FAIL'}  {label}")
