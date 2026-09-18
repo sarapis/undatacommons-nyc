@@ -95,6 +95,8 @@ systematic version. **2,503 findings, 93 HIGH.** Five verified errors so far:
 | Feel safe walking alone after dark (16.1.4) | Kyrgyzstan **6,710–6,990%**, 2021–23 | Every other observation is 22.8–95.0. ÷100 continues its own trend exactly |
 | Municipal waste recycled | South Africa **1.86bn tonnes** | ~90% of all municipal waste on Earth; its own prior years are ~5×10⁵ |
 | Hazardous waste per capita | Brunei **12,580 tonnes per person** | Global median 22 **kg**; looks like a national total in a per-capita field |
+| Workers in strikes (`STR_WORK_NB`) | Brazil **1.28bn workers**, 2015 | Six times its population; 14× any country's record; a 400× break in its own series |
+| Min wage in PPP int'l $ (`EAR_INEE_NB_PPP`) | Slovenia **110–175k**, 2000–06 | Global max is 10,259. Breaks to 763 in 2007 — the year it adopted the euro. Unconverted tolar |
 | E-waste, **four** indicators | Guadeloupe ×1,000 in 2022 | 13.71→13,950 kg/capita and 5,472→5,367,000 t, collected *and* recycled. Makes a territory of 380,000 the world's largest e-waste recycler, 6× the previous maximum |
 | Average remittance cost | Malawi **−0.1%, −0.93%** | A cost, negative for two years between normal values |
 

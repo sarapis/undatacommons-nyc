@@ -1,15 +1,16 @@
 ---
 layout: default
-title: Data quality report — 2026-09-16
+title: Data quality report — updated 2026-09-18
 ---
 
-# UN System Data Commons — five data quality issues, with evidence
+# UN System Data Commons — seven data quality issues, with evidence
 
-**For the UN System Data Commons platform team.** Prepared 16 Sep 2026 by the NYC Voluntary Local
-Review team (Builders' Day participants), offered constructively — we are building a city↔UN
+**For the UN System Data Commons platform team.** Prepared 16 Sep 2026, **widened 18 Sep** from the
+SDG goal framework to the whole governed graph — which more than doubled the surface and added two
+errors. By the NYC Voluntary Local Review team (Builders' Day participants), offered constructively — we are building a city↔UN
 indicator crosswalk and these surfaced while checking the data our own work depends on.
 
-**How they were found.** A sweep of the governed SDG corpus — **689 indicators, 773,335
+**How they were found.** A sweep of the governed corpus — **1,661 indicators, 1,701,211
 observations, every reporting country and every year** — against plausibility checks that need no
 subject-matter knowledge: a percentage outside 0–100, a negative count, a rate exceeding its own
 denominator, a value far outside its own indicator's distribution. One
@@ -19,7 +20,7 @@ Source: [`probe/smell.py`](https://github.com/sarapis/undatacommons-nyc/blob/mai
 full output: [smell test artifact](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest)
 
 **Every item below was checked by hand** against the indicator's own distribution before being
-included. The sweep produced 2,503 findings; these are the five we are confident are errors, plus
+included. The sweep produced 3,844 findings; these are the seven we are confident are errors, plus
 one that is not an error and matters more. Issues we investigated and **dismissed** are listed at
 the end, so you can see what the checks get wrong.
 
@@ -34,6 +35,8 @@ the end, so you can see what the checks get wrong.
 | 3 | `EN_HAZ_PCAP` — hazardous waste per capita | Brunei | National total in a per-capita field, 2016–23 | High |
 | 4 | `EN_EWT_*` — e-waste, **four** indicators | Guadeloupe | ×1,000, 2022, propagated across all four | High |
 | 5 | `SI_RMT_COST` — average remittance cost | Malawi, Myanmar | Negative cost | High |
+| 6 | `STR_WORK_NB` — workers in strikes and lockouts | Brazil | 1.28 **billion** workers, 2015 | High |
+| 7 | `EAR_INEE_NB_PPP` — minimum wage in PPP int'l dollars | Slovenia | Unconverted tolar, 2000–06 | High |
 | — | `VC_DSR_MORT` — deaths due to disaster | United States | Not an error; a comparability hazard | — |
 
 ---
@@ -141,6 +144,49 @@ the two negative years sit between 13.13 and 31.48.
 
 ---
 
+## 6. Brazil: 1.28 billion workers involved in strikes
+
+**`undata/ilo/STR_WORK_NB`** — *Number of workers involved in strikes and lockouts*. Unit
+`COUNT_PERSONS`. 1,178 observations across 91 countries.
+
+| Brazil | 2010 | 2011 | 2012 | **2015** | 2016 | 2017 |
+|---|---:|---:|---:|---:|---:|---:|
+| workers | 1,582,750 | 2,050,020 | 1,771,950 | **1,284,680,000** | 761,000,000 | 364,600,000 |
+
+Brazil's population is about 210 million. The 2015 figure is **six times the entire population**,
+and **fourteen times the 92,324,000 maximum any country has ever recorded** on this indicator. The
+global median is 9,831.
+
+Brazil's own series runs between 0.8 and 3.8 million from 2000 to 2012, so 2015 is a break of
+roughly **400×** against its own history, and 2016–2019 stay in the hundreds of millions before
+returning to normal.
+
+**Suggested check:** whether the 2015– figures are worker-*days* or some cumulative measure rather
+than a count of persons.
+
+---
+
+## 7. Slovenia: unconverted tolar in an international-dollar field
+
+**`undata/ilo/EAR_INEE_NB_PPP`** — *Monthly minimum wage in international dollars at Purchasing
+Power Parity rates*. Unit `CR_USD_PPP_2021`. 3,369 observations across 162 countries.
+
+| Slovenia | 2000 | 2002 | 2004 | 2006 | **2007** | 2008 | 2010 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| | 159,122 | 170,774 | 109,986 | 116,837 | **763** | 826 | 1,050 |
+
+The global median is **382** and the maximum any country has ever recorded is **10,259**. Slovenia's
+2000–2006 values are ten to seventeen times that maximum.
+
+**The break is diagnostic.** It falls exactly at **2007 — the year Slovenia adopted the euro** — and
+every value from 2007 onward is unremarkable. The pre-2007 figures read as Slovenian tolar that
+were never converted into the PPP international dollars the unit declares. At roughly 240 tolar to
+the euro, 170,774 tolar is about 712 euro, which is the right order for the 2007 figure of 763.
+
+**Suggested check:** whether other pre-euro-accession members carry the same pattern in this series.
+
+---
+
 ## Not an error, and more important than any of the above
 
 **`undata/sdg/VC_DSR_MORT`** — *Number of deaths due to disaster*. Unit `COUNT`.
@@ -174,6 +220,13 @@ Some of this is certainly true of small islands. But a two-decade run of exact z
 non-submission looks like when stored as a number rather than a gap, and from outside the two are
 indistinguishable.
 
+**Twelve years of a flat negative.** `undata/unaids/INF_AVRT` — *new HIV infections averted by
+prevention of mother-to-child transmission*, unit `COUNT_INFECTIONS`. Mozambique reports **−15.6
+for twelve consecutive years, 1990–2001**, varying only in the third decimal, then +18.6 in 2002 and
++187 in 2003. We understand this is modelled as a counterfactual difference, so a negative is not
+in itself impossible — but a *flat* negative across twelve years before the programme existed looks
+more like a baseline offset than a measurement. The global median is 11.7.
+
 **100% collection rates.** `undata/sdg/EN_EWT_COLLR` (*proportion of electronic waste that is
 collected*) sits at exactly 100 for Niger for eight consecutive years (2012–2019) and Iran for six
 (2018–2023).
@@ -193,6 +246,11 @@ like a finding and is not:
   own population. Our check's premise was wrong, not the data.
 - **Euro-area countries sharing a conversion factor of 1.08271; Benin, Burkina Faso and Cameroon
   sharing 710.208.** Correct — the check had found the euro and the CFA franc.
+- **Iran's monthly minimum wage, 23× the indicator's 99th percentile.** Correct. The unit is
+  `CR_LCU` — **local currency** — so 53 million is an ordinary monthly wage in rial and absurd in
+  euro. Our outlier check compares every country's values within an indicator, which is meaningless
+  on a local-currency series; it now skips them. Worth noting as a general hazard for anyone
+  building automated checks on this graph.
 - **23,172 negative percentages.** Correct, nearly all. "Annual growth rate of real GDP per
   capita", "Current account balance as a proportion of GDP", "Change in minimum river flow (%)".
   Which leads to the one structural observation we would offer:
@@ -207,11 +265,36 @@ like a finding and is not:
 
 ---
 
+## A third structural item
+
+Alongside the 170 unnamed indicators and the `Percent` unit, one more that surfaced from widening
+the sweep: **enumerating the corpus depends on where you start, and no entry point sees everything.**
+
+Walking `->relevantVariable` from `undata/topic/Root` yields **1,661 base indicators**; walking from
+the seventeen SDG goal trees yields **689**. That much is expected — the goal framework is a subset.
+What is not expected is that **six indicators are reachable from the goal trees and not from Root**:
+
+```
+undata/sdg/SG_DSR_SILN   undata/sdg/SG_DSR_SILS   undata/sdg/SM_POP_REFG_OR
+undata/sdg/VC_DSR_AGLH   undata/sdg/VC_DSR_CHLN   undata/sdg/VC_DSR_HOLH
+```
+
+All seventeen goal trees are direct children of Root — 17 of its 42 — so a traversal from Root
+should be a strict superset. Three checks rule out the obvious explanations: neither walk logged a
+fetch error, the goal-tree walk is exactly reproducible (re-run two days apart, identical 689), and
+the disagreement runs both ways — twelve `undata/sdg/` indicators are reachable from Root and not
+from the goal trees, including `SG_DMK_PARLYTH*` and `SE_SGE_*`.
+
+So `->relevantVariable` is not transitive across these hierarchies, and a client enumerating the
+corpus from a single root gets a silently incomplete set with no way to detect it. We would want to
+know which entry point, if any, is intended to be complete.
+
 ## Reproducing
 
 ```bash
 git clone https://github.com/sarapis/undatacommons-nyc
-python3 probe/smell.py --all
+python3 probe/corpus.py --roots all       # the whole graph, 1,661 indicators
+python3 probe/smell.py --all --corpus probe/cache/corpus-all.json
 ```
 
 Stdlib only. Writes `docs/artifacts/smell-<date>.{json,md}`; the JSON carries every finding with
