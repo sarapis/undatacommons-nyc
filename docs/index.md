@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-17** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-18** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
@@ -327,6 +327,16 @@ place-measurable** (the classifier said 67; 28 of those have a *country* as thei
 the [worksheet](https://sarapis.github.io/undatacommons-nyc/artifacts/us-silent-latest)) — mostly municipal and hazardous waste, wastewater and groundwater. A city can be
 compared internationally on exactly the indicators its own country skips. The 11 hand-built pairs are 1.6% of the corpus and 4% of the usable pool — so
 the crosswalk is a verified sample, not a representative one.
+
+**The goal framework is 41% of the governed corpus.** Walking `->relevantVariable` from
+`undata/topic/Root` rather than the seventeen goal trees yields **1,661 base indicators, 65,418
+variables and 29,805 topic nodes** — 978 indicators unreachable from the SDG framework, across WHO
+(354), UNICEF (245), ILO (93), UNIDO (69) and eleven more agencies. The 689 remains the right
+denominator for a Voluntary Local Review, which reports against the goal framework; but six
+indicators are reachable from the goal trees and **not** from Root, reproducibly, with no fetch
+errors and all seventeen goal trees sitting as direct children of Root. `->relevantVariable` is not
+transitive, so **no single entry point enumerates the graph completely** and a client that picks
+one cannot tell.
 
 The `probe/` pipeline now enumerates, screens and proposes candidates from the corpus rather
 than from intuition. Its matching stage uses embedding search over the full 2,400-dataset NYC catalog: on seven

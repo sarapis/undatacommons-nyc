@@ -29,6 +29,11 @@ UN System Data Commons.
   `--set-baseline` only when the new state has been read and accepted. `UNDC_ENDPOINT` /
   `UNDC_REST` override the host without a code edit. `--self-test` proves the diff still
   detects drift rather than merely failing to find it.
+- **Enumeration is entry-point dependent — no single root sees everything.** The 17 SDG goal
+  trees yield 689 base indicators; `undata/topic/Root` yields 1,661 (65,418 variables). But 6 are
+  reachable from the goal trees and NOT from Root, reproducibly, though all 17 goal trees are
+  Root's direct children — `->relevantVariable` is not transitive. 689 is still correct for a VLR;
+  just never call it "the corpus". `corpus.py --roots all --out` keeps the two separate.
 - **The SDG goal trees expose StatVarPeerGroups (`undata/svpg/...`), not variables.** Follow the
   `->member` arc to real DCIDs. Rewriting the prefix is DCID guessing and returns nothing.
 - **"City-scoped" is not the same as "a place can hold a value for it."** `probe/scope.py` reads

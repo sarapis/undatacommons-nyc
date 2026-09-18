@@ -403,10 +403,11 @@ def apply_rarity_gate(findings, n_obs, n_places):
     return kept, suppressed
 
 
-def load_targets(use_all, limit):
+def load_targets(use_all, limit, corpus_path=None):
     if use_all:
+        src = pathlib.Path(corpus_path) if corpus_path else CORPUS
         rows = [{"dcid": d, "name": None}
-                for d in sorted(json.loads(CORPUS.read_text())["bases"])]
+                for d in sorted(json.loads(src.read_text())["bases"])]
     else:
         rows = [{"dcid": r["dcid"], "name": r.get("name")}
                 for r in json.loads(SCREENED.read_text())["indicators"]
@@ -524,11 +525,14 @@ def main():
                     help="sweep every enumerated base indicator, not just the usable ones")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--resume", action="store_true")
+    ap.add_argument("--corpus", default=None,
+                    help="corpus file for --all (default cache/corpus.json); pass "
+                         "cache/corpus-all.json to sweep the whole graph")
     ap.add_argument("--recheck", action="store_true",
                     help="re-run the checks over cached observations, fetching nothing")
     args = ap.parse_args()
 
-    targets = load_targets(args.all, args.limit)
+    targets = load_targets(args.all, args.limit, args.corpus)
     scope = ("all 689 enumerated SDG base indicators" if args.all
              else f"the {len(targets)} indicators screened usable (GREEN/AMBER/RANK-ONLY)")
 
