@@ -797,9 +797,10 @@ sections above.</p>
   <div>
     <dt>What the cities publish</dt>
     <dd><span class="big">150 datasets &middot; 28 cities</span>
-    <small>Tenders, awards, vendors, purchase orders. New York City alone registers
-    <strong>55,806 contracts worth $147 billion</strong>. None of it is counted anywhere in the
-    framework.</small></dd>
+    <small>Tenders, awards, vendors, purchase orders. New York City registers <strong>55,806
+    contracts worth $147bn</strong>; Portland, Oregon publishes <strong>14,955 tenders and 9,913
+    contracts</strong> in OCDS going back to 2015, at least <strong>$9.7bn</strong>. None of it is
+    counted anywhere in the framework.</small></dd>
   </div>
 </div>
 <p class="gap-punch">This is the broadest of the three categories &mdash;
@@ -823,7 +824,10 @@ election datasets. It is the one least likely to be an artefact of who happens t
   one that survives being checked.</p>
 </div>
 
-<p class="prov"><b>Source</b> <code>python3 probe/category_gaps.py</code> &middot;
+<p class="prov"><b>Contract volumes</b> NYC Government Databook (55,806 contracts, $147bn) &middot; Portland OCDS
+database, queried directly (9,913 contracts; $9.7bn is a <em>floor</em> &mdash; only 4,783 of them
+carry a value field)<br>
+<b>Source</b> <code>python3 probe/category_gaps.py</code> &middot;
 17,162 datasets from 45 city portals &middot; framework searched across
 all 519 named SDG base indicators &middot; full method in the
 <a href="https://sarapis.github.io/undatacommons-nyc/artifacts/inverse-latest">inverse crosswalk</a></p>
