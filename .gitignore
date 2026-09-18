@@ -10,3 +10,5 @@ secrets.json
 probe/cache/nyc_catalog_vectors.npz
 probe/cache/smell-raw.json
 probe/cache/municipal-catalogs.json
+probe/cache/corpus-all.json
+probe/cache/corpus-all-state.json

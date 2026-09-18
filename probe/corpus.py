@@ -106,10 +106,11 @@ def agency(dcid):
     return parts[1] if dcid.startswith("undata/") and len(parts) > 2 else "other"
 
 
-def walk(roots, resume=False, ctx=None):
+def walk(roots, resume=False, ctx=None, state_path=None):
     ctx = ctx or _ctx()
-    if resume and STATE.exists():
-        st = json.loads(STATE.read_text())
+    state_path = state_path or STATE
+    if resume and state_path.exists():
+        st = json.loads(state_path.read_text())
         topics, variables = set(st["topics"]), set(st["variables"])
         seen, queue = set(st["seen"]), deque(st["queue"])
         print(f"resuming: {len(seen)} walked, {len(queue)} queued", file=sys.stderr)
@@ -152,9 +153,9 @@ def walk(roots, resume=False, ctx=None):
 
         since_checkpoint += len(batch)
         if since_checkpoint >= 500:
-            STATE.write_text(json.dumps({"topics": sorted(topics),
-                                         "variables": sorted(variables),
-                                         "seen": sorted(seen), "queue": list(queue)}))
+            state_path.write_text(json.dumps({"topics": sorted(topics),
+                                              "variables": sorted(variables),
+                                              "seen": sorted(seen), "queue": list(queue)}))
             since_checkpoint = 0
         print(f"  walked={len(seen):<6} topics={len(topics):<6} "
               f"vars={len(variables):<7} queue={len(queue)}", file=sys.stderr)
@@ -168,12 +169,25 @@ def main():
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--roots", choices=["sdg", "all"], default="sdg",
                     help="sdg = the 17 SDG goal trees (default); all = the whole graph")
+    # Without this, --roots all overwrites the SDG corpus that screened.json,
+    # the smell sweep, the US-silent worksheet, category_gaps and the demo's
+    # funnel all resolve against -- a whole-graph walk would silently replace
+    # the 689 with a different set and every downstream count would move.
+    ap.add_argument("--out", default=None,
+                    help="where to write (default: cache/corpus.json for --roots sdg, "
+                         "cache/corpus-all.json for --roots all)")
     args = ap.parse_args()
+
+    out_path = pathlib.Path(args.out) if args.out else (
+        CORPUS if args.roots == "sdg" else CACHE / "corpus-all.json")
+    # Resume state is per-output, so an interrupted whole-graph walk cannot be
+    # resumed into the SDG corpus or vice versa.
+    state_path = out_path.with_name(out_path.stem + "-state.json")
 
     CACHE.mkdir(parents=True, exist_ok=True)
     roots = SDG_GOAL_ROOTS if args.roots == "sdg" else [ROOT]
     print(f"walking {len(roots)} root(s): {args.roots}", file=sys.stderr)
-    topics, raw = walk(roots, resume=args.resume)
+    topics, raw = walk(roots, resume=args.resume, state_path=state_path)
 
     # Everything the goal trees yield is a peer-group node; the real variables
     # hang off its member arc.
@@ -200,16 +214,16 @@ def main():
         "base_indicators_by_agency": dict(sorted(by_agency.items(), key=lambda kv: -kv[1])),
         "bases": {b: vs for b, vs in sorted(bases.items())},
     }
-    CORPUS.write_text(json.dumps(out, indent=1))
-    if STATE.exists():
-        STATE.unlink()
+    out_path.write_text(json.dumps(out, indent=1))
+    if state_path.exists():
+        state_path.unlink()
 
     print(f"\ntopic nodes      {len(topics):,}")
     print(f"peer groups      {len(groups):,}")
     print(f"variables        {len(variables):,}")
     print(f"base indicators  {len(bases):,}")
     print("by agency:", json.dumps(out["base_indicators_by_agency"], indent=1))
-    print(f"\nwrote {CORPUS}")
+    print(f"\nwrote {out_path}")
 
 
 if __name__ == "__main__":
