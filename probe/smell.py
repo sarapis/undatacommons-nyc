@@ -279,8 +279,19 @@ def check_series(dcid, name, place, place_name, unit, kind, series, signed):
     return out
 
 
+# A value in LOCAL CURRENCY cannot be compared across countries: 53 million is
+# an ordinary monthly minimum wage in Iranian rial and an absurd one in euro.
+# The outlier check compares every country's values within an indicator, so on a
+# local-currency indicator it reports the country with the weakest currency and
+# calls it an anomaly. Iran's minimum wage was flagged 23x the p99 on exactly
+# this basis, and it is correct data.
+INCOMPARABLE_UNITS = ("LCU",)
+
+
 def check_outliers(dcid, name, unit, by_place):
     """Values extreme against the indicator's own distribution, not against a unit."""
+    if any(t in (unit or "").upper() for t in INCOMPARABLE_UNITS):
+        return []
     allv = [abs(v) for _, ser in by_place.values() for _, v in ser]
     if len(allv) < OUTLIER_MIN_OBS:
         return []
