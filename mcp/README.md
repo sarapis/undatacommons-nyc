@@ -43,6 +43,16 @@ publishes counts, the UN publishes rates per 100,000). Free key:
 | `benchmark` | A comparison for one indicator and year — **or a refusal with the reason** |
 | `world_position` | NYC's rank among every reporting country, with nearest neighbours |
 | `explain_grade` | The definitional difference, denominator problem or coverage gap behind a grade |
+| `reportable_gaps` | Indicators the **US reports nothing for**, which a city could — where NYC vs the world is the only comparison available. Ungraded by construction. |
+| `framework_coverage` | Does an indicator for this concept exist **at all**? Zero of the 519 named base indicators mentions an election, a vote or a turnout. |
+| `data_quality` | Plausibility flags from a sweep of 773,335 observations. Rows marked `verified_error` were confirmed by hand; the rest are unreviewed questions. |
+
+The last three answer questions the first four structurally cannot. `benchmark` asks what the UN
+holds for an indicator; `framework_coverage` asks whether the framework has the indicator at all.
+`world_position` places NYC among countries that report; `reportable_gaps` finds the indicators
+where the United States is not among them. And `data_quality` exists because the sweep behind it
+found five errors in authoritative UN data — a server that serves figures without letting a caller
+check them is the failure this project is built against.
 
 It also serves `skill://nyc-benchmark-researcher/SKILL.md`, mirroring the UN Data Commons
 server's own convention of shipping a playbook alongside its tools.

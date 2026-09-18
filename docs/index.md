@@ -192,6 +192,17 @@ Violations*, a verified 11.1.1 match, landed at the 24th percentile), and **14 o
 published as diffuse rather than read as themes**. The unit of evidence is cities, not datasets,
 precisely because of that.
 
+### The server answers the new questions too
+
+The [benchmark MCP server](https://github.com/sarapis/undatacommons-nyc/tree/main/mcp) now carries
+**seven tools**. The three added on 18 Sep answer what the original four structurally cannot:
+`reportable_gaps` (the indicators the US reports nothing for), `framework_coverage` (does an
+indicator for this concept exist *at all* — zero of 519 mention an election), and `data_quality`
+(plausibility flags from the 773,335-observation sweep, with the five hand-verified errors marked
+`verified_error` and everything else labelled unreviewed).
+
+All three read committed artifacts, so a clean clone answers without re-running a probe.
+
 ## The spec
 
 **[City ↔ UN Comparability Spec v0.1](https://sarapis.github.io/undatacommons-nyc/spec/)** — the

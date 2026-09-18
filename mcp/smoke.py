@@ -107,11 +107,14 @@ def main():
         call(4, "world_position", {"indicator": "road-deaths", "year": "2021"}),
         call(5, "world_position", {"indicator": "municipal-waste", "year": "2019"}),
         call(6, "benchmark", {"indicator": "municipal waste"}),
+        call(7, "framework_coverage", {"concept": "election voting turnout"}),
+        call(8, "reportable_gaps", {"theme": "waste", "limit": 5}),
+        call(9, "data_quality", {"dcid": "VC_SNS_WALN_DRK"}),
     ])
     checks = []
     sc = lambda i: out[i]["result"]["structuredContent"]  # noqa: E731
 
-    checks.append(("4 tools exposed", len(out[1]["result"]["tools"]) == 4))
+    checks.append(("7 tools exposed", len(out[1]["result"]["tools"]) == 7))
     b = sc(2)
     checks.append(("pm25 2019 NYC 6.6", round(b["nyc"]["value"], 1) == 6.6))
     checks.append(("pm25 2019 comparator 7.57", round(b["comparator"]["value"], 2) == 7.57))
@@ -122,6 +125,21 @@ def main():
     checks.append(("municipal waste rank 41 of 91", (w["rank"], w["of"]) == (41, 91)))
     checks.append(("municipal waste ~397.9 kg", abs(w["nyc_value"] - 397.9) < 0.5))
     checks.append(("ambiguous name returns candidates", "candidates" in sc(6)))
+
+    fc = sc(7)
+    checks.append(("framework_coverage: zero election indicators",
+                   fc["matching_indicators"] == 0))
+    checks.append(("framework_coverage: attaches the measured municipal side",
+                   fc["municipal_side"].get("cities") == 23))
+    rg = sc(8)
+    checks.append(("reportable_gaps: every row ungraded",
+                   all(r["graded"] is False for r in rg["indicators"])))
+    checks.append(("reportable_gaps: municipal waste has 133 reporting countries",
+                   any(r["reporting_countries"] == 133 for r in rg["indicators"])))
+    dq = sc(9)
+    checks.append(("data_quality: Kyrgyzstan flagged and verified",
+                   dq["verified_error_series"] == 1
+                   and dq["findings"][0]["value"] == 6710.0))
     checks += demo_checks()
 
     for label, ok in checks:

@@ -34,6 +34,20 @@ import census                                # noqa: E402
 CROSSWALK = json.loads((ROOT / "probe" / "crosswalk.json").read_text())
 PAIRS = {p["id"]: p for p in CROSSWALK["pairs"]}
 
+ARTIFACTS = ROOT / "docs" / "artifacts"
+
+
+def _latest(glob):
+    """Newest artifact matching a glob, or None.
+
+    Every one of these is committed, so a clean clone can answer without
+    re-running a probe. A missing artifact returns None and the tool says so
+    rather than pretending the answer is zero -- which is the failure this whole
+    project keeps finding.
+    """
+    hits = sorted(ARTIFACTS.glob(glob))
+    return json.loads(hits[-1].read_text()) if hits else None
+
 # Grades where a comparison may be drawn on one axis. Everything else is a
 # human judgment that it may not, and this server honours that judgment rather
 # than second-guessing it -- the same veto the pair probe applies.
@@ -43,6 +57,18 @@ SKILL = """# NYC ↔ UN benchmark researcher
 
 You are answering questions about how New York City compares to the UN's
 authoritative global statistics.
+
+Seven tools, and three of them answer questions the other four cannot:
+
+- `reportable_gaps` — the United States reports NOTHING for 130 of the 442
+  usable indicators. On those, NYC against the world is not a weaker comparison
+  than NYC against the US; it is the only one available. Every row is ungraded.
+- `framework_coverage` — does an indicator for this concept exist at all? None
+  of the 519 named base indicators mentions an election, a vote or a turnout.
+  A zero here is a finding about the framework, not about a city.
+- `data_quality` — before quoting any UN figure, check whether a sweep of
+  773,335 observations flagged it. Rows marked `verified_error` were confirmed
+  by hand; everything else is an unreviewed question, not a defect.
 
 ## Before anything else
 
@@ -318,6 +344,173 @@ def t_world_position(args):
             "caveat": p["reason"]}
 
 
+
+# The five findings a human checked against each indicator's own distribution
+# and confirmed as errors, written up at
+# docs/findings/2026-09-16-data-quality-report.md. Everything else the sweep
+# raised is an unreviewed flag, and a tool that cannot tell a caller which is
+# which is handing them the same ambiguity the sweep started with.
+VERIFIED_ERRORS = {
+    ("undata/sdg/VC_SNS_WALN_DRK", "Kyrgyzstan"):
+        "x100 scale error 2021-23: 6710/6840/6990 where every other observation "
+        "in the indicator falls between 22.8 and 95.0.",
+    ("undata/sdg/EN_MWT_RCYV", "South Africa"):
+        "Reads as kilograms: 1.86-3.44 billion tonnes recycled, against world "
+        "municipal waste generation near 2 billion tonnes.",
+    ("undata/sdg/EN_HAZ_PCAP", "Brunei"):
+        "National total in a per-capita field: divide by Brunei's population and "
+        "it lands on 28 kg against a global median of 22.",
+    ("undata/sdg/EN_EWT_COLLPCAP", "Guadeloupe"):
+        "x1,000 slip in the 2022 submission, propagated through all four e-waste "
+        "indicators; makes a territory of 380,000 the world's largest recycler.",
+    ("undata/sdg/SI_RMT_COST", "Malawi"):
+        "Negative remittance cost, -0.10 and -0.93, between 13.13 and 31.48.",
+}
+
+
+def t_reportable_gaps(args):
+    """Indicators the US does not report, which a city could."""
+    art = _latest("us-silent-*.json")
+    if not art:
+        return {"error": "no us-silent artifact in docs/artifacts",
+                "fix": "python3 probe/us_silent.py"}
+    theme = (args.get("theme") or "").strip().lower()
+    rows = art["indicators"]
+    if theme:
+        rows = [r for r in rows if theme in r["name"].lower()]
+    min_peers = int(args.get("min_countries") or 0)
+    rows = [r for r in rows if (r["world"] or {}).get("countries", 0) >= min_peers]
+    rows.sort(key=lambda r: -((r["world"] or {}).get("countries") or 0))
+
+    out = []
+    for r in rows[:int(args.get("limit") or 25)]:
+        w = r["world"] or {}
+        c = (r["nyc_candidates"] or [None])[0]
+        out.append({
+            "dcid": r["dcid"], "indicator": r["name"],
+            "reporting_countries": w.get("countries"),
+            "years": (f"{w.get('first')}" if w.get("first") == w.get("last")
+                      else f"{w.get('first')}-{w.get('last')}"),
+            "single_year_level_only": w.get("first") == w.get("last"),
+            "unit": w.get("unit"), "us_observations": w.get("us_obs"),
+            "provenance": w.get("provenance"),
+            "nyc_candidate": ({"dataset": c["id"], "name": c["name"], "score": c["score"]}
+                              if c else None),
+            "graded": False})
+    return {
+        "generated": art["generated"],
+        "us_silent_usable": art["us_silent_usable"],
+        "place_measurable": art["city_scoped"],
+        "returned": len(out),
+        "what_this_is": "Indicators the United States reports nothing for, so NYC against the "
+                        "world is not a weaker comparison than NYC against the US -- it is the "
+                        "only one available. US absence was verified against the country "
+                        "observations, not inherited from the screening proxy.",
+        "not_a_crosswalk": "Every row is graded:false. The NYC candidate is a proposal from an "
+                           "embedding matcher whose precision on hand-read lists is roughly half. "
+                           "Under comparability spec v0.1 a grade is a human judgment, so none of "
+                           "these is a mapping until a person makes it one.",
+        "indicators": out}
+
+
+def t_framework_coverage(args):
+    """Does the SDG framework have an indicator for a concept at all?
+
+    The inverse of everything else here. `benchmark` asks what the UN holds for
+    an indicator; this asks whether the framework has an indicator at all -- the
+    question that found that none of the 519 named base indicators mentions an
+    election, a vote or a turnout.
+    """
+    concept = (args.get("concept") or "").strip()
+    if not concept:
+        return {"error": "concept is required",
+                "example": {"concept": "election voting turnout"}}
+    screened = json.loads((ROOT / "probe" / "cache" / "screened.json").read_text())
+    named = [(r["dcid"], r["name"]) for r in screened["indicators"] if r.get("name")]
+    words = [w for w in re.findall(r"[A-Za-z][A-Za-z-]{2,}", concept.lower())]
+    if not words:
+        return {"error": f"no searchable words in {concept!r}"}
+    pat = re.compile("|".join(re.escape(w) for w in words), re.I)
+    hits = [{"dcid": d, "name": n} for d, n in named if pat.search(n)]
+
+    out = {"concept": concept, "searched_terms": words,
+           "named_indicators_searched": len(named),
+           "matching_indicators": len(hits), "indicators": hits[:20],
+           "caveat": "Lexical search over indicator NAMES. A concept the framework covers under "
+                     "different words will not appear here, so a zero is a prompt to check the "
+                     "wording, not proof of absence."}
+
+    # Two categories have a measured municipal side; the rest do not, and the
+    # tool says which it is rather than implying the count is missing.
+    gaps = _latest("category-gaps-*.json") or {}
+    for key, c in (gaps.get("categories") or {}).items():
+        if any(w in key or w in c["label"].lower() for w in words):
+            dom = c.get("top_city") or [None, 0]
+            out["municipal_side"] = {
+                "category": c["label"],
+                "datasets": c["n_datasets"], "cities": c["n_cities"],
+                "in_bottom_quartile": c["in_tail"],
+                "most_concentrated_city": dom[0], "its_share_of_datasets": dom[1],
+                "nearest_indicators_offered": [n for n, _ in c["nearest_offered"][:3]],
+                "method": "Titles carrying the category's vocabulary in six languages -- "
+                          "counted, not clustered. Cities are the unit of evidence, not "
+                          "datasets: one city publishing three hundred files is a filing habit."}
+            break
+    else:
+        out["municipal_side"] = {
+            "measured": False,
+            "note": "No precomputed municipal count for this concept. "
+                    "Add it to CATEGORIES in probe/category_gaps.py and re-run."}
+    return out
+
+
+def t_data_quality(args):
+    """Plausibility flags the corpus sweep raised against a UN series."""
+    art = _latest("smell-*.json")
+    if not art:
+        return {"error": "no smell artifact in docs/artifacts",
+                "fix": "python3 probe/smell.py --all"}
+    q = (args.get("dcid") or args.get("indicator") or "").strip().lower()
+    findings = art["findings"]
+    if q:
+        findings = [f for f in findings
+                    if q in f["dcid"].lower() or q in (f.get("indicator") or "").lower()]
+    sev = (args.get("severity") or "").strip().upper()
+    if sev:
+        findings = [f for f in findings if f["severity"] == sev]
+    # Verified errors first, then by severity. A caller asking whether a series
+    # is trustworthy wants the confirmed defect before the unreviewed flag.
+    order = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
+    def _verified(f):
+        return VERIFIED_ERRORS.get((f["dcid"], f.get("place_name")))
+    findings.sort(key=lambda f: (0 if _verified(f) else 1, order.get(f["severity"], 9)))
+    counts = {}
+    for f in findings:
+        counts[f["severity"]] = counts.get(f["severity"], 0) + 1
+    return {
+        "generated": art["generated"], "scope": art["scope"],
+        "observations_swept": art["observations"],
+        "query": q or "(everything)", "matching_findings": len(findings),
+        "by_severity": counts,
+        # A verified error spans every year of its series -- Brunei's is eight
+        # rows of one defect -- so report the series count, not the row count.
+        "verified_error_rows": sum(1 for f in findings if _verified(f)),
+        "verified_error_series": len({(f["dcid"], f.get("place_name"))
+                                      for f in findings if _verified(f)}),
+        "findings": [dict({k: f[k] for k in ("check", "severity", "dcid", "indicator",
+                                             "place_name", "year", "value", "unit", "detail")
+                           if k in f},
+                          verified_error=_verified(f) or False)
+                     for f in findings[:int(args.get("limit") or 20)]],
+        "this_flags_it_does_not_judge":
+            "A flag is a question for someone who knows the indicator, not a defect report. "
+            "Kuwait's water stress above 100% is correct; so is a disaster-affected rate above "
+            "its own population, because a person counts once per disaster. Rows carrying "
+            "`verified_error` were checked by hand against the indicator's own distribution and "
+            "confirmed; every other row is UNREVIEWED and should be treated as a question.",
+    }
+
+
 TOOLS = [
     {"name": "list_benchmarks",
      "description": "List every NYC↔UN indicator pair with its comparability grade and tier. "
@@ -349,6 +542,34 @@ TOOLS = [
                      "properties": {"indicator": {"type": "string"}},
                      "required": ["indicator"]},
      "handler": t_explain_grade},
+    {"name": "reportable_gaps",
+     "description": "Indicators the United States reports NOTHING for, which a city could report "
+                    "-- where NYC against the world is the only comparison available. Returns "
+                    "the peer group of reporting countries and an UNGRADED NYC candidate.",
+     "inputSchema": {"type": "object",
+                     "properties": {"theme": {"type": "string",
+                                              "description": "substring filter, e.g. 'waste'"},
+                                    "min_countries": {"type": "integer"},
+                                    "limit": {"type": "integer"}}},
+     "handler": t_reportable_gaps},
+    {"name": "framework_coverage",
+     "description": "Does the SDG framework have an indicator for a concept at all? Searches "
+                    "every named base indicator. This is how we found that none of the 519 "
+                    "mentions an election, a vote or a turnout.",
+     "inputSchema": {"type": "object",
+                     "properties": {"concept": {"type": "string"}},
+                     "required": ["concept"]},
+     "handler": t_framework_coverage},
+    {"name": "data_quality",
+     "description": "Plausibility flags raised against a UN series by a sweep of 773,335 "
+                    "observations -- impossible percentages, scale errors, values far outside "
+                    "an indicator's own distribution. Check before quoting a figure.",
+     "inputSchema": {"type": "object",
+                     "properties": {"dcid": {"type": "string"},
+                                    "severity": {"type": "string",
+                                                 "enum": ["HIGH", "MEDIUM", "LOW"]},
+                                    "limit": {"type": "integer"}}},
+     "handler": t_data_quality},
 ]
 HANDLERS = {t["name"]: t.pop("handler") for t in TOOLS}
 
