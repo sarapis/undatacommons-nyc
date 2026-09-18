@@ -35,6 +35,12 @@ UN System Data Commons.
   an indicator's topic and judges it municipal; it cannot see that *"extent to which countries have
   laws and regulations that guarantee…"* measures a legislature. 28 of the 67 US-silent
   "city-scoped" indicators were country-as-subject. `us_silent.py` filters them lexically.
+- **Never conclude "the framework has no indicator for X" from a search over NAMES.** 170 of the
+  689 base indicators carry none, and SDG 12.7.1's procurement series `SG_SCP_PROCN` is one of
+  them — a name search reported zero procurement indicators while three sat in the goal tree.
+  `probe/category_gaps.py` searches DCID mnemonics too and reports them as candidates, never as
+  counts (`SE_ACS_ELECT` is schools with *electricity*). Every unnamed candidate found so far
+  holds zero observations: unnamed and empty are the same set.
 - **A cluster is not a count.** k-means returns *k* groups whether or not *k* categories exist,
   and membership is "nearest to this centroid", not "belongs to this category". The FOIA cluster
   spanned 15 cities; only 8 publish a dataset whose title says so. Where a category can be counted

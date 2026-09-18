@@ -47,6 +47,26 @@ CATEGORIES = {
                      r"\bpolling\b|poll site|\bprecinct|partidos pol[íi]ticos",
         "framework": r"\belection|\belectoral|\bvot(e|er|ing|es)\b|turnout|ballot|referend|"
                      r"suffrag|polling|candidat",
+        "framework_dcid": r"ELEC|_VOT|BALLOT|POLL|DMK",
+    },
+    "procurement": {
+        "label": "Public procurement",
+        # Six languages again. "contract" alone is broad -- it catches employment
+        # and lease records -- so it sits alongside the unambiguous procurement
+        # words rather than carrying the category on its own.
+        "municipal": r"\bprocurement\b|\btenders?\b|\bsolicitations?\b|\bbid(der|ding)?s?\b|"
+                     r"purchase orders?|\bcontracts?\b|\bvendors?\b|\bsuppliers?\b|"
+                     r"licita[çc][ãa]o|licita[çc][õo]es|licitaci[óo]n|contrataci[óo]n|preg[ãa]o|"
+                     r"\bcompras\b|\bappalti\b|\bgare?\b|\bbandi\b|contratti|"
+                     r"vergabe|ausschreibung|javna nabava|\bnabava\b",
+        # SDG 12.7.1 is the only thing close, and it measures a POLICY.
+        "framework": r"procurement|tender|public purchas|supplier",
+        # 170 of the 689 base indicators carry no name, so a search over names
+        # alone reported ZERO procurement indicators -- and SG_SCP_PROCN, the
+        # SDG 12.7.1 series, was sitting right there unnamed. Mnemonics are
+        # noisy (SE_ACS_ELECT is electricity, not elections), so these are
+        # reported as candidates for a human to read, never counted as matches.
+        "framework_dcid": r"PROC|TENDER|SUPPL",
     },
     "records access": {
         "label": "Records-access requests",
@@ -54,6 +74,7 @@ CATEGORIES = {
                      r"information request|open records|acesso [àa] informa|transpar[êe]ncia|"
                      r"transparencia|solicitud(es)? de informaci|informationsfreiheit",
         "framework": r"access to information|right to information|freedom of information",
+        "framework_dcid": r"INFO|ACCSS|_ACC",
     },
 }
 
@@ -67,6 +88,17 @@ def main():
              json.loads((CACHE / "screened.json").read_text())["indicators"] if r.get("name")}
     bases = json.loads((CACHE / "corpus.json").read_text())["bases"]
     inds = [(d, names[d]) for d in sorted(bases) if d in names]
+    unnamed = [d for d in sorted(bases) if d not in names]
+    # Whether an unnamed DCID holds anything at all, from the cached sweep. An
+    # empty indicator is a different fact from an absent one and the difference
+    # is the whole finding for procurement.
+    raw = json.loads((CACHE / "smell-raw.json").read_text()) if (CACHE / "smell-raw.json").exists() else {}
+
+    def obs_count(dcid):
+        r = raw.get(dcid)
+        if r is None:
+            return None
+        return len([1 for _, _, v in ((r.get("data") or {}).get("rows") or []) if v is not None])
 
     rows = []
     for group, model_lang in (("en", "en"), ("non-en", "es")):
@@ -98,12 +130,18 @@ def main():
     for key, spec in CATEGORIES.items():
         mpat, fpat = re.compile(spec["municipal"], re.I), re.compile(spec["framework"], re.I)
         fw = [{"dcid": d, "name": n} for d, n in inds if fpat.search(n)]
+        dpat = re.compile(spec.get("framework_dcid") or r"(?!)", re.I)
+        dcid_cands = [{"dcid": d, "named": False, "observations": obs_count(d)}
+                      for d in unnamed if dpat.search(d.rsplit("/", 1)[-1])]
         hit = [r for r in rows if mpat.search(r["name"])]
         by_city = collections.Counter(r["city"] for r in hit)
         out["categories"][key] = {
             "label": spec["label"],
             "framework_indicators": fw,
             "n_framework": len(fw),
+            "unnamed_dcid_candidates": dcid_cands,
+            "n_unnamed_candidates": len(dcid_cands),
+            "n_unnamed_candidates_with_data": sum(1 for c in dcid_cands if c["observations"]),
             "n_datasets": len(hit), "n_cities": len(by_city),
             "in_tail": sum(1 for r in hit if r["in_tail"]),
             "mean_affinity": round(sum(r["affinity"] for r in hit) / max(len(hit), 1), 3),
@@ -120,7 +158,12 @@ def main():
     for key, c in out["categories"].items():
         dom = c["top_city"]
         print(f"\n{c['label']}")
-        print(f"  framework: {c['n_framework']} of {len(inds)} named indicators")
+        print(f"  framework: {c['n_framework']} of {len(inds)} named indicators"
+              + (f"; {c['n_unnamed_candidates']} unnamed DCID candidate(s), "
+                 f"{c['n_unnamed_candidates_with_data']} with any data"
+                 if c["n_unnamed_candidates"] else ""))
+        for cand in c["unnamed_dcid_candidates"]:
+            print(f"      ? {cand['dcid']:<34}observations={cand['observations']}")
         print(f"  municipal: {c['n_datasets']} datasets across {c['n_cities']} cities "
               f"({c['in_tail']} in tail), mean affinity {c['mean_affinity']} vs {overall:.3f}")
         if dom:

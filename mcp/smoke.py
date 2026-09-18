@@ -93,6 +93,15 @@ def demo_checks():
     checks.append((f"records access: {fo['n_datasets']} logs / {fo['n_cities']} cities on the page",
                    f"{fo['n_datasets']} logs &middot; {fo['n_cities']} cities" in html))
     checks.append(("records access: exactly one framework indicator", fo["n_framework"] == 1))
+    pr = g["categories"].get("procurement")
+    checks.append(("procurement category measured", pr is not None))
+    if pr:
+        checks.append((f"procurement: {pr['n_datasets']} datasets / {pr['n_cities']} cities on the page",
+                       f"{pr['n_datasets']} datasets &middot; {pr['n_cities']} cities" in html))
+        empty = [c for c in pr["unnamed_dcid_candidates"]
+                 if c["dcid"].rsplit("/", 1)[-1].startswith("SG_SCP_PROCN")]
+        checks.append(("procurement: SDG 12.7.1 slots exist and are empty",
+                       len(empty) == 3 and all(c["observations"] == 0 for c in empty)))
     waste = [k for n, k in el["nearest_offered"] if "waste" in n.lower()]
     checks.append(("elections' nearest-concept punchline matches the data",
                    bool(waste) and f"<strong>{waste[0]}</strong> of those election" in html))

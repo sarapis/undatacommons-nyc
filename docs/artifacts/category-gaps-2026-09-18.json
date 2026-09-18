@@ -1,0 +1,504 @@
+{
+ "generated": "2026-09-18",
+ "datasets_scanned": 17162,
+ "cities": 45,
+ "named_indicators": 519,
+ "mean_affinity_all": 0.407,
+ "categories": {
+  "elections": {
+   "label": "Electoral administration",
+   "framework_indicators": [],
+   "n_framework": 0,
+   "unnamed_dcid_candidates": [
+    {
+     "dcid": "undata/sdg/SE_ACS_ELECT",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_JDC",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_JDC_CNS",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_JDC_HGR",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_JDC_LWR",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_PARLCC_JC",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_PARLCC_LC",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_PARLCC_UC",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_PARLSP_UC",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_DMK_PSRVC",
+     "named": false,
+     "observations": 0
+    }
+   ],
+   "n_unnamed_candidates": 10,
+   "n_unnamed_candidates_with_data": 0,
+   "n_datasets": 469,
+   "n_cities": 23,
+   "in_tail": 302,
+   "mean_affinity": 0.332,
+   "top_city": [
+    "Milan",
+    310
+   ],
+   "by_city": [
+    [
+     "Milan",
+     310
+    ],
+    [
+     "Edmonton",
+     35
+    ],
+    [
+     "Calgary",
+     27
+    ],
+    [
+     "Los Angeles",
+     15
+    ],
+    [
+     "Cambridge",
+     13
+    ],
+    [
+     "Winnipeg",
+     13
+    ],
+    [
+     "New York",
+     10
+    ],
+    [
+     "Madrid",
+     9
+    ],
+    [
+     "Buenos Aires",
+     9
+    ],
+    [
+     "Chicago",
+     7
+    ],
+    [
+     "Boston",
+     5
+    ],
+    [
+     "Austin",
+     2
+    ],
+    [
+     "Baton Rouge",
+     2
+    ],
+    [
+     "Somerville",
+     2
+    ],
+    [
+     "Matera",
+     2
+    ],
+    [
+     "Dallas",
+     1
+    ],
+    [
+     "Oakland",
+     1
+    ],
+    [
+     "New Orleans",
+     1
+    ],
+    [
+     "Santa Monica",
+     1
+    ],
+    [
+     "Everett",
+     1
+    ],
+    [
+     "Cincinnati",
+     1
+    ],
+    [
+     "Orlando",
+     1
+    ],
+    [
+     "Recife",
+     1
+    ]
+   ],
+   "nearest_offered": [
+    [
+     "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
+     70
+    ],
+    [
+     "Countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information",
+     61
+    ],
+    [
+     "Current number of seats in national parliaments",
+     42
+    ],
+    [
+     "Countries with national statistical plans with funding from government",
+     36
+    ],
+    [
+     "Municipal waste collected",
+     35
+    ]
+   ],
+   "examples": [
+    "Voting/Poll Sites \u2014 New York",
+    "Police Precincts \u2014 New York",
+    "Voter Analysis 2008-2018 \u2014 New York",
+    "Historical Voter Turnout \u2014 New York",
+    "Election District Poll Sites \u2014 New York",
+    "Agency Voter Registration Activity \u2014 New York",
+    "Proxy Voting Records \u2014 New York",
+    "Election Districts \u2014 New York",
+    "Off-Year and Special Elections Intermediary \u2014 New York",
+    "Off-Year and Special Elections Contribution \u2014 New York"
+   ]
+  },
+  "procurement": {
+   "label": "Public procurement",
+   "framework_indicators": [],
+   "n_framework": 0,
+   "unnamed_dcid_candidates": [
+    {
+     "dcid": "undata/sdg/ER_H2O_PROCED",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_SCP_PROCN",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_SCP_PROCN_HS",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SG_SCP_PROCN_LS",
+     "named": false,
+     "observations": 0
+    }
+   ],
+   "n_unnamed_candidates": 4,
+   "n_unnamed_candidates_with_data": 0,
+   "n_datasets": 150,
+   "n_cities": 28,
+   "in_tail": 48,
+   "mean_affinity": 0.393,
+   "top_city": [
+    "New York",
+    36
+   ],
+   "by_city": [
+    [
+     "New York",
+     36
+    ],
+    [
+     "Fortaleza",
+     19
+    ],
+    [
+     "S\u00e3o Paulo",
+     13
+    ],
+    [
+     "Kansas City",
+     12
+    ],
+    [
+     "Austin",
+     9
+    ],
+    [
+     "Richmond, CA",
+     8
+    ],
+    [
+     "Chicago",
+     6
+    ],
+    [
+     "Baton Rouge",
+     6
+    ],
+    [
+     "Cincinnati",
+     5
+    ],
+    [
+     "Mesa",
+     4
+    ],
+    [
+     "Belo Horizonte",
+     4
+    ],
+    [
+     "Cambridge",
+     3
+    ],
+    [
+     "Buenos Aires",
+     3
+    ],
+    [
+     "Edmonton",
+     2
+    ],
+    [
+     "Los Angeles",
+     2
+    ],
+    [
+     "Dallas",
+     2
+    ],
+    [
+     "Oakland",
+     2
+    ],
+    [
+     "Providence",
+     2
+    ],
+    [
+     "Milan",
+     2
+    ],
+    [
+     "Matera",
+     2
+    ],
+    [
+     "Seattle",
+     1
+    ],
+    [
+     "Winnipeg",
+     1
+    ],
+    [
+     "Boston",
+     1
+    ],
+    [
+     "Everett",
+     1
+    ],
+    [
+     "Gainesville",
+     1
+    ],
+    [
+     "Los Angeles (Controller)",
+     1
+    ],
+    [
+     "Richmond, VA",
+     1
+    ],
+    [
+     "Recife",
+     1
+    ]
+   ],
+   "nearest_offered": [
+    [
+     "Total inbound official flows (disbursement) for Aid for Trade",
+     12
+    ],
+    [
+     "Total government revenue, in local currency",
+     11
+    ],
+    [
+     "Forest area",
+     11
+    ],
+    [
+     "Countries with procedures in law or policy for participation by service users/communities in planning program in water resources planning and management",
+     9
+    ],
+    [
+     "Countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information",
+     8
+    ]
+   ],
+   "examples": [
+    "Universal Solicitation for Broadband Asset Dataset \u2014 New York",
+    "Upcoming contracts to be awarded (CIP) \u2014 New York",
+    "Waiting List for General Vendor Licenses \u2014 New York",
+    "Universal Solicitation of Broadband Target Neighborhoods \u2014 New York",
+    "Directory Of Awarded Construction Contracts \u2014 New York",
+    "Bid Tabulations (Historical) \u2014 New York",
+    "Vendor List by Commodity \u2014 New York",
+    "Department of Youth and Community Development (DYCD) Contracts \u2014 New York",
+    "DSNY Disposal Vendors \u2014 New York",
+    "Upcoming contracts to be awarded (CAP) \u2014 New York"
+   ]
+  },
+  "records access": {
+   "label": "Records-access requests",
+   "framework_indicators": [
+    {
+     "dcid": "undata/sdg/SG_INF_ACCSS",
+     "name": "Countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information"
+    }
+   ],
+   "n_framework": 1,
+   "unnamed_dcid_candidates": [
+    {
+     "dcid": "undata/sdg/FB_BNK_ACCSS",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/FB_BNK_ACCSS_ILF",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/FB_BNK_ACCSS_OLF",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/FC_ACC_SSID",
+     "named": false,
+     "observations": 0
+    },
+    {
+     "dcid": "undata/sdg/SE_ACC_HNDWSH",
+     "named": false,
+     "observations": 0
+    }
+   ],
+   "n_unnamed_candidates": 5,
+   "n_unnamed_candidates_with_data": 0,
+   "n_datasets": 73,
+   "n_cities": 8,
+   "in_tail": 35,
+   "mean_affinity": 0.371,
+   "top_city": [
+    "Chicago",
+    47
+   ],
+   "by_city": [
+    [
+     "Chicago",
+     47
+    ],
+    [
+     "S\u00e3o Paulo",
+     12
+    ],
+    [
+     "Fortaleza",
+     6
+    ],
+    [
+     "Oakland",
+     3
+    ],
+    [
+     "Seattle",
+     2
+    ],
+    [
+     "Winnipeg",
+     1
+    ],
+    [
+     "New Orleans",
+     1
+    ],
+    [
+     "Recife",
+     1
+    ]
+   ],
+   "nearest_offered": [
+    [
+     "Countries that have legislative, administrative and policy framework or measures reported to the Access and Benefit-Sharing Clearing-House",
+     28
+    ],
+    [
+     "Countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information",
+     5
+    ],
+    [
+     "Countries with procedures in law or policy for participation by service users/communities in planning program in water resources planning and management",
+     4
+    ],
+    [
+     "Incidence of bribery (proportion of firms experiencing at least one bribe payment request)",
+     4
+    ],
+    [
+     "Countries that have national urban policies or regional development plans that respond to population dynamics, ensure balanced territorial development, and increase local fiscal space",
+     4
+    ]
+   ],
+   "examples": [
+    "FOIA Request Log - Police \u2014 Chicago",
+    "FOIA Request Log - Fire \u2014 Chicago",
+    "FOIA Request Log - Buildings \u2014 Chicago",
+    "FOIA Request Log - Finance \u2014 Chicago",
+    "FOIA Request Log - Human Resources \u2014 Chicago",
+    "FOIA Request Log - Procurement Services \u2014 Chicago",
+    "FOIA Request Log - Planning and Development \u2014 Chicago",
+    "FOIA Request Log - Administrative Hearings \u2014 Chicago",
+    "FOIA Request Log - Animal Care and Control \u2014 Chicago",
+    "FOIA Request Log - OEMC \u2014 Chicago"
+   ]
+  }
+ }
+}

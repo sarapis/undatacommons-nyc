@@ -162,6 +162,19 @@ long it took. The nearest SDG indicator is 16.10.2, *"countries that adopt and i
 guarantees for public access to information"*: the framework asks whether a **law exists**, the
 cities publish whether the law **works**. A country can score full marks and answer nothing.
 
+**Public procurement makes it three, and it is the sturdiest.** 28 cities publish 150 procurement
+datasets — NYC alone registers 55,806 contracts worth $147bn — and no publisher is above a quarter
+of the category, where Milan is 66% of the election datasets. The framework's SDG 12.7.1 slots
+(`SG_SCP_PROCN`, `_HS`, `_LS`) exist, carry **no name and zero observations for zero countries**,
+and the adjacent indicator that does work records whether a country has an action plan: value `1`
+for all 75 countries that answer, and nobody reports `0`. Twice now the framework asks whether a
+policy was *adopted* while cities publish what *happened*.
+
+That also corrected the method: searching indicator **names** missed `SG_SCP_PROCN` entirely, since
+170 of the 689 carry none. The category search now reads DCID mnemonics too, as candidates for a
+human rather than as counts. All 19 unnamed candidates it surfaced across the three categories hold
+zero observations — **unnamed and empty are the same set.**
+
 Electoral administration is the larger gap: **zero of the 519 named indicators** mention an
 election, a vote or a turnout, and for **35** of those 469 city datasets the closest concept in the
 whole framework is *municipal waste collected*. Both are now on the
