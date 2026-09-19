@@ -63,6 +63,11 @@ UN System Data Commons.
 - **Never gate a check on a list of unit strings.** A whitelist of percent/count/rate units
   silently discarded Mauritius' food waste going 207 → 177,570 tonnes because `WEIGHT_TN` was not
   on it. Gate on a property of the values instead.
+- **`entityMetadata` names ~155 places per call and drops the alphabetical tail as `''`.** No
+  error, no flag; the data rows are complete and the names are not. Never label from one
+  response: `country_names.names_for(response)` fills from `probe/cache/country_names.json`
+  (union across calls, 240 of 246 named), and `country_names.label()` falls back to the ISO
+  code, never the DCID. Refresh with `python3 probe/country_names.py`.
 - **Every datapoint keeps its attribution.** The platform requires it and our QA approach
   promises it.
 

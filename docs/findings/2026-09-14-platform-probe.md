@@ -79,6 +79,31 @@ Every observation carries `provenanceUrl`, a unit DCID (e.g.
 rate is a checkable match rather than a judgment call. That makes part of our comparability
 grader automatic.
 
+## Finding 5 — `entityMetadata` names about 155 places per call, then goes silent
+
+*Added 19 Sep, measured against the live deployment.*
+
+`get_child_observations(variable, Earth, Country)` returns an `entityMetadata` block naming
+each child place. It names **152–162 of them per call** and returns `''` for every place
+after that, and the places it drops are always the **alphabetical tail by DCID**:
+
+| Variable | Entities | Named | First unnamed |
+|---|---:|---:|---|
+| `undata/sdg/VC_IHR_PSRC` | 198 | 154 | `country/SHN` |
+| `undata/sdg/SH_STA_TRAF` | 195 | 162 | `country/SUR` |
+| `undata/unicef/DM_POP` | 232 | 152 | `country/NIC` |
+| `undata/sdg/EN_MWT_RCYR` | 96 | 96 | — |
+
+Sixty calls, thirty-three capped, and in no capped response does a named place sort after the
+first unnamed one. Nothing in the response says a name was dropped. The data rows are complete;
+only the names are not. Non-ASCII characters in the names that do arrive are U+FFFD
+(`Cura�ao`, `R�union`).
+
+**Implication:** a client cannot label a chart from one response. Ours takes the union of names
+across calls (`probe/country_names.py`) — a variable with fewer than ~150 reporting places
+names all of them — and reaches 240 of 246 places. Full table:
+[country-names-latest](https://sarapis.github.io/undatacommons-nyc/artifacts/country-names-latest).
+
 ## Consequence for the application we submitted
 
 The pitch survives — the bridge is the value, and the platform's own governance boundary gives
