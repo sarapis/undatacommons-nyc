@@ -93,7 +93,7 @@ It publishes **greater cities**, not municipalities:
 | City | Eurostat "greater city" | Municipality | Error if used |
 |---|---:|---:|---|
 | Madrid | 5,115,272 | **3,520,396** | rates ~31% too low |
-| Milan | 3,580,530 | ~1,370,000 | rates ~60% too low |
+| Milan | 3,580,530 | **1,399,079** | rates ~60% too low |
 
 A city's open data covers its municipality. Dividing municipal counts by a metropolitan
 denominator is precisely the mismatch this project exists to catch, so Eurostat is not used.

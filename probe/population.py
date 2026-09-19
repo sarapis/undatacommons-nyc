@@ -9,16 +9,17 @@ WHY NOT ONE INTERNATIONAL SOURCE. Eurostat's Urban Audit (urb_cpop1) looks like
 the obvious answer for Europe and is wrong for this purpose: it publishes
 **greater cities**, not municipalities. Madrid's greater city is 5,115,272 while
 the city's own padrón counts 3,520,396 -- a 45% inflation that would push every
-Madrid rate about 31% too low, silently. Milan is worse: 3.58M greater city
-against roughly 1.37M for the comune.
+Madrid rate about 31% too low, silently. Milan is worse: 3,580,530 greater city
+against 1,399,079 for the comune.
 
 So denominators come from the city's own statistical publication wherever
 possible. That also gives the numerator and denominator the same publisher,
 which is better provenance than mixing sources.
 
 Resolvers:
-  census      US Census ACS 1-year, by place FIPS (annual, places >= ~65k)
-  portal_csv  a CSV on the city's own portal, summing declared columns
+  census             US Census ACS 1-year, by place FIPS (annual, places >= ~65k)
+  portal_csv         a CSV on the city's own portal, summing declared columns
+  portal_csv_series  a CSV on the city's own portal, year column plus value column
 """
 
 import csv
