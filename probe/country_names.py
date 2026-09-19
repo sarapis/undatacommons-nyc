@@ -26,13 +26,14 @@ the cache, never a DCID.
 Usage:
     python3 probe/country_names.py            # build or refresh the cache, print the table
     python3 probe/country_names.py --check    # measure the cap per call, write nothing
-    python3 probe/country_names.py --budget 80
+    python3 probe/country_names.py --budget 80   # stops earlier once 25 calls add nothing
 
 Stdlib only. Writes probe/cache/country_names.json and docs/artifacts/country-names-<date>.{json,md}.
 """
 
 import argparse
 import datetime as dt
+import functools
 import json
 import pathlib
 import sys
@@ -67,11 +68,26 @@ def _screened_dcids():
                   if x.get("grade") in ("GREEN", "AMBER", "RANK-ONLY"))
 
 
+@functools.lru_cache(maxsize=1)
 def load():
-    """dcid -> name from the cache; empty if the cache has not been built."""
+    """dcid -> name from the cache; empty if the cache has not been built.
+
+    Read once per process: the server calls this on every tool call and a sweep on every
+    indicator. A rebuild (`build`) does not go through here, so it cannot go stale in-process.
+    """
     if not CACHE.exists():
         return {}
     return json.loads(CACHE.read_text(encoding="utf-8")).get("names", {})
+
+
+def _clean(name):
+    """A name fit to embed anywhere -- the demo writes these into a <script> block.
+
+    Country names are letters, spaces and a little punctuation. Anything with angle brackets or
+    control characters is not a name we should carry, whatever the platform sent.
+    """
+    return (bool(name) and "<" not in name and ">" not in name
+            and not any(ord(ch) < 32 for ch in name))
 
 
 def names_for(response, cache=None):
@@ -114,18 +130,27 @@ def measure(response):
             "first_unnamed": first, "alphabetical_tail": clean}
 
 
+# After the seeds, give up once this many consecutive calls add no new name. Six places
+# (SGS, SJM, SXM, UMI, VAT, VIR) appear only in variables too large to name them, so
+# "everything is named" never happens and a run would otherwise always spend its whole budget.
+# Names arrive in a trickle -- a small variable every ten or fifteen calls -- so this is
+# deliberately generous; 15 cost Tokelau.
+PATIENCE = 25
+
+
 def build(client, budget, check_only=False, quiet=False):
     names = {}
+    rejected = {}
     seen = set()
     calls = []
-    queue = _crosswalk_dcids() + _SEEDS + _screened_dcids()
+    seeds = _crosswalk_dcids() + _SEEDS
+    # The crosswalk variables are screened too; call each once.
+    queue = seeds + [d for d in _screened_dcids() if d not in seeds]
+    since_new = 0
     for dcid in queue:
         if len(calls) >= budget:
             break
-        unnamed_seen = [p for p in seen if p not in names]
-        # Stop early once every place we have ever seen carries a name -- but only after
-        # the seeds, which are the calls the coverage table exists to report on.
-        if len(calls) >= len(_crosswalk_dcids()) + len(_SEEDS) and seen and not unnamed_seen:
+        if len(calls) >= len(seeds) and since_new >= PATIENCE:
             break
         try:
             r = client.call_tool("get_child_observations",
@@ -137,12 +162,17 @@ def build(client, budget, check_only=False, quiet=False):
         m = measure(r)
         m["variable"] = dcid
         calls.append(m)
+        before = len(names)
         for row in ((r.get("entityMetadata") or {}).get("rows") or []):
             seen.add(row[0])
             if row[1] and row[0] not in names:
-                names[row[0]] = row[1]
+                if _clean(row[1]):
+                    names[row[0]] = row[1]
+                else:
+                    rejected[row[0]] = row[1]
         for row in ((r.get("data") or {}).get("rows") or []):
             seen.add(row[0])
+        since_new = 0 if len(names) > before else since_new + 1
         if not quiet:
             still = sum(1 for p in seen if p not in names)
             print(f"  {dcid.split('/', 1)[-1]:<40} {m['entities']:>4} entities "
@@ -155,6 +185,7 @@ def build(client, budget, check_only=False, quiet=False):
            "endpoint": client.endpoint,
            "places_seen": len(seen), "places_named": len(names),
            "unnamed": unnamed,
+           "rejected": dict(sorted(rejected.items())),
            "calls": calls,
            "names": dict(sorted(names.items()))}
     if not check_only:
@@ -192,6 +223,9 @@ def render(out):
     if out["unnamed"]:
         lines += ["", "## Still unnamed after the union", "",
                   ", ".join(f"`{p}`" for p in out["unnamed"])]
+    if out.get("rejected"):
+        lines += ["", "## Names refused (angle brackets or control characters)", ""]
+        lines += [f"- `{p}`: `{n!r}`" for p, n in out["rejected"].items()]
     lines += ["", "## Reproducing", "", "```bash", "python3 probe/country_names.py", "```", ""]
     return "\n".join(lines)
 
