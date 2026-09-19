@@ -39,8 +39,10 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from undc import Client, UNDCError  # noqa: E402
+import country_names  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+_NAME_CACHE = country_names.load()   # read once; one sweep is 1,661 calls
 CACHE = ROOT / "probe" / "cache"
 ARTIFACTS = ROOT / "docs" / "artifacts"
 STATE = CACHE / "smell.json"
@@ -346,7 +348,9 @@ def sweep_one(client, dcid, raw=None):
     src = r.get("sourceMetadata") or {}
     unit = (src.get("unit") or "").split("UNIT_MEASURE-")[-1]
     kind = unit_kind(unit)
-    names = {x[0]: x[1] for x in ((r.get("entityMetadata") or {}).get("rows") or [])}
+    # entityMetadata names ~155 places and drops the alphabetical tail silently; the cache
+    # built by probe/country_names.py fills what this response left blank.
+    names = country_names.names_for(r, cache=_NAME_CACHE)
 
     by_place = {}
     n_obs = 0
@@ -544,8 +548,14 @@ def main():
     args = ap.parse_args()
 
     targets = load_targets(args.all, args.limit, args.corpus)
-    scope = ("all 689 enumerated SDG base indicators" if args.all
-             else f"the {len(targets)} indicators screened usable (GREEN/AMBER/RANK-ONLY)")
+    # Say which corpus was swept. The 18 Sep artifact read "all 689 enumerated SDG base
+    # indicators -- 1,661 indicators" because this label ignored --corpus.
+    if args.all and args.corpus:
+        scope = f"the whole governed graph, {len(targets)} base indicators ({args.corpus})"
+    elif args.all:
+        scope = f"all {len(targets)} enumerated SDG base indicators"
+    else:
+        scope = f"the {len(targets)} indicators screened usable (GREEN/AMBER/RANK-ONLY)"
 
     done = {}
     if args.resume and STATE.exists():

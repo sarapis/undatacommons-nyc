@@ -30,6 +30,7 @@ sys.path.insert(0, str(ROOT / "probe"))
 from undc import Client, UNDCError          # noqa: E402
 import nyc                                   # noqa: E402
 import census                                # noqa: E402
+import country_names                         # noqa: E402
 
 CROSSWALK = json.loads((ROOT / "probe" / "crosswalk.json").read_text())
 PAIRS = {p["id"]: p for p in CROSSWALK["pairs"]}
@@ -302,10 +303,14 @@ def t_world_position(args):
                          "child_place_type": "Country", "date": year})
     except UNDCError as exc:
         return {"error": str(exc)}
-    names = {x[0]: x[1] for x in ((r.get("entityMetadata") or {}).get("rows") or [])}
+    # The platform names only ~155 of the places in a response and drops the alphabetical
+    # tail without saying so (probe/country_names.py). Live names first, the measured cache
+    # for the rest, and an ISO code -- never a bare DCID -- where neither has one.
+    names = country_names.names_for(r)
     rows = [x for x in ((r.get("data") or {}).get("rows") or []) if x[2] is not None]
-    vals = [(x[2], names.get(x[0], x[0])) for x in rows]
+    vals = [(x[2], country_names.label(x[0], names)) for x in rows]
     _keys = [x[0] for x in rows]
+    unnamed = sorted(x[0] for x in rows if x[0] not in names)
     if not vals:
         return {"error": f"no country data for {year}",
                 "note": "Pick a year the indicator was actually collected in; "
@@ -339,6 +344,7 @@ def t_world_position(args):
             "nyc_value": round(v, 3), "unit": ny_meta.get("unit"),
             "rank": better + 1, "of": len(vals) + 1,
             "neighbours": [{"place": n, "value": round(x, 3)} for x, n in vals[lo:hi]],
+            "unnamed_places": unnamed,
             "note": ("Lower rank = lower value. Tier 3 places a CITY against whole "
                      "NATIONS, which is context rather than a peer comparison."),
             "caveat": p["reason"]}

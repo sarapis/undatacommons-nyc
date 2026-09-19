@@ -1,0 +1,497 @@
+{
+ "generated": "2026-09-19",
+ "endpoint": "https://unsd-datacommons.gcp.un-icc.cloud/mcp",
+ "places_seen": 246,
+ "places_named": 240,
+ "unnamed": [
+  "country/SGS",
+  "country/SJM",
+  "country/SXM",
+  "country/UMI",
+  "country/VAT",
+  "country/VIR"
+ ],
+ "rejected": {},
+ "calls": [
+  {
+   "entities": 185,
+   "named": 158,
+   "unnamed": 27,
+   "first_unnamed": "country/SVK",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/EN_ATM_PM25.URBANIZATION--DOU_CITY"
+  },
+  {
+   "entities": 198,
+   "named": 154,
+   "unnamed": 44,
+   "first_unnamed": "country/SHN",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/VC_IHR_PSRC"
+  },
+  {
+   "entities": 96,
+   "named": 96,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/EN_MWT_RCYR"
+  },
+  {
+   "entities": 195,
+   "named": 162,
+   "unnamed": 33,
+   "first_unnamed": "country/SUR",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/SH_STA_TRAF"
+  },
+  {
+   "entities": 199,
+   "named": 162,
+   "unnamed": 37,
+   "first_unnamed": "country/SSD",
+   "alphabetical_tail": true,
+   "variable": "undata/who/CHILD_DEATHS.AGE--Y0T4"
+  },
+  {
+   "entities": 195,
+   "named": 162,
+   "unnamed": 33,
+   "first_unnamed": "country/SUR",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/SH_STA_MORT.SEX--F"
+  },
+  {
+   "entities": 183,
+   "named": 162,
+   "unnamed": 21,
+   "first_unnamed": "country/TKM",
+   "alphabetical_tail": true,
+   "variable": "undata/who/AIR_DEATH.AIR_POL_TYPE--AMB"
+  },
+  {
+   "entities": 170,
+   "named": 161,
+   "unnamed": 9,
+   "first_unnamed": "country/UZB",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/SI_POV_DAY1"
+  },
+  {
+   "entities": 205,
+   "named": 156,
+   "unnamed": 49,
+   "first_unnamed": "country/SAU",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/EN_LND_SLUM.URBANIZATION--DOU_U"
+  },
+  {
+   "entities": 189,
+   "named": 156,
+   "unnamed": 33,
+   "first_unnamed": "country/SOM",
+   "alphabetical_tail": true,
+   "variable": "undata/unicef/DM_BU_PC_DOU.URBANIZATION--DOU_CITY"
+  },
+  {
+   "entities": 163,
+   "named": 153,
+   "unnamed": 10,
+   "first_unnamed": "country/UKR",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/SH_H2O_SAFE"
+  },
+  {
+   "entities": 133,
+   "named": 133,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/EN_MWT_COLLV"
+  },
+  {
+   "entities": 232,
+   "named": 152,
+   "unnamed": 80,
+   "first_unnamed": "country/NIC",
+   "alphabetical_tail": true,
+   "variable": "undata/unicef/DM_POP"
+  },
+  {
+   "entities": 232,
+   "named": 152,
+   "unnamed": 80,
+   "first_unnamed": "country/NIC",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_FOOD_WST"
+  },
+  {
+   "entities": 232,
+   "named": 152,
+   "unnamed": 80,
+   "first_unnamed": "country/NIC",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_FOOD_WST_PC"
+  },
+  {
+   "entities": 201,
+   "named": 157,
+   "unnamed": 44,
+   "first_unnamed": "country/SAU",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_FPA_CFPI"
+  },
+  {
+   "entities": 29,
+   "named": 29,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_AGRBIO"
+  },
+  {
+   "entities": 34,
+   "named": 34,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_AGRWAG"
+  },
+  {
+   "entities": 121,
+   "named": 121,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_DGRD"
+  },
+  {
+   "entities": 33,
+   "named": 33,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FERTMG"
+  },
+  {
+   "entities": 28,
+   "named": 28,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FIES"
+  },
+  {
+   "entities": 39,
+   "named": 39,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FOVH"
+  },
+  {
+   "entities": 235,
+   "named": 154,
+   "unnamed": 81,
+   "first_unnamed": "country/NIU",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRST"
+  },
+  {
+   "entities": 208,
+   "named": 157,
+   "unnamed": 51,
+   "first_unnamed": "country/ROU",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRSTBIOPHA"
+  },
+  {
+   "entities": 246,
+   "named": 153,
+   "unnamed": 93,
+   "first_unnamed": "country/MUS",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRSTCERT"
+  },
+  {
+   "entities": 228,
+   "named": 155,
+   "unnamed": 73,
+   "first_unnamed": "country/NZL",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRSTCHG"
+  },
+  {
+   "entities": 144,
+   "named": 144,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRSTMGT"
+  },
+  {
+   "entities": 235,
+   "named": 154,
+   "unnamed": 81,
+   "first_unnamed": "country/NIU",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRSTN"
+  },
+  {
+   "entities": 208,
+   "named": 155,
+   "unnamed": 53,
+   "first_unnamed": "country/PYF",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_FRSTPRCT"
+  },
+  {
+   "entities": 30,
+   "named": 30,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_H2OAVAIL"
+  },
+  {
+   "entities": 48,
+   "named": 48,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_LNDSTR"
+  },
+  {
+   "entities": 31,
+   "named": 31,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_NFI"
+  },
+  {
+   "entities": 31,
+   "named": 31,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_PSTCDSMG"
+  },
+  {
+   "entities": 35,
+   "named": 35,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_RMM"
+  },
+  {
+   "entities": 20,
+   "named": 20,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_SDGRD"
+  },
+  {
+   "entities": 10,
+   "named": 10,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_SUST"
+  },
+  {
+   "entities": 195,
+   "named": 160,
+   "unnamed": 35,
+   "first_unnamed": "country/SSD",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_SUST_PRXCSS"
+  },
+  {
+   "entities": 195,
+   "named": 160,
+   "unnamed": 35,
+   "first_unnamed": "country/SSD",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_SUST_PRXTS"
+  },
+  {
+   "entities": 235,
+   "named": 154,
+   "unnamed": 81,
+   "first_unnamed": "country/NIU",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_LND_TOTL"
+  },
+  {
+   "entities": 192,
+   "named": 161,
+   "unnamed": 31,
+   "first_unnamed": "country/SVN",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_AGVAS"
+  },
+  {
+   "entities": 157,
+   "named": 157,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_FIESMS"
+  },
+  {
+   "entities": 157,
+   "named": 157,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_FIESMSN"
+  },
+  {
+   "entities": 156,
+   "named": 156,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_FIESS"
+  },
+  {
+   "entities": 153,
+   "named": 153,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_FIESSN"
+  },
+  {
+   "entities": 192,
+   "named": 161,
+   "unnamed": 31,
+   "first_unnamed": "country/SVN",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_ORTIND"
+  },
+  {
+   "entities": 33,
+   "named": 33,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_PRD_XSUBDY"
+  },
+  {
+   "entities": 192,
+   "named": 161,
+   "unnamed": 31,
+   "first_unnamed": "country/SVN",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/AG_XPD_AGSGB"
+  },
+  {
+   "entities": 196,
+   "named": 159,
+   "unnamed": 37,
+   "first_unnamed": "country/SMR",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/BN_CAB_XOKA_GD_ZS"
+  },
+  {
+   "entities": 189,
+   "named": 159,
+   "unnamed": 30,
+   "first_unnamed": "country/SWE",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/BN_KLT_PTXL_CD"
+  },
+  {
+   "entities": 201,
+   "named": 159,
+   "unnamed": 42,
+   "first_unnamed": "country/SLE",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/BX_KLT_DINV_WD_GD_ZS"
+  },
+  {
+   "entities": 200,
+   "named": 159,
+   "unnamed": 41,
+   "first_unnamed": "country/SLV",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/BX_TRF_PWKR"
+  },
+  {
+   "entities": 191,
+   "named": 158,
+   "unnamed": 33,
+   "first_unnamed": "country/SRB",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ENVTECH_EXP"
+  },
+  {
+   "entities": 192,
+   "named": 158,
+   "unnamed": 34,
+   "first_unnamed": "country/SLV",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ENVTECH_IMP"
+  },
+  {
+   "entities": 91,
+   "named": 91,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ENVTECH_REXP"
+  },
+  {
+   "entities": 90,
+   "named": 90,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ENVTECH_RIMP"
+  },
+  {
+   "entities": 192,
+   "named": 158,
+   "unnamed": 34,
+   "first_unnamed": "country/SLV",
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ENVTECH_TT"
+  },
+  {
+   "entities": 157,
+   "named": 157,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_FTA_TOTAL"
+  },
+  {
+   "entities": 32,
+   "named": 32,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ODA_BDVDL"
+  },
+  {
+   "entities": 154,
+   "named": 154,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ODA_BDVL"
+  },
+  {
+   "entities": 48,
+   "named": 48,
+   "unnamed": 0,
+   "first_unnamed": null,
+   "alphabetical_tail": true,
+   "variable": "undata/sdg/DC_ODA_LDCG"
+  }
+ ]
+}

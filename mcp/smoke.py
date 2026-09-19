@@ -46,6 +46,20 @@ def demo_checks():
     html = DEMO.read_text()
     core = [r for r in o["indicators"] if re.search(r"waste|wetland|water", r["name"], re.I)]
     checks.append(("demo and mirror identical", DEMO.read_text() == DEMO_MIRROR.read_text()))
+
+    # The world strips: every country the platform can name is named. The only blanks
+    # allowed are the places no call ever names (probe/country_names.py lists them).
+    cache_path = ROOT / "probe" / "cache" / "country_names.json"
+    checks.append(("country-name cache present", cache_path.exists()))
+    if cache_path.exists():
+        never = set(json.loads(cache_path.read_text(encoding="utf-8"))["unnamed"])
+        m = re.search(r"const WORLD = (\{.*?\});\n", html, re.S)
+        blanks = {f"country/{row[0]}" for card in json.loads(m.group(1)).values()
+                  for row in card["vals"] if not row[1]} if m else {"parse failed"}
+        checks.append(("demo world strips: every nameable country is named",
+                       blanks <= never))
+        if not blanks <= never:
+            print("   blank:", ", ".join(sorted(blanks - never)), file=sys.stderr)
     checks.append((f"{len(core)} waste/water rows in the worksheet", len(core) == 12))
     missing = [r for r in core if r["dcid"].rsplit("/", 1)[-1] not in html]
     checks.append(("every waste series appears in the demo", not missing))
@@ -133,6 +147,12 @@ def main():
     w = sc(5)
     checks.append(("municipal waste rank 41 of 91", (w["rank"], w["of"]) == (41, 91)))
     checks.append(("municipal waste ~397.9 kg", abs(w["nyc_value"] - 397.9) < 0.5))
+    # The platform names ~155 places per call and drops the rest; the server fills them
+    # from probe/cache/country_names.json. A neighbour that reads "country/USA" means the
+    # cache is missing or stale (python3 probe/country_names.py).
+    checks.append(("world_position: no neighbour is a bare DCID",
+                   all(not n["place"].startswith("country/")
+                       for n in r["neighbours"] + w["neighbours"])))
     checks.append(("ambiguous name returns candidates", "candidates" in sc(6)))
 
     fc = sc(7)

@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-18** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-19** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
@@ -297,6 +297,14 @@ points. This is why the coverage probe exists.
 **4. Provenance is first-class and machine-readable.** Every observation carries
 `provenanceUrl`, `observationPeriod`, `sourceId` and a unit DCID that encodes the
 denominator. That makes part of the comparability check automatic rather than hand-curated.
+
+**5. Names are capped at about 155 per call, silently.** `get_child_observations` over every
+country names 152–162 places and returns `''` for the alphabetical tail — South Africa,
+Sweden, the United States and forty others on the homicide series — with nothing in the
+response to say so. Measured on sixty calls, 19 Sep. `probe/country_names.py` recovers 240 of
+246 names by union across calls; the server and the smell test read from it. See the
+[correction](https://sarapis.github.io/undatacommons-nyc/activity) and
+[`country-names-latest`](https://sarapis.github.io/undatacommons-nyc/artifacts/country-names-latest).
 
 ### Where the demo indicators actually are
 
