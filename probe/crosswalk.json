@@ -369,6 +369,259 @@
         "un_multiplier": 1000,
         "note": "DSNY publishes 'Tons' without specifying short or metric; US short tons assumed. If metric, NYC figures are ~10% low."
       }
+    },
+    {
+      "id": "haz-generated-per-gdp",
+      "sdg": "12.4.2",
+      "label": "Hazardous waste generated per unit of GDP",
+      "un": {
+        "dcid": "undata/sdg/EN_HAZ_GENGDP",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/GBR"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "b3mq-yvvr",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (NYC DEP wastewater co-digestion, b3mq-yvvr) tracks monthly biogas and RNG production metrics at wastewater treatment plants -- an energy-recovery indicator, not a hazardous waste indicator. EN_HAZ_GENGDP requires Basel Convention hazardous waste generation in tonnes per million USD GDP; the biogas dataset contains no hazardous waste data of any kind.",
+      "tier": 3
+    },
+    {
+      "id": "haz-exported",
+      "sdg": "12.4.2",
+      "label": "Hazardous waste exported",
+      "un": {
+        "dcid": "undata/sdg/EN_HAZ_EXP",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/GBR"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "99xv-he3n",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (DSNY disposal sites, 99xv-he3n) tracks routing of DSNY-collected municipal solid waste to domestic landfills and transfer stations. EN_HAZ_EXP measures transboundary shipments of hazardous waste under the Basel Convention. These are different regulatory regimes (Basel vs. domestic MSW) and different waste streams; DSNY does not handle Basel Convention hazardous waste.",
+      "tier": 3
+    },
+    {
+      "id": "total-waste-generation",
+      "sdg": "11.6.1",
+      "label": "Total waste generation",
+      "un": {
+        "dcid": "undata/sdg/EN_TWT_GENV",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/GBR"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "bibp-6ff7",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (DSNY waste characterization, bibp-6ff7) consists of four snapshot composition studies (2005, 2013, 2017, 2023) giving material percentages of residential waste -- not generation volumes. Even with a volume dataset, DSNY residential collection covers roughly half of total waste generated; the UN indicator includes commercial and industrial streams invisible to DSNY.",
+      "tier": 3
+    },
+    {
+      "id": "wastewater-treated",
+      "sdg": "6.3.1",
+      "label": "Total wastewater treated",
+      "un": {
+        "dcid": "undata/sdg/EN_WWT_TREAT",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/DEU",
+          "country/CAN"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "icbf-663g",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (Watershed Water Quality -- Wastewater, icbf-663g) records chemical parameter monitoring at wastewater treatment plant effluent sites (analytes, concentrations, compliance). EN_WWT_TREAT requires volumetric flow -- cubic metres treated per year. The dataset has no flow volume columns; it answers 'how clean is the effluent,' not 'how much is treated.'",
+      "tier": 3
+    },
+    {
+      "id": "haz-treated-disposed-volume",
+      "sdg": "12.4.2",
+      "label": "Hazardous waste treated or disposed, volume",
+      "un": {
+        "dcid": "undata/sdg/EN_HAZ_TRTDISV",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/GBR"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "95kh-h6zc",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (Dewatered Solids and Biosolids Allocations, 95kh-h6zc) tracks sewage sludge management -- the solid byproduct of wastewater treatment -- in dry metric tons. Biosolids are regulated under 40 CFR Part 503 and are explicitly excluded from hazardous waste definitions under both RCRA and the Basel Convention. EN_HAZ_TRTDISV measures hazardous waste treated or disposed through approved methods; biosolids are not hazardous waste.",
+      "tier": 3
+    },
+    {
+      "id": "haz-treated-disposed-rate",
+      "sdg": "12.4.2",
+      "label": "Proportion of hazardous waste treated or disposed",
+      "un": {
+        "dcid": "undata/sdg/EN_HAZ_TRTDISR",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/GBR"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "95kh-h6zc",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Same dataset mismatch as EN_HAZ_TRTDISV: biosolids (95kh-h6zc) are sewage sludge, explicitly excluded from hazardous waste definitions under Basel and RCRA. Both the numerator (hazardous waste treated) and denominator (hazardous waste generated) for this proportion are absent from the biosolids dataset.",
+      "tier": 3
+    },
+    {
+      "id": "haz-imported",
+      "sdg": "12.4.2",
+      "label": "Hazardous waste imported",
+      "un": {
+        "dcid": "undata/sdg/EN_HAZ_IMP",
+        "place": "country/USA",
+        "peers": [
+          "country/DEU",
+          "country/JPN",
+          "country/FRA",
+          "country/GBR"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "99xv-he3n",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Same dataset as proposed for EN_HAZ_EXP (DSNY disposal sites, 99xv-he3n). DSNY collects municipal solid waste for domestic disposal; it does not handle internationally imported hazardous waste under the Basel Convention. Transboundary hazardous waste movements occur at national level under EPA and State authority, not city level.",
+      "tier": 3
+    },
+    {
+      "id": "groundwater-good-quality",
+      "sdg": "6.3.2",
+      "label": "Proportion of groundwater bodies with good ambient water quality",
+      "un": {
+        "dcid": "undata/sdg/EN_H2O_GRAMBQ",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/DEU",
+          "country/CAN"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "3y4p-uusw",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (Watershed Water Quality -- Limnology, 3y4p-uusw) monitors chemical and physical parameters of NYC's drinking water reservoir system -- surface water bodies. EN_H2O_GRAMBQ specifically measures groundwater bodies (aquifers). Limnology is the science of inland surface waters; groundwater is a distinct hydrological compartment with separate monitoring requirements. NYC's watershed reservoirs are not aquifers.",
+      "tier": 3
+    },
+    {
+      "id": "wastewater-generated",
+      "sdg": "6.3.1",
+      "label": "Total wastewater generated",
+      "un": {
+        "dcid": "undata/sdg/EN_WWT_GEN",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/DEU",
+          "country/CAN"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "b3mq-yvvr",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (NYC DEP wastewater co-digestion, b3mq-yvvr) tracks biogas production metrics -- sludge wet tons digested, RNG output, food scraps co-digested. EN_WWT_GEN requires total wastewater generated in volumetric flow units. Biogas production is a downstream energy-recovery metric at wastewater plants; it does not measure or allow estimation of influent wastewater volumes.",
+      "tier": 3
+    },
+    {
+      "id": "wastewater-treated-proportion",
+      "sdg": "6.3.1",
+      "label": "Proportion of wastewater safely treated",
+      "un": {
+        "dcid": "undata/sdg/EN_WWT_TREATR",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/DEU",
+          "country/CAN"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "95kh-h6zc",
+        "method_class": "administrative_count"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (Dewatered Solids and Biosolids, 95kh-h6zc) records sludge disposal destinations in dry metric tons. EN_WWT_TREATR is a ratio of volumetric wastewater flows. Both the treated-flow numerator and the generated-flow denominator require flow data absent from the biosolids dataset.",
+      "tier": 3
+    },
+    {
+      "id": "human-made-wetlands",
+      "sdg": "6.6.1",
+      "label": "Extent of human made wetlands",
+      "un": {
+        "dcid": "undata/sdg/EN_WBE_HMWTL",
+        "place": "country/USA",
+        "peers": [
+          "country/GBR",
+          "country/FRA",
+          "country/DEU",
+          "country/CAN"
+        ],
+        "method_class": "administrative_data"
+      },
+      "nyc": {
+        "dataset": "p48c-iqtu",
+        "method_class": "remote_sensing"
+      },
+      "grade": "BLOCKED",
+      "reason": "Proposed dataset (NYC Wetlands, p48c-iqtu) classifies wetland features by vegetation and hydrological type (estuarine, emergent, forested, shrub/scrub) via remote sensing. EN_WBE_HMWTL counts hectares of human-made water bodies (reservoirs, irrigation canals, aquaculture ponds, salt pans) per SDG 6.6.1. The dataset's classification schema maps ecological type, not construction origin; no field distinguishes human-made from natural wetlands. NYC's principal human-made water bodies -- the Catskill/Delaware/Croton reservoir system -- are outside the five boroughs and outside this dataset's geographic scope.",
+      "tier": 3
     }
   ],
   "spec_version": "0.1",
