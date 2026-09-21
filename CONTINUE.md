@@ -1,7 +1,7 @@
 # Continue here — UN Data Commons × NYC
 
-Written 2026-09-15, updated 2026-09-16. **Builders' Day is Tue 22 Sep** at Google NY; the
-platform goes public **17 Sep** — tomorrow.
+Written 2026-09-15, updated 2026-09-20. **Builders' Day is Tue 22 Sep** at Google NY — two days
+away. The platform went public 17 Sep with zero drift.
 
 ---
 
@@ -28,7 +28,7 @@ including the launch diff's bug, about itself.
 
 ---
 
-## 2. State — verified 2026-09-16, not recalled
+## 2. State — verified 2026-09-20, not recalled
 
 Repo `/Users/devin/Antigravity/undatacommons-nyc`: **clean, 0 unpushed, on `main`.**
 
@@ -41,11 +41,13 @@ python3 probe/launch_diff.py         # 57 series + 12 variables + corpus, 0 drif
 python3 probe/launch_diff.py --self-test   # 10/10 — proves the diff can see drift
 ```
 
-**The pre-launch pass is done (16 Sep).** Every probe re-run against the live deployment and
-diffed against 14 Sep: 689 base indicators, 6,025 variant DCIDs, 689 screened indicators, 57
-crosswalk series and 12 crosswalk variables — **all identical**. The *search surface* moved (44 →
-56 coverage candidates, nine of fifteen topics, none lost), the graph did not. See
-`docs/_posts/2026-09-16-the-launch-diff-and-the-bug-it-found-in-itself.md`.
+**The platform went public 17 Sep and nothing moved.** `launch_diff.py` that morning: 57 series,
+12 variables, 689 corpus indicators, **zero drift** against the 16 Sep baseline; smoke 8/8. No
+public hostname resolves even now (`undatacommons.unicc.biz`, `datacommons.un.org` both refuse),
+so the pre-launch host is still the one answering.
+
+⚠️ **That diff is 3 days old and the event is in 2.** Re-run it before Tuesday — one command,
+exits non-zero on drift.
 
 | Thing | Count | Source of truth |
 |---|---:|---|
@@ -53,7 +55,9 @@ crosswalk series and 12 crosswalk variables — **all identical**. The *search s
 | Usable on the UN side | 442 | `probe/cache/screened.json` |
 | Crosswalk pairs, hand-graded | 12 | `probe/crosswalk.json` |
 | US-silent indicators a place can hold | 39 | `docs/artifacts/us-silent-latest.md` |
-| Demo cards | 5 | `demo/benchmarks.html` |
+| Demo cards / sections | 5 cards + 3 added | `demo/benchmarks.html` |
+| Verified errors in UN data | 7 | `docs/findings/2026-09-16-data-quality-report.md` |
+| MCP server tools | 7 | `mcp/server.py` |
 | Portals surveyed / municipal | 372 / 70 | `portals/inventory.json` |
 | Cities with a denominator | 27 US + Madrid + Milan | `cities/denominators.json` |
 
@@ -91,17 +95,21 @@ shared; the Pages mirror is the one to present from).
 
 ## 4. Waiting on the human
 
-- **Sep 17 launch re-run — now one command, and still undone because the launch is tomorrow.**
-  After the platform goes public: `python3 probe/launch_diff.py` (exits non-zero on any drift)
-  then `python3 mcp/smoke.py`. If the public deployment answers on a different host, set
-  `UNDC_ENDPOINT` / `UNDC_REST` — no code edit. Only run `--set-baseline` after *reading* the new
-  state and accepting it; re-baselining on every run is how a checker reports "no change" forever.
-  As of 16 Sep no public hostname resolves (`undatacommons.unicc.biz`, `datacommons.un.org` both
-  refuse), so which host serves the public deployment is a question for the organizers.
+- **Send the platform-team email.** Drafted and ready, recipient identified from Devin's own
+  inbox: **Yves Jaques, yjaques@unicef.org** (UNICEF, Chief Geospatial & Computational Analytics —
+  he onboarded the team and invited feedback; Benedikt Wagner is event logistics, not platform).
+  Text is at `/private/tmp/.../platform-team-email.txt`, which is session-scoped and will be GONE —
+  reconstruct from `docs/findings/2026-09-16-data-quality-report.md`, which carries everything.
+  **I could not send it: the Gmail connector has read access only** and `create_draft` was
+  refused. Needs reconnecting with write scope in claude.ai connector settings.
+- **The three Builders' Day decks are UNTRACKED in `~/Antigravity/undatacommons-collab`** —
+  `un-datacommons-builders-dayv1/v2/v3-unnyc.pptx`, none ever committed (`git log -- '*.pptx'` is
+  empty), none gitignored. Devin's call whether they belong in git; a `git clean` would take them.
 - **What the demo should be on the day.** It is NYC-only. Everything since — multi-city, the spec,
   the MCP server, the inventory — strengthens the story and appears in none of it. Grow it or keep
   it focused? Devin's call; it depends on the room.
-- **The talk is unwritten.** 5–15 minutes, single track.
+- **No talk is being written.** Devin declined one on 17 Sep; the deck plus a live demo is the
+  format. Do not restart a talk unless he asks.
 - **Whether to rotate the Census key.** It was pasted in chat. Low sensitivity (free, rate-limit
   only), so probably not worth it — but it is the owner's call.
 - **Collaborator access.** Devin asked to stop being prompted about GitHub usernames for Henry and
@@ -111,10 +119,11 @@ shared; the Pages mirror is the one to present from).
 
 ## 5. Candidates, ranked
 
-1. **The Sep 17 diff — run it, it is one command now.** The harness and the pre-launch baseline
-   are in place; what remains is running it once the platform is public.
-2. **The talk.** Five surprises, already written up on the feed; the road-deaths inversion and the
-   Malaysia 147.7% recycling figure are the two that land.
+1. **Re-run `launch_diff.py` before Tuesday.** Last run 17 Sep; two minutes; the only thing that
+   could break the demo on the day.
+2. **Read the demo end to end as a document.** Every figure is machine-asserted (32 smoke checks)
+   and all 10 charts confirmed drawing, but nobody has read it as prose. Individually-true
+   sentences can still be collectively confusing, and no assertion catches that.
 3. **Wire more denominators.** The five most matchable cities — Bolzano 19, Madrid 16, Edmonton
    15, Calgary 15, Queensland 14 — and only Madrid has one. That is the binding constraint on
    every non-US city, and each is an afternoon of reading.
@@ -158,7 +167,7 @@ shared; the Pages mirror is the one to present from).
   country-as-subject indicators ("extent to which countries have laws…"), which no place can hold
   a value for. The real core is 12 waste/water/wetlands indicators against DSNY and DEP series;
   three carry a single year, so level-only. All 39 verified US-absent against observations.
-- **The demo now carries the three new findings**, and `mcp/smoke.py` (24 checks) asserts every
+- **The demo now carries the three new findings**, and `mcp/smoke.py` (32 checks) asserts every
   figure on it against `screened.json`, `crosswalk.json`, `us-silent-*.json` and
   `category-gaps-*.json`. The masthead funnel had carried numbers matching no run for days because
   nothing tied it to the pipeline; it does now.
@@ -178,9 +187,24 @@ shared; the Pages mirror is the one to present from).
   survived `--limit`. That is now deterministic; published city worksheets were generated under
   the old arbitrary order and have not been regenerated.
 
+- **`smell.py --recheck` needs `--all` too, or it silently narrows.** `--recheck --corpus
+  corpus-all.json` without `--all` re-checked only the 442 usable set and **overwrote the
+  whole-graph artifact with the smaller one**. No error. Always pass all three flags together.
+- **Enumeration is entry-point dependent.** Root yields 1,661 base indicators, the 17 goal trees
+  689 — but 6 are reachable from the goal trees and **not** from Root, reproducibly, though all 17
+  are Root's direct children. Neither root sees everything. 689 stays correct for a VLR; never
+  call it "the corpus".
+- **The `portland-ocds` MCP connector is broken and NOT fixable on the box.** Its documented
+  endpoint (`/mcp/mcp`) does not exist in nginx there; Postgres runs natively as superuser with
+  `tenders` readable, so the "permission denied" comes from some *other* host whose URL lives in
+  claude.ai settings. Full diagnosis on Hub task `cb774ead`. Portland's numbers were taken over
+  SSH instead and are already in the finding.
+
 **Not done, stated plainly:**
-- The post-launch run of `launch_diff.py` (the platform is not public until 17 Sep), the talk, and
-  denominators for 24 non-US cities.
+- Denominators for 24 non-US cities — still the binding constraint on every multi-city claim.
+- The platform-team email is written but **unsent** (connector is read-only).
+- The `--roots all` sweep found 2 new errors; its **MEDIUM/LOW findings are unread** — 3,844 total,
+  only the 93 HIGH were triaged.
 - No second city has been graded, so the spec has never been used by anyone but its author.
 - `leedsdatamill.org`, `dati.lazio.it`, `www.opendata-hro.de` fail the catalog fetch; 3 of 70
   municipal portals are unscored.

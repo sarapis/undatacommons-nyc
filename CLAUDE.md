@@ -109,7 +109,7 @@ UN System Data Commons.
 - `mcp/` — the benchmark MCP server, **7 tools**. `server.py` serves the graded crosswalk and
   REFUSES on pairs a human graded incomparable; `reportable_gaps`, `framework_coverage` and
   `data_quality` serve the US-silent worksheet, the category gaps and the smell-test findings from
-  committed artifacts (no probe re-run needed). `smoke.py` (29 checks) asserts every figure the
+  committed artifacts (no probe re-run needed). `smoke.py` (32 checks) asserts every figure the
   server and the demo publish against the artifacts and the pipeline that produced them.
 - `probe/` — probes and the enumeration pipeline (stdlib only)
   - `corpus.py` → `screen.py` → `catalog.py` → `match_nyc.py`: enumerate the SDG corpus,
@@ -118,11 +118,12 @@ UN System Data Commons.
   - Needs `pip3 install model2vec` for embedding search. Without it the matcher falls back to
     keyword overlap, which measured median rank 1535 of 2400 — worse than a coin flip.
   - `pair_probe.py`: verify both sides of every crosswalk mapping.
-  - `smell.py`: plausibility checks over the corpus (689 indicators, 773k observations, one
-    `get_child_observations` call each). `--recheck` re-runs the checks over cached raw
-    observations and fetches nothing — always use it when changing a check. `--all` sweeps every
-    base indicator rather than the 442 screened usable; it adds 0.65% more data, because 207 of
-    the extra 247 hold no country observations at all.
+  - `smell.py`: plausibility checks, one `get_child_observations` call per indicator.
+    `--recheck` re-runs the checks over cached raw observations and fetches nothing — always use
+    it when changing a check. `--all` sweeps the 689 SDG base indicators rather than the 442
+    screened usable (only +0.65% data: 207 of the extra 247 hold no country observations).
+    `--all --corpus probe/cache/corpus-all.json` sweeps the whole graph — 1,661 indicators,
+    1,701,211 observations, and where 2 of the 7 verified errors were found.
   - `launch_diff.py`: snapshot every DCID the crosswalk expects and diff it against
     `probe/cache/launch-baseline.json`. `--set-baseline` to accept a new state (deliberately,
     never automatically); `--self-test` to prove the diff still detects drift.
