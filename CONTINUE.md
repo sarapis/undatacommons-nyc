@@ -32,6 +32,11 @@ including the launch diff's bug, about itself.
 
 Repo `/Users/devin/Antigravity/undatacommons-nyc`: **clean, 0 unpushed, on `main`.**
 
+⚠️ **`git fetch` first — you are not the only committer.** Henry Grunzweig pushed
+`57a4f75` (Milan's denominator) on 18 Sep while this session was working, and a
+`git log origin/main..HEAD` against a stale ref reported "0 unpushed" right up
+until the push was rejected. Fetch before you believe any divergence count.
+
 ```bash
 cd /Users/devin/Antigravity/undatacommons-nyc
 python3 mcp/smoke.py                 # 8/8 passed
