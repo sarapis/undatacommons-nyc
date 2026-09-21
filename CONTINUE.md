@@ -1,7 +1,7 @@
 # Continue here — UN Data Commons × NYC
 
-Written 2026-09-15, updated 2026-09-20. **Builders' Day is Tue 22 Sep** at Google NY — two days
-away. The platform went public 17 Sep with zero drift.
+Written 2026-09-15, updated 2026-09-21. **Builders' Day is Tue 22 Sep** at Google NY — tomorrow.
+The platform went public 17 Sep and has not moved since; last verified 20 Sep.
 
 ---
 
@@ -51,8 +51,12 @@ python3 probe/launch_diff.py --self-test   # 10/10 — proves the diff can see d
 public hostname resolves even now (`undatacommons.unicc.biz`, `datacommons.un.org` both refuse),
 so the pre-launch host is still the one answering.
 
-⚠️ **That diff is 3 days old and the event is in 2.** Re-run it before Tuesday — one command,
-exits non-zero on drift.
+**Re-run 20 Sep: still zero drift** — 57 series, 12 variables, 689 corpus indicators, tool list
+and REST node unchanged, against the same 16 Sep baseline. `--self-test` passed 10/10 the same
+evening, so that clean result is a real finding and not a detector that has quietly stopped
+working — always pair the two, because a broken diff and a calm platform print the same line.
+Report: `docs/artifacts/launch-diff-2026-09-20.md`. Baseline deliberately NOT reset; nothing
+drifted, so the 16 Sep reference still stands.
 
 | Thing | Count | Source of truth |
 |---|---:|---|
@@ -124,17 +128,15 @@ shared; the Pages mirror is the one to present from).
 
 ## 5. Candidates, ranked
 
-1. **Re-run `launch_diff.py` before Tuesday.** Last run 17 Sep; two minutes; the only thing that
-   could break the demo on the day.
-2. **Read the demo end to end as a document.** Every figure is machine-asserted (32 smoke checks)
+1. **Read the demo end to end as a document.** Every figure is machine-asserted (32 smoke checks)
    and all 10 charts confirmed drawing, but nobody has read it as prose. Individually-true
    sentences can still be collectively confusing, and no assertion catches that.
-3. **Wire more denominators.** The five most matchable cities — Bolzano 19, Madrid 16, Edmonton
+2. **Wire more denominators.** The five most matchable cities — Bolzano 19, Madrid 16, Edmonton
    15, Calgary 15, Queensland 14 — and only Madrid has one. That is the binding constraint on
    every non-US city, and each is an afternoon of reading.
-4. **Grade a second city's worksheet.** Bolzano or Madrid. Would prove the spec works for someone
+3. **Grade a second city's worksheet.** Bolzano or Madrid. Would prove the spec works for someone
    other than its author, which is the main open question about it.
-5. **Not more crosswalk pairs.** Checked three domains (suicide, broadband, e-waste); all three
+4. **Not more crosswalk pairs.** Checked three domains (suicide, broadband, e-waste); all three
    had NYC-side problems. Diminishing returns.
 
 ---
