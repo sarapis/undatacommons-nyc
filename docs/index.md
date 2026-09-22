@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-18** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-21** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
@@ -86,9 +86,11 @@ obviously alive.
 ## Data quality — a smell test on the graph
 
 **[UN graph smell test](https://sarapis.github.io/undatacommons-nyc/artifacts/smell-latest)** —
-plausibility checks over the **whole corpus: 689 indicators, 773,335 observations**, every
-reporting country and year. Malaysia's 147.7% recycling rate was found by accident; this is the
-systematic version. **2,503 findings, 93 HIGH.** Five verified errors so far:
+plausibility checks over the **whole governed graph: 1,661 indicators, 1,701,211 observations**,
+every reporting country and year. Malaysia's 147.7% recycling rate was found by accident; this is
+the systematic version. **3,844 findings, 93 HIGH.** Seven verified errors, each checked by hand
+against the indicator's own distribution — a flag is not an error, which is why the number below
+is seven and not 3,844:
 
 | Indicator | What it says | Why it is wrong |
 |---|---|---|
@@ -112,8 +114,10 @@ validates `screen.py`'s six-country panel, whose grade could not in principle di
 panel does not report this" from "nobody does". It distinguishes them 84% of the time, so **442
 remains the right denominator** downstream.
 
-Five of these are written up for the platform team with full evidence, mechanism and suggested
-correction: **[data quality report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report)**.
+All seven are written up for the platform team with full evidence, mechanism and suggested
+correction: **[data quality report](https://sarapis.github.io/undatacommons-nyc/findings/2026-09-16-data-quality-report)**,
+with a one-page index of the lot at
+**[the addendum](https://undatacommons.sarapis.org/addendum-errors-in-the-un-data/)**.
 
 The report also publishes what it **suppressed** (165 groups, 38,943 would-be findings) and what
 it cannot reach (123 indicators whose units have no meaningful range). The `Percent` unit in the
@@ -213,7 +217,7 @@ The [benchmark MCP server](https://github.com/sarapis/undatacommons-nyc/tree/mai
 **seven tools**. The three added on 18 Sep answer what the original four structurally cannot:
 `reportable_gaps` (the indicators the US reports nothing for), `framework_coverage` (does an
 indicator for this concept exist *at all* — zero of 519 mention an election), and `data_quality`
-(plausibility flags from the 773,335-observation sweep, with the five hand-verified errors marked
+(plausibility flags from the 1,701,211-observation sweep, with the seven hand-verified errors marked
 `verified_error` and everything else labelled unreviewed).
 
 All three read committed artifacts, so a clean clone answers without re-running a probe.
@@ -274,6 +278,49 @@ Three layers:
    comparators, with definitional caveats on the face of the chart rather than in a footnote.
 3. **A natural-language agent** that answers a staffer's question by routing to real queries and
    returning a citable **benchmark card**: number, source, vintage, method, caveat.
+
+## NYC's own Data Commons — live
+
+**[commons.databook.nyc](https://commons.databook.nyc)** — a custom Data Commons instance holding
+NYC's own series, public since 21 Sep. Built in a
+separate workspace, `~/Antigravity/nyc-datacommons` — **local only, no remote yet**, so the code
+behind the instance is not public the way this repo is. It imports this repo's `probe/` as a
+library rather than copying it, so the SoQL and the denominators are the ones already argued over
+here; a forked query is how two repos start disagreeing about what NYC's homicide count is.
+
+**11 variables, 410 observations**, read back out of the running instance over the API and matched
+against the CSVs that produced them. Nine are the crosswalk pairs whose NYC side was already in
+observation shape; two more are a deliberate cadence A/B.
+
+What it settled, none of it assumed:
+
+- **Sub-annual survives.** 260 month-granularity observations load, return from the API as months,
+  and render as months. NYC's structural advantage over a national graph is frequency, and the
+  platform does not flatten it.
+- **Provenance renders** — source, a live link to the NYC Open Data dataset page, period, unit and
+  a copyable citation, with nothing argued for.
+- **The caveat is one click further away than the citation.** Each variable's comparability grade
+  and reason are in the graph and shown in full on `/browser/<variable>` — and are *absent* from
+  the chart's "About this data". The one thing this project most wants attached to a number is the
+  one thing the chart surface does not carry.
+- **A blank unit renders as `Count`**, which on a per-100,000 rate is wrong rather than missing.
+  Fixed by defining `Per100kPeople` and `KgPerPerson` as `UnitOfMeasure` instances in MCF — the
+  timeline axis renders a unit's **DCID** and ignores its `name`, established by adding one and
+  rebuilding.
+- **Council district, NTA, community district and police precinct do not exist as classes in the
+  base graph at all** — so no instance of one exists under any spelling. City, borough, census
+  tract, ZCTA, school district and state do. Publishing by council district means defining the
+  class and the entities in MCF.
+
+**What it costs:** one Hetzner cpx32 (4 vCPU / 8 GB), **€41.99/mo**, nbg1. 1.9 GB resident with
+NL search on — about half what the same containers use under emulation on a Mac — against 8.9 GB
+of images. Lightly load-tested and no further: 20 observation queries at 10-way concurrency all
+answered, mean 1.4 s, while one page render returned 502 in the same burst. **A team's tool, not
+public-traffic infrastructure.**
+
+⚠️ The loader reported `status = SUCCESS` with `numObs: 0` on a database that imported nothing,
+because `INPUT_DIR` is flat and the CSVs were one directory down. The site came up, every variable
+existed, and the database was empty. **The exit code is not the evidence; the row count is.**
 
 ## What we have verified about the platform
 
