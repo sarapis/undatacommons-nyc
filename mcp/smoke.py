@@ -5,6 +5,7 @@ The server and the demo must not drift apart. These expected values are the ones
 on https://sarapis.github.io/undatacommons-nyc/demo/benchmarks.html
 """
 import json
+import os
 import pathlib
 import re
 import subprocess
@@ -14,6 +15,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SERVER = str(ROOT / "mcp" / "server.py")
 DEMO = ROOT / "demo" / "benchmarks.html"
 DEMO_MIRROR = ROOT / "docs" / "demo" / "benchmarks.html"
+# The collab site (undatacommons.sarapis.org) serves its OWN copy, passthrough-copied by
+# eleventy from undatacommons-collab/demo/benchmarks.html. That is a third copy in a
+# different repo, and nothing here could see it -- so updating this repo and forgetting
+# that one silently served two different sets of figures from two hostnames. Checked when
+# the sibling checkout is present; skipped with a visible note when it is not, because a
+# check that fails on everyone else's machine gets deleted.
+COLLAB_DEMO = pathlib.Path(
+    os.environ.get("COLLAB_REPO", ROOT.parent / "undatacommons-collab")) / "demo" / "benchmarks.html"
 
 
 def rpc(msgs):
@@ -46,6 +55,12 @@ def demo_checks():
     html = DEMO.read_text()
     core = [r for r in o["indicators"] if re.search(r"waste|wetland|water", r["name"], re.I)]
     checks.append(("demo and mirror identical", DEMO.read_text() == DEMO_MIRROR.read_text()))
+    if COLLAB_DEMO.exists():
+        checks.append(("collab site's demo copy identical",
+                       DEMO.read_text() == COLLAB_DEMO.read_text()))
+    else:
+        print(f"  note  collab demo copy not checked ({COLLAB_DEMO} absent; "
+              f"set COLLAB_REPO to point at the sibling checkout)")
     checks.append((f"{len(core)} waste/water rows in the worksheet", len(core) == 12))
     missing = [r for r in core if r["dcid"].rsplit("/", 1)[-1] not in html]
     checks.append(("every waste series appears in the demo", not missing))

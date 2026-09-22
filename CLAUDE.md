@@ -109,8 +109,11 @@ UN System Data Commons.
 - `mcp/` — the benchmark MCP server, **7 tools**. `server.py` serves the graded crosswalk and
   REFUSES on pairs a human graded incomparable; `reportable_gaps`, `framework_coverage` and
   `data_quality` serve the US-silent worksheet, the category gaps and the smell-test findings from
-  committed artifacts (no probe re-run needed). `smoke.py` (32 checks) asserts every figure the
-  server and the demo publish against the artifacts and the pipeline that produced them.
+  committed artifacts (no probe re-run needed). `smoke.py` (33 checks) asserts every figure the
+  server and the demo publish against the artifacts and the pipeline that produced them, and
+  that all **three** copies of `benchmarks.html` are identical — this repo's `demo/` and
+  `docs/demo/`, plus `undatacommons-collab/demo/` which is what undatacommons.sarapis.org
+  serves (`COLLAB_REPO` overrides the sibling path; skipped with a note if absent).
 - `probe/` — probes and the enumeration pipeline (stdlib only)
   - `corpus.py` → `screen.py` → `catalog.py` → `match_nyc.py`: enumerate the SDG corpus,
     screen for US coverage, cache the NYC catalog, propose candidates by embedding search.
