@@ -6,7 +6,7 @@ title: Project briefing
 
 # UN Data Commons × NYC — project briefing
 
-**Last updated: 2026-09-21** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
+**Last updated: 2026-09-22** · Team: Devin, Henry, Olivia · [Repo](https://github.com/sarapis/undatacommons-nyc)
 
 ## The demo
 
