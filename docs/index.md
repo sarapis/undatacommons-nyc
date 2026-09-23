@@ -282,18 +282,31 @@ Three layers:
 ## NYC's own Data Commons — live
 
 **[commons.databook.nyc](https://commons.databook.nyc)** — a custom Data Commons instance holding
-NYC's own series, public since 21 Sep. Built in a
-separate workspace, `~/Antigravity/nyc-datacommons` — **local only, no remote yet**, so the code
-behind the instance is not public the way this repo is. It imports this repo's `probe/` as a
+NYC's own series, public since 21 Sep. Built in
+[`sarapis/nyc-datacommons`](https://github.com/sarapis/nyc-datacommons), which imports this repo's `probe/` as a
 library rather than copying it, so the SoQL and the denominators are the ones already argued over
 here; a forked query is how two repos start disagreeing about what NYC's homicide count is.
 
-**11 variables, 410 observations**, read back out of the running instance over the API and matched
-against the CSVs that produced them. Nine are the crosswalk pairs whose NYC side was already in
-observation shape; two more are a deliberate cadence A/B.
+**16 variables, 572 observations**, every one read back out of the running instance over the API
+and matched against the CSV that produced it. Nine are crosswalk pairs whose NYC side was already
+in observation shape; two are a deliberate cadence A/B; four are DSNY and DEP series added on
+22 Sep — water consumption reaches back to **1960**, the longest series in the instance, falling
+from 1,512 MGD at its 1979 peak to 1,002 in 2024.
 
 What it settled, none of it assumed:
 
+- **Two official publishers, ten per cent apart.** Homicide is the only concept where the instance
+  holds both our series and a base Data Commons series for the same entity, so it is the one
+  chance to check a load against an independent publisher. Across 16 overlapping years NYPD and
+  the FBI differ by a mean of **+0.4%** — the first real evidence the NYPD query is right. Then
+  from 2023 the sign flips and the gap triples to **−10.4%** (385 vs 345 in 2023), and 2021 is
+  missing from the FBI series entirely. **This is the project's thesis without the UN graph in
+  it**: same concept, same city, same year, two official sources, and nothing on a chart tells you
+  which you are looking at.
+- **The platform will draw the misleading chart for you.** Asked for the rate and the FBI's count
+  together, the Timelines Explorer put both on one axis labelled `Count (Per100kPeople)` — our
+  unit applied to the FBI's counts. `NYC_Homicide_Count` was loaded so both sides are counts and
+  the axis reads plainly.
 - **Sub-annual survives.** 260 month-granularity observations load, return from the API as months,
   and render as months. NYC's structural advantage over a national graph is frequency, and the
   platform does not flatten it.
@@ -307,6 +320,12 @@ What it settled, none of it assumed:
   Fixed by defining `Per100kPeople` and `KgPerPerson` as `UnitOfMeasure` instances in MCF — the
   timeline axis renders a unit's **DCID** and ignores its `name`, established by adding one and
   rebuilding.
+- **The twelve US-silent indicators yielded zero new series** — a correction to this page's own
+  earlier estimate of "about three". Searching the NYC catalog directly rather than trusting the
+  worksheet's candidate column: "hazardous waste" returns **zero datasets** in the whole catalog
+  (it is DEC/EPA RCRA reporting, not city data), "groundwater" returns zero, DEP publishes sludge
+  digestion but not treated wastewater volume, and the wetlands layer is polygons with no area
+  column. What went in instead is real DSNY and DEP data answering different questions.
 - **Council district, NTA, community district and police precinct do not exist as classes in the
   base graph at all** — so no instance of one exists under any spelling. City, borough, census
   tract, ZCTA, school district and state do. Publishing by council district means defining the
